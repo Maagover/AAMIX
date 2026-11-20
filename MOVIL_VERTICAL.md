@@ -16,7 +16,7 @@ La exportación web emplea una base de 480 × 854 con aspecto expandible. Las ca
 
 El código, catálogo y recursos pertenecen a `Maagover/AAMIX`. Ambos presets se construyen desde un mismo árbol. El cliente web usa el mismo proyecto Supabase de PC; no se crea otra base de cuentas ni se ejecutan migraciones o reinicios.
 
-El repositorio remoto comenzó como repositorio de distribución sin fuentes. La importación inicial descarga el ZIP oficial v1.11.1, comprueba su SHA-256 y recupera los fuentes completos; después aplica los archivos móviles versionados. Esa importación se ejecuta una sola vez en la rama de trabajo y deja todos los fuentes en Git. Las actualizaciones posteriores editan esos fuentes directamente y no vuelven a importar el ZIP antiguo.
+El repositorio remoto comenzó como repositorio de distribución sin fuentes. La importación inicial descarga el ZIP oficial v1.11.1, comprueba su SHA-256 y recupera los fuentes completos; después aplica los archivos móviles versionados. Esa importación se ejecutó una sola vez en main y deja todos los fuentes en Git. Las actualizaciones posteriores editan esos fuentes directamente y no vuelven a importar el ZIP antiguo.
 
 La automatización genera artefactos Web y Windows. La promoción del artefacto Windows al instalador estable sigue usando el publicador existente y requiere completar las pruebas de distribución y compatibilidad. Construir ambos artefactos no significa que el instalador estable ya haya publicado una actualización.
 
@@ -36,3 +36,9 @@ Se verifica además la presentación en navegador con viewport de 390 × 844. Es
 El anfitrión sigue ejecutando las reglas del multijugador. Mantener la página abierta y en primer plano es necesario para ese rol. El progreso del servidor comparte la cuenta; las preferencias visuales y sonoras son locales a cada dispositivo. El guardado de sesión de Windows mediante DPAPI no se habilita en el navegador.
 
 No se debe promover esta versión como cliente móvil estable hasta comprobar partidas cruzadas, reconexión y suspensión en dispositivos físicos.
+
+## Publicación comprobada
+
+Web pública: https://maagover.github.io/AAMIX/
+
+La primera construcción y el despliegue en GitHub Pages finalizaron correctamente. Se verificó la página publicada a 390 × 844 y el recorrido de invitado hasta el tablero. Los cambios en main generan y publican la web automáticamente; los artefactos Windows de cada construcción quedan en Actions. El instalador estable conserva su proceso de publicación independiente.
