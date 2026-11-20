@@ -1,0 +1,221 @@
+{
+  "release": "0.14.0",
+  "project_id": "drpsedaiqyowwikhjugs",
+  "date_chile": "2026-10-18",
+  "status": "applied_verified",
+  "before": {
+    "collection_quantity": 142,
+    "owned_decks": 3,
+    "redemptions": 5,
+    "receipts": 5,
+    "completed_receipts": 3,
+    "mission_claims": 1,
+    "daily_claims": 2,
+    "packs": 0,
+    "qa_users": 0
+  },
+  "before_schema": {
+    "mission_constraints_confirmed": [
+      "aamix_mission_claims_check",
+      "aamix_mission_claims_mission_id_check",
+      "aamix_mission_claims_pkey",
+      "aamix_mission_claims_user_id_fkey"
+    ],
+    "existing_public_functions_invoker": [
+      "aamix_inventory()",
+      "aamix_begin_match(uuid,text)",
+      "aamix_finish_match(uuid,text)",
+      "aamix_claim_mission(text)"
+    ],
+    "existing_private_guarded_definers": [
+      "begin_match(uuid,text)",
+      "finish_match(uuid,text)",
+      "claim_mission(text)"
+    ],
+    "existing_private_read_helper_invoker": "missions_status()",
+    "all_checked_function_search_paths": "empty",
+    "existing_begin_finish_bodies_confirmed_against_shipped_sources": true
+  },
+  "tests": {
+    "new_suite_passed": true,
+    "new_suite": "test_challenges_and_missions_v0140_rollback.sql",
+    "new_suite_status": "PASS_REAL_DATABASE_ALL_FIXTURES_ROLLED_BACK",
+    "new_suite_server_pack_draws": 1000,
+    "challenge_stages": 5,
+    "challenge_opponent_decks_40_cards": true,
+    "challenge_rewards_once_per_UUID_stage": true,
+    "locked_skips_and_defeat_no_unlock": true,
+    "random_receipts_cannot_spoof_challenges": true,
+    "request_mode_stage_deck_immutable": true,
+    "finish_result_immutable": true,
+    "started_parallel_attempts_and_replays_no_duplicate_reward": true,
+    "retries_per_start_finish_and_mission_claim": 20,
+    "missions": 4,
+    "play_one_chile_midnight_and_legacy_alias_preserved": true,
+    "win_one_any_historic_claim_blocks_lifetime_reward": true,
+    "play_ten_new_reward_3_old_paid_5_preserved": true,
+    "win_ten_lifetime_5_and_historical_receipts_counted": true,
+    "owner_RLS_auth_ACL_and_invoker_wrappers": true,
+    "challenge_and_all_mission_overflows_rolled_back_atomically": true,
+    "legacy_gift_suite_passed": true,
+    "legacy_gift_suite": "test_gift_codes_v0110_rollback.sql",
+    "legacy_gift_suite_status": "PASS_REAL_DATABASE_ALL_FIXTURES_ROLLED_BACK",
+    "legacy_server_pack_draws": 1000,
+    "legacy_six_gift_redemptions_and_promotional_avatar_locks_preserved": true,
+    "unchanged_gift_definition_count": 8,
+    "current_server_pack_draws": 2000,
+    "promotional_cards_in_server_samples": 0,
+    "synthetic_users_only": true,
+    "real_mail_sent": 0,
+    "all_fixtures_rolled_back": true,
+    "new_real_rewards_claimed": 0,
+    "initial_harness_failure": "The final pack regression inherited an empty JWT from the auth guard test. The server correctly rejected it. Test setup now restores the synthetic confirmed account before drawing; the corrected full suite passed. Production SQL was unchanged.",
+    "real_simultaneous_independent_connections_tested": false
+  },
+  "real_rewards_claimed_by_agent": 0,
+  "auth_smtp_changes": false,
+  "migration": {
+    "version": "20261018203917",
+    "name": "aamix_challenges_and_missions_v0140",
+    "source": "aamix_challenges_and_missions_v0140.sql",
+    "method": "Supabase apply_migration connector"
+  },
+  "source_sha256": "56edb8ecb88865bdc2c5f13e17a732676aeb33dab8eef5d30aa99a378ec2aa31",
+  "before_old_field_hashes": {
+    "decks": "86ff615e5c950c4e016a89db04956f0b",
+    "wallet": "c845c0a7c53629fb11882b62596c66ef",
+    "starter": "4152aa68c9b2d0db61f024de874d7b3d",
+    "openings": "41b8959bafe711ffa07cb8ef5f5947fa",
+    "collection": "9de956c60db66b71789708a42fbe90f8",
+    "redemptions": "6fc5b4581e95d7cd547b016205a7317d",
+    "daily_missions": "bfe5cdb341641b502b1f54d87b7fe9a1",
+    "receipts_old_fields": "919f7b08b784aca509ef463056fee1d9",
+    "mission_claims_old_fields": "825c94b96dbbbee444508350a58918fc"
+  },
+  "after": {
+    "aggregates": {
+      "packs": 0,
+      "qa_users": 0,
+      "receipts": 5,
+      "owned_decks": 3,
+      "redemptions": 5,
+      "daily_claims": 2,
+      "mission_claims": 1,
+      "completed_receipts": 3,
+      "collection_quantity": 142,
+      "challenge_completions": 0
+    },
+    "base_decks": [
+      {
+        "id": "flaan",
+        "cards": 40,
+        "resources": 18
+      },
+      {
+        "id": "girabl",
+        "cards": 40,
+        "resources": 12
+      },
+      {
+        "id": "kajido",
+        "cards": 40,
+        "resources": 18
+      },
+      {
+        "id": "maago",
+        "cards": 40,
+        "resources": 15
+      },
+      {
+        "id": "papito",
+        "cards": 40,
+        "resources": 18
+      }
+    ],
+    "pack_eligible": 35,
+    "completion_RLS": true,
+    "old_field_hashes": {
+      "decks": "86ff615e5c950c4e016a89db04956f0b",
+      "wallet": "c845c0a7c53629fb11882b62596c66ef",
+      "starter": "4152aa68c9b2d0db61f024de874d7b3d",
+      "openings": "41b8959bafe711ffa07cb8ef5f5947fa",
+      "collection": "9de956c60db66b71789708a42fbe90f8",
+      "redemptions": "6fc5b4581e95d7cd547b016205a7317d",
+      "daily_missions": "bfe5cdb341641b502b1f54d87b7fe9a1",
+      "receipts_old_fields": "919f7b08b784aca509ef463056fee1d9",
+      "mission_claims_old_fields": "825c94b96dbbbee444508350a58918fc"
+    },
+    "public_functions": [
+      {
+        "args": "p_request_id uuid, p_deck_id text, p_stage integer",
+        "name": "aamix_begin_challenge_match",
+        "config": [
+          "search_path=\"\""
+        ],
+        "definer": false,
+        "anon_execute": false,
+        "authenticated_execute": true
+      },
+      {
+        "args": "p_request_id uuid, p_deck_id text",
+        "name": "aamix_begin_match",
+        "config": [
+          "search_path=\"\""
+        ],
+        "definer": false,
+        "anon_execute": false,
+        "authenticated_execute": true
+      },
+      {
+        "args": "p_mission_id text",
+        "name": "aamix_claim_mission",
+        "config": [
+          "search_path=\"\""
+        ],
+        "definer": false,
+        "anon_execute": false,
+        "authenticated_execute": true
+      },
+      {
+        "args": "p_match_id uuid, p_result text",
+        "name": "aamix_finish_match",
+        "config": [
+          "search_path=\"\""
+        ],
+        "definer": false,
+        "anon_execute": false,
+        "authenticated_execute": true
+      },
+      {
+        "args": "",
+        "name": "aamix_inventory",
+        "config": [
+          "search_path=\"\""
+        ],
+        "definer": false,
+        "anon_execute": false,
+        "authenticated_execute": true
+      }
+    ],
+    "claim_amounts_valid": true,
+    "completion_policies": [
+      {
+        "roles": [
+          "authenticated"
+        ],
+        "using": "(( SELECT auth.uid() AS uid) = user_id)",
+        "command": "SELECT"
+      }
+    ],
+    "gift_code_definitions": 8
+  },
+  "real_player_old_fields_unchanged": true,
+  "advisors": {
+    "public_RLS_issues": 0,
+    "private_deny_all_RLS_tables": 5,
+    "private_deny_all_level": "INFO",
+    "private_deny_all_remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+    "preexisting_auth_warning_unchanged": "Leaked password protection disabled; Auth and SMTP configuration unchanged",
+    "preexisting_auth_warning_remediation": "https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection"
+  }
+}

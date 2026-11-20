@@ -1,0 +1,230 @@
+{
+  "version": "0.14.0",
+  "confirmed_by_author": "2026-10-18",
+  "gift_code": {
+    "code": "M4Z0M44G0",
+    "deck_id": "maago",
+    "source": "tests/fixtures/mazos_legacy.json:usuario_maagover",
+    "per_uuid": 1
+  },
+  "daily_mission": {
+    "title": "Juega 1 partida",
+    "condition": "Terminar contra IA, victoria o derrota, con cuenta",
+    "pack_reward": 1,
+    "reset_timezone": "America/Santiago",
+    "reset_time": "00:00"
+  },
+  "pack": {
+    "size": 5,
+    "slot1": "Recurso garantizado, único Recurso del sobre",
+    "slots2_3_4": "Normales uniformes con reemplazo",
+    "slot5": {
+      "normal_probability": 0.7,
+      "special_probability": 0.3,
+      "special_weights_percent_within_group": {
+        "0105": 5,
+        "0103": 5,
+        "0115": 5,
+        "0119": 5,
+        "0134": 16,
+        "0128": 16,
+        "0125": 16,
+        "0131": 16,
+        "0130": 16
+      }
+    },
+    "normal_cards_uniform": true,
+    "server_authoritative_draw": true,
+    "promotional_cards_allowed": false,
+    "excluded_promotional_codes": [
+      "01a",
+      "01b",
+      "01c",
+      "01d",
+      "01e",
+      "01f"
+    ],
+    "eligible_cards": 35,
+    "eligible_normal_cards": 25,
+    "eligible_special_cards": 9,
+    "eligible_resource_cards": 1,
+    "expansion_name": "Transmisión Caída",
+    "cover": "assets/estetica/sobre_cerrado.png",
+    "opened_art": "assets/estetica/sobre_abierto.png"
+  },
+  "gift_codes": [
+    {
+      "codigo": "M4Z0M44G0",
+      "nombre": "Mazo Maagover",
+      "tipo": "mazo",
+      "mazo_id": "maago",
+      "total_cartas": 40,
+      "recursos": 15,
+      "fuente_lista": "tests/fixtures/mazos_legacy.json:usuario_maagover"
+    },
+    {
+      "codigo": "P3RI",
+      "nombre": "3 copias de Peri",
+      "tipo": "cartas",
+      "cartas": [
+        {
+          "codigo": "01a",
+          "cantidad": 3
+        }
+      ]
+    },
+    {
+      "codigo": "B1G0T3S",
+      "nombre": "3 copias de Bigotes",
+      "tipo": "cartas",
+      "cartas": [
+        {
+          "codigo": "01b",
+          "cantidad": 3
+        }
+      ]
+    },
+    {
+      "codigo": "SI2TYA",
+      "nombre": "Tsuki y Akira",
+      "tipo": "cartas",
+      "cartas": [
+        {
+          "codigo": "01c",
+          "cantidad": 1
+        }
+      ]
+    },
+    {
+      "codigo": "CHANCHULINES",
+      "nombre": "Granjita de Chanchuus",
+      "tipo": "cartas",
+      "cartas": [
+        {
+          "codigo": "01d",
+          "cantidad": 1
+        }
+      ]
+    },
+    {
+      "codigo": "TORNEOAAMIX1",
+      "nombre": "Dragón Tee K.O",
+      "tipo": "cartas",
+      "cartas": [
+        {
+          "codigo": "01e",
+          "cantidad": 1
+        }
+      ]
+    },
+    {
+      "codigo": "AAMIXTC",
+      "nombre": "1 sobre",
+      "tipo": "sobres",
+      "sobres": 1
+    },
+    {
+      "codigo": "M4Z0G1R4",
+      "nombre": "Mazo Girabl",
+      "tipo": "mazo",
+      "mazo_id": "girabl",
+      "total_cartas": 40,
+      "recursos": 12,
+      "fuente_lista": "tests/fixtures/mazos_legacy.json:usuario_girabl"
+    }
+  ],
+  "avatars": {
+    "eligible_ally_count": 22,
+    "promotional_avatars_unlocked": false
+  },
+  "missions": [
+    {
+      "id": "play_one",
+      "nombre": "Juega 1 partida",
+      "frecuencia": "diaria",
+      "objetivo": 1,
+      "resultados": [
+        "victory",
+        "defeat"
+      ],
+      "recompensa_sobres": 1,
+      "conserva_registro_anterior": true
+    },
+    {
+      "id": "win_one",
+      "nombre": "Gana 1 partida",
+      "frecuencia": "una_vez_por_UUID",
+      "objetivo": 1,
+      "resultados": [
+        "victory"
+      ],
+      "recompensa_sobres": 1,
+      "acumulativa": true,
+      "reclamos_diarios_anteriores_bloquean_nuevo_premio": true
+    },
+    {
+      "id": "play_ten",
+      "nombre": "Juega 10 partidas",
+      "frecuencia": "una_vez_por_UUID",
+      "objetivo": 10,
+      "resultados": [
+        "victory",
+        "defeat"
+      ],
+      "recompensa_sobres": 3,
+      "acumulativa": true,
+      "premios_anteriores_de_5_sobres_se_conservan": true
+    },
+    {
+      "id": "win_ten",
+      "nombre": "Gana 10 partidas",
+      "frecuencia": "una_vez_por_UUID",
+      "objetivo": 10,
+      "resultados": [
+        "victory"
+      ],
+      "recompensa_sobres": 5,
+      "acumulativa": true
+    }
+  ],
+  "challenges": {
+    "formato": "aamix.desafio",
+    "version": "0.14.0",
+    "autoridad": "Servidor por UUID. El cliente declara el resultado de la partida local contra la IA.",
+    "desbloqueo": "Ganar por primera vez desbloquea la siguiente etapa. Las etapas completadas pueden repetirse.",
+    "premios": "Automáticos al confirmar la primera victoria de cada etapa, una vez por cuenta. Reintentos y repeticiones no vuelven a entregar premios.",
+    "etapas": [
+      {
+        "stage": 1,
+        "deck_id": "papito",
+        "nombre": "Mazo Papito",
+        "recompensa_sobres": 1
+      },
+      {
+        "stage": 2,
+        "deck_id": "flaan",
+        "nombre": "Mazo Flaan",
+        "recompensa_sobres": 1
+      },
+      {
+        "stage": 3,
+        "deck_id": "kajido",
+        "nombre": "Mazo Kajido",
+        "recompensa_sobres": 1
+      },
+      {
+        "stage": 4,
+        "deck_id": "maago",
+        "nombre": "Mazo Maagover",
+        "recompensa_sobres": 2
+      },
+      {
+        "stage": 5,
+        "deck_id": "girabl",
+        "nombre": "Mazo Girabl",
+        "recompensa_sobres": 3
+      }
+    ],
+    "mision_progreso": "Todas las partidas terminadas, aleatorias o desafíos, cuentan para las misiones. No se cuentan intentos sin terminar."
+  }
+}

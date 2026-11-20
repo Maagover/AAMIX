@@ -1,0 +1,137 @@
+{
+  "formato": "aamix.mazos_prueba",
+  "version": "0.2.0",
+  "edicion_id": "edicion_1",
+  "fuente": "image.png proporcionada por el autor",
+  "estado": "Transcripción de los mazos del autor, verificada por tamaño y copias. Todavía sin partidas de prueba.",
+  "mazos": [
+    {
+      "id": "usuario_maagover",
+      "nombre": "Maagover",
+      "recurso_inicial": "0100",
+      "fuente": "image.png, columna MAAGOVER",
+      "cartas": [
+        {
+          "codigo": "0108",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0104",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0107",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0109",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0111",
+          "cantidad": 2
+        },
+        {
+          "codigo": "01c",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0116",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0120",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0133",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0132",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0131",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0122",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0124",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0100",
+          "cantidad": 15
+        }
+      ]
+    },
+    {
+      "id": "usuario_girabl",
+      "nombre": "Girabl",
+      "recurso_inicial": "0100",
+      "fuente": "image.png, columna GIRABL",
+      "cartas": [
+        {
+          "codigo": "0127",
+          "cantidad": 3
+        },
+        {
+          "codigo": "01a",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0108",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0104",
+          "cantidad": 2
+        },
+        {
+          "codigo": "01b",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0113",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0112",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0107",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0111",
+          "cantidad": 1
+        },
+        {
+          "codigo": "01c",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0116",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0120",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0124",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0100",
+          "cantidad": 12
+        }
+      ]
+    }
+  ]
+}

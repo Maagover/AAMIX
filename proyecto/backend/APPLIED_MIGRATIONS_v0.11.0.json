@@ -1,0 +1,75 @@
+{
+  "project_id": "drpsedaiqyowwikhjugs",
+  "current_release": "0.11.0",
+  "verification_date": "2026-10-18",
+  "applied": [
+    {
+      "version": "20261017185851",
+      "name": "aamix_collection_starter_v090",
+      "source": "aamix_collection.sql"
+    },
+    {
+      "version": "20261017194519",
+      "name": "aamix_profiles_rewards_v0100",
+      "source": "aamix_rewards.sql"
+    },
+    {
+      "version": "20261017221142",
+      "name": "aamix_packs_exclude_promotional_v0101",
+      "sources": [
+        "aamix_no_promo_packs.sql",
+        "promo_repair_admin.sql"
+      ],
+      "method": "Supabase dashboard SQL, transaction and schema_migrations record; connector apply_migration failed with expired requestState"
+    },
+    {
+      "version": "20261018031742",
+      "name": "aamix_gift_codes_and_avatar_lock_v0110",
+      "source": "aamix_gift_codes_v0110.sql",
+      "method": "Supabase apply_migration connector"
+    },
+    {
+      "version": "20261018032104",
+      "name": "aamix_gift_codes_index_v0110",
+      "source": "aamix_gift_codes_index_v0110.sql",
+      "method": "Supabase apply_migration connector"
+    }
+  ],
+  "tests": {
+    "test_gift_codes_v0110_rollback.sql": {
+      "passed": true,
+      "exact_new_codes": 5,
+      "new_promo_cards_total": 9,
+      "maagover_preserved": "40 cards,15 resources,exact saved list",
+      "sequential_retries_per_code": 20,
+      "uuid_isolation": true,
+      "auth_and_direct_write_guards": true,
+      "atomic_failure_rollback": true,
+      "owned_promotional_avatars_rejected": true,
+      "eligible_avatars": 22,
+      "server_pack_draws": 1000,
+      "promotional_cards_in_packs": 0,
+      "all_fixtures_rolled_back": true
+    }
+  },
+  "post_test_state": {
+    "qa_accounts_remaining": 0,
+    "real_collection_quantity_unchanged": 85,
+    "real_rewards_redeemed_by_agent": 0,
+    "real_emails_sent_by_agent": 0,
+    "gift_code_definitions": 6,
+    "new_card_codes_grant_decks": false,
+    "avatar_unlocks_for_promos": false,
+    "pack_eligible_cards": 35
+  },
+  "advisors": {
+    "public_RLS_issues": 0,
+    "private_deny_all_RLS_tables": 5,
+    "preexisting_auth_warning_unchanged": "Leaked password protection disabled; Auth configuration unchanged"
+  },
+  "historical_v0101_record": "APPLIED_MIGRATIONS_v0.10.1.json",
+  "limitations": [
+    "Game results for daily missions are client reported, not server verified gameplay.",
+    "Real simultaneous two-client concurrency and new real mailbox access were not tested."
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "project_id": "drpsedaiqyowwikhjugs",
+  "current_release": "0.14.0",
+  "verification_date": "2026-10-18",
+  "applied": [
+    {
+      "version": "20261017185851",
+      "name": "aamix_collection_starter_v090",
+      "source": "aamix_collection.sql"
+    },
+    {
+      "version": "20261017194519",
+      "name": "aamix_profiles_rewards_v0100",
+      "source": "aamix_rewards.sql"
+    },
+    {
+      "version": "20261017221142",
+      "name": "aamix_packs_exclude_promotional_v0101",
+      "sources": [
+        "aamix_no_promo_packs.sql",
+        "promo_repair_admin.sql"
+      ],
+      "method": "Supabase dashboard SQL, transaction and schema_migrations record; connector apply_migration failed with expired requestState"
+    },
+    {
+      "version": "20261018031742",
+      "name": "aamix_gift_codes_and_avatar_lock_v0110",
+      "source": "aamix_gift_codes_v0110.sql",
+      "method": "Supabase apply_migration connector"
+    },
+    {
+      "version": "20261018032104",
+      "name": "aamix_gift_codes_index_v0110",
+      "source": "aamix_gift_codes_index_v0110.sql",
+      "method": "Supabase apply_migration connector"
+    },
+    {
+      "version": "20261018035100",
+      "name": "aamix_missions_and_gifts_v0120",
+      "source": "aamix_missions_and_gifts_v0120.sql",
+      "method": "Supabase apply_migration connector"
+    },
+    {
+      "version": "20261018203917",
+      "name": "aamix_challenges_and_missions_v0140",
+      "source": "aamix_challenges_and_missions_v0140.sql",
+      "method": "Supabase apply_migration connector"
+    }
+  ],
+  "tests": {
+    "new_suite_passed": true,
+    "new_suite": "test_challenges_and_missions_v0140_rollback.sql",
+    "new_suite_status": "PASS_REAL_DATABASE_ALL_FIXTURES_ROLLED_BACK",
+    "new_suite_server_pack_draws": 1000,
+    "challenge_stages": 5,
+    "challenge_opponent_decks_40_cards": true,
+    "challenge_rewards_once_per_UUID_stage": true,
+    "locked_skips_and_defeat_no_unlock": true,
+    "random_receipts_cannot_spoof_challenges": true,
+    "request_mode_stage_deck_immutable": true,
+    "finish_result_immutable": true,
+    "started_parallel_attempts_and_replays_no_duplicate_reward": true,
+    "retries_per_start_finish_and_mission_claim": 20,
+    "missions": 4,
+    "play_one_chile_midnight_and_legacy_alias_preserved": true,
+    "win_one_any_historic_claim_blocks_lifetime_reward": true,
+    "play_ten_new_reward_3_old_paid_5_preserved": true,
+    "win_ten_lifetime_5_and_historical_receipts_counted": true,
+    "owner_RLS_auth_ACL_and_invoker_wrappers": true,
+    "challenge_and_all_mission_overflows_rolled_back_atomically": true,
+    "legacy_gift_suite_passed": true,
+    "legacy_gift_suite": "test_gift_codes_v0110_rollback.sql",
+    "legacy_gift_suite_status": "PASS_REAL_DATABASE_ALL_FIXTURES_ROLLED_BACK",
+    "legacy_server_pack_draws": 1000,
+    "legacy_six_gift_redemptions_and_promotional_avatar_locks_preserved": true,
+    "unchanged_gift_definition_count": 8,
+    "current_server_pack_draws": 2000,
+    "promotional_cards_in_server_samples": 0,
+    "synthetic_users_only": true,
+    "real_mail_sent": 0,
+    "all_fixtures_rolled_back": true,
+    "new_real_rewards_claimed": 0,
+    "initial_harness_failure": "The final pack regression inherited an empty JWT from the auth guard test. The server correctly rejected it. Test setup now restores the synthetic confirmed account before drawing; the corrected full suite passed. Production SQL was unchanged.",
+    "real_simultaneous_independent_connections_tested": false
+  },
+  "post_test_state": {
+    "packs": 0,
+    "qa_users": 0,
+    "receipts": 5,
+    "owned_decks": 3,
+    "redemptions": 5,
+    "daily_claims": 2,
+    "mission_claims": 1,
+    "completed_receipts": 3,
+    "collection_quantity": 142,
+    "challenge_completions": 0
+  },
+  "advisors": {
+    "public_RLS_issues": 0,
+    "private_deny_all_RLS_tables": 5,
+    "private_deny_all_level": "INFO",
+    "private_deny_all_remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+    "preexisting_auth_warning_unchanged": "Leaked password protection disabled; Auth and SMTP configuration unchanged",
+    "preexisting_auth_warning_remediation": "https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection"
+  },
+  "historical_v0110_record": "APPLIED_MIGRATIONS_v0.11.0.json",
+  "limitations": [
+    "Local AI outcomes are client-reported, not replayed/validated on the server.",
+    "Started parallel attempts and sequential retries were tested; truly simultaneous independent database connections were not tested."
+  ],
+  "real_player_old_fields_unchanged": true,
+  "historical_v0120_record": "APPLIED_MIGRATIONS_v0.12.0.json",
+  "current_detail": "VERIFICATION_v0.14.0.json"
+}

@@ -1,5 +1,9 @@
 # AAMIX
 
+Esta rama incorpora el proyecto fuente compartido y una interfaz web vertical para celulares. Estado, pruebas y pasos pendientes en [MOVIL_VERTICAL.md](MOVIL_VERTICAL.md). La publicación del cliente web y las releases estables del instalador se registran por separado.
+
+Para construir PC y web desde el mismo código: `node scripts/setup-tools.mjs` y `node scripts/build.mjs` (Node 24). Para la vista previa: `node scripts/serve-web.mjs`.
+
 Juego de cartas AAMIX para **Windows 10 y 11 de 64 bits**.
 
 **[Descargar AAMIX · Instalar y actualizar](https://github.com/Maagover/AAMIX/releases/latest/download/AAMIX_Instalador.exe)**

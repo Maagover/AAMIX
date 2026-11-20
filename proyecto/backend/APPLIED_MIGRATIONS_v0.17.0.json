@@ -1,0 +1,181 @@
+{
+  "project_id": "drpsedaiqyowwikhjugs",
+  "current_release": "0.17.0",
+  "verification_date": "2026-10-19 America/Santiago",
+  "applied": [
+    {
+      "version": "20261017185851",
+      "name": "aamix_collection_starter_v090",
+      "source": "aamix_collection.sql"
+    },
+    {
+      "version": "20261017194519",
+      "name": "aamix_profiles_rewards_v0100",
+      "source": "aamix_rewards.sql"
+    },
+    {
+      "version": "20261017221142",
+      "name": "aamix_packs_exclude_promotional_v0101",
+      "sources": [
+        "aamix_no_promo_packs.sql",
+        "promo_repair_admin.sql"
+      ],
+      "method": "Supabase dashboard SQL, transaction and schema_migrations record; connector apply_migration failed with expired requestState"
+    },
+    {
+      "version": "20261018031742",
+      "name": "aamix_gift_codes_and_avatar_lock_v0110",
+      "source": "aamix_gift_codes_v0110.sql",
+      "method": "Supabase apply_migration connector"
+    },
+    {
+      "version": "20261018032104",
+      "name": "aamix_gift_codes_index_v0110",
+      "source": "aamix_gift_codes_index_v0110.sql",
+      "method": "Supabase apply_migration connector"
+    },
+    {
+      "version": "20261018035100",
+      "name": "aamix_missions_and_gifts_v0120",
+      "source": "aamix_missions_and_gifts_v0120.sql",
+      "method": "Supabase apply_migration connector"
+    },
+    {
+      "version": "20261018203917",
+      "name": "aamix_challenges_and_missions_v0140",
+      "source": "aamix_challenges_and_missions_v0140.sql",
+      "method": "Supabase apply_migration connector"
+    },
+    {
+      "version": "20261018215041",
+      "name": "aamix_welcome_challenge_v0150",
+      "source": "aamix_welcome_challenge_v0150.sql",
+      "method": "Supabase apply_migration connector"
+    },
+    {
+      "version": "20261019051553",
+      "name": "aamix_economy_and_normal_packs_v0160",
+      "source": "aamix_economy_and_normal_packs_v0160.sql",
+      "method": "Supabase apply_migration connector"
+    },
+    {
+      "version": "20261019123235",
+      "name": "aamix_wallet_gift_codes_v0170",
+      "source": "aamix_wallet_gift_codes_v0170.sql",
+      "source_sha256": "cb8bf24301bf994cfd9c44df99940a3aff0ffcbcb031e08be8e3de169b97ddb0",
+      "method": "Supabase apply_migration connector"
+    },
+    {
+      "version": "20261019124033",
+      "name": "aamix_multiplayer_v0170",
+      "source": "aamix_multiplayer_v0170.sql",
+      "source_sha256": "10a8fbb1548d874312b170318a9a5026071dd3cba1934bc68622da16e22081a5",
+      "method": "Supabase apply_migration connector"
+    }
+  ],
+  "tests": {
+    "wallet_gifts": {
+      "checks": 12,
+      "failures": 0,
+      "all_fixtures_rolled_back": true
+    },
+    "multiplayer": {
+      "checks": 25,
+      "failures": 0,
+      "all_fixtures_rolled_back": true
+    },
+    "real_players_touched": 0,
+    "real_emails_sent": 0
+  },
+  "post_test_state": [
+    {
+      "table_name": "aamix_collection",
+      "count": 32,
+      "digest": "165bbcc50b3a4da3d82f2841ac37e15f"
+    },
+    {
+      "table_name": "aamix_owned_decks",
+      "count": 3,
+      "digest": "86ff615e5c950c4e016a89db04956f0b"
+    },
+    {
+      "table_name": "aamix_code_redemptions",
+      "count": 5,
+      "digest": "6fc5b4581e95d7cd547b016205a7317d"
+    },
+    {
+      "table_name": "aamix_match_receipts",
+      "count": 10,
+      "digest": "63da1da43a37e85798033f7fb5905382"
+    },
+    {
+      "table_name": "aamix_mission_claims",
+      "count": 1,
+      "digest": "b276994d1b522f8d927a2ebac55aa901"
+    },
+    {
+      "table_name": "aamix_daily_missions",
+      "count": 3,
+      "digest": "3c83b40194ace97a2e23f471688e9fb8"
+    },
+    {
+      "table_name": "aamix_rewards_state",
+      "count": 1,
+      "digest": "9b63c8d25b13744d55a0c29d1c33c457"
+    },
+    {
+      "table_name": "aamix_pack_openings",
+      "count": 6,
+      "digest": "f53a3285d4b2d443c5ac53d0e9a6faa3"
+    },
+    {
+      "table_name": "aamix_starter_gifts",
+      "count": 1,
+      "digest": "4152aa68c9b2d0db61f024de874d7b3d"
+    },
+    {
+      "table_name": "aamix_challenge_completions",
+      "count": 2,
+      "digest": "4cc307dfedb2785d18d34231998ea9b2"
+    },
+    {
+      "table_name": "aamix_welcome_packs",
+      "count": 0,
+      "digest": "d751713988987e9331980363e24189ce"
+    },
+    {
+      "table_name": "aamix_restos_welcome",
+      "count": 1,
+      "digest": "29fedc1bf0923ac3e19df74cd3e609c1"
+    },
+    {
+      "table_name": "aamix_shop_purchases",
+      "count": 1,
+      "digest": "770031c6e9fed1c2fbf4f3e09b34f20d"
+    },
+    {
+      "table_name": "aamix_daily_claims_v016",
+      "count": 2,
+      "digest": "4826323f6c496ed5b6dc1d82b37c87c2"
+    }
+  ],
+  "advisors": {
+    "public_RLS_issues": 0,
+    "new_welcome_table_has_owner_policy": true,
+    "private_deny_all_RLS_tables": 5,
+    "private_deny_all_level": "INFO",
+    "private_deny_all_remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+    "preexisting_auth_warning_unchanged": "Leaked password protection disabled; passwordless email OTP is unchanged",
+    "preexisting_auth_warning_remediation": "https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection"
+  },
+  "historical_v0110_record": "APPLIED_MIGRATIONS_v0.11.0.json",
+  "limitations": [
+    "Local AI outcomes are client-reported, not replayed/validated on the server.",
+    "Started parallel attempts and sequential retries were tested; truly simultaneous independent database connections were not tested."
+  ],
+  "real_player_old_fields_unchanged": true,
+  "historical_v0120_record": "APPLIED_MIGRATIONS_v0.12.0.json",
+  "current_detail": "VERIFICATION_v0.17.0.json",
+  "historical_v0140_record": "APPLIED_MIGRATIONS_v0.14.0.json",
+  "historical_v0150_record": "APPLIED_MIGRATIONS_v0.15.0.json"
+}

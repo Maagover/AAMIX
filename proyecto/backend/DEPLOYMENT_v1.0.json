@@ -1,0 +1,250 @@
+{
+  "release": "1.0",
+  "project_id": "drpsedaiqyowwikhjugs",
+  "status": "applied_verified",
+  "migrations": {
+    "migrations": [
+      {
+        "version": "20261017185851",
+        "name": "aamix_collection_starter_v090"
+      },
+      {
+        "version": "20261017194519",
+        "name": "aamix_profiles_rewards_v0100"
+      },
+      {
+        "version": "20261017221142",
+        "name": "aamix_packs_exclude_promotional_v0101"
+      },
+      {
+        "version": "20261018031742",
+        "name": "aamix_gift_codes_and_avatar_lock_v0110"
+      },
+      {
+        "version": "20261018032104",
+        "name": "aamix_gift_codes_index_v0110"
+      },
+      {
+        "version": "20261018035100",
+        "name": "aamix_missions_and_gifts_v0120"
+      },
+      {
+        "version": "20261018203917",
+        "name": "aamix_challenges_and_missions_v0140"
+      },
+      {
+        "version": "20261018215041",
+        "name": "aamix_welcome_challenge_v0150"
+      },
+      {
+        "version": "20261019051553",
+        "name": "aamix_economy_and_normal_packs_v0160"
+      },
+      {
+        "version": "20261019123235",
+        "name": "aamix_wallet_gift_codes_v0170"
+      },
+      {
+        "version": "20261019124033",
+        "name": "aamix_multiplayer_v0170"
+      },
+      {
+        "version": "20261019141339",
+        "name": "aamix_rooms_and_pack_presentation_v0180"
+      },
+      {
+        "version": "20261019174330",
+        "name": "aamix_realtime_v100"
+      },
+      {
+        "version": "20261019175446",
+        "name": "aamix_realtime_order_v100"
+      },
+      {
+        "version": "20261019180057",
+        "name": "aamix_release_progress_recovery_v100"
+      },
+      {
+        "version": "20261019181047",
+        "name": "aamix_release_recovery_verify_v100"
+      }
+    ]
+  },
+  "reset": [
+    {
+      "reset_result": {
+        "tables": 19,
+        "accounts": 3,
+        "batch_id": "4d048587-1e75-400c-a430-07507c09f4a2",
+        "rows_removed": 266,
+        "auth_unchanged": true,
+        "welcome_awarded": false
+      }
+    }
+  ],
+  "recovery_rehearsal": [
+    {
+      "verification": {
+        "passed": true,
+        "reset_restore_rollback_checks": 1
+      }
+    }
+  ],
+  "bootstrap": [
+    {
+      "verification": {
+        "status": "passed; all temporary rewards roll back next",
+        "release_bootstrap_checks": 8
+      }
+    }
+  ],
+  "final_state": [
+    {
+      "final_state": {
+        "accounts": 3,
+        "no_decks": true,
+        "no_wallet": true,
+        "reset_done": true,
+        "backup_tables": 19,
+        "no_collection": true,
+        "auth_unchanged": true,
+        "backed_accounts": 3
+      }
+    }
+  ],
+  "advisors": {
+    "result": {
+      "lints": [
+        {
+          "name": "rls_enabled_no_policy",
+          "title": "RLS Enabled No Policy",
+          "level": "INFO",
+          "facing": "EXTERNAL",
+          "categories": [
+            "SECURITY"
+          ],
+          "description": "Detects cases where row level security (RLS) has been enabled on a table but no RLS policies have been created.",
+          "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+          "count": 10,
+          "findings": [
+            {
+              "detail": "Table \\`aamix_private.base_decks\\` has RLS enabled, but no policies exist",
+              "metadata": {
+                "name": "base_decks",
+                "type": "table",
+                "schema": "aamix_private"
+              },
+              "observed_at": "2026-10-19T18:12:27.947Z"
+            },
+            {
+              "detail": "Table \\`aamix_private.catalog_codes\\` has RLS enabled, but no policies exist",
+              "metadata": {
+                "name": "catalog_codes",
+                "type": "table",
+                "schema": "aamix_private"
+              },
+              "observed_at": "2026-10-19T18:12:27.947Z"
+            },
+            {
+              "detail": "Table \\`aamix_private.gift_code_rewards\\` has RLS enabled, but no policies exist",
+              "metadata": {
+                "name": "gift_code_rewards",
+                "type": "table",
+                "schema": "aamix_private"
+              },
+              "observed_at": "2026-10-19T18:12:27.947Z"
+            },
+            {
+              "detail": "Table \\`aamix_private.mp_commands\\` has RLS enabled, but no policies exist",
+              "metadata": {
+                "name": "mp_commands",
+                "type": "table",
+                "schema": "aamix_private"
+              },
+              "observed_at": "2026-10-19T18:12:27.947Z"
+            },
+            {
+              "detail": "Table \\`aamix_private.mp_members\\` has RLS enabled, but no policies exist",
+              "metadata": {
+                "name": "mp_members",
+                "type": "table",
+                "schema": "aamix_private"
+              },
+              "observed_at": "2026-10-19T18:12:27.947Z"
+            },
+            {
+              "detail": "Table \\`aamix_private.mp_rooms\\` has RLS enabled, but no policies exist",
+              "metadata": {
+                "name": "mp_rooms",
+                "type": "table",
+                "schema": "aamix_private"
+              },
+              "observed_at": "2026-10-19T18:12:27.947Z"
+            },
+            {
+              "detail": "Table \\`aamix_private.pack_promo_corrections\\` has RLS enabled, but no policies exist",
+              "metadata": {
+                "name": "pack_promo_corrections",
+                "type": "table",
+                "schema": "aamix_private"
+              },
+              "observed_at": "2026-10-19T18:12:27.947Z"
+            },
+            {
+              "detail": "Table \\`aamix_private.reward_catalog\\` has RLS enabled, but no policies exist",
+              "metadata": {
+                "name": "reward_catalog",
+                "type": "table",
+                "schema": "aamix_private"
+              },
+              "observed_at": "2026-10-19T18:12:27.947Z"
+            },
+            {
+              "detail": "Table \\`aamix_release_backup.batches\\` has RLS enabled, but no policies exist",
+              "metadata": {
+                "name": "batches",
+                "type": "table",
+                "schema": "aamix_release_backup"
+              },
+              "observed_at": "2026-10-19T18:12:27.947Z"
+            },
+            {
+              "detail": "Table \\`aamix_release_backup.table_snapshots\\` has RLS enabled, but no policies exist",
+              "metadata": {
+                "name": "table_snapshots",
+                "type": "table",
+                "schema": "aamix_release_backup"
+              },
+              "observed_at": "2026-10-19T18:12:27.947Z"
+            }
+          ]
+        },
+        {
+          "name": "auth_leaked_password_protection",
+          "title": "Leaked Password Protection Disabled",
+          "level": "WARN",
+          "facing": "EXTERNAL",
+          "categories": [
+            "SECURITY"
+          ],
+          "description": "Leaked password protection is currently disabled.",
+          "remediation": "https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection",
+          "count": 1,
+          "findings": [
+            {
+              "detail": "Supabase Auth prevents the use of compromised passwords by checking against HaveIBeenPwned.org. Enable this feature to enhance security.",
+              "metadata": {
+                "type": "auth",
+                "entity": "Auth"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "qa_accounts_deleted": 2,
+  "real_emails_sent": 0,
+  "auth_accounts_preserved": true,
+  "backup_payload_excluded_from_distribution": true
+}

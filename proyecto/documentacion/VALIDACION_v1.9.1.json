@@ -1,0 +1,12 @@
+{
+  "version": "1.9.1",
+  "checks": 28,
+  "failures": 0,
+  "native_run": true,
+  "captures_reviewed": 2,
+  "network_game_requests": 0,
+  "random_draws": 0,
+  "backend_changes": false,
+  "remote_PCs_tested": false,
+  "historical_tests_summed": false
+}

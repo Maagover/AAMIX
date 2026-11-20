@@ -1,0 +1,41 @@
+{
+  "version": "1.0",
+  "source_distinct_checks": 75,
+  "portable_checks_pending": 6,
+  "release_distinct_checks_planned": 81,
+  "AI_and_badge": 15,
+  "remember_local": 15,
+  "remember_real_remote_two_processes": 5,
+  "exe_icon_launcher": 10,
+  "UI_and_race_guards": 10,
+  "backup_reset_restore_and_bootstrap_SQL": 9,
+  "native_online_scenarios": 11,
+  "current_failures": 0,
+  "real_emails_sent": 0,
+  "real_player_auth_tests": 0,
+  "synthetic_accounts_created_and_deleted": 2,
+  "large_historical_suites_run": false,
+  "test_notes": [
+    "AI winning-blocker fixture corrected, only affected assertion repeated.",
+    "DPAPI tests require Windows key store permissions; local sandbox attempt then native permitted run.",
+    "SQL verifier alias ambiguity corrected in separate migration before reset; recovery rehearsal then passed with ROLLBACK.",
+    "UI-only fixture logs sandbox certificate notice and deferred resource teardown warning; real online and native startup logs clean.",
+    "Screenshots of the existing game use its own render viewport; no physical speaker listening claimed."
+  ],
+  "metrics": {
+    "guest_polling_median_ms": 1727,
+    "guest_push_median_ms": 831,
+    "host_push_median_ms": 443.5,
+    "guest_push_samples": 5,
+    "guest_polling_samples": 3,
+    "animation_speed": 1.0,
+    "normal_animations_enabled": true,
+    "two_native_processes_one_PC": true,
+    "separate_remote_PCs_tested": false,
+    "timing_method": "Action accepted until committed room revision observed; samples every150ms, not frame-precise; small sample with variable natural hands.",
+    "host_commands": 8,
+    "guest_commands": 5,
+    "fallback_available": true,
+    "competitive_authoritative_server": false
+  }
+}

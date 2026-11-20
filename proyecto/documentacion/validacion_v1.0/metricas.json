@@ -1,0 +1,16 @@
+{
+  "guest_polling_median_ms": 1727,
+  "guest_push_median_ms": 831,
+  "host_push_median_ms": 443.5,
+  "guest_push_samples": 5,
+  "guest_polling_samples": 3,
+  "animation_speed": 1.0,
+  "normal_animations_enabled": true,
+  "two_native_processes_one_PC": true,
+  "separate_remote_PCs_tested": false,
+  "timing_method": "Action accepted until committed room revision observed; samples every150ms, not frame-precise; small sample with variable natural hands.",
+  "host_commands": 8,
+  "guest_commands": 5,
+  "fallback_available": true,
+  "competitive_authoritative_server": false
+}

@@ -1,0 +1,316 @@
+{
+  "release": "0.18.0",
+  "project_id": "drpsedaiqyowwikhjugs",
+  "status": "applied_verified",
+  "applied_version": "20261019141339",
+  "migration_name": "aamix_rooms_and_pack_presentation_v0180",
+  "source": "aamix_rooms_and_pack_presentation_v0180.sql",
+  "source_sha256": "57a2f5adf13254d68c66ad62226f6a46c315823e32de5e8e8d4b6a83ef3b04e5",
+  "SQL_tests": {
+    "checks": 23,
+    "failures": 0,
+    "all_fixtures_rolled_back": true,
+    "real_players_touched": 0,
+    "deterministic_pack_draw_fixtures": true
+  },
+  "before": [
+    {
+      "table_name": "aamix_collection",
+      "count": 47,
+      "digest": "5b6c658588efaf217675ab8f4c4084c8"
+    },
+    {
+      "table_name": "aamix_owned_decks",
+      "count": 4,
+      "digest": "27d896abccec3fa9388f28dadd0b1940"
+    },
+    {
+      "table_name": "aamix_code_redemptions",
+      "count": 7,
+      "digest": "f92ebc15f68e6a7739bf51b07052efd2"
+    },
+    {
+      "table_name": "aamix_match_receipts",
+      "count": 12,
+      "digest": "1a1c338a1abde0a68d360d1f9a21d7ec"
+    },
+    {
+      "table_name": "aamix_mission_claims",
+      "count": 1,
+      "digest": "b276994d1b522f8d927a2ebac55aa901"
+    },
+    {
+      "table_name": "aamix_daily_missions",
+      "count": 4,
+      "digest": "462b52fd8557944f39706eced4741e64"
+    },
+    {
+      "table_name": "aamix_rewards_state",
+      "count": 2,
+      "digest": "5eda5c9334ab01941951d2556683481d"
+    },
+    {
+      "table_name": "aamix_pack_openings",
+      "count": 8,
+      "digest": "ac80e46c0de7372f7df1d0798fa5ed97"
+    },
+    {
+      "table_name": "aamix_starter_gifts",
+      "count": 2,
+      "digest": "feabf73a84eaf065517e1ae4e4515958"
+    },
+    {
+      "table_name": "aamix_challenge_completions",
+      "count": 2,
+      "digest": "4cc307dfedb2785d18d34231998ea9b2"
+    },
+    {
+      "table_name": "aamix_welcome_packs",
+      "count": 1,
+      "digest": "21651d4b03667c96d69eb7412fe8f20d"
+    },
+    {
+      "table_name": "aamix_restos_welcome",
+      "count": 2,
+      "digest": "66d8980e1e7744ec9fa624b3213a324d"
+    },
+    {
+      "table_name": "aamix_shop_purchases",
+      "count": 1,
+      "digest": "770031c6e9fed1c2fbf4f3e09b34f20d"
+    },
+    {
+      "table_name": "aamix_daily_claims_v016",
+      "count": 3,
+      "digest": "54a28d9846d490455797456e871317d7"
+    }
+  ],
+  "after_original_fields": [
+    {
+      "table_name": "aamix_collection",
+      "count": 47,
+      "digest": "5b6c658588efaf217675ab8f4c4084c8"
+    },
+    {
+      "table_name": "aamix_owned_decks",
+      "count": 4,
+      "digest": "27d896abccec3fa9388f28dadd0b1940"
+    },
+    {
+      "table_name": "aamix_code_redemptions",
+      "count": 7,
+      "digest": "f92ebc15f68e6a7739bf51b07052efd2"
+    },
+    {
+      "table_name": "aamix_match_receipts",
+      "count": 12,
+      "digest": "1a1c338a1abde0a68d360d1f9a21d7ec"
+    },
+    {
+      "table_name": "aamix_mission_claims",
+      "count": 1,
+      "digest": "b276994d1b522f8d927a2ebac55aa901"
+    },
+    {
+      "table_name": "aamix_daily_missions",
+      "count": 4,
+      "digest": "462b52fd8557944f39706eced4741e64"
+    },
+    {
+      "table_name": "aamix_rewards_state",
+      "count": 2,
+      "digest": "5eda5c9334ab01941951d2556683481d"
+    },
+    {
+      "table_name": "aamix_pack_openings",
+      "count": 8,
+      "digest": "ac80e46c0de7372f7df1d0798fa5ed97"
+    },
+    {
+      "table_name": "aamix_starter_gifts",
+      "count": 2,
+      "digest": "feabf73a84eaf065517e1ae4e4515958"
+    },
+    {
+      "table_name": "aamix_challenge_completions",
+      "count": 2,
+      "digest": "4cc307dfedb2785d18d34231998ea9b2"
+    },
+    {
+      "table_name": "aamix_welcome_packs",
+      "count": 1,
+      "digest": "21651d4b03667c96d69eb7412fe8f20d"
+    },
+    {
+      "table_name": "aamix_restos_welcome",
+      "count": 2,
+      "digest": "66d8980e1e7744ec9fa624b3213a324d"
+    },
+    {
+      "table_name": "aamix_shop_purchases",
+      "count": 1,
+      "digest": "770031c6e9fed1c2fbf4f3e09b34f20d"
+    },
+    {
+      "table_name": "aamix_daily_claims_v016",
+      "count": 3,
+      "digest": "54a28d9846d490455797456e871317d7"
+    }
+  ],
+  "original_fields_all_fourteen_tables_identical": true,
+  "excluded_new_columns": {
+    "aamix_pack_openings": [
+      "new_card_indices"
+    ]
+  },
+  "draw_functions_restored_after_deterministic_fixtures": true,
+  "synthetic_native_users_created_and_deleted": 2,
+  "cleanup": {
+    "synthetic_users_deleted": 2,
+    "method": "Official authenticated Supabase SQL editor; exact synthetic email pair and qa_run marker; returned count 2; original fields of fourteen public tables unchanged afterwards",
+    "connector_delete_error": "Invalid or expired requestState",
+    "connector_delete_attempts": 1,
+    "real_players_deleted": 0
+  },
+  "native_receipts": [
+    {
+      "result": "defeat",
+      "receipts": 1,
+      "players": 1
+    },
+    {
+      "result": "victory",
+      "receipts": 1,
+      "players": 1
+    }
+  ],
+  "native_metrics": {
+    "host_ack_ms_median": 426.5,
+    "guest_ack_ms_median": 1504.5,
+    "native_host_actions": 8,
+    "native_guest_actions": 6,
+    "host_submit_calls": 0,
+    "host_combined_calls": 8,
+    "guest_submit_calls": 6,
+    "includes_two_processes_on_one_PC": true,
+    "separate_remote_PCs_tested": false,
+    "old_version_latency_benchmark_run": false,
+    "note": "Observed timings in this run only; not a guarantee or a measured percentage improvement. Host own action path reduced from submit+commit to one combined authenticated RPC."
+  },
+  "real_emails_sent": 0,
+  "real_players_used": 0,
+  "auth_or_smtp_settings_changed": false,
+  "advisors": {
+    "result": {
+      "lints": [
+        {
+          "name": "rls_enabled_no_policy",
+          "title": "RLS Enabled No Policy",
+          "level": "INFO",
+          "facing": "EXTERNAL",
+          "categories": [
+            "SECURITY"
+          ],
+          "description": "Detects cases where row level security (RLS) has been enabled on a table but no RLS policies have been created.",
+          "remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+          "count": 8,
+          "findings": [
+            {
+              "detail": "Table \\`aamix_private.base_decks\\` has RLS enabled, but no policies exist",
+              "metadata": {
+                "name": "base_decks",
+                "type": "table",
+                "schema": "aamix_private"
+              },
+              "observed_at": "2026-10-19T14:18:24.143Z"
+            },
+            {
+              "detail": "Table \\`aamix_private.catalog_codes\\` has RLS enabled, but no policies exist",
+              "metadata": {
+                "name": "catalog_codes",
+                "type": "table",
+                "schema": "aamix_private"
+              },
+              "observed_at": "2026-10-19T14:18:24.143Z"
+            },
+            {
+              "detail": "Table \\`aamix_private.gift_code_rewards\\` has RLS enabled, but no policies exist",
+              "metadata": {
+                "name": "gift_code_rewards",
+                "type": "table",
+                "schema": "aamix_private"
+              },
+              "observed_at": "2026-10-19T14:18:24.143Z"
+            },
+            {
+              "detail": "Table \\`aamix_private.mp_commands\\` has RLS enabled, but no policies exist",
+              "metadata": {
+                "name": "mp_commands",
+                "type": "table",
+                "schema": "aamix_private"
+              },
+              "observed_at": "2026-10-19T14:18:24.143Z"
+            },
+            {
+              "detail": "Table \\`aamix_private.mp_members\\` has RLS enabled, but no policies exist",
+              "metadata": {
+                "name": "mp_members",
+                "type": "table",
+                "schema": "aamix_private"
+              },
+              "observed_at": "2026-10-19T14:18:24.143Z"
+            },
+            {
+              "detail": "Table \\`aamix_private.mp_rooms\\` has RLS enabled, but no policies exist",
+              "metadata": {
+                "name": "mp_rooms",
+                "type": "table",
+                "schema": "aamix_private"
+              },
+              "observed_at": "2026-10-19T14:18:24.143Z"
+            },
+            {
+              "detail": "Table \\`aamix_private.pack_promo_corrections\\` has RLS enabled, but no policies exist",
+              "metadata": {
+                "name": "pack_promo_corrections",
+                "type": "table",
+                "schema": "aamix_private"
+              },
+              "observed_at": "2026-10-19T14:18:24.143Z"
+            },
+            {
+              "detail": "Table \\`aamix_private.reward_catalog\\` has RLS enabled, but no policies exist",
+              "metadata": {
+                "name": "reward_catalog",
+                "type": "table",
+                "schema": "aamix_private"
+              },
+              "observed_at": "2026-10-19T14:18:24.143Z"
+            }
+          ]
+        },
+        {
+          "name": "auth_leaked_password_protection",
+          "title": "Leaked Password Protection Disabled",
+          "level": "WARN",
+          "facing": "EXTERNAL",
+          "categories": [
+            "SECURITY"
+          ],
+          "description": "Leaked password protection is currently disabled.",
+          "remediation": "https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection",
+          "count": 1,
+          "findings": [
+            {
+              "detail": "Supabase Auth prevents the use of compromised passwords by checking against HaveIBeenPwned.org. Enable this feature to enhance security.",
+              "metadata": {
+                "type": "auth",
+                "entity": "Auth"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

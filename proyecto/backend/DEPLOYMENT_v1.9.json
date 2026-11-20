@@ -1,0 +1,55 @@
+{
+  "project_ref": "drpsedaiqyowwikhjugs",
+  "channel": "production",
+  "applied_migrations": [
+    {
+      "version": "20261027223740",
+      "name": "aamix_halloween_v190"
+    },
+    {
+      "version": "20261027224058",
+      "name": "aamix_halloween_v190_event_guard"
+    },
+    {
+      "version": "20261027224457",
+      "name": "aamix_halloween_v190_protocol"
+    },
+    {
+      "version": "20261027224542",
+      "name": "aamix_halloween_v190_room_alias"
+    },
+    {
+      "version": "20261027224707",
+      "name": "aamix_halloween_v190_room_constraint"
+    }
+  ],
+  "last_migration": "20261027224707",
+  "do_not_replay": true,
+  "preview_schemas_unchanged": true,
+  "player_records_reset_or_copied": false,
+  "auth_identities_before_after": 7,
+  "security": {
+    "new_private_tables_RLS": 3,
+    "new_private_tables_client_grants": 0,
+    "anonymous_new_RPC_execute": false,
+    "new_public_RPC_security": "invoker; authenticated only",
+    "clock": "statement_timestamp; no client override",
+    "new_security_advisors": 0
+  },
+  "validation": {
+    "version": "1.9.0",
+    "current_ui_checks": 77,
+    "current_rules_checks": 74,
+    "failures": 0,
+    "native_UI_run": true,
+    "captures_generated": 10,
+    "server_transaction_scenarios": "passed",
+    "random_packs_in_final_server_scenario": 10,
+    "cards_in_final_server_scenario": 22,
+    "QA_accounts_persisted": 0,
+    "emails_sent": 0,
+    "remote_PCs_tested": false,
+    "latency_measured": false,
+    "historical_tests_summed": false
+  }
+}

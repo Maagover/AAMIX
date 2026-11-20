@@ -1,0 +1,14 @@
+{
+  "release": "1.8.1",
+  "ui_checks": 26,
+  "caption_layout_cards": 41,
+  "captures_reviewed": 8,
+  "network_fixture_requests": 0,
+  "backend_changed": false,
+  "sql_checks_this_release": 0,
+  "random_simulations": 0,
+  "historical_tests_summed": false,
+  "failures": 0,
+  "remote_pcs_tested": false,
+  "latency_measured": false
+}

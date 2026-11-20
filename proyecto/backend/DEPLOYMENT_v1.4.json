@@ -1,0 +1,67 @@
+{
+  "release": "1.4.0",
+  "project_id": "drpsedaiqyowwikhjugs",
+  "status": "applied_verified",
+  "base_deployment": "DEPLOYMENT_v1.3.json",
+  "new_migration": {
+    "version": "20261021121949",
+    "name": "aamix_events_v140"
+  },
+  "progress_reset": false,
+  "calendar_timezone": "America/Santiago",
+  "calendar_authority": "statement_timestamp() from server; no client clock override",
+  "inclusive_dates": true,
+  "event_missions": 17,
+  "private_tables": [
+    "event_definitions",
+    "event_visits",
+    "event_claims",
+    "event_design_unlocks"
+  ],
+  "public_rpc": [
+    "aamix_events_sync",
+    "aamix_claim_event_mission"
+  ],
+  "old_rpc_contracts_preserved": true,
+  "ruleset_version": "1.3",
+  "multiplayer_protocol": 3,
+  "snapshot_protocol": 1,
+  "launcher_protocol": 1,
+  "minimum_launcher": 1,
+  "validation": {
+    "release": "1.4.0",
+    "sql_groups": 35,
+    "sql_users_rolled_back": 2,
+    "event_missions": 17,
+    "ui_checks": 24,
+    "captures_reviewed": 4,
+    "https_checks": 16,
+    "https_synthetic_users_created_and_deleted": 2,
+    "https_synthetic_sessions_remaining": 0,
+    "existing_users_preserved": 4,
+    "regression_card_scenarios": 25,
+    "regression_card_assertions": 160,
+    "regression_snapshot_checks": 17,
+    "regression_ai_checks": 15,
+    "current_failures": 0,
+    "real_emails_sent": 0,
+    "random_simulations": 0,
+    "historical_tests_summed": false,
+    "realtime_retested": false,
+    "two_remote_pcs_tested": false,
+    "latency_measured": false,
+    "fixture_corrections": "UI waits for payment animation before checking zoom; HTTPS fixture includes a legacy starter gift and therefore has no new welcome pack.",
+    "known_test_teardown_warning": "Historical snapshot test reports two leaked ObjectDB instances at exit; assertions pass. Not a new gameplay warning."
+  },
+  "security_advisors": {
+    "new_findings": 0,
+    "preexisting_private_rls_information": 12,
+    "preexisting_password_leak_protection_warning": true,
+    "remediation": "https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection"
+  },
+  "limitations": [
+    "Single-player completion remains client-reported; multiplayer keeps the trusted host. No independent competitive server.",
+    "Real HTTPS tests cover the currently active Welcome event; future dates were verified in a rolled-back transaction with a temporary server clock definition.",
+    "No production clock override, QA users, sessions or private credentials retained."
+  ]
+}

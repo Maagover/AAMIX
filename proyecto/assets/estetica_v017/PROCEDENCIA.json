@@ -1,0 +1,13 @@
+{
+  "release": "0.17.0",
+  "file": "restos.png",
+  "source": "D:/Maago/streams/item_0234.png",
+  "author_supplied": true,
+  "unchanged_bytes": true,
+  "dimensions": [
+    160,
+    160
+  ],
+  "sha256": "7a78a265fe62649581728d660a00cc774f5791fe8a592d4f29aed827d3d15aac",
+  "prior_asset_preserved": "assets/estetica_v016/restos.png"
+}

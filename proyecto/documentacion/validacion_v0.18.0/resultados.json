@@ -1,0 +1,50 @@
+{
+  "version": "0.18.0",
+  "date": "2026-10-19 America/Santiago",
+  "status": "source_complete",
+  "source_distinct_checks": 62,
+  "SQL_checks": 23,
+  "presentation_UI_adapter_checks": 26,
+  "background_poll_control_race_checks": 1,
+  "real_animation_render_checks": 2,
+  "native_online_scenarios": 10,
+  "portable_final_checks": 6,
+  "release_distinct_checks_after_portable": 68,
+  "current_failures_after_repairs": 0,
+  "native_engine_commands": 14,
+  "full_network_game_to_deck_exhaustion": false,
+  "native_game_ended_by_guest_abandon": true,
+  "native_animations_enabled": true,
+  "real_emails_sent": 0,
+  "real_players_used": 0,
+  "all_SQL_fixtures_rolled_back": true,
+  "draw_functions_originals_restored": true,
+  "synthetic_users_deleted": 2,
+  "fourteen_original_table_hashes_identical": true,
+  "large_historical_suites_executed": false,
+  "audio_driver": "Dummy",
+  "physical_speaker_listening_verified": false,
+  "metrics": {
+    "host_ack_ms_median": 426.5,
+    "guest_ack_ms_median": 1504.5,
+    "native_host_actions": 8,
+    "native_guest_actions": 6,
+    "host_submit_calls": 0,
+    "host_combined_calls": 8,
+    "guest_submit_calls": 6,
+    "includes_two_processes_on_one_PC": true,
+    "separate_remote_PCs_tested": false,
+    "old_version_latency_benchmark_run": false,
+    "note": "Observed timings in this run only; not a guarantee or a measured percentage improvement. Host own action path reduced from submit+commit to one combined authenticated RPC."
+  },
+  "repairs": [
+    "Normalize JSON float indices before Array.has for new-card markers; repeated affected cases 3 and 7 only.",
+    "Explicit Confirmar and Abandonar wait for an in-flight background poll, without another poll taking their slot. Initial live attempt stopped before play and resumed with the same synthetic users.",
+    "Animation QA called nonexistent damage helper; corrected test to actual mill method. No product rules changed."
+  ],
+  "local_sandbox_notes": [
+    "Restricted local Godot tests log Windows root-certificate access notice; no live account requests from these fixtures.",
+    "Editor import could not save editor preferences outside workspace; runtime scripts compiled and final ZIP startup is verified independently."
+  ],
+  "final_ZIP_status": "External INFORME_ENTREGA_v0.18.0.json confirms final six checks and archive integrity."
+}

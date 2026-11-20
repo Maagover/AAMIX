@@ -1,0 +1,51 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 596.36 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 2060
+
+SCRIPT ERROR: Invalid access to property or key 'ended' on a base object of type 'Dictionary'.
+   at: _render_content (res://main.gd:519)
+   GDScript backtrace (most recent call first):
+       [0] _render_content (res://main.gd:519)
+       [1] render (res://main.gd:440)
+       [2] finish (res://tests/test_ui_v015.gd:75)
+       [3] run (res://tests/test_ui_v015.gd:136)
+       [4] settle (res://tests/test_ui_v015.gd:49)
+FAIL: Pack tile is horizontally centered
+SCRIPT ERROR: Invalid access to property or key 'ended' on a base object of type 'Dictionary'.
+   at: _render_content (res://main.gd:519)
+   GDScript backtrace (most recent call first):
+       [0] _render_content (res://main.gd:519)
+       [1] render (res://main.gd:440)
+       [2] finish (res://tests/test_ui_v015.gd:75)
+       [3] run (res://tests/test_ui_v015.gd:231)
+       [4] wait_network (res://tests/test_ui_v015.gd:55)
+       [5] settle (res://tests/test_ui_v015.gd:49)
+ERROR: Can't take value from empty array.
+   at: back (core/variant/array.cpp:360)
+   GDScript backtrace (most recent call first):
+       [0] run (res://tests/test_ui_v015.gd:232)
+       [1] finish (res://tests/test_ui_v015.gd:76)
+       [2] settle (res://tests/test_ui_v015.gd:49)
+SCRIPT ERROR: Invalid call. Nonexistent function 'get_children' in base 'Nil'.
+   at: buttons (res://tests/test_ui_v015.gd:45)
+   GDScript backtrace (most recent call first):
+       [0] buttons (res://tests/test_ui_v015.gd:45)
+       [1] run (res://tests/test_ui_v015.gd:232)
+       [2] finish (res://tests/test_ui_v015.gd:76)
+       [3] settle (res://tests/test_ui_v015.gd:49)
+FAIL: Challenge defeat has only Rematch and Back
+ERROR: Can't take value from empty array.
+   at: back (core/variant/array.cpp:360)
+   GDScript backtrace (most recent call first):
+       [0] run (res://tests/test_ui_v015.gd:234)
+       [1] shot (res://tests/test_ui_v015.gd:65)
+SCRIPT ERROR: Invalid call. Nonexistent function 'get_children' in base 'Nil'.
+   at: find_text (res://tests/test_ui_v015.gd:24)
+   GDScript backtrace (most recent call first):
+       [0] find_text (res://tests/test_ui_v015.gd:24)
+       [1] run (res://tests/test_ui_v015.gd:234)
+       [2] shot (res://tests/test_ui_v015.gd:65)
+SCRIPT ERROR: Invalid access to property or key 'pressed' on a base object of type 'Nil'.
+   at: run (res://tests/test_ui_v015.gd:234)
+   GDScript backtrace (most recent call first):
+       [0] run (res://tests/test_ui_v015.gd:234)
+       [1] shot (res://tests/test_ui_v015.gd:65)

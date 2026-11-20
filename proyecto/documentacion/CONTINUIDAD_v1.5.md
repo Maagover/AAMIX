@@ -1,0 +1,33 @@
+# Continuidad oficial AAMIX 1.5.0
+
+Base: ZIP oficial publicado 1.4.0, copiado a work/AAMIX_v1.5. No se reconstruyó desde prototipos. Todas las versiones, ZIP y entregas anteriores permanecen intactos. sources/ es sólo lectura.
+
+## Cambios y autoridad del servidor
+
+Amigos usa código aleatorio estable de 12 hex por UUID, normaliza espacios/guiones, solicitudes entrantes/salientes, aceptación, rechazo y eliminación. Sólo comparte con los participantes nombre visible y avatar; no correos, sesiones ni colección rival. social.gd mantiene únicamente estado en memoria, valida identidad de respuesta y generación de cuenta, limpia al salir y consulta cada cinco segundos en Amigos/Intercambio (30 en inicio). Sin chat ni mensajes libres. La consulta periódica no se ha presentado como nueva latencia garantizada.
+
+Ofertas una carta por jugador. Normales y Especiales no Singulares forman un grupo; Singulares otro. Recurso y Promocional quedan excluidas aunque una Promo sea Singular. Cada oferta abierta reserva una copia contra otras ofertas hasta cancelación/vencimiento (24h). Cambiar carta incrementa revisión y borra ambas confirmaciones. Confirmar conserva revisión para permitir confirmaciones concurrentes de la misma pareja; la segunda confirmación realiza un único traslado atómico. Se comprueba amistad, propiedad y disponibilidad al resolver. UUID de solicitud y payload idempotentes; reintentos ambiguos se recuperan sin duplicar. Bloqueos de las dos carteras siempre por UUID ordenado, luego oferta; se conservan transacciones de economía existentes.
+
+Decisión expresa del autor: puede entregarse una carta usada en mazos. Tras el traslado se recorta en CADA mazo sólo lo que excede la colección restante; copias sobrantes no dañan el mazo. Todo mazo afectado pasa a borrador y sube revisión. También base/regalado: editable=true permanente en esa copia del usuario, sin modificar plantilla global ni portada original. Se editan por el mismo creador y RPC de guardado con revisión y propiedad. Sólo 40 cartas y al menos un Recurso para jugar; borradores guardados también necesitan Recurso. Los mazos base no afectados continúan inmutables. Los mazos válidos pueden compartir las mismas copias poseídas.
+
+Las salas waiting/ready que usan un mazo recién dañado se cancelan; partidas playing y recibos individuales ya iniciados conservan su snapshot original. Invitación a un amigo crea una sala privada de reglas1.3 reservada a su UUID; aceptar elige mazo y entra al lobby habitual. Ambos deben confirmar para empezar. Sala/invitación con expiración se revalida en el servidor. El anfitrión continúa siendo autoridad de reglas; no hay árbitro competitivo independiente.
+
+Cinco misiones históricas añadidas en ledger separado, sin cambiar cuatro originales: play_fifty(50,10 café), win_fifty(50,7TC), win_five_kajido/ win_five_flaan/ win_five_papito(5,200Restos cada una). Cuentan recibos terminados históricos por UUID y player_deck congelado al iniciar; códigos0105/0103/0115. Sin inferir cartas de la colección o mazo editado posteriormente. Recompensas transaccionales y únicas por UUID/misión, incluso reintentos.
+
+## Interfaz y presentación
+
+Inicio: Amigos a la derecha de Tienda; regalo sólo icono y tuerca nueva PNG transparente. Eventos originales conservados: icono sin fondo, texto claro, carta arriba centrada y resumen debajo centrado; sin pie técnico de zona horaria/frecuencia. Misiones objetivo>1 tienen barra además del contador; 0/1 no. Cartas jugadas no Recursos: pausa legible0.4s, entrada0.24/salida0.36 a velocidad normal y sin doble revelación por Serandimini. No revelar mano/mazo rival. Animaciones desactivables. Música detenida inmediatamente en Victoria/Derrota hasta salir, efectos sonoros conservados.
+
+La tuerca assets/estetica_v150/configuracion.png se generó con ImageGen integrado a partir de la estética del PNG iconos_aamix.png (regalo/dado/espadas/candado/recarga). Transparencia conservada. Las demás imágenes y música son las originales de1.4. No se rediseñaron de nuevo las cajas de mazos.
+
+## Despliegue y validación
+
+Supabase drpsedaiqyowwikhjugs: 20261021140633 aamix_social_v150 y 20261021140639 aamix_missions_v150 aplicadas y comprobadas. No repetirlas ni las anteriores. Reinicio de estreno ya realizado históricamente: jamás repetir ni ejecutar admin_reset_progress_v100.sql. Nuevas tablas privadas con RLS/denegación directa; RPC públicos invoker y auxiliares definer con search_path vacío. No se publican credenciales, sesiones, respaldos ni archivos privados de pruebas.
+
+43 grupos SQL en transacción revertida con tres usuarios sintéticos,43 verificaciones UI con siete capturas revisadas y24 HTTPS nativas con dos cuentas temporales; las confirmaciones HTTP se iniciaron concurrentemente sobre la misma revisión. Se corrigieron ambigüedades SQL detectadas antes de aplicar y la normalización de finales de línea del generador. Se ajustó el fixture UI para fijar el jugador humano antes de comprobar Derrota; no cambió la regla. Se ejecutaron de nuevo25 escenarios/160 aserciones de cartas y17 snapshots. El fixture heredado de snapshots avisa de dos ObjectDB al cerrarse, sin fallos de aserciones. Aviso de certificados sólo en proceso de pruebas restringido; HTTPS nativo fuera de esa restricción pasó con validación TLS normal. Cuatro usuarios HTTPS creados en dos ejecuciones; las cuatro sesiones revocadas y los cuatro usuarios eliminados después; cuatro usuarios originales preservados. Sin sorteos, correos, dos PCs remotos, Realtime nuevo ni medición de latencia. No se suman pruebas históricas.
+
+Asesor de seguridad sin hallazgos nuevos; conserva12 INFO de tablas privadas y aviso previo de protección de contraseñas filtradas desactivada. Esta actualización no cambia opciones de Auth ni seguridad de Windows.
+
+Paquete completo motor/+proyecto/, iniciador blanco e instalador amarillo estables sin alteraciones. Transporte3/snapshot1/ruleset1.3, protocolo instalador1/minimum_launcher1. user://AAMIX, DPAPI CurrentUser y directorios habituales estables. Sin firma digital propia ni autoactualización del instalador; no prometer desaparición de SmartScreen. Publicar cuatro assets: ZIP completo, AAMIX_Instalador.exe, aamix-update.json y SHA256SUMS.txt. No sobrescribir ninguna release anterior. Confirmación pública y prueba de actualización real quedan registradas fuera del ZIP en entregas/AAMIX_v1.5_publicacion.
+
+Pendientes reales: reanudar individuales, ranking, emparejamiento público y arbitraje competitivo independiente. Amigos e intercambios implementados en1.5;41 efectos de cartas ya implementados en1.3. Para decisiones previas consultar CONTINUIDAD_v1.4.md y anteriores; este documento prevalece donde modifica la editabilidad de mazos.

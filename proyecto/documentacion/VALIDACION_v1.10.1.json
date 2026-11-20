@@ -1,0 +1,14 @@
+{
+  "version": "1.10.1",
+  "directed_checks": 24,
+  "AI_regression_checks": 19,
+  "failures": 0,
+  "native_captures_reviewed": 2,
+  "AI_full_games": 6,
+  "AI_game_failures": 0,
+  "network_game_requests": 0,
+  "reward_random_draws": 0,
+  "remote_PCs_tested": false,
+  "balance_exhaustively_tested": false,
+  "historical_executions_summed": false
+}

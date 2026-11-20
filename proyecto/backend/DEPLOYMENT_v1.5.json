@@ -1,0 +1,65 @@
+{
+  "release": "1.5.0",
+  "project_id": "drpsedaiqyowwikhjugs",
+  "status": "applied_verified",
+  "base_deployment": "DEPLOYMENT_v1.4.json",
+  "new_migrations": [
+    {
+      "version": "20261021140633",
+      "name": "aamix_social_v150"
+    },
+    {
+      "version": "20261021140639",
+      "name": "aamix_missions_v150"
+    }
+  ],
+  "progress_reset": false,
+  "ruleset_version": "1.3",
+  "multiplayer_protocol": 3,
+  "snapshot_protocol": 1,
+  "launcher_protocol": 1,
+  "minimum_launcher": 1,
+  "public_rpc": [
+    "aamix_social_sync",
+    "aamix_friend_request",
+    "aamix_friend_respond",
+    "aamix_friend_remove",
+    "aamix_trade_create",
+    "aamix_trade_action",
+    "aamix_duel_create",
+    "aamix_duel_respond"
+  ],
+  "private_tables": [
+    "social_people",
+    "friendships",
+    "social_requests",
+    "card_trades",
+    "friend_duels",
+    "historical_claims_v150"
+  ],
+  "old_rpc_contracts_preserved": true,
+  "validation": {
+    "release": "1.5.0",
+    "sql_groups": 43,
+    "sql_users_rolled_back": 3,
+    "ui_checks": 43,
+    "captures_reviewed": 7,
+    "https_checks": 24,
+    "https_synthetic_users_created_and_deleted": 4,
+    "https_synthetic_sessions_remaining": 0,
+    "existing_users_preserved": 4,
+    "concurrent_https_confirmations": true,
+    "regression_card_scenarios": 25,
+    "regression_card_assertions": 160,
+    "regression_snapshot_checks": 17,
+    "current_failures": 0,
+    "real_emails_sent": 0,
+    "random_simulations": 0,
+    "historical_tests_summed": false,
+    "two_remote_pcs_tested": false,
+    "latency_measured": false,
+    "realtime_retested": false,
+    "known_test_teardown_warning": "The inherited snapshot fixture reports two ObjectDB objects at shutdown; all 17 assertions pass."
+  },
+  "security_advisors": "No new findings. Existing 12 private-table INFO notices and previously disabled leaked-password protection unchanged."
+}

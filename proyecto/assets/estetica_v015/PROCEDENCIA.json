@@ -1,0 +1,50 @@
+{
+  "icons": {
+    "file": "iconos_aamix.png",
+    "tool": "built-in image_gen",
+    "original_generated_path": "C:\\Users\\maago\\.codex\\generated_images\\01a14b35-7f10-7183-9697-0c59a536bfc7\\exec-79b7c32a-6a06-4d52-8a6b-d8e6c7b6e078.png",
+    "sha256": "da397be59715d36cc0839a3341ca79b35a378f2bc777d0bf432a9ae845f1ace6",
+    "layout": "3 columns,2 rows; gift,dice,swords / lock,reload,empty",
+    "palette": [
+      "#fffaf0",
+      "#fcdb7f",
+      "#96724e",
+      "#493720"
+    ],
+    "prompt_file": "PROMPT_IMAGEGEN.txt"
+  },
+  "menu_music": {
+    "file": "audio/menu_arcade_coins.mp3",
+    "original": "D:\\Maago\\Maagover\\Renser - Arcade Coins.mp3",
+    "sha256": "6fa22adf970881fe580f4512a62907e494e70546e40bd90d4539a74e0da93cd4",
+    "bytes": 5047332,
+    "provided_by_user": true
+  },
+  "references": [
+    {
+      "file": "referencia_candado.png",
+      "sha256": "06b733aac6ca6c2084ee755bb2e19f2aea1c80cf581ea9a9d10f1985efc81139",
+      "original_bytes_preserved": true
+    },
+    {
+      "file": "referencia_dado.png",
+      "sha256": "23f0d639b387c1bea205418c09749ffd683d4fcad1f2d18491afe49c1950da38",
+      "original_bytes_preserved": true
+    },
+    {
+      "file": "referencia_espadas.png",
+      "sha256": "b5a107a9c0129ebdc7f0cd57eab7e17454ad34af6176bdb1b6ca201473e35741",
+      "original_bytes_preserved": true
+    },
+    {
+      "file": "referencia_regalo.png",
+      "sha256": "ef2070fcca5c3f12e6e6e13608b8eea8a94e5c4c22642543b9a6f86618f7c18f",
+      "original_bytes_preserved": true
+    },
+    {
+      "file": "referencia_reload.png",
+      "sha256": "47c190f334727693df70c43ff5ffc46b68bc2a648ad0e7c4a03815953c5bd2e7",
+      "original_bytes_preserved": true
+    }
+  ]
+}

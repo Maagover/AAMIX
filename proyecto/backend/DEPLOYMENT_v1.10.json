@@ -1,0 +1,52 @@
+{
+  "project_ref": "drpsedaiqyowwikhjugs",
+  "channel": "production",
+  "previous_last_migration": "20261027224707",
+  "applied_migrations": [
+    {
+      "version": "20261028020516",
+      "name": "aamix_challenge_extension_v1100"
+    },
+    {
+      "version": "20261028020844",
+      "name": "aamix_challenge_extension_v1100_milestone_scope"
+    }
+  ],
+  "last_migration": "20261028020844",
+  "do_not_replay": true,
+  "principal_SQL_is_consolidated_final_state": true,
+  "player_records_reset_or_copied": false,
+  "authorized_targeted_legacy_correction": {
+    "accounts": 2,
+    "promo_copies_removed_each": 1,
+    "old_stages_preserved": 5,
+    "other_balances_and_copies_preserved": true,
+    "private_audit_exported": false
+  },
+  "security": {
+    "new_private_table_RLS": true,
+    "player_table_grants": 0,
+    "legacy_correction_RPC_exposed": false,
+    "new_public_functions": 0,
+    "new_advisors": 0
+  },
+  "validation": {
+    "version": "1.10.0",
+    "directed_checks": 59,
+    "directed_failures": 0,
+    "native_presentation_checks": 54,
+    "native_captures_reviewed": 4,
+    "complete_AI_games": 6,
+    "AI_game_failures": 0,
+    "server_transaction_scenarios": "passed; all fixtures rolled back",
+    "random_reward_draws": 0,
+    "persistent_QA_accounts": 0,
+    "emails_sent": 0,
+    "real_accounts_adjusted_with_authorization": 2,
+    "promo_copies_removed_per_account": 1,
+    "old_stages_preserved": 5,
+    "remote_PCs_tested": false,
+    "latency_measured": false,
+    "historical_tests_summed": false
+  }
+}

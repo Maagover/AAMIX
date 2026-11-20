@@ -1,0 +1,200 @@
+{
+  "name": "AAMIX Online",
+  "display_version": "AAMIX Online v1.3.1",
+  "brand_version": "1.3.1",
+  "version": "1.11.1",
+  "channel": "stable",
+  "base_version": "1.11.0",
+  "integrated_preview": "1.11.0-preview.2",
+  "platform": "Windows x86_64",
+  "engine": "Godot 4.7.2 bundled",
+  "start": "AAMIX.exe",
+  "user_directory": "AAMIX",
+  "network": {
+    "protocol": 3,
+    "ruleset_version": "1.9",
+    "rpc_suffix": "_v190",
+    "preview_gateway_used": false,
+    "host_runs_rules": true,
+    "independent_competitive_server": false
+  },
+  "halloween": {
+    "mode": "official_calendar",
+    "scheduled_dates": [
+      "2026-10-30",
+      "2026-11-01"
+    ],
+    "active_for_testing": false,
+    "mp_victory_packs": 1,
+    "pack_probabilities": {
+      "H01": 0.2375,
+      "H02": 0.2375,
+      "H03": 0.2375,
+      "H04": 0.2375,
+      "H05": 0.05
+    },
+    "initial_test_packs": 0,
+    "event": {
+      "id": "halloween_2026",
+      "title": "EVENTO HALLOWEEN",
+      "card_code": "H05",
+      "start_day": "2026-10-30",
+      "end_day": "2026-11-01",
+      "battle": true,
+      "battle_id": "halloween",
+      "preview": false,
+      "summary": "La festividad del terror se toma AAMIX, encuentra las cinco Cartas Exclusivas del evento y completa las misiones para obtener recompensas. Durante este evento, los ganadores de batallas multijugador recibirán 1 Sobre AAMIX Halloween.",
+      "missions": [
+        {
+          "id": "play_three",
+          "title": "Juega 3 partidas",
+          "target": 3,
+          "metric": "played",
+          "scope": "event",
+          "reward": {
+            "halloween_packs": 1
+          }
+        },
+        {
+          "id": "play_five",
+          "title": "Juega 5 partidas",
+          "target": 5,
+          "metric": "played",
+          "scope": "event",
+          "reward": {
+            "halloween_packs": 2
+          }
+        },
+        {
+          "id": "win_three",
+          "title": "Gana 3 partidas",
+          "target": 3,
+          "metric": "wins",
+          "scope": "event",
+          "reward": {
+            "halloween_packs": 2
+          }
+        },
+        {
+          "id": "trade_one",
+          "title": "Intercambia 1 carta",
+          "target": 1,
+          "metric": "trades",
+          "scope": "event",
+          "reward": {
+            "halloween_packs": 1
+          }
+        },
+        {
+          "id": "friend_one",
+          "title": "Añade 1 Amigo",
+          "target": 1,
+          "metric": "friends",
+          "scope": "event",
+          "reward": {
+            "halloween_packs": 1
+          }
+        },
+        {
+          "id": "event_win_five",
+          "title": "Gana 5 veces la Partida de Evento",
+          "target": 5,
+          "metric": "event_wins",
+          "scope": "event",
+          "reward": {
+            "cards": [
+              {
+                "codigo": "H05",
+                "cantidad": 1
+              }
+            ]
+          }
+        }
+      ],
+      "featured_cards": [
+        "H02",
+        "H05"
+      ]
+    }
+  },
+  "confirmed_H03_force": 2,
+  "H03_original_art_prints": 3,
+  "bulk_opening": true,
+  "epic_singular_rotation_degrees": 360,
+  "validation": {
+    "version": "1.11.1",
+    "directed_checks": 151,
+    "failures": 0,
+    "native_captures_reviewed": 1,
+    "backend_changed_this_revision": false,
+    "server_tests_this_revision": 0,
+    "reward_requests": 0,
+    "remote_PCs_tested": false,
+    "historical_executions_summed": false
+  },
+  "continuity": "documentacion/CONTINUIDAD.md",
+  "collection_exclusives_visibility": "from server-confirmed event start, retained afterwards; header counts only visible cards",
+  "challenge": {
+    "levels": 11,
+    "new_stages": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "new_stage_first_win_packs": 3,
+    "new_stage_cover_reward": true,
+    "full_completion_stages": 11,
+    "repeat_win_restos_after_full_completion": 5,
+    "navigation": "persistent controller, real horizontal scroll, one main level with neighbor peek and working arrows",
+    "missions": {
+      "1-3": [
+        "win_five"
+      ],
+      "4-5": [
+        "win_five",
+        "no_singular"
+      ],
+      "6-10": [
+        "win_five",
+        "no_singular",
+        "keep_twenty"
+      ],
+      "11": [
+        "win_five",
+        "no_singular",
+        "keep_twenty",
+        "no_losses"
+      ]
+    }
+  },
+  "tutorial": {
+    "guide": "Sam",
+    "presentation_first": true,
+    "real_board": true,
+    "guided_chapters": 8,
+    "drag_and_drop": true,
+    "card_then_destination_click": true,
+    "normal_rule_engine": true,
+    "practice_rewards": false,
+    "skippable": true,
+    "singular": "Explanation and Continue; no duplicate-copy exercise",
+    "guide_panel": "Centered, narrower, green accent"
+  },
+  "publication": {
+    "release_tag": "v1.11.1",
+    "requested_local_test_only": false,
+    "authorized": true,
+    "repository": "Maagover/AAMIX",
+    "minimum_launcher": 1
+  },
+  "presentation_v112": {
+    "ally_force_badge": "Translucent cream; green above printed Force, red below, brown at printed Force; refreshed every frame",
+    "backdrop_text": "light cream with dark outline outside panels",
+    "domain_dim": "background only, readable text",
+    "enter_key": "focused visible enabled button before default primary"
+  },
+  "mission_layout": "Shared Challenge/daily/historical/event row; text and 12px progress bar left, reward icon button right; green when claimable, faded only once claimed"
+}

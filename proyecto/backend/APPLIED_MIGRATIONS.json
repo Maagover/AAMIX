@@ -1,0 +1,151 @@
+{
+  "project_id": "drpsedaiqyowwikhjugs",
+  "current_release": "1.0",
+  "verification_date": "2026-10-19 America/Santiago",
+  "applied": [
+    {
+      "version": "20261017185851",
+      "name": "aamix_collection_starter_v090",
+      "source": "aamix_collection.sql"
+    },
+    {
+      "version": "20261017194519",
+      "name": "aamix_profiles_rewards_v0100",
+      "source": "aamix_rewards.sql"
+    },
+    {
+      "version": "20261017221142",
+      "name": "aamix_packs_exclude_promotional_v0101",
+      "sources": [
+        "aamix_no_promo_packs.sql",
+        "promo_repair_admin.sql"
+      ],
+      "method": "Supabase dashboard SQL, transaction and schema_migrations record; connector apply_migration failed with expired requestState"
+    },
+    {
+      "version": "20261018031742",
+      "name": "aamix_gift_codes_and_avatar_lock_v0110",
+      "source": "aamix_gift_codes_v0110.sql",
+      "method": "Supabase apply_migration connector"
+    },
+    {
+      "version": "20261018032104",
+      "name": "aamix_gift_codes_index_v0110",
+      "source": "aamix_gift_codes_index_v0110.sql",
+      "method": "Supabase apply_migration connector"
+    },
+    {
+      "version": "20261018035100",
+      "name": "aamix_missions_and_gifts_v0120",
+      "source": "aamix_missions_and_gifts_v0120.sql",
+      "method": "Supabase apply_migration connector"
+    },
+    {
+      "version": "20261018203917",
+      "name": "aamix_challenges_and_missions_v0140",
+      "source": "aamix_challenges_and_missions_v0140.sql",
+      "method": "Supabase apply_migration connector"
+    },
+    {
+      "version": "20261018215041",
+      "name": "aamix_welcome_challenge_v0150",
+      "source": "aamix_welcome_challenge_v0150.sql",
+      "method": "Supabase apply_migration connector"
+    },
+    {
+      "version": "20261019051553",
+      "name": "aamix_economy_and_normal_packs_v0160",
+      "source": "aamix_economy_and_normal_packs_v0160.sql",
+      "method": "Supabase apply_migration connector"
+    },
+    {
+      "version": "20261019123235",
+      "name": "aamix_wallet_gift_codes_v0170",
+      "source": "aamix_wallet_gift_codes_v0170.sql",
+      "source_sha256": "cb8bf24301bf994cfd9c44df99940a3aff0ffcbcb031e08be8e3de169b97ddb0",
+      "method": "Supabase apply_migration connector"
+    },
+    {
+      "version": "20261019124033",
+      "name": "aamix_multiplayer_v0170",
+      "source": "aamix_multiplayer_v0170.sql",
+      "source_sha256": "10a8fbb1548d874312b170318a9a5026071dd3cba1934bc68622da16e22081a5",
+      "method": "Supabase apply_migration connector"
+    },
+    {
+      "version": "20261019141339",
+      "name": "aamix_rooms_and_pack_presentation_v0180",
+      "source": "aamix_rooms_and_pack_presentation_v0180.sql",
+      "source_sha256": "57a2f5adf13254d68c66ad62226f6a46c315823e32de5e8e8d4b6a83ef3b04e5",
+      "method": "Supabase apply_migration connector"
+    },
+    {
+      "version": "20261019174330",
+      "name": "aamix_realtime_v100",
+      "source": "aamix_realtime_v100.sql",
+      "source_sha256": "f6649e27bd9abc8144a3591df79408e1e7e9b07234ef67a963f5921836a28fee",
+      "method": "Supabase apply_migration"
+    },
+    {
+      "version": "20261019175446",
+      "name": "aamix_realtime_order_v100",
+      "source": "aamix_realtime_order_v100.sql",
+      "source_sha256": "a2437ff0948898ba19d51ce7a4f4e8ede4b6d484132a636594e24ec08d858a39",
+      "method": "Supabase apply_migration"
+    },
+    {
+      "version": "20261019180057",
+      "name": "aamix_release_progress_recovery_v100",
+      "source": "admin_progress_tools_v100.sql",
+      "source_sha256": "b42d4ea48bb62817a031119c0ebd4429dfcb1176c5260f804ba7886529c6a4d7",
+      "method": "Supabase apply_migration"
+    },
+    {
+      "version": "20261019181047",
+      "name": "aamix_release_recovery_verify_v100",
+      "source": "aamix_release_recovery_verify_v100.sql",
+      "source_sha256": "33aa364fc4dd1c5215fc6f5baadfdb73e3c69d9e81a439be19d38db0dc47d276",
+      "method": "Supabase apply_migration"
+    }
+  ],
+  "tests": {
+    "checks": 23,
+    "failures": 0,
+    "all_fixtures_rolled_back": true,
+    "real_players_touched": 0,
+    "deterministic_pack_draw_fixtures": true
+  },
+  "post_test_state": [
+    {
+      "final_state": {
+        "accounts": 3,
+        "no_decks": true,
+        "no_wallet": true,
+        "reset_done": true,
+        "backup_tables": 19,
+        "no_collection": true,
+        "auth_unchanged": true,
+        "backed_accounts": 3
+      }
+    }
+  ],
+  "advisors": {
+    "public_RLS_issues": 0,
+    "new_welcome_table_has_owner_policy": true,
+    "private_deny_all_RLS_tables": 5,
+    "private_deny_all_level": "INFO",
+    "private_deny_all_remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+    "preexisting_auth_warning_unchanged": "Leaked password protection disabled; passwordless email OTP is unchanged",
+    "preexisting_auth_warning_remediation": "https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection"
+  },
+  "historical_v0110_record": "APPLIED_MIGRATIONS_v0.11.0.json",
+  "limitations": [
+    "Local AI outcomes are client-reported, not replayed/validated on the server.",
+    "Started parallel attempts and sequential retries were tested; truly simultaneous independent database connections were not tested."
+  ],
+  "real_player_old_fields_unchanged": true,
+  "historical_v0120_record": "APPLIED_MIGRATIONS_v0.12.0.json",
+  "current_detail": "DEPLOYMENT_v1.0.json",
+  "historical_v0140_record": "APPLIED_MIGRATIONS_v0.14.0.json",
+  "historical_v0150_record": "APPLIED_MIGRATIONS_v0.15.0.json"
+}

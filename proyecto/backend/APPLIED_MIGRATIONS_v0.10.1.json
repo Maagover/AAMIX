@@ -1,0 +1,91 @@
+{
+  "project_id": "drpsedaiqyowwikhjugs",
+  "applied": [
+    {
+      "version": "20261017185851",
+      "name": "aamix_collection_starter_v090",
+      "source": "aamix_collection.sql"
+    },
+    {
+      "version": "20261017194519",
+      "name": "aamix_profiles_rewards_v0100",
+      "source": "aamix_rewards.sql"
+    },
+    {
+      "version": "20261017221142",
+      "name": "aamix_packs_exclude_promotional_v0101",
+      "sources": [
+        "aamix_no_promo_packs.sql",
+        "promo_repair_admin.sql"
+      ],
+      "method": "Supabase dashboard SQL, transaction and schema_migrations record; connector apply_migration failed with expired requestState"
+    }
+  ],
+  "verification_date": "2026-10-17",
+  "current_release": "0.10.1",
+  "current_pack_pool": {
+    "catalogue": 41,
+    "eligible": 35,
+    "normal": 25,
+    "special": 9,
+    "resource": 1,
+    "excluded_promotional": 6
+  },
+  "tests": {
+    "test_rewards_rollback.sql": {
+      "passed": true,
+      "sampled_packs": 10000,
+      "special_count": 3025,
+      "named_special_count": 624,
+      "normal_cards_observed_in_slot5": 25,
+      "promotional_cards": 0
+    },
+    "test_pack_exclusion_rollback.sql": {
+      "passed": true,
+      "sampled_packs": 1000,
+      "special_count": 300,
+      "normal_count": 700,
+      "resource_normal_special_fixtures": true,
+      "promotional_cards": 0,
+      "ddl_and_fixtures_rolled_back": true
+    },
+    "test_promo_repair_rollback.sql": {
+      "passed": true,
+      "legitimate_maagover_promo_preserved": true,
+      "quantity_preserved": true,
+      "idempotent_retries": 3,
+      "failure_rolled_back_atomically": true
+    }
+  },
+  "historical_pack_correction": {
+    "authorized_by_author": true,
+    "committed": true,
+    "replacements": 1,
+    "old_code": "01e",
+    "old_name": "Dragón Tee K.O",
+    "new_code": "0116",
+    "new_name": "El conflicto de Maagover",
+    "position": 2,
+    "quantity_before": 85,
+    "quantity_after": 85,
+    "legitimate_maagover_promo_quantity": 1,
+    "audit_rows": 1,
+    "opening_uuid_omitted": true
+  },
+  "post_test_state": {
+    "test_accounts_remaining": 0,
+    "catalogue_cards": 41,
+    "special_constraint_restored": true
+  },
+  "advisors": {
+    "public_RLS_issues": 0,
+    "private_deny_all_RLS_tables": 4,
+    "client_repair_execute_granted": false,
+    "preexisting_auth_warning": "Leaked password protection disabled; Auth configuration left unchanged"
+  },
+  "historical_v0100_record": "APPLIED_MIGRATIONS_v0.10.0.json",
+  "limitations": [
+    "Local AI game completion is reported by the client, not validated by an authoritative game server.",
+    "A local result lost before its completion RPC cannot be reconstructed by the server."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "release": "1.2.0",
+  "ui_checks": 23,
+  "ui_failures": [],
+  "captures_reviewed": 6,
+  "cover_assets_reviewed": 10,
+  "cover_asset_functional_checks": 62,
+  "cover_contact_sheet_saved": true,
+  "sql_groups": 17,
+  "sql_rolled_back_users": 2,
+  "https_checks": 10,
+  "https_synthetic_users_created_deleted": 1,
+  "defender_executables_scanned": 4,
+  "defender_threats_found": 0,
+  "previous_binaries_identical": true,
+  "random_draws": 0,
+  "real_emails_sent": 0,
+  "historical_suites_not_summed": true,
+  "two_remote_pcs_tested": false,
+  "network_latency_remeasured": false,
+  "visual_sandbox_certificate_warning": "Local in-memory UI fixture only; HTTPS native test with system certificate access passed cleanly.",
+  "backend_cleanup": {
+    "existing_users_preserved": 4,
+    "synthetic_users_remaining": 0,
+    "synthetic_sessions_remaining": 0,
+    "synthetic_decks_remaining": 0
+  }
+}

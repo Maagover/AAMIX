@@ -1,0 +1,7 @@
+{
+  "checks": 23,
+  "failures": 0,
+  "all_fixtures_rolled_back": true,
+  "real_players_touched": 0,
+  "deterministic_pack_draw_fixtures": true
+}

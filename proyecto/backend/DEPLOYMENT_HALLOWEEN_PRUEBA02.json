@@ -1,0 +1,26 @@
+{
+  "project_ref": "drpsedaiqyowwikhjugs",
+  "applied": true,
+  "migration": {
+    "version": "20261027015617",
+    "name": "aamix_halloween_preview02_pack_bundles",
+    "source": "halloween_preview02.sql",
+    "sha256": "39e91b7c38c97bb62a6023e74a4ae1f83fed4aa16be5d4eb046b327086c76312"
+  },
+  "requires": "DEPLOYMENT_HALLOWEEN_PRUEBA01.json migrations already applied",
+  "do_not_reapply": true,
+  "isolated_preview_only": true,
+  "new_public_gateway": false,
+  "new_public_definer": false,
+  "new_rpc_through_existing_gateway": "aamix_open_all_packs(uuid,text)",
+  "official_functions_fingerprint": "b9d40089e50abf626c5a73d6dae15199",
+  "identities_before_and_after": 7,
+  "persistent_synthetic_users_created": 0,
+  "sql_synthetic_users_rolled_back": 1,
+  "existing_preview_balances_reset": false,
+  "new_default_halloween_packs": 0,
+  "tables_without_rls": 0,
+  "anonymous_batch_execute": false,
+  "new_security_advisor_findings": 0,
+  "github_published": false
+}

@@ -1,0 +1,145 @@
+{
+  "project_id": "drpsedaiqyowwikhjugs",
+  "release": "0.15.0",
+  "status": "applied_verified",
+  "applied_version": "20261018215041",
+  "migration_name": "aamix_welcome_challenge_v0150",
+  "source": "aamix_welcome_challenge_v0150.sql",
+  "source_sha256": "bb7c6e708165decacbbeef3456dfd31bb458cbc1b48e68e5e2ed63b4e648a75c",
+  "requires": "Seven existing migrations through 20261018203917; do not replay applied migrations.",
+  "new_table": "aamix_welcome_packs",
+  "new_rpcs": [
+    "aamix_claim_welcome_pack()",
+    "aamix_enter_challenge()"
+  ],
+  "inventory_added_field": "welcome_pack",
+  "starter_rpc_requires_challenge_entry": true,
+  "existing_starter_accounts_receive_no_extra_welcome_pack": true,
+  "changes_auth_smtp": false,
+  "existing_real_player_tables_identical": true,
+  "before": [
+    {
+      "table_name": "aamix_collection",
+      "count": 31,
+      "digest": "62ef699496f9e9076e11d6371a48822e"
+    },
+    {
+      "table_name": "aamix_owned_decks",
+      "count": 3,
+      "digest": "86ff615e5c950c4e016a89db04956f0b"
+    },
+    {
+      "table_name": "aamix_code_redemptions",
+      "count": 5,
+      "digest": "6fc5b4581e95d7cd547b016205a7317d"
+    },
+    {
+      "table_name": "aamix_match_receipts",
+      "count": 8,
+      "digest": "12d97766a90e099b9df024b6edb826e2"
+    },
+    {
+      "table_name": "aamix_mission_claims",
+      "count": 1,
+      "digest": "b276994d1b522f8d927a2ebac55aa901"
+    },
+    {
+      "table_name": "aamix_daily_missions",
+      "count": 2,
+      "digest": "bfe5cdb341641b502b1f54d87b7fe9a1"
+    },
+    {
+      "table_name": "aamix_rewards_state",
+      "count": 1,
+      "digest": "c845c0a7c53629fb11882b62596c66ef"
+    },
+    {
+      "table_name": "aamix_pack_openings",
+      "count": 5,
+      "digest": "12f5aac842f43259ced612e57b24cf1c"
+    },
+    {
+      "table_name": "aamix_starter_gifts",
+      "count": 1,
+      "digest": "4152aa68c9b2d0db61f024de874d7b3d"
+    },
+    {
+      "table_name": "aamix_challenge_completions",
+      "count": 1,
+      "digest": "a46b47b73c3f2cac1fe545b57d6b2efd"
+    }
+  ],
+  "after": [
+    {
+      "table_name": "aamix_collection",
+      "count": 31,
+      "digest": "62ef699496f9e9076e11d6371a48822e"
+    },
+    {
+      "table_name": "aamix_owned_decks",
+      "count": 3,
+      "digest": "86ff615e5c950c4e016a89db04956f0b"
+    },
+    {
+      "table_name": "aamix_code_redemptions",
+      "count": 5,
+      "digest": "6fc5b4581e95d7cd547b016205a7317d"
+    },
+    {
+      "table_name": "aamix_match_receipts",
+      "count": 8,
+      "digest": "12d97766a90e099b9df024b6edb826e2"
+    },
+    {
+      "table_name": "aamix_mission_claims",
+      "count": 1,
+      "digest": "b276994d1b522f8d927a2ebac55aa901"
+    },
+    {
+      "table_name": "aamix_daily_missions",
+      "count": 2,
+      "digest": "bfe5cdb341641b502b1f54d87b7fe9a1"
+    },
+    {
+      "table_name": "aamix_rewards_state",
+      "count": 1,
+      "digest": "c845c0a7c53629fb11882b62596c66ef"
+    },
+    {
+      "table_name": "aamix_pack_openings",
+      "count": 5,
+      "digest": "12f5aac842f43259ced612e57b24cf1c"
+    },
+    {
+      "table_name": "aamix_starter_gifts",
+      "count": 1,
+      "digest": "4152aa68c9b2d0db61f024de874d7b3d"
+    },
+    {
+      "table_name": "aamix_challenge_completions",
+      "count": 1,
+      "digest": "a46b47b73c3f2cac1fe545b57d6b2efd"
+    }
+  ],
+  "tests": {
+    "checks": 20,
+    "failures": 0,
+    "suite": "test_welcome_v0150_rollback.sql",
+    "synthetic_users": 5,
+    "all_fixtures_rolled_back": true,
+    "real_rewards_claimed": 0,
+    "real_emails_sent": 0,
+    "large_pack_draw_suites_run": false,
+    "welcome_retry_calls": 10,
+    "true_parallel_connections_tested": false
+  },
+  "advisors": {
+    "public_RLS_issues": 0,
+    "new_welcome_table_has_owner_policy": true,
+    "private_deny_all_RLS_tables": 5,
+    "private_deny_all_level": "INFO",
+    "private_deny_all_remediation": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+    "preexisting_auth_warning_unchanged": "Leaked password protection disabled; passwordless email OTP is unchanged",
+    "preexisting_auth_warning_remediation": "https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection"
+  }
+}

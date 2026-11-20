@@ -1,0 +1,113 @@
+{
+  "captures": [
+    "C:/Users/maago/.codex/.chatgpt-projects/g-p-6ad0c7fad7dc8191baf5845e9f78b3cd/work/qa_decks_v110/01-mis-mazos-claro.png",
+    "C:/Users/maago/.codex/.chatgpt-projects/g-p-6ad0c7fad7dc8191baf5845e9f78b3cd/work/qa_decks_v110/02-ver-mazo-claro.png",
+    "C:/Users/maago/.codex/.chatgpt-projects/g-p-6ad0c7fad7dc8191baf5845e9f78b3cd/work/qa_decks_v110/03-constructor-claro.png",
+    "C:/Users/maago/.codex/.chatgpt-projects/g-p-6ad0c7fad7dc8191baf5845e9f78b3cd/work/qa_decks_v110/04-mis-mazos-oscuro.png",
+    "C:/Users/maago/.codex/.chatgpt-projects/g-p-6ad0c7fad7dc8191baf5845e9f78b3cd/work/qa_decks_v110/05-constructor-oscuro.png",
+    "C:/Users/maago/.codex/.chatgpt-projects/g-p-6ad0c7fad7dc8191baf5845e9f78b3cd/work/qa_decks_v110/06-ver-mazo-oscuro.png"
+  ],
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "fixture_only": true,
+  "layout": [
+    {
+      "grid_size": [
+        1524.0,
+        300.0
+      ],
+      "theme": "light",
+      "tiles": [
+        {
+          "id": "kajido",
+          "position": [
+            129.0,
+            0.0
+          ],
+          "size": [
+            300.0,
+            300.0
+          ]
+        },
+        {
+          "id": "custom_10000000-0000-4000-8000-000000000110",
+          "position": [
+            451.0,
+            0.0
+          ],
+          "size": [
+            300.0,
+            300.0
+          ]
+        },
+        {
+          "id": "custom_20000000-0000-4000-8000-000000000110",
+          "position": [
+            773.0,
+            0.0
+          ],
+          "size": [
+            300.0,
+            300.0
+          ]
+        }
+      ]
+    },
+    {
+      "grid_size": [
+        1524.0,
+        622.0
+      ],
+      "theme": "dark",
+      "tiles": [
+        {
+          "id": "kajido",
+          "position": [
+            129.0,
+            0.0
+          ],
+          "size": [
+            300.0,
+            300.0
+          ]
+        },
+        {
+          "id": "custom_10000000-0000-4000-8000-000000000110",
+          "position": [
+            451.0,
+            0.0
+          ],
+          "size": [
+            300.0,
+            300.0
+          ]
+        },
+        {
+          "id": "custom_20000000-0000-4000-8000-000000000110",
+          "position": [
+            773.0,
+            0.0
+          ],
+          "size": [
+            300.0,
+            300.0
+          ]
+        },
+        {
+          "id": "custom_00000000-0000-4000-8000-000000000110",
+          "position": [
+            1095.0,
+            0.0
+          ],
+          "size": [
+            300.0,
+            300.0
+          ]
+        }
+      ]
+    }
+  ],
+  "network_requests": 0,
+  "real_accounts_used": 0,
+  "ui_v110_checks": 48
+}

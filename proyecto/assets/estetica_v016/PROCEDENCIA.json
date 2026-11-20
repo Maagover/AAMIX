@@ -1,0 +1,33 @@
+{
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "file": "restos.png",
+      "size": [
+        1241,
+        1268
+      ],
+      "mode": "RGBA",
+      "sha256": "ed704b70e8f2265c6249e0b23c3e5b629faa1c0914e148035a4768bc6f5d72dc"
+    },
+    {
+      "file": "sobre_normal_abierto.png",
+      "size": [
+        1084,
+        1451
+      ],
+      "mode": "RGBA",
+      "sha256": "9dea4f66e0307922d97c1b972ce15fe4e25b79fcc557bc9905236d3c19cfd488"
+    },
+    {
+      "file": "sobre_normal_cerrado.png",
+      "size": [
+        1084,
+        1451
+      ],
+      "mode": "RGBA",
+      "sha256": "faf02f14ab358eb91e6038220737c1bdb934e308d1dbb322dac198d10cc1cf1f"
+    }
+  ],
+  "originals_preserved": true
+}

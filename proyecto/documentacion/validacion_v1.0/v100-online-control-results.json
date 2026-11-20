@@ -1,0 +1,172 @@
+{
+  "two_separate_native_processes": true,
+  "actual_supabase_https": true,
+  "emails_sent": 0,
+  "results": [
+    {
+      "action_ms": [
+        732,
+        426,
+        499,
+        490,
+        476,
+        427,
+        495,
+        612
+      ],
+      "actions": 8,
+      "animation_speed": 1.0,
+      "animations": [
+        "move->deck",
+        "shuffle",
+        "move->hand",
+        "move->resources",
+        "move->paid",
+        "move->defense"
+      ],
+      "explicit_confirmation_wait": true,
+      "failures": [],
+      "got_setup": true,
+      "payment_finished": true,
+      "private_views": true,
+      "recovered": false,
+      "role": 0,
+      "room_id": "fed92b3d-c197-453f-b7a4-371b3155dc8c",
+      "rpc_metrics": {
+        "durations_ms": [
+          362,
+          478,
+          434,
+          283,
+          317,
+          333,
+          316,
+          301,
+          312,
+          384,
+          367,
+          392,
+          400,
+          367,
+          384,
+          384,
+          334,
+          400,
+          411,
+          400,
+          434,
+          415,
+          427,
+          407,
+          394,
+          342,
+          395,
+          421,
+          450,
+          384,
+          384,
+          401,
+          517
+        ],
+        "requests": {
+          "aamix_mp_commit": 4,
+          "aamix_mp_confirm": 1,
+          "aamix_mp_create_room": 1,
+          "aamix_mp_host_action": 8,
+          "aamix_mp_poll": 19
+        }
+      },
+      "server_push_count": 3,
+      "socket_joined": false,
+      "turns_seen": [
+        0,
+        2
+      ],
+      "exit_code": 0,
+      "script_error": false,
+      "native_error": false
+    },
+    {
+      "action_ms": [
+        2279,
+        1627,
+        1727
+      ],
+      "actions": 3,
+      "animation_speed": 1.0,
+      "animations": [
+        "move->deck",
+        "shuffle",
+        "move->hand",
+        "move->resources",
+        "move->paid",
+        "move->defense"
+      ],
+      "explicit_confirmation_wait": true,
+      "failures": [],
+      "got_setup": true,
+      "payment_finished": false,
+      "private_views": true,
+      "recovered": true,
+      "role": 1,
+      "room_id": "",
+      "rpc_metrics": {
+        "durations_ms": [
+          299,
+          317,
+          284,
+          317,
+          284,
+          319,
+          317,
+          284,
+          317,
+          300,
+          433,
+          330,
+          384,
+          417,
+          367,
+          362,
+          401,
+          401,
+          335,
+          384,
+          417,
+          367,
+          367,
+          401,
+          401,
+          367,
+          417,
+          383,
+          367,
+          384,
+          400,
+          383,
+          416,
+          380,
+          395,
+          366
+        ],
+        "requests": {
+          "aamix_mp_active": 1,
+          "aamix_mp_confirm": 1,
+          "aamix_mp_join_room": 1,
+          "aamix_mp_leave": 2,
+          "aamix_mp_poll": 28,
+          "aamix_mp_submit": 3
+        }
+      },
+      "server_push_count": 1,
+      "socket_joined": false,
+      "turns_seen": [
+        0,
+        1
+      ],
+      "exit_code": 0,
+      "script_error": false,
+      "native_error": false
+    }
+  ]
+}

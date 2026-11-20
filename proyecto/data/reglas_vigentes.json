@@ -1,0 +1,224 @@
+{
+  "formato": "aamix.reglas",
+  "version": "1.3.0",
+  "fecha": "2026-10-20",
+  "fuentes": [
+    "Aclaraciones del autor del20-10-2026 sobre derrotado/destruido, Viborín, Almenta y Caída de elDepul.",
+    "Aclaración del autor del 17-10-2026: sin Aliados en Defensa no se pide confirmar bloqueos; se aplica el daño automáticamente si no hay un Evento jugable con el que responder.",
+    "Aclaración del autor del 17-10-2026: pasar automáticamente a Acciones si el jugador no tiene Recursos en Mano.",
+    "Aclaraciones del autor sobre Bigotes y Azul, 16-10-2026 a las 22:12 de Chile.",
+    "Aclaraciones del autor del 16-10-2026, incluida la ampliación de las 19:32.",
+    "Reglas de torneo proporcionadas por el autor.",
+    "REGLAS_Press.pdf donde no ha sido modificado."
+  ],
+  "construccion_mazo": {
+    "tamano_exacto": 40,
+    "max_copias_no_recurso": 3,
+    "max_copias_singular": 1,
+    "max_copias_recurso": null,
+    "recurso_inicial_incluido_en_40": true
+  },
+  "preparacion": {
+    "recurso_inicial": 1,
+    "recurso_inicial_desde": "mazo_propio",
+    "mano_inicial": 6,
+    "manos_tras_cambio": [
+      5,
+      5
+    ],
+    "max_cambios": 2,
+    "procedimiento_cambio": "Devolver la mano completa al mazo y barajar antes de sacar la nueva mano.",
+    "jugador_inicial": "Al azar y por acuerdo mutuo."
+  },
+  "comienzo_turno": {
+    "primero": "reagrupar_recursos_y_aliados",
+    "recurso_desde_mano": {
+      "opcional": true,
+      "maximo": 1,
+      "momento": "Justo después de reagrupar; antes de otra acción normal.",
+      "sin_recurso_en_mano": "Después de reagrupar, se pasa automáticamente a Acciones sin pedir confirmación."
+    }
+  },
+  "tipos": {
+    "objeto": {
+      "maximo_por_aliado": 1,
+      "si_portador_sale": {
+        "accion": "descartar_objeto",
+        "destino": "cementerio_dueno_objeto",
+        "independiente_del_destino_portador": true,
+        "destinos_portador_citados": [
+          "mazo",
+          "cementerio",
+          "quemadas",
+          "mano"
+        ]
+      }
+    },
+    "dominio": {
+      "maximo_activo_global": 1,
+      "reemplazo": {
+        "accion": "descartar_anterior",
+        "destino": "cementerio_dueno"
+      }
+    },
+    "evento": {
+      "tras_resolverse": "cementerio_dueno"
+    }
+  },
+  "combate": {
+    "ataque_opcional": true,
+    "aliados_nuevos_no_atacan_salvo_agil": true,
+    "bloqueo": {
+      "max_bloqueadores_por_atacante": 1,
+      "max_atacantes_por_bloqueador": 1,
+      "asignacion": "jugador_defensor",
+      "sin_aliados_en_defensa": "Se omite la confirmación de bloqueos. Si existe un Evento jugable se conserva la oportunidad de responder antes del daño; de lo contrario, el daño se resuelve automáticamente."
+    },
+    "tras_declarar_ataque": {
+      "puede_volver_a_jugar_aliados_objetos_dominios": false,
+      "atacante_puede_jugar_eventos_si": [
+        "al_menos_un_ataque_bloqueado",
+        "defensor_ha_jugado_un_evento_en_su_defensa"
+      ],
+      "sin_ninguna_condicion": "El atacante no puede jugar Eventos; el defensor conserva su oportunidad de jugar uno antes del daño."
+    },
+    "eventos_turno_rival": {
+      "permitidos_solo_en": "fase_de_defensa",
+      "pagan_coste": true,
+      "antes_del_dano": true
+    },
+    "ventana_eventos": {
+      "primera_prioridad": "defensor",
+      "alternada": true,
+      "solo_clase": "Evento",
+      "habilidades": "Se rigen por el texto de cada carta; jugar cartas y activar habilidades se tratan como acciones distintas."
+    },
+    "dano": {
+      "por_cada_atacante_por_separado": true,
+      "un_punto": "Enviar una carta de la parte superior del mazo defensor al Cementerio.",
+      "atacante_mayor": "Defensor destruido; diferencia de Fuerza al mazo.",
+      "fuerzas_iguales": "Ambos destruidos; sin daño al mazo.",
+      "defensor_mayor": "Atacante destruido; sin daño al mazo.",
+      "sin_bloqueador": "Fuerza completa del atacante al mazo."
+    }
+  },
+  "fin_turno": {
+    "robo_ordinario": 1,
+    "despues_del_robo_no_se_juegan_mas_cartas_en_turno_propio": true,
+    "minimo_mano": 3,
+    "completar_hasta_minimo": true,
+    "maximo_mano": 8,
+    "exceso": "El jugador escoge y descarta al Cementerio hasta tener ocho, antes de que juegue el rival.",
+    "alcance_minimo": "Al terminar el turno propio, según la frase del autor «al terminar su turno».",
+    "formula_cartas_a_robar_sin_otros_efectos": "1 + max(0, 3 - (cartas_en_mano_antes_del_robo + 1))",
+    "ejemplos": [
+      {
+        "mano_antes": 0,
+        "robo_total": 3,
+        "mano_despues": 3
+      },
+      {
+        "mano_antes": 1,
+        "robo_total": 2,
+        "mano_despues": 3
+      },
+      {
+        "mano_antes": 2,
+        "robo_total": 1,
+        "mano_despues": 3
+      },
+      {
+        "mano_antes": 3,
+        "robo_total": 1,
+        "mano_despues": 4
+      },
+      {
+        "mano_antes": 8,
+        "robo_total": 1,
+        "mano_tras_robo": 9,
+        "descartes": 1,
+        "mano_despues": 8
+      }
+    ]
+  },
+  "limites_de_cartas_en_juego": {
+    "se_cumplen_al_aplicarse": true,
+    "escoge_las_que_permanecen": "cada_jugador_dueno_de_sus_cartas",
+    "resto": {
+      "accion": "descartar",
+      "destino": "cementerio"
+    },
+    "ejemplo_escuela_de_vuelo": {
+      "limite_aliados_por_jugador": 4,
+      "si_tiene_6": "Su dueño elige los cuatro que permanecen y descarta los otros dos."
+    }
+  },
+  "fuerza": {
+    "base": "Valor impreso de la carta.",
+    "bonos_suman_sobre_base": true,
+    "conteo_tipo_lucha_o_fundamental_incluye_fuente_si_cumple": true,
+    "muñeco_de_miku": {
+      "portador_maagover_o_dicky": 4,
+      "otro_portador": 1,
+      "bonus_condicional_reemplaza_al_generico": true,
+      "ejemplo_base_1_con_maagover_o_dicky": 5
+    }
+  },
+  "busquedas": {
+    "mostrar_encontrada_antes_de_mano_o_juego": true,
+    "cumplir_criterios": true
+  },
+  "quemadas": {
+    "recuperables_durante_partida": false,
+    "pueden_volver_al_juego_durante_partida": false
+  },
+  "victoria": {
+    "derrota": "Quedarse sin cartas en el mazo."
+  },
+  "estado_implementacion": "Las41 cartas catalogadas tienen sus efectos programados, incluidas las6 promocionales.",
+  "pendiente_confirmar": [
+    "Orden de daño de distintos atacantes cuando los efectos dependan de ese orden.",
+    "Orden de efectos simultáneos y respuestas.",
+    "Empate si ambos mazos se vacían simultáneamente.",
+    "Excepciones del primer turno, si existieran."
+  ],
+  "habilidades_confirmadas": {
+    "Bigotes": {
+      "codigo": "01b",
+      "max_activaciones_por_carta_y_turno_propio": 1,
+      "activable_en_turno_rival": false,
+      "reinicio": "siguiente_turno_del_dueno"
+    },
+    "Azul": {
+      "codigo": "0111",
+      "en_linea_ataque": 1,
+      "mientras_bloquea": 2,
+      "en_defensa_sin_bloquear": 0,
+      "bonos_no_acumulativos": true
+    },
+    "Viborín": {
+      "max_activaciones_por_carta_y_turno_propio": 1,
+      "bonus_temporal_fuerza": 3,
+      "reinicio": "siguiente_turno_del_dueno",
+      "codigo": "0126",
+      "activable_en_turno_rival": false
+    },
+    "Almenta": {
+      "max_activaciones_por_carta_y_turno_propio": 1,
+      "reinicio": "siguiente_turno_del_dueno",
+      "codigo": "0129",
+      "activable_en_turno_rival": false,
+      "coste_activacion": 1
+    },
+    "Caída de elDepul": {
+      "objetivo": "Último Aliado que aún permanece en el Cementerio rival.",
+      "codigo": "0118",
+      "requiere_aliado_en_cementerio_rival": true
+    }
+  },
+  "conceptos": {
+    "enviar_o_descartar": "No equivale automáticamente a derrotar en combate.",
+    "destruido": "Incluye combate y efectos de otras cartas.",
+    "derrotado": "Únicamente perder un combate."
+  }
+}

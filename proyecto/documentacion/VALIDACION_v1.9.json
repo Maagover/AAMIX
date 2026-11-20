@@ -1,0 +1,16 @@
+{
+  "version": "1.9.0",
+  "current_ui_checks": 77,
+  "current_rules_checks": 74,
+  "failures": 0,
+  "native_UI_run": true,
+  "captures_generated": 10,
+  "server_transaction_scenarios": "passed",
+  "random_packs_in_final_server_scenario": 10,
+  "cards_in_final_server_scenario": 22,
+  "QA_accounts_persisted": 0,
+  "emails_sent": 0,
+  "remote_PCs_tested": false,
+  "latency_measured": false,
+  "historical_tests_summed": false
+}

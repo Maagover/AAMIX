@@ -1,0 +1,142 @@
+{
+  "provided_by_user": true,
+  "original_files_preserved": true,
+  "assets": [
+    {
+      "file": "valle.png",
+      "original": "C:/Users/maago/AppData/Local/Temp/codex-clipboard-8668f3a8-53d9-4741-b359-9fb7560f3c10.png",
+      "sha256": "3c0307825b311e3965a5e5059db23c7f723b19aaaa9832c51b3148051847160a",
+      "bytes": 1283211,
+      "size": [
+        1334,
+        744
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        0,
+        0,
+        1334,
+        744
+      ]
+    },
+    {
+      "file": "mazo_flaan.png",
+      "original": "D:\\Maago\\streams\\2026\\CartasAAMIX\\PORTADAS\\MazoFlaan_Portada.png",
+      "sha256": "815fa35bd7f0c8a76a2a8bb6c8627b27257546e0ff2470738b63eb9b506c97c2",
+      "bytes": 776591,
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        240,
+        146,
+        816,
+        901
+      ]
+    },
+    {
+      "file": "mazo_girabl.png",
+      "original": "D:\\Maago\\streams\\2026\\CartasAAMIX\\PORTADAS\\MazoGirabl_Portada.png",
+      "sha256": "ee264f3e75cbec8fcd201094931147e8168e87d043cc6bb1ff8a39c4ede4d8e1",
+      "bytes": 801572,
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        240,
+        146,
+        816,
+        901
+      ]
+    },
+    {
+      "file": "mazo_kajido.png",
+      "original": "D:\\Maago\\streams\\2026\\CartasAAMIX\\PORTADAS\\MazoKajido_Portada.png",
+      "sha256": "92d6e42159ad80d0c6e4cc7336c5d48f1a4a0a3a74a86ede7d514f73a5ca3d54",
+      "bytes": 790051,
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        240,
+        146,
+        816,
+        901
+      ]
+    },
+    {
+      "file": "mazo_maago.png",
+      "original": "D:\\Maago\\streams\\2026\\CartasAAMIX\\PORTADAS\\MazoMaagover_Portada.png",
+      "sha256": "c8bfe40895d7f91ca1f6eaf6800c62a8cbb61ecde1984e706d21156682a07c3f",
+      "bytes": 767263,
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        240,
+        146,
+        816,
+        901
+      ]
+    },
+    {
+      "file": "mazo_papito.png",
+      "original": "D:\\Maago\\streams\\2026\\CartasAAMIX\\PORTADAS\\MazoPapito_Portada.png",
+      "sha256": "23e0413f87eb9d9bc4681dc3ece5a14f370ad90e91e13940c58e677fe3739480",
+      "bytes": 797562,
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        240,
+        146,
+        816,
+        901
+      ]
+    },
+    {
+      "file": "resultado_derrota.png",
+      "original": "D:\\Maago\\streams\\2026\\CartasAAMIX\\PORTADAS\\DERROTA.png",
+      "sha256": "0fbb46e00292d768c3a30ec6b25c0058dc2dbadb6a515583e5191aefc9a55ce6",
+      "bytes": 252750,
+      "size": [
+        2000,
+        2000
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        72,
+        691,
+        1901,
+        1316
+      ]
+    },
+    {
+      "file": "resultado_victoria.png",
+      "original": "D:\\Maago\\streams\\2026\\CartasAAMIX\\PORTADAS\\VICTORIA.png",
+      "sha256": "61e46c6ca453508c0332bbafa1985e06b102cedc110a172158e0f04a8747e6ea",
+      "bytes": 273485,
+      "size": [
+        2000,
+        2000
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        74,
+        690,
+        1930,
+        1316
+      ]
+    }
+  ]
+}

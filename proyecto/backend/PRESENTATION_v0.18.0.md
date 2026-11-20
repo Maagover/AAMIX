@@ -1,0 +1,17 @@
+# Presentación y salas · AAMIX 0.18.0
+
+Aplicado: **20261019141339_aamix_rooms_and_pack_presentation_v0180**. No repetir. Los wrappers públicos nuevos son SECURITY INVOKER; las funciones internas privadas comprueban UUID confirmado y pertenencia. No hay nuevos permisos de lectura directa ni claves administrativas en el cliente.
+
+new_card_indices integer[] conserva índices cero-basados en cada apertura. El bloqueo común de cartera evita que compra/apertura cambien la colección entre clasificación y concesión. Sólo el primer ejemplar antes desconocido del sobre se marca. opening y pending_opening incluyen el campo; reintentos y reconocimientos conservan orden y flags. Filas históricas reciben [] sin alterar cartas. La misión diaria nueva paga 25; el ledger admite importes históricos de 50 y el reintento devuelve el importe ya pagado.
+
+aamix_mp_confirm(p_room_id uuid) confirma sólo al llamante, también mientras espera al segundo jugador. La respuesta incluye protocol=2 y confirmed=[host,guest]. El commit inicial exige ambos true. Los snapshots de salas ya iniciadas se conservan.
+
+aamix_mp_host_action recibe p_room_id, p_request_id, p_expected_revision, p_method, p_args, p_host_state, p_guest_view, p_actor_slot, p_winner y p_error. Sólo el anfitrión puede usarlo. Ejecuta los controles de submit y commit en una misma transacción; snapshot inválido deshace también el comando, y un UUID repetido con datos iguales no avanza otra vez. Los RPC anteriores siguen disponibles para acciones del invitado y recuperación.
+
+Los snapshots añaden presentation y guest_presentation; el cliente filtra el segundo a movimientos visibles y tokens negativos para cartas ocultas. No se agrega el pago privado del anfitrión ni se transmiten caras de su mano o del mazo. La autoridad de reglas sigue en el anfitrión de confianza; la base valida membresía, actor, revisión y forma de vista. Los resultados de abandono continúan con el gate de un recibo por jugador.
+
+Intervalos: .24 s anfitrión esperando al rival, .32 s invitado esperando al rival, .16 s invitado esperando su comando; 1.2 s al esperar entrada propia, .4 s listo en sala, 1 s espera y 8 s terminada. Las peticiones tardan además lo que imponga la red. Poll sin cambio omite estado y ambos mazos completos. Hay pausa de aplicación durante la presentación breve; no se mezcla un snapshot nuevo con una animación en curso. Confirmar/Abandonar esperan un poll en curso con prioridad.
+
+Pruebas: 23 asserts SQL en rollback, sorteos fijos sólo en ese fixture y funciones originales comparadas después. Dos procesos nativos en HTTPS verifican confirmación, animaciones, reintentos, recuperación, ocho host_action sin submit redundante y seis submit del invitado sin reenvío. Datos originales de 14 tablas iguales por hash y dos cuentas QA eliminadas. Ver DEPLOYMENT_v0.18.0.json.
+
+Documentación consultada: [funciones y seguridad](https://supabase.com/docs/guides/database/functions), [changelog](https://supabase.com/changelog), [HTTPRequest de Godot](https://docs.godotengine.org/en/stable/classes/class_httprequest.html). El cambio de cifrados TLS de noviembre no altera estos contratos SQL. El asesor conserva las INFO de [RLS privado sin políticas](https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy) y el aviso previo de [protección de contraseñas filtradas](https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection); no se modificó Auth ni SMTP.

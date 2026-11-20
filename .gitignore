@@ -1,0 +1,11 @@
+.tools/
+build/
+proyecto/.godot/
+proyecto/export_presets.local.cfg
+proyecto/tests/qa_*
+proyecto/tests/*.err
+*.log
+*.tmp
+.env
+.env.*
+!.env.example

@@ -1,0 +1,15 @@
+{
+  "code_signing_certificate_available": false,
+  "runtime_binary_hashes_preserved": true,
+  "smart_screen_report": "Windows protegió su PC/editor desconocido",
+  "reference": "https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/smartscreen-reputation",
+  "signature_status": {
+    "session_helper": "NotSigned",
+    "launcher": "NotSigned",
+    "installer": "NotSigned",
+    "godot_engine": "Valid"
+  },
+  "installer_scan_output": "Scan starting...\nScan finished.\nScanning C:\\Users\\maago\\.codex\\.chatgpt-projects\\g-p-6ad0c7fad7dc8191baf5845e9f78b3cd\\entregas\\AAMIX_Instalador.exe found no threats.",
+  "installer_scan_exit_code": 0,
+  "security_settings_changed": false
+}

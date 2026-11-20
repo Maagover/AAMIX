@@ -1,0 +1,14 @@
+{
+  "combate_desafio": {
+    "seconds": 48.6076,
+    "peak": 0.72,
+    "rms": 0.1372,
+    "channels": 2,
+    "sample_rate": 32000,
+    "sha256": "e035f612bb2e2f11a5877cbaf1d4517330e095205df1dddf72b8e42505348682",
+    "origin": "Original AAMIX synthesis; no external samples or existing melodies",
+    "bpm": 158,
+    "bars": 32,
+    "loop_boundary_jump": 0.00291
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "description": "Native WinExe process launched engine from a spaced installation path, with unrelated working directory and intact arguments; propagated engine exit code.",
+  "passed": true,
+  "checks": 1
+}

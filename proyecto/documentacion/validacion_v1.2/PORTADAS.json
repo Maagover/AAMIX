@@ -1,0 +1,200 @@
+{
+  "contact_sheet": "C:/Users/maago/.codex/.chatgpt-projects/g-p-6ad0c7fad7dc8191baf5845e9f78b3cd/work/qa_covers_v120/contact-sheet.png",
+  "cover_asset_checks": 63,
+  "designs": [
+    {
+      "alpha": true,
+      "height": 1254,
+      "key": "kajido",
+      "opaque_bounds": [
+        247,
+        126,
+        777,
+        1033
+      ],
+      "path": "assets/estetica_v120/mazo_kajido.png",
+      "used_bounds": [
+        0,
+        0,
+        1240,
+        1254
+      ],
+      "width": 1254
+    },
+    {
+      "alpha": true,
+      "height": 1254,
+      "key": "papito",
+      "opaque_bounds": [
+        249,
+        129,
+        776,
+        1029
+      ],
+      "path": "assets/estetica_v120/mazo_papito.png",
+      "used_bounds": [
+        33,
+        126,
+        1193,
+        1128
+      ],
+      "width": 1254
+    },
+    {
+      "alpha": true,
+      "height": 1254,
+      "key": "flaan",
+      "opaque_bounds": [
+        250,
+        131,
+        775,
+        1027
+      ],
+      "path": "assets/estetica_v120/mazo_flaan.png",
+      "used_bounds": [
+        0,
+        0,
+        1216,
+        1254
+      ],
+      "width": 1254
+    },
+    {
+      "alpha": true,
+      "height": 1254,
+      "key": "maago",
+      "opaque_bounds": [
+        251,
+        133,
+        772,
+        1024
+      ],
+      "path": "assets/estetica_v120/mazo_maago.png",
+      "used_bounds": [
+        73,
+        0,
+        1105,
+        1254
+      ],
+      "width": 1254
+    },
+    {
+      "alpha": true,
+      "height": 1254,
+      "key": "girabl",
+      "opaque_bounds": [
+        249,
+        129,
+        776,
+        1029
+      ],
+      "path": "assets/estetica_v120/mazo_girabl.png",
+      "used_bounds": [
+        0,
+        0,
+        1240,
+        1254
+      ],
+      "width": 1254
+    },
+    {
+      "alpha": true,
+      "height": 1254,
+      "key": "custom_transmision",
+      "opaque_bounds": [
+        249,
+        130,
+        775,
+        1029
+      ],
+      "path": "assets/estetica_v120/mazo_transmision.png",
+      "used_bounds": [
+        23,
+        29,
+        1204,
+        1225
+      ],
+      "width": 1254
+    },
+    {
+      "alpha": true,
+      "height": 1254,
+      "key": "custom_restos",
+      "opaque_bounds": [
+        249,
+        132,
+        776,
+        1026
+      ],
+      "path": "assets/estetica_v120/mazo_restos.png",
+      "used_bounds": [
+        0,
+        101,
+        1152,
+        1153
+      ],
+      "width": 1254
+    },
+    {
+      "alpha": true,
+      "height": 1254,
+      "key": "custom_tsuki_akira",
+      "opaque_bounds": [
+        249,
+        129,
+        776,
+        1030
+      ],
+      "path": "assets/estetica_v120/mazo_tsuki_akira.png",
+      "used_bounds": [
+        0,
+        24,
+        1186,
+        1230
+      ],
+      "width": 1254
+    },
+    {
+      "alpha": true,
+      "height": 1254,
+      "key": "custom_chanchuus",
+      "opaque_bounds": [
+        251,
+        129,
+        773,
+        1029
+      ],
+      "path": "assets/estetica_v120/mazo_chanchuus.png",
+      "used_bounds": [
+        0,
+        0,
+        1234,
+        1254
+      ],
+      "width": 1254
+    },
+    {
+      "alpha": true,
+      "height": 1254,
+      "key": "custom_viborin",
+      "opaque_bounds": [
+        249,
+        130,
+        776,
+        1029
+      ],
+      "path": "assets/estetica_v120/mazo_viborin.png",
+      "used_bounds": [
+        27,
+        19,
+        1199,
+        1235
+      ],
+      "width": 1254
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "network_requests": 0,
+  "test_type": "local native image/texture validation; no account or server"
+}

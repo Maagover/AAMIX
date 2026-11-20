@@ -1,0 +1,30 @@
+{
+  "release": "1.1.0",
+  "project_id": "drpsedaiqyowwikhjugs",
+  "status": "applied_verified",
+  "base_deployment": "DEPLOYMENT_v1.0.json",
+  "new_migration": {"version": "20261020022913", "name": "aamix_custom_decks_v110"},
+  "progress_reset": false,
+  "existing_accounts_preserved": 4,
+  "verification": {
+    "transactional_rehearsal_groups_passed": 31,
+    "sql_synthetic_accounts_rolled_back": 3,
+    "native_https_checks_passed": 22,
+    "native_https_synthetic_accounts_deleted": 2,
+    "remaining_qa_sessions": 0,
+    "remaining_qa_decks": 0,
+    "real_emails_sent": 0,
+    "real_player_auth_tests": 0
+  },
+  "compatibility": {"legacy_inventory_decks_unchanged": true, "custom_inventory_field": "custom_decks", "multiplayer_protocol": 3, "launcher_protocol": 1},
+  "security_advisors": {
+    "new_public_table_owner_select_rls": true,
+    "direct_client_writes_denied": true,
+    "private_registry_and_request_ledger_rls_without_policies": "Intentional deny-all for API roles; access only through authenticated private helpers.",
+    "rls_information": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+    "preexisting_password_leak_protection_warning_unchanged": true,
+    "password_warning_reference": "https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection"
+  },
+  "limitations": ["No two remote PCs tested", "No new latency or WebSocket benchmark", "Trusted rules host retained"],
+  "private_credentials_in_distribution": false
+}

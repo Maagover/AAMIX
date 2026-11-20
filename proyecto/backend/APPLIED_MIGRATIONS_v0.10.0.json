@@ -1,0 +1,32 @@
+{
+  "project_id": "drpsedaiqyowwikhjugs",
+  "applied": [
+    {"version": "20261017185851", "name": "aamix_collection_starter_v090", "source": "aamix_collection.sql"},
+    {"version": "20261017194519", "name": "aamix_profiles_rewards_v0100", "source": "aamix_rewards.sql"}
+  ],
+  "verification_date": "2026-10-17",
+  "live_counts_before": {"users": 2, "starter_gifts": 1, "owned_decks": 1, "collection_rows": 12, "collection_quantity": 40},
+  "live_counts_after": {"users": 2, "starter_gifts": 1, "owned_decks": 1, "collection_rows": 12, "collection_quantity": 40},
+  "committed_new_reward_rows_after_tests": 0,
+  "committed_test_users": 0,
+  "tests": {
+    "test_rewards_rollback.sql": "PASS, twice; synthetic random UUIDs; every transaction rolled back",
+    "test_collection_rollback.sql": "PASS against upgraded backend; all transactions rolled back",
+    "server_draws_tested_total": 20000,
+    "last_sample_packs": 10000,
+    "last_sample_specials": 3029,
+    "last_sample_named_specials_combined": 602,
+    "last_sample_slot5_named": {"0103": 148, "0105": 146, "0115": 141, "0119": 167},
+    "last_sample_slot5_other_specials": {"0125": 469, "0128": 481, "0130": 465, "0131": 505, "0134": 507},
+    "normal_cards_observed_in_slot5": 31,
+    "real_two_connection_concurrency_test": "NOT RUN; wallet serialization and unique constraints reviewed; sequential retries and second-client request aliases tested"
+  },
+  "advisors": {
+    "public_RLS_issues": 0,
+    "private_RLS_no_policy_info": "Three internal deny-all tables, no client SELECT grant; expected",
+    "preexisting_auth_warning": "Leaked password protection disabled; Auth configuration left unchanged",
+    "preexisting_auth_warning_remediation": "https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection",
+    "performance": "Six unused foreign-key-support indexes, informational on tiny data; no missing indexes reported"
+  },
+  "limitations": ["Local AI game completion is reported by the client, not validated by an authoritative game server.", "A local result lost before its completion RPC cannot be reconstructed by the server."]
+}

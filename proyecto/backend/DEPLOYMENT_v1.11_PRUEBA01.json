@@ -1,0 +1,11 @@
+{
+  "project_ref": "drpsedaiqyowwikhjugs",
+  "version": "1.11.0-preview.1",
+  "applied_migration": "20261031201203",
+  "name": "aamix_challenge_missions_v111",
+  "account_resets": 0,
+  "test_users_persisted": 0,
+  "test_sql": "test_challenge_missions_v111_rollback.sql",
+  "previous_clients_compatible": true,
+  "local_preview_only": true
+}

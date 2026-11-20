@@ -1,0 +1,83 @@
+{
+  "run_at_utc": "2026-10-17T19:51:11.170699+00:00",
+  "engine": "C:\\Users\\maago\\.codex\\.chatgpt-projects\\g-p-6ad0c7fad7dc8191baf5845e9f78b3cd\\work\\AAMIX_Prototipo_Local_v0.10.0\\motor\\AAMIX.exe",
+  "mode": "headless",
+  "results": [
+    {
+      "test": "test_game.gd",
+      "returncode": 0,
+      "seconds": 0.88,
+      "summary": {
+        "checks": 143,
+        "complete_simulations": 24,
+        "failures": []
+      },
+      "checks": 143,
+      "simulations": 24,
+      "errors": [],
+      "log": "C:\\Users\\maago\\.codex\\.chatgpt-projects\\g-p-6ad0c7fad7dc8191baf5845e9f78b3cd\\work\\v010-validation\\test_game.log",
+      "passed": true
+    },
+    {
+      "test": "test_v02.gd",
+      "returncode": 0,
+      "seconds": 2.09,
+      "summary": {
+        "bot_games": 88,
+        "failures": [],
+        "v02_checks": 125
+      },
+      "checks": 125,
+      "simulations": 88,
+      "errors": [],
+      "log": "C:\\Users\\maago\\.codex\\.chatgpt-projects\\g-p-6ad0c7fad7dc8191baf5845e9f78b3cd\\work\\v010-validation\\test_v02.log",
+      "passed": true
+    },
+    {
+      "test": "test_v08.gd",
+      "returncode": 0,
+      "seconds": 2.53,
+      "summary": {
+        "checks": 242,
+        "failures": [],
+        "new_complete_games": 81
+      },
+      "checks": 242,
+      "simulations": 81,
+      "errors": [],
+      "log": "C:\\Users\\maago\\.codex\\.chatgpt-projects\\g-p-6ad0c7fad7dc8191baf5845e9f78b3cd\\work\\v010-validation\\test_v08.log",
+      "passed": true
+    },
+    {
+      "test": "test_profiles.gd",
+      "returncode": 0,
+      "seconds": 5.48,
+      "summary": {
+        "profile_checks": 40,
+        "failures": 0
+      },
+      "checks": 40,
+      "simulations": 0,
+      "errors": [],
+      "log": "C:\\Users\\maago\\.codex\\.chatgpt-projects\\g-p-6ad0c7fad7dc8191baf5845e9f78b3cd\\work\\v010-validation\\test_profiles.log",
+      "passed": true
+    },
+    {
+      "test": "test_presentation_v010.gd",
+      "returncode": 0,
+      "seconds": 3.02,
+      "summary": {
+        "failures": [],
+        "presentation_v010_checks": 40
+      },
+      "checks": 40,
+      "simulations": 0,
+      "errors": [],
+      "log": "C:\\Users\\maago\\.codex\\.chatgpt-projects\\g-p-6ad0c7fad7dc8191baf5845e9f78b3cd\\work\\v010-validation\\test_presentation_v010.log",
+      "passed": true
+    }
+  ],
+  "checks": 590,
+  "simulations": 193,
+  "all_passed": true
+}

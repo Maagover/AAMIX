@@ -1,0 +1,53 @@
+{
+  "version": "0.13.0",
+  "date": "2026-10-18",
+  "native_windows": true,
+  "engine": "Godot4.7.2.stable.official.ed1daf0bf",
+  "status": "complete",
+  "source_checks": 376,
+  "source_failures": 0,
+  "suites": [
+    {
+      "suite": "ui_v013_checks",
+      "checks": 143,
+      "mode": "GUI",
+      "failures": 0
+    },
+    {
+      "suite": "aesthetic_v013_checks",
+      "checks": 71,
+      "mode": "GUI, synthetic inventory",
+      "failures": 0
+    },
+    {
+      "suite": "presentation_v013_checks",
+      "checks": 45,
+      "mode": "GUI",
+      "failures": 0
+    },
+    {
+      "suite": "pack_art_v013_checks",
+      "checks": 19,
+      "mode": "GUI, loopback HTTP fixture",
+      "failures": 0
+    },
+    {
+      "suite": "rewards_v012_checks",
+      "checks": 98,
+      "mode": "headless, loopback HTTP fixture",
+      "failures": 0
+    }
+  ],
+  "complete_ai_games_rerun": 0,
+  "http_fixture_receipts_are_not_ai_games": true,
+  "repeated_suites_excluded": true,
+  "backend_changed": false,
+  "backend_migrations_executed": 0,
+  "real_rewards_redeemed_by_agent": 0,
+  "real_emails_sent": 0,
+  "all_nine_user_png_hashes_passed": true,
+  "visual_review_passed": true,
+  "audio_driver": "Dummy",
+  "audio_physical_speaker_listening_verified": false,
+  "final_archive_report": "INFORME_ENTREGA_v0.13.0.json beside the ZIP records final archive integrity and independent extracted startup."
+}

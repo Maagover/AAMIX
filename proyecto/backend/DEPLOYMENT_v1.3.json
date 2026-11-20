@@ -1,0 +1,78 @@
+{
+  "release": "1.3.0",
+  "project_id": "drpsedaiqyowwikhjugs",
+  "status": "applied_verified",
+  "base_deployment": "DEPLOYMENT_v1.2.json",
+  "new_migration": {
+    "version": "20261020123723",
+    "name": "aamix_ruleset_v130"
+  },
+  "progress_reset": false,
+  "existing_accounts_preserved": 4,
+  "verification": {
+    "transactional_rehearsal_groups_passed": 24,
+    "sql_synthetic_accounts_rolled_back": 2,
+    "native_https_status": "passed",
+    "native_https_checks_passed": 13,
+    "native_https_checks_failed": 0,
+    "native_https_clients": 2,
+    "native_https_processes": 1,
+    "native_https_midmatch_fixture_cards": 80,
+    "native_https_versioned_rpc_mapping_verified": true,
+    "native_https_synthetic_accounts_deleted": 2,
+    "remaining_synthetic_users": 0,
+    "remaining_qa_sessions": 0,
+    "remaining_qa_decks": 0,
+    "remaining_qa_rooms": 0,
+    "local_private_fixture_removed": true,
+    "real_emails_sent_by_sql_rehearsal": 0,
+    "random_card_draws_by_sql_rehearsal": 0,
+    "mp_response_live_change_only_added_ruleset_version": true,
+    "verification_execution": "Root executed the transactional SQL rehearsal, applied the migration and compared the live mp_response definition. Integration completed 13 native HTTPS checks; root confirmed the results and removed the exact two synthetic accounts and their test data."
+  },
+  "compatibility": {
+    "legacy_ruleset_version": "1.2",
+    "current_ruleset_version": "1.3",
+    "new_entry_rpc": [
+      "aamix_mp_create_room_v130",
+      "aamix_mp_join_room_v130"
+    ],
+    "new_operation_rpc": [
+      "aamix_mp_poll_v130",
+      "aamix_mp_active_v130",
+      "aamix_mp_confirm_v130",
+      "aamix_mp_submit_v130",
+      "aamix_mp_commit_v130",
+      "aamix_mp_host_action_v130"
+    ],
+    "legacy_public_rpc_signatures_preserved": true,
+    "cross_ruleset_join_blocked_by_server": true,
+    "legacy_operations_cannot_resume_current_ruleset": true,
+    "both_commit_snapshots_require_explicit_current_ruleset": true,
+    "legacy_snapshot_missing_ruleset_treated_as": "1.2",
+    "incompatible_active_v130_metadata_only": true,
+    "shared_leave_rpc": "aamix_mp_leave",
+    "multiplayer_protocol": 3,
+    "snapshot_protocol": 1,
+    "launcher_protocol": 1
+  },
+  "security_advisors": {
+    "unchanged_from_previous_deployment": true,
+    "new_public_tables": 0,
+    "private_tables_rls_retained": true,
+    "public_wrappers_security_invoker": true,
+    "guarded_helpers_verify_current_user_and_room_membership": true,
+    "search_path_empty": true,
+    "preexisting_private_rls_without_policies_information_retained": true,
+    "rls_information": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+    "preexisting_password_leak_protection_warning_unchanged": true,
+    "password_warning_reference": "https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection"
+  },
+  "limitations": [
+    "Native HTTPS verification used two clients within one process and a controlled 80-card midmatch fixture; it does not establish a full match between separate remote computers",
+    "Realtime WebSocket transport was not tested by this verification",
+    "No two remote PCs or new latency benchmark were tested",
+    "Trusted rules host retained; ruleset endpoints prevent accidental version mixing, not modified-client impersonation"
+  ],
+  "private_credentials_in_distribution": false
+}

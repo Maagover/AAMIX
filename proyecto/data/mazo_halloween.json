@@ -1,0 +1,60 @@
+{
+  "id": "halloween",
+  "nombre": "Mazo Halloween",
+  "portada": "halloween",
+  "recurso_inicial": "0100",
+  "cartas": [
+    {
+      "codigo": "0100",
+      "cantidad": 17
+    },
+    {
+      "codigo": "H04",
+      "cantidad": 3
+    },
+    {
+      "codigo": "0128",
+      "cantidad": 3
+    },
+    {
+      "codigo": "H01",
+      "cantidad": 3
+    },
+    {
+      "codigo": "H02",
+      "cantidad": 1
+    },
+    {
+      "codigo": "H03",
+      "cantidad": 1
+    },
+    {
+      "codigo": "01b",
+      "cantidad": 1
+    },
+    {
+      "codigo": "0112",
+      "cantidad": 2
+    },
+    {
+      "codigo": "0113",
+      "cantidad": 2
+    },
+    {
+      "codigo": "H05",
+      "cantidad": 1
+    },
+    {
+      "codigo": "0116",
+      "cantidad": 2
+    },
+    {
+      "codigo": "0120",
+      "cantidad": 2
+    },
+    {
+      "codigo": "0124",
+      "cantidad": 2
+    }
+  ]
+}

@@ -1,0 +1,1662 @@
+{
+  "name": "AAMIX",
+  "version": "0.18.0",
+  "engine": "Godot 4.7.2 stable",
+  "platform": "Windows x86_64",
+  "mode": "Individual aleatoria, Desafío AAMIX y multijugador privado para dos jugadores; cuentas y colección remota",
+  "decks": [
+    "Mazo Kajido",
+    "Mazo Papito",
+    "Mazo Flaan",
+    "Mazo Maagover (obtenido con código)",
+    "Mazo Girabl (obtenido con código)"
+  ],
+  "confirmed_rules": {
+    "Bigotes": "Una vez en cada turno del dueño, nunca en el turno rival.",
+    "Azul": "Fuerza base +1 mientras esté en Ataque; +2 mientras bloquee; sin esos bonos en Defensa sin bloquear.",
+    "sin_recursos_en_mano": "Tras la reagrupación se pasa automáticamente a Acciones. Con Recursos en Mano se conserva la elección de bajar uno o continuar.",
+    "defensa_sin_aliados": "Omitir Confirmar bloqueos; conservar respuesta con Evento jugable y aplicar daño automático si no hay respuesta disponible."
+  },
+  "interaction": "Sobres frontales con capas y estrella de carta nueva; confirmación de ambos en salas; animaciones y sincronización online optimizadas; abandono confirmado; Juega 1 diaria paga 25 Restos.",
+  "pending_rules": [
+    "Búsquedas fallidas, cantidades exactas y búsquedas opcionales: se conserva el perfil de la versión 0.1.",
+    "Orden de daño: se sigue el orden de preparación de atacantes."
+  ],
+  "not_implemented": [
+    "Constructor de mazos",
+    "Intercambios",
+    "Efectos de diez cartas catalogadas",
+    "Guardado y reanudación de partidas individuales",
+    "Arbitraje de reglas en servidor independiente, ranking y emparejamiento público",
+    "Guardado y reanudación de partidas individuales",
+    "Arbitraje de reglas en servidor independiente, ranking y emparejamiento público"
+  ],
+  "screens": [
+    "Intro",
+    "Resumen previo de combate",
+    "Sobre de bienvenida",
+    "Mazo para el desafío",
+    "Iniciar sesión",
+    "Crear cuenta",
+    "Inicio invitado",
+    "Inicio autenticado",
+    "Elige tu mazo",
+    "Partida individual",
+    "Mi cuenta",
+    "Regalo inicial",
+    "Mi Colección",
+    "Mis Mazos",
+    "Elegir avatar",
+    "Código de regalo",
+    "Misiones",
+    "Mis sobres",
+    "Victoria o Derrota",
+    "Desafío AAMIX",
+    "Tienda",
+    "Visuales · Tema Claro y Tema Oscuro",
+    "Multijugador · Crear sala, unirse, retomar y cerrar",
+    "Multijugador · Crear sala, unirse, retomar y cerrar"
+  ],
+  "menu_placeholders": [],
+  "graphics": {
+    "style": "Interfaces claras de crema, blanco, dorado y café; valle animado en intro/inicio y madera en partida.",
+    "logos": "Logo original a color y blanco.",
+    "card_back": "Dorso original del autor.",
+    "animations": [
+      "Reparto inicial",
+      "Robo",
+      "Ataque",
+      "Bloqueo",
+      "Descarte y daño al Mazo",
+      "Barajado",
+      "Pagos y reagrupación",
+      "Dos cartas ampliadas flotando juntas y logo con flotación más sutil, sin giro",
+      "Icono de regalo",
+      "Avisos de turno",
+      "Victoria o Derrota",
+      "Apertura de sobre y deslizamiento de cinco cartas",
+      "Pila frontal de sobres; eventos online filtrados de baraja, mano, robo, Cementerio y otras zonas"
+    ],
+    "cards": "Imágenes originales con redondeado sutil por shader; sin nombres, tipos, costes ni fuerza repetidos debajo. Estrella estática discreta en las cartas nuevas de sobres.",
+    "layout": "Dominio neutral horizontal entre ambos campos; columna propia Pagadas–Mazo–Recursos; descartes separados Cementerio sobre Quemadas. Mano y Aliados propios de 88 × 120.",
+    "feedback": "Contornos de origen y destino por encima de la imagen; selección marcada; reordenamiento numerado; acciones principales con fondo claro y letras oscuras.",
+    "event_zone": false
+  },
+  "audio": {
+    "music": "Renser - Arcade Coins del autor en intro/menús; pista original nueva de desafío; combate aleatorio anterior conservado.",
+    "effects": [
+      "robo",
+      "carta",
+      "pago",
+      "ataque",
+      "bloqueo",
+      "descarte",
+      "barajar",
+      "dano",
+      "interfaz",
+      "regalo",
+      "regalo_recibido",
+      "victoria",
+      "derrota",
+      "turno",
+      "sobre_abrir",
+      "sobre_carta"
+    ],
+    "controls": "Volúmenes independientes y silencio global; ajustes persistentes.",
+    "generation": "Síntesis original, sin samples externos; generador incluido."
+  },
+  "next_stage": "Recoger comentarios de 0.18. Mantener beta con anfitrión de confianza y pruebas acotadas.",
+  "accounts": {
+    "provider": "Supabase Auth",
+    "project_ref": "drpsedaiqyowwikhjugs",
+    "plan": "free",
+    "configuration_shipped": true,
+    "publishable_key_only": true,
+    "email_templates_ready": true,
+    "registration_enabled_in_game": true,
+    "blocked_by": null,
+    "session_persistence": "memory_only",
+    "collection_implemented": true,
+    "multiplayer_implemented": true,
+    "email_delivery": "custom_smtp",
+    "smtp_provider": "Brevo",
+    "email_setup_confirmed_by_author": "2026-10-17",
+    "starter_gift_implemented": true,
+    "owned_decks_implemented": true,
+    "guest_implemented": true,
+    "author_confirmed_email_access": true,
+    "live_gift_relogin_tested_by_agent": false,
+    "profiles_implemented": true,
+    "gift_codes_implemented": true,
+    "daily_missions_implemented": true,
+    "packs_implemented": true,
+    "mission_result_authority": "Individual: resultado declarado por cliente. Online: recibos únicos del servidor; reglas ejecutadas por anfitrión de confianza.",
+    "pending_local_match_result_persistence": "memory_only",
+    "pending_pack_opening_persistence": "server_transaction_with_ordered_cards"
+  },
+  "supported_codes": 31,
+  "distinct_cards_in_current_decks": 21,
+  "historical_validation_v081": {
+    "release": "0.8.1",
+    "account_contract_checks": 31,
+    "account_contract_failures": 0,
+    "headless_contract_smoke_checks": 30,
+    "graphics": "Linux · X11 · OpenGL Compatibility",
+    "native_windows": "Motor oficial de Windows idéntico a 0.8; ejecución nativa de esta entrega pendiente de la prueba del autor.",
+    "live_https_auth_settings": {
+      "passed": true,
+      "http_status": 200,
+      "email_verification_required": true,
+      "emails_sent": 0
+    },
+    "shipped_registration_form_enabled": true,
+    "shipped_login_form_enabled": true,
+    "live_email_delivery_tested": false,
+    "first_live_account_verified": false,
+    "security_advisor_alerts": 0,
+    "rules_decks_catalogue_audio_animations_and_windows_engine_identical_to_v08": true,
+    "historical_v08_baseline": {
+      "original_engine_checks": 143,
+      "new_engine_and_bot_checks": 125,
+      "ui_checks": 30,
+      "total_checks": 810,
+      "original_simulations": 24,
+      "bot_vs_bot_simulations": 64,
+      "mixed_payment_simulations": 24,
+      "complete_games": 193,
+      "failures": 0,
+      "graphics": "Linux · OpenGL Compatibility",
+      "native_windows": "Motor oficial para Windows de la entrega anterior; interfaz 0.8 verificada en Linux, ejecución nativa en Windows pendiente.",
+      "v03_presentation_checks": 54,
+      "v04_card_and_audio_checks": 46,
+      "audio": "Archivos PCM verificados y señal no nula capturada desde los buses de música y efectos del motor; salida física de Windows pendiente de probar.",
+      "v05_layout_selection_and_resource_checks": 43,
+      "v06_account_http_checks": 31,
+      "account_live_service_tested": true,
+      "v07_empty_defense_and_settings_checks": 31,
+      "v08_engine_checks": 242,
+      "v08_ui_checks": 65,
+      "new_deck_complete_games": 81,
+      "new_deck_automatic_payment_games": 54,
+      "new_deck_mixed_payment_games": 27,
+      "account_live_registration_tested": false,
+      "account_real_emails_sent": 0,
+      "account_live_check": "GET /auth/v1/settings: HTTP 200 desde Godot, verificación TLS normal; correo habilitado y confirmación obligatoria"
+    }
+  },
+  "historical_validation_v090": {
+    "version": "0.9.0",
+    "date": "2026-10-17",
+    "native_windows": true,
+    "engine": "4.7.2.stable.official.ed1daf0bf",
+    "renderer": "OpenGL Compatibility, NVIDIA RTX 2060",
+    "rule_checks_current": 242,
+    "current_deck_simulations": 81,
+    "ui_gameplay_checks": 65,
+    "auth_local_contract_checks": 31,
+    "new_access_collection_ui_contract_checks": 38,
+    "additional_regressions": [
+      {
+        "script": "test_game",
+        "exit_code": 0,
+        "results": [
+          {
+            "checks": 143,
+            "complete_simulations": 24,
+            "failures": []
+          }
+        ]
+      },
+      {
+        "script": "test_v02",
+        "exit_code": 0,
+        "results": [
+          {
+            "bot_games": 88,
+            "failures": [],
+            "v02_checks": 125
+          }
+        ]
+      },
+      {
+        "script": "test_ui_v02",
+        "exit_code": 0,
+        "results": [
+          {
+            "failures": [],
+            "ui_checks": 30
+          }
+        ]
+      },
+      {
+        "script": "test_v03",
+        "exit_code": 0,
+        "results": [
+          {
+            "failures": [],
+            "v03_checks": 54
+          }
+        ]
+      },
+      {
+        "script": "test_v04",
+        "exit_code": 0,
+        "results": [
+          {
+            "failures": [],
+            "v04_checks": 46
+          }
+        ]
+      },
+      {
+        "script": "test_v05",
+        "exit_code": 0,
+        "results": [
+          {
+            "failures": [],
+            "v05_checks": 43
+          }
+        ]
+      },
+      {
+        "script": "test_v07",
+        "exit_code": 0,
+        "results": [
+          {
+            "failures": [],
+            "v07_checks": 31
+          }
+        ]
+      }
+    ],
+    "database_test": "PASS: three exact deck lists and collection maps, 20 retries, UUID isolation, direct write denial, verified email, rollback",
+    "backend_migration": "20261017185851_aamix_collection_starter_v090",
+    "live_https_auth_settings": 200,
+    "live_rpc_without_session_statuses": [
+      401,
+      401
+    ],
+    "real_emails_sent_by_agent": 0,
+    "gift_claims_committed_by_agent": 0,
+    "test_accounts_remaining": 0,
+    "real_concurrent_clients_verified": false,
+    "concurrency_note": "Parallel connector requests were serialized. Timing assertion detected no overlap; do not count as concurrent validation. Unique UUID and ON CONFLICT gate are implemented and inspected.",
+    "live_email_access": "Author confirmed functional before this release. No new mailbox test by agent.",
+    "live_award_then_new_email_login_tested": false,
+    "unmodified_core": [
+      "game.gd",
+      "ai.gd",
+      "account.gd",
+      "drop_surface.gd",
+      "card_image.gd",
+      "motion.gd",
+      "data/catalogo_edicion_1.json",
+      "data/mazos_prueba.json",
+      "data/reglas_vigentes.json",
+      "data/cuentas.json"
+    ],
+    "total_script_checks": 848,
+    "total_complete_simulations": 193,
+    "clean_zip_extract_manifest_verified": true,
+    "clean_portable_windows_access_and_guest_match_passed": true,
+    "clean_portable_ui_contract_checks": 38,
+    "clean_portable_ui_contract_failures": 0
+  },
+  "rewards": {
+    "gift_deck_name": "Mazo Maagover",
+    "pack_normals_uniform": true,
+    "gift_deck_resources": 15,
+    "pack_resource_slot": 1,
+    "pack_normal_count": 25,
+    "special_group_weights": {
+      "0105": 5,
+      "0103": 5,
+      "0128": 16,
+      "0134": 16,
+      "0115": 5,
+      "0125": 16,
+      "0130": 16,
+      "0131": 16,
+      "0119": 5
+    },
+    "gift_code": "M4Z0M44G0",
+    "mission_frequency": "Diarias: Juega 1 y Gana 1. Únicas por cuenta: Juega 10 y Gana 10.",
+    "gift_code_frequency": "once_per_uuid",
+    "mission_reset": "00:00",
+    "gift_deck_id": "maago",
+    "pack_size": 5,
+    "gift_deck_cards": 40,
+    "pack_slot5_normal_probability": 0.7,
+    "pack_normals_repeat": true,
+    "pack_slot5_special_probability": 0.3,
+    "ally_avatar_count": 22,
+    "mission_timezone": "America/Santiago",
+    "pack_resources_other_slots": false,
+    "mission_results": [
+      "victory",
+      "defeat"
+    ],
+    "pack_promotional_cards_allowed": false,
+    "pack_excluded_promotional_codes": [
+      "01a",
+      "01b",
+      "01c",
+      "01d",
+      "01e",
+      "01f"
+    ],
+    "pack_eligible_cards": 35,
+    "promotional_avatars_unlocked": false,
+    "gift_codes": [
+      {
+        "codigo": "M4Z0M44G0",
+        "nombre": "Mazo Maagover",
+        "tipo": "mazo",
+        "mazo_id": "maago",
+        "total_cartas": 40,
+        "recursos": 15,
+        "fuente_lista": "tests/fixtures/mazos_legacy.json:usuario_maagover"
+      },
+      {
+        "codigo": "P3RI",
+        "nombre": "3 copias de Peri",
+        "tipo": "cartas",
+        "cartas": [
+          {
+            "codigo": "01a",
+            "cantidad": 3
+          }
+        ]
+      },
+      {
+        "codigo": "B1G0T3S",
+        "nombre": "3 copias de Bigotes",
+        "tipo": "cartas",
+        "cartas": [
+          {
+            "codigo": "01b",
+            "cantidad": 3
+          }
+        ]
+      },
+      {
+        "codigo": "SI2TYA",
+        "nombre": "Tsuki y Akira",
+        "tipo": "cartas",
+        "cartas": [
+          {
+            "codigo": "01c",
+            "cantidad": 1
+          }
+        ]
+      },
+      {
+        "codigo": "CHANCHULINES",
+        "nombre": "Granjita de Chanchuus",
+        "tipo": "cartas",
+        "cartas": [
+          {
+            "codigo": "01d",
+            "cantidad": 1
+          }
+        ]
+      },
+      {
+        "codigo": "TORNEOAAMIX1",
+        "nombre": "Dragón Tee K.O",
+        "tipo": "cartas",
+        "cartas": [
+          {
+            "codigo": "01e",
+            "cantidad": 1
+          }
+        ]
+      },
+      {
+        "codigo": "AAMIXTC",
+        "nombre": "1 sobre",
+        "tipo": "sobres",
+        "sobres": 1
+      },
+      {
+        "codigo": "M4Z0G1R4",
+        "nombre": "Mazo Girabl",
+        "tipo": "mazo",
+        "mazo_id": "girabl",
+        "total_cartas": 40,
+        "recursos": 12,
+        "fuente_lista": "tests/fixtures/mazos_legacy.json:usuario_girabl"
+      },
+      {
+        "codigo": "AAMIX50",
+        "nombre": "50 Restos",
+        "tipo": "restos",
+        "restos": 50
+      },
+      {
+        "codigo": "AAMIX100",
+        "nombre": "100 Restos",
+        "tipo": "restos",
+        "restos": 100
+      },
+      {
+        "codigo": "AAMIX1000",
+        "nombre": "1000 Restos",
+        "tipo": "restos",
+        "restos": 1000
+      },
+      {
+        "codigo": "AAMIXNAVIDAD",
+        "nombre": "1 sobre TC, 50 Restos y 1 carta aleatoria",
+        "tipo": "combinado",
+        "sobres": 1,
+        "restos": 50,
+        "sobres_carta_aleatoria": 1
+      }
+    ],
+    "pack_expansion_name": "Transmisión Caída",
+    "missions": [
+      {
+        "id": "play_one",
+        "scope": "daily",
+        "target": 1,
+        "reward_kind": "restos",
+        "reward_amount": 25
+      },
+      {
+        "id": "win_one",
+        "scope": "daily",
+        "target": 1,
+        "reward_kind": "normal_pack",
+        "reward_amount": 1
+      },
+      {
+        "id": "play_ten",
+        "scope": "lifetime",
+        "target": 10,
+        "reward_kind": "tc_pack",
+        "reward_amount": 3
+      },
+      {
+        "id": "win_ten",
+        "scope": "lifetime",
+        "target": 10,
+        "reward_kind": "tc_pack",
+        "reward_amount": 5
+      }
+    ],
+    "girabl_cards": 40,
+    "girabl_resources": 12,
+    "pack_new_marker": "persisted_zero_based_new_card_indices;first_previously_unowned_copy_only",
+    "daily_play_historical_50_preserved": true
+  },
+  "historical_validation_v0100": {
+    "version": "0.10.0",
+    "date": "2026-10-17",
+    "native_windows": true,
+    "engine": "Godot4.7.2.stable.official.ed1daf0bf",
+    "renderer": "OpenGL Compatibility, NVIDIA RTX2060",
+    "total_script_checks": 1050,
+    "total_complete_simulations": 214,
+    "script_failures": 0,
+    "headless": {
+      "run_at_utc": "2026-10-17T19:51:11.170699+00:00",
+      "engine": "C:\\Users\\maago\\.codex\\.chatgpt-projects\\g-p-6ad0c7fad7dc8191baf5845e9f78b3cd\\work\\AAMIX_Prototipo_Local_v0.10.0\\motor\\AAMIX.exe",
+      "mode": "headless",
+      "results": [
+        {
+          "test": "test_game.gd",
+          "returncode": 0,
+          "seconds": 0.88,
+          "summary": {
+            "checks": 143,
+            "complete_simulations": 24,
+            "failures": []
+          },
+          "checks": 143,
+          "simulations": 24,
+          "errors": [],
+          "log": "C:\\Users\\maago\\.codex\\.chatgpt-projects\\g-p-6ad0c7fad7dc8191baf5845e9f78b3cd\\work\\v010-validation\\test_game.log",
+          "passed": true
+        },
+        {
+          "test": "test_v02.gd",
+          "returncode": 0,
+          "seconds": 2.09,
+          "summary": {
+            "bot_games": 88,
+            "failures": [],
+            "v02_checks": 125
+          },
+          "checks": 125,
+          "simulations": 88,
+          "errors": [],
+          "log": "C:\\Users\\maago\\.codex\\.chatgpt-projects\\g-p-6ad0c7fad7dc8191baf5845e9f78b3cd\\work\\v010-validation\\test_v02.log",
+          "passed": true
+        },
+        {
+          "test": "test_v08.gd",
+          "returncode": 0,
+          "seconds": 2.53,
+          "summary": {
+            "checks": 242,
+            "failures": [],
+            "new_complete_games": 81
+          },
+          "checks": 242,
+          "simulations": 81,
+          "errors": [],
+          "log": "C:\\Users\\maago\\.codex\\.chatgpt-projects\\g-p-6ad0c7fad7dc8191baf5845e9f78b3cd\\work\\v010-validation\\test_v08.log",
+          "passed": true
+        },
+        {
+          "test": "test_profiles.gd",
+          "returncode": 0,
+          "seconds": 5.48,
+          "summary": {
+            "profile_checks": 40,
+            "failures": 0
+          },
+          "checks": 40,
+          "simulations": 0,
+          "errors": [],
+          "log": "C:\\Users\\maago\\.codex\\.chatgpt-projects\\g-p-6ad0c7fad7dc8191baf5845e9f78b3cd\\work\\v010-validation\\test_profiles.log",
+          "passed": true
+        },
+        {
+          "test": "test_presentation_v010.gd",
+          "returncode": 0,
+          "seconds": 3.02,
+          "summary": {
+            "failures": [],
+            "presentation_v010_checks": 40
+          },
+          "checks": 40,
+          "simulations": 0,
+          "errors": [],
+          "log": "C:\\Users\\maago\\.codex\\.chatgpt-projects\\g-p-6ad0c7fad7dc8191baf5845e9f78b3cd\\work\\v010-validation\\test_presentation_v010.log",
+          "passed": true
+        }
+      ],
+      "checks": 590,
+      "simulations": 193,
+      "all_passed": true
+    },
+    "gui_regressions": [
+      {
+        "script": "test_ui_v02",
+        "exit_code": 0,
+        "results": [
+          {
+            "failures": [],
+            "ui_checks": 30
+          }
+        ]
+      },
+      {
+        "script": "test_v03",
+        "exit_code": 0,
+        "results": [
+          {
+            "failures": [],
+            "v03_checks": 54
+          }
+        ]
+      },
+      {
+        "script": "test_v04",
+        "exit_code": 0,
+        "results": [
+          {
+            "failures": [],
+            "v04_checks": 53
+          }
+        ]
+      },
+      {
+        "script": "test_v05",
+        "exit_code": 0,
+        "results": [
+          {
+            "failures": [],
+            "v05_checks": 43
+          }
+        ]
+      },
+      {
+        "script": "test_v07",
+        "exit_code": 0,
+        "results": [
+          {
+            "failures": [],
+            "v07_checks": 31
+          }
+        ]
+      },
+      {
+        "script": "test_ui_v08",
+        "exit_code": 0,
+        "results": [
+          {
+            "failures": [],
+            "v08_ui_checks": 65
+          }
+        ]
+      }
+    ],
+    "account_contract": {
+      "account_checks": 31,
+      "failures": [],
+      "live_service_tested": false
+    },
+    "collection_contract": {
+      "failures": [],
+      "real_emails_sent": 0,
+      "v09_ui_contract_checks": 38
+    },
+    "rewards_ui_contract": {
+      "failures": [],
+      "real_emails_sent": 0,
+      "rewards_ui_checks": 51
+    },
+    "maagover_current_engine": {
+      "returncode": 0,
+      "seconds": 0.88,
+      "mode": "headless",
+      "log": "C:\\Users\\maago\\.codex\\.chatgpt-projects\\g-p-6ad0c7fad7dc8191baf5845e9f78b3cd\\work\\v010-validation\\test_maagover_v010.log",
+      "result": {
+        "complete_simulations": 21,
+        "failures": [],
+        "games": [
+          {
+            "actions": 43,
+            "completed": true,
+            "deck_ids": [
+              "maago",
+              "kajido"
+            ],
+            "error": "",
+            "manual_payment": [
+              false,
+              false
+            ],
+            "seed": 11000,
+            "winner": 0
+          },
+          {
+            "actions": 86,
+            "completed": true,
+            "deck_ids": [
+              "maago",
+              "kajido"
+            ],
+            "error": "",
+            "manual_payment": [
+              true,
+              false
+            ],
+            "seed": 11001,
+            "winner": 0
+          },
+          {
+            "actions": 74,
+            "completed": true,
+            "deck_ids": [
+              "maago",
+              "kajido"
+            ],
+            "error": "",
+            "manual_payment": [
+              false,
+              true
+            ],
+            "seed": 11002,
+            "winner": 0
+          },
+          {
+            "actions": 70,
+            "completed": true,
+            "deck_ids": [
+              "kajido",
+              "maago"
+            ],
+            "error": "",
+            "manual_payment": [
+              false,
+              false
+            ],
+            "seed": 11031,
+            "winner": 1
+          },
+          {
+            "actions": 58,
+            "completed": true,
+            "deck_ids": [
+              "kajido",
+              "maago"
+            ],
+            "error": "",
+            "manual_payment": [
+              true,
+              false
+            ],
+            "seed": 11032,
+            "winner": 1
+          },
+          {
+            "actions": 119,
+            "completed": true,
+            "deck_ids": [
+              "kajido",
+              "maago"
+            ],
+            "error": "",
+            "manual_payment": [
+              false,
+              true
+            ],
+            "seed": 11033,
+            "winner": 1
+          },
+          {
+            "actions": 80,
+            "completed": true,
+            "deck_ids": [
+              "maago",
+              "papito"
+            ],
+            "error": "",
+            "manual_payment": [
+              false,
+              false
+            ],
+            "seed": 11062,
+            "winner": 1
+          },
+          {
+            "actions": 93,
+            "completed": true,
+            "deck_ids": [
+              "maago",
+              "papito"
+            ],
+            "error": "",
+            "manual_payment": [
+              true,
+              false
+            ],
+            "seed": 11063,
+            "winner": 0
+          },
+          {
+            "actions": 95,
+            "completed": true,
+            "deck_ids": [
+              "maago",
+              "papito"
+            ],
+            "error": "",
+            "manual_payment": [
+              false,
+              true
+            ],
+            "seed": 11064,
+            "winner": 0
+          },
+          {
+            "actions": 104,
+            "completed": true,
+            "deck_ids": [
+              "papito",
+              "maago"
+            ],
+            "error": "",
+            "manual_payment": [
+              false,
+              false
+            ],
+            "seed": 11093,
+            "winner": 1
+          },
+          {
+            "actions": 97,
+            "completed": true,
+            "deck_ids": [
+              "papito",
+              "maago"
+            ],
+            "error": "",
+            "manual_payment": [
+              true,
+              false
+            ],
+            "seed": 11094,
+            "winner": 0
+          },
+          {
+            "actions": 68,
+            "completed": true,
+            "deck_ids": [
+              "papito",
+              "maago"
+            ],
+            "error": "",
+            "manual_payment": [
+              false,
+              true
+            ],
+            "seed": 11095,
+            "winner": 1
+          },
+          {
+            "actions": 76,
+            "completed": true,
+            "deck_ids": [
+              "maago",
+              "flaan"
+            ],
+            "error": "",
+            "manual_payment": [
+              false,
+              false
+            ],
+            "seed": 11124,
+            "winner": 0
+          },
+          {
+            "actions": 106,
+            "completed": true,
+            "deck_ids": [
+              "maago",
+              "flaan"
+            ],
+            "error": "",
+            "manual_payment": [
+              true,
+              false
+            ],
+            "seed": 11125,
+            "winner": 0
+          },
+          {
+            "actions": 77,
+            "completed": true,
+            "deck_ids": [
+              "maago",
+              "flaan"
+            ],
+            "error": "",
+            "manual_payment": [
+              false,
+              true
+            ],
+            "seed": 11126,
+            "winner": 1
+          },
+          {
+            "actions": 74,
+            "completed": true,
+            "deck_ids": [
+              "flaan",
+              "maago"
+            ],
+            "error": "",
+            "manual_payment": [
+              false,
+              false
+            ],
+            "seed": 11155,
+            "winner": 0
+          },
+          {
+            "actions": 101,
+            "completed": true,
+            "deck_ids": [
+              "flaan",
+              "maago"
+            ],
+            "error": "",
+            "manual_payment": [
+              true,
+              false
+            ],
+            "seed": 11156,
+            "winner": 0
+          },
+          {
+            "actions": 104,
+            "completed": true,
+            "deck_ids": [
+              "flaan",
+              "maago"
+            ],
+            "error": "",
+            "manual_payment": [
+              false,
+              true
+            ],
+            "seed": 11157,
+            "winner": 1
+          },
+          {
+            "actions": 51,
+            "completed": true,
+            "deck_ids": [
+              "maago",
+              "maago"
+            ],
+            "error": "",
+            "manual_payment": [
+              false,
+              false
+            ],
+            "seed": 12000,
+            "winner": 1
+          },
+          {
+            "actions": 72,
+            "completed": true,
+            "deck_ids": [
+              "maago",
+              "maago"
+            ],
+            "error": "",
+            "manual_payment": [
+              true,
+              false
+            ],
+            "seed": 12001,
+            "winner": 0
+          },
+          {
+            "actions": 119,
+            "completed": true,
+            "deck_ids": [
+              "maago",
+              "maago"
+            ],
+            "error": "",
+            "manual_payment": [
+              false,
+              true
+            ],
+            "seed": 12002,
+            "winner": 1
+          }
+        ],
+        "maagover_v010_checks": 64
+      }
+    },
+    "backend": {
+      "project_id": "drpsedaiqyowwikhjugs",
+      "applied": [
+        {
+          "version": "20261017185851",
+          "name": "aamix_collection_starter_v090",
+          "source": "aamix_collection.sql"
+        },
+        {
+          "version": "20261017194519",
+          "name": "aamix_profiles_rewards_v0100",
+          "source": "aamix_rewards.sql"
+        }
+      ],
+      "verification_date": "2026-10-17",
+      "live_counts_before": {
+        "users": 2,
+        "starter_gifts": 1,
+        "owned_decks": 1,
+        "collection_rows": 12,
+        "collection_quantity": 40
+      },
+      "live_counts_after": {
+        "users": 2,
+        "starter_gifts": 1,
+        "owned_decks": 1,
+        "collection_rows": 12,
+        "collection_quantity": 40
+      },
+      "committed_new_reward_rows_after_tests": 0,
+      "committed_test_users": 0,
+      "tests": {
+        "test_rewards_rollback.sql": "PASS, twice; synthetic random UUIDs; every transaction rolled back",
+        "test_collection_rollback.sql": "PASS against upgraded backend; all transactions rolled back",
+        "server_draws_tested_total": 20000,
+        "last_sample_packs": 10000,
+        "last_sample_specials": 3029,
+        "last_sample_named_specials_combined": 602,
+        "last_sample_slot5_named": {
+          "0103": 148,
+          "0105": 146,
+          "0115": 141,
+          "0119": 167
+        },
+        "last_sample_slot5_other_specials": {
+          "0125": 469,
+          "0128": 481,
+          "0130": 465,
+          "0131": 505,
+          "0134": 507
+        },
+        "normal_cards_observed_in_slot5": 31,
+        "real_two_connection_concurrency_test": "NOT RUN; wallet serialization and unique constraints reviewed; sequential retries and second-client request aliases tested"
+      },
+      "advisors": {
+        "public_RLS_issues": 0,
+        "private_RLS_no_policy_info": "Three internal deny-all tables, no client SELECT grant; expected",
+        "preexisting_auth_warning": "Leaked password protection disabled; Auth configuration left unchanged",
+        "preexisting_auth_warning_remediation": "https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection",
+        "performance": "Six unused foreign-key-support indexes, informational on tiny data; no missing indexes reported"
+      },
+      "limitations": [
+        "Local AI game completion is reported by the client, not validated by an authoritative game server.",
+        "A local result lost before its completion RPC cannot be reconstructed by the server."
+      ]
+    },
+    "live_auth_settings": {
+      "email_verification_required": true,
+      "emails_sent": 0,
+      "godot_https_auth_settings": true,
+      "status": 200,
+      "transport_result": 0
+    },
+    "live_rewards_access": {
+      "http_statuses": [
+        401,
+        401,
+        401,
+        401,
+        401,
+        401,
+        401
+      ],
+      "live_rewards_anonymous_denied": true,
+      "real_emails_sent": 0,
+      "rewards_granted": 0
+    },
+    "real_emails_sent_by_agent": 0,
+    "real_concurrent_clients_verified": false,
+    "local_ai_result_server_authoritative": false,
+    "clean_zip_extract_manifest_verified": true,
+    "clean_portable_start_passed": true,
+    "status": "complete",
+    "portable_rewards_contract_checks": 51,
+    "portable_rewards_contract_failures": 0
+  },
+  "historical_validation_v0101": {
+    "version": "0.10.1",
+    "date": "2026-10-17",
+    "native_windows": true,
+    "engine": "Godot4.7.2.stable.official.ed1daf0bf",
+    "total_script_checks": 155,
+    "total_complete_simulations": 21,
+    "script_failures": 0,
+    "profiles_checks": 40,
+    "maagover_checks": 64,
+    "rewards_ui_contract_checks": 51,
+    "import_passed": true,
+    "access_and_guest_match_passed": true,
+    "backend": {
+      "project_id": "drpsedaiqyowwikhjugs",
+      "applied": [
+        {
+          "version": "20261017185851",
+          "name": "aamix_collection_starter_v090",
+          "source": "aamix_collection.sql"
+        },
+        {
+          "version": "20261017194519",
+          "name": "aamix_profiles_rewards_v0100",
+          "source": "aamix_rewards.sql"
+        },
+        {
+          "version": "20261017221142",
+          "name": "aamix_packs_exclude_promotional_v0101",
+          "sources": [
+            "aamix_no_promo_packs.sql",
+            "promo_repair_admin.sql"
+          ],
+          "method": "Supabase dashboard SQL, transaction and schema_migrations record; connector apply_migration failed with expired requestState"
+        }
+      ],
+      "verification_date": "2026-10-17",
+      "current_release": "0.10.1",
+      "current_pack_pool": {
+        "catalogue": 41,
+        "eligible": 35,
+        "normal": 25,
+        "special": 9,
+        "resource": 1,
+        "excluded_promotional": 6
+      },
+      "tests": {
+        "test_rewards_rollback.sql": {
+          "passed": true,
+          "sampled_packs": 10000,
+          "special_count": 3025,
+          "named_special_count": 624,
+          "normal_cards_observed_in_slot5": 25,
+          "promotional_cards": 0
+        },
+        "test_pack_exclusion_rollback.sql": {
+          "passed": true,
+          "sampled_packs": 1000,
+          "special_count": 300,
+          "normal_count": 700,
+          "resource_normal_special_fixtures": true,
+          "promotional_cards": 0,
+          "ddl_and_fixtures_rolled_back": true
+        },
+        "test_promo_repair_rollback.sql": {
+          "passed": true,
+          "legitimate_maagover_promo_preserved": true,
+          "quantity_preserved": true,
+          "idempotent_retries": 3,
+          "failure_rolled_back_atomically": true
+        }
+      },
+      "historical_pack_correction": {
+        "authorized_by_author": true,
+        "committed": true,
+        "replacements": 1,
+        "old_code": "01e",
+        "old_name": "Dragón Tee K.O",
+        "new_code": "0116",
+        "new_name": "El conflicto de Maagover",
+        "position": 2,
+        "quantity_before": 85,
+        "quantity_after": 85,
+        "legitimate_maagover_promo_quantity": 1,
+        "audit_rows": 1,
+        "opening_uuid_omitted": true
+      },
+      "post_test_state": {
+        "test_accounts_remaining": 0,
+        "catalogue_cards": 41,
+        "special_constraint_restored": true
+      },
+      "advisors": {
+        "public_RLS_issues": 0,
+        "private_deny_all_RLS_tables": 4,
+        "client_repair_execute_granted": false,
+        "preexisting_auth_warning": "Leaked password protection disabled; Auth configuration left unchanged"
+      },
+      "historical_v0100_record": "APPLIED_MIGRATIONS_v0.10.0.json",
+      "limitations": [
+        "Local AI game completion is reported by the client, not validated by an authoritative game server.",
+        "A local result lost before its completion RPC cannot be reconstructed by the server."
+      ]
+    },
+    "clean_zip_extract_manifest_verified": true,
+    "clean_portable_start_passed": true,
+    "status": "complete",
+    "historical_v0100_results_reexecuted": false,
+    "portable_rewards_contract_checks": 51,
+    "portable_rewards_contract_failures": 0,
+    "portable_verification": "Fresh QA archive extracted with no .godot cache; final archive is independently extracted and checked before delivery."
+  },
+  "historical_validation_v0110": {
+    "version": "0.11.0",
+    "date": "2026-10-18",
+    "native_windows": true,
+    "engine": "Godot4.7.2.stable.official.ed1daf0bf",
+    "total_script_checks": 336,
+    "total_complete_simulations": 21,
+    "script_failures": 0,
+    "ui_v011_checks": 61,
+    "profiles_checks": 48,
+    "presentation_checks": 40,
+    "maagover_checks": 64,
+    "rewards_new_contract_checks": 71,
+    "rewards_existing_flow_checks": 52,
+    "additional_repeated_headless_rewards_checks": 71,
+    "repeated_checks_excluded_from_total": true,
+    "backend": {
+      "project_id": "drpsedaiqyowwikhjugs",
+      "current_release": "0.11.0",
+      "verification_date": "2026-10-18",
+      "applied": [
+        {
+          "version": "20261017185851",
+          "name": "aamix_collection_starter_v090",
+          "source": "aamix_collection.sql"
+        },
+        {
+          "version": "20261017194519",
+          "name": "aamix_profiles_rewards_v0100",
+          "source": "aamix_rewards.sql"
+        },
+        {
+          "version": "20261017221142",
+          "name": "aamix_packs_exclude_promotional_v0101",
+          "sources": [
+            "aamix_no_promo_packs.sql",
+            "promo_repair_admin.sql"
+          ],
+          "method": "Supabase dashboard SQL, transaction and schema_migrations record; connector apply_migration failed with expired requestState"
+        },
+        {
+          "version": "20261018031742",
+          "name": "aamix_gift_codes_and_avatar_lock_v0110",
+          "source": "aamix_gift_codes_v0110.sql",
+          "method": "Supabase apply_migration connector"
+        },
+        {
+          "version": "20261018032104",
+          "name": "aamix_gift_codes_index_v0110",
+          "source": "aamix_gift_codes_index_v0110.sql",
+          "method": "Supabase apply_migration connector"
+        }
+      ],
+      "tests": {
+        "test_gift_codes_v0110_rollback.sql": {
+          "passed": true,
+          "exact_new_codes": 5,
+          "new_promo_cards_total": 9,
+          "maagover_preserved": "40 cards,15 resources,exact saved list",
+          "sequential_retries_per_code": 20,
+          "uuid_isolation": true,
+          "auth_and_direct_write_guards": true,
+          "atomic_failure_rollback": true,
+          "owned_promotional_avatars_rejected": true,
+          "eligible_avatars": 22,
+          "server_pack_draws": 1000,
+          "promotional_cards_in_packs": 0,
+          "all_fixtures_rolled_back": true
+        }
+      },
+      "post_test_state": {
+        "qa_accounts_remaining": 0,
+        "real_collection_quantity_unchanged": 85,
+        "real_rewards_redeemed_by_agent": 0,
+        "real_emails_sent_by_agent": 0,
+        "gift_code_definitions": 6,
+        "new_card_codes_grant_decks": false,
+        "avatar_unlocks_for_promos": false,
+        "pack_eligible_cards": 35
+      },
+      "advisors": {
+        "public_RLS_issues": 0,
+        "private_deny_all_RLS_tables": 5,
+        "preexisting_auth_warning_unchanged": "Leaked password protection disabled; Auth configuration unchanged"
+      },
+      "historical_v0101_record": "APPLIED_MIGRATIONS_v0.10.1.json",
+      "limitations": [
+        "Game results for daily missions are client reported, not server verified gameplay.",
+        "Real simultaneous two-client concurrency and new real mailbox access were not tested."
+      ]
+    },
+    "clean_zip_extract_manifest_verified": true,
+    "clean_portable_start_passed": true,
+    "status": "complete",
+    "portable_rewards_contract_checks": 71,
+    "portable_rewards_contract_failures": 0,
+    "portable_checks_excluded_from_unique_source_total": true,
+    "final_archive_report": "INFORME_ENTREGA_v0.11.0.json next to the archive records its final hash and independent final extraction/start check."
+  },
+  "historical_validation_v0120": {
+    "version": "0.12.0",
+    "date": "2026-10-18",
+    "native_windows": true,
+    "engine": "Godot4.7.2.stable.official.ed1daf0bf",
+    "total_script_checks": 582,
+    "script_failures": 0,
+    "total_complete_simulations": 48,
+    "ui_v012_checks": 130,
+    "presentation_checks": 43,
+    "profiles_checks": 48,
+    "girabl_checks": 76,
+    "girabl_complete_games": 27,
+    "maagover_checks": 64,
+    "maagover_complete_games": 21,
+    "rewards_new_checks": 98,
+    "rewards_previous_checks": 71,
+    "rewards_legacy_checks": 52,
+    "fixture_reports_not_counted_as_AI_games": 11,
+    "backend": {
+      "project_id": "drpsedaiqyowwikhjugs",
+      "current_release": "0.12.0",
+      "verification_date": "2026-10-18",
+      "applied": [
+        {
+          "version": "20261017185851",
+          "name": "aamix_collection_starter_v090",
+          "source": "aamix_collection.sql"
+        },
+        {
+          "version": "20261017194519",
+          "name": "aamix_profiles_rewards_v0100",
+          "source": "aamix_rewards.sql"
+        },
+        {
+          "version": "20261017221142",
+          "name": "aamix_packs_exclude_promotional_v0101",
+          "sources": [
+            "aamix_no_promo_packs.sql",
+            "promo_repair_admin.sql"
+          ],
+          "method": "Supabase dashboard SQL, transaction and schema_migrations record; connector apply_migration failed with expired requestState"
+        },
+        {
+          "version": "20261018031742",
+          "name": "aamix_gift_codes_and_avatar_lock_v0110",
+          "source": "aamix_gift_codes_v0110.sql",
+          "method": "Supabase apply_migration connector"
+        },
+        {
+          "version": "20261018032104",
+          "name": "aamix_gift_codes_index_v0110",
+          "source": "aamix_gift_codes_index_v0110.sql",
+          "method": "Supabase apply_migration connector"
+        },
+        {
+          "version": "20261018035100",
+          "name": "aamix_missions_and_gifts_v0120",
+          "source": "aamix_missions_and_gifts_v0120.sql",
+          "method": "Supabase apply_migration connector"
+        }
+      ],
+      "tests": {
+        "test_missions_and_gifts_v0120_rollback.sql": {
+          "passed": true,
+          "server_pack_draws": 1000,
+          "daily_play_one_legacy_preserved": true,
+          "daily_win_one": true,
+          "lifetime_play_ten": true,
+          "historic_finished_receipts_counted": true,
+          "independent_claims": true,
+          "chile_midnight_with_other_session_timezone": true,
+          "retries_per_claim_and_code": 20,
+          "gift_pack_and_exact_girabl_40_12": true,
+          "auth_and_RLS": true,
+          "atomic_overflow_rollback": true,
+          "all_fixtures_rolled_back": true
+        },
+        "test_gift_codes_v0110_rollback.sql": {
+          "passed": true,
+          "catalogue_code_count_updated_to": 8,
+          "server_pack_draws": 1000,
+          "old_gifts_and_promotional_avatar_locks_preserved": true,
+          "all_fixtures_rolled_back": true
+        }
+      },
+      "post_test_state": {
+        "qa_accounts_remaining": 0,
+        "real_collection_quantity_before": 85,
+        "real_collection_quantity_after": 85,
+        "owned_decks_before_and_after": 2,
+        "redemptions_before_and_after": 1,
+        "completed_receipts_before_and_after": 1,
+        "new_real_mission_claims": 0,
+        "real_rewards_redeemed_by_agent": 0,
+        "gift_code_definitions": 8,
+        "server_girabl_matches_original_fixture": true,
+        "girabl_cards": 40,
+        "girabl_resources": 12,
+        "promotional_cards_in_test_packs": 0,
+        "eligible_pack_pool": 35
+      },
+      "advisors": {
+        "public_RLS_issues": 0,
+        "private_deny_all_RLS_tables": 5,
+        "preexisting_auth_warning_unchanged": "Leaked password protection disabled; Auth and SMTP configuration unchanged"
+      },
+      "historical_v0110_record": "APPLIED_MIGRATIONS_v0.11.0.json",
+      "limitations": [
+        "Game results for daily missions are client reported, not server verified gameplay.",
+        "Real simultaneous two-client concurrency and new real mailbox access were not tested."
+      ]
+    },
+    "clean_zip_extract_manifest_verified": true,
+    "clean_portable_start_passed": true,
+    "status": "complete",
+    "portable_rewards_contract_checks": 98,
+    "portable_rewards_contract_failures": 0,
+    "portable_checks_excluded_from_unique_source_total": true,
+    "final_archive_report": "The adjacent INFORME_ENTREGA_v0.12.0.json records the final archive hash and final extraction/start check."
+  },
+  "new_visual_assets": {
+    "raster_assets": 0,
+    "vector_control": "new_card_badge.gd",
+    "original_raster_and_audio_bytes_preserved": true
+  },
+  "audio_opening": {
+    "file": "sobre_rasgar.wav",
+    "logical_effect": "sobre_abrir",
+    "seconds": 0.82,
+    "sample_rate": 44100,
+    "channels": 1,
+    "peak": 0.49,
+    "rms": 0.0824,
+    "origin": "Original AAMIX synthesized foil/paper tear; no external samples",
+    "generator": "tools/generate_pack_tear_audio.py",
+    "seed": 130018,
+    "sha256": "d1129a63087a35b474d4df64117dc68d7e53cb90fc464f7e21906a587045ab95"
+  },
+  "historical_validation_v0130": {
+    "version": "0.13.0",
+    "date": "2026-10-18",
+    "native_windows": true,
+    "engine": "Godot4.7.2.stable.official.ed1daf0bf",
+    "status": "complete",
+    "source_checks": 376,
+    "source_failures": 0,
+    "suites": [
+      {
+        "suite": "ui_v013_checks",
+        "checks": 143,
+        "mode": "GUI",
+        "failures": 0
+      },
+      {
+        "suite": "aesthetic_v013_checks",
+        "checks": 71,
+        "mode": "GUI, synthetic inventory",
+        "failures": 0
+      },
+      {
+        "suite": "presentation_v013_checks",
+        "checks": 45,
+        "mode": "GUI",
+        "failures": 0
+      },
+      {
+        "suite": "pack_art_v013_checks",
+        "checks": 19,
+        "mode": "GUI, loopback HTTP fixture",
+        "failures": 0
+      },
+      {
+        "suite": "rewards_v012_checks",
+        "checks": 98,
+        "mode": "headless, loopback HTTP fixture",
+        "failures": 0
+      }
+    ],
+    "complete_ai_games_rerun": 0,
+    "http_fixture_receipts_are_not_ai_games": true,
+    "repeated_suites_excluded": true,
+    "backend_changed": false,
+    "backend_migrations_executed": 0,
+    "real_rewards_redeemed_by_agent": 0,
+    "real_emails_sent": 0,
+    "all_nine_user_png_hashes_passed": true,
+    "visual_review_passed": true,
+    "audio_driver": "Dummy",
+    "audio_physical_speaker_listening_verified": false,
+    "final_archive_report": "INFORME_ENTREGA_v0.13.0.json beside the ZIP records final archive integrity and independent extracted startup."
+  },
+  "validation": {
+    "version": "0.18.0",
+    "date": "2026-10-19 America/Santiago",
+    "status": "source_complete",
+    "source_distinct_checks": 62,
+    "SQL_checks": 23,
+    "presentation_UI_adapter_checks": 26,
+    "background_poll_control_race_checks": 1,
+    "real_animation_render_checks": 2,
+    "native_online_scenarios": 10,
+    "portable_final_checks": 6,
+    "release_distinct_checks_after_portable": 68,
+    "current_failures_after_repairs": 0,
+    "native_engine_commands": 14,
+    "full_network_game_to_deck_exhaustion": false,
+    "native_game_ended_by_guest_abandon": true,
+    "native_animations_enabled": true,
+    "real_emails_sent": 0,
+    "real_players_used": 0,
+    "all_SQL_fixtures_rolled_back": true,
+    "draw_functions_originals_restored": true,
+    "synthetic_users_deleted": 2,
+    "fourteen_original_table_hashes_identical": true,
+    "large_historical_suites_executed": false,
+    "audio_driver": "Dummy",
+    "physical_speaker_listening_verified": false,
+    "metrics": {
+      "host_ack_ms_median": 426.5,
+      "guest_ack_ms_median": 1504.5,
+      "native_host_actions": 8,
+      "native_guest_actions": 6,
+      "host_submit_calls": 0,
+      "host_combined_calls": 8,
+      "guest_submit_calls": 6,
+      "includes_two_processes_on_one_PC": true,
+      "separate_remote_PCs_tested": false,
+      "old_version_latency_benchmark_run": false,
+      "note": "Observed timings in this run only; not a guarantee or a measured percentage improvement. Host own action path reduced from submit+commit to one combined authenticated RPC."
+    },
+    "repairs": [
+      "Normalize JSON float indices before Array.has for new-card markers; repeated affected cases 3 and 7 only.",
+      "Explicit Confirmar and Abandonar wait for an in-flight background poll, without another poll taking their slot. Initial live attempt stopped before play and resumed with the same synthetic users.",
+      "Animation QA called nonexistent damage helper; corrected test to actual mill method. No product rules changed."
+    ],
+    "local_sandbox_notes": [
+      "Restricted local Godot tests log Windows root-certificate access notice; no live account requests from these fixtures.",
+      "Editor import could not save editor preferences outside workspace; runtime scripts compiled and final ZIP startup is verified independently."
+    ],
+    "final_ZIP_status": "External INFORME_ENTREGA_v0.18.0.json confirms final six checks and archive integrity."
+  },
+  "historical_visual_assets_v0130": {
+    "path": "assets/estetica/PROCEDENCIA.json",
+    "count": 9,
+    "original_bytes_preserved": true
+  },
+  "battle_audio": {
+    "combate_desafio": {
+      "seconds": 48.6076,
+      "peak": 0.72,
+      "rms": 0.1372,
+      "channels": 2,
+      "sample_rate": 32000,
+      "sha256": "e035f612bb2e2f11a5877cbaf1d4517330e095205df1dddf72b8e42505348682",
+      "origin": "Original AAMIX synthesis; no external samples or existing melodies",
+      "bpm": 158,
+      "bars": 32,
+      "loop_boundary_jump": 0.00291
+    }
+  },
+  "backend_release": "0.18.0",
+  "economy": {
+    "welcome_restos": 100,
+    "once_per_UUID": true,
+    "existing_accounts_included": true,
+    "singular_price": 500,
+    "other_card_price": 150,
+    "eligible_cards": 34,
+    "resource_and_promos_excluded": true,
+    "normal_pack_eligible_cards": 25,
+    "mission_rewards": {
+      "play_one": "daily25Restos",
+      "win_one": "daily1normalcardpack",
+      "play_ten": "lifetime3TC",
+      "win_ten": "lifetime5TC"
+    }
+  },
+  "multiplayer": {
+    "status": "trusted_host_friend_beta",
+    "players": 2,
+    "transport": "Supabase HTTPS RPC private relay",
+    "rule_authority": "Creator Godot client",
+    "host_must_stay_open": true,
+    "guest_view_redacted": true,
+    "room_code_characters": 8,
+    "global_room_cap": 8,
+    "one_active_room_per_UUID": true,
+    "hard_TTL_seconds": 7200,
+    "disconnect_grace_seconds": 180,
+    "completed_retention_days": 7,
+    "snapshots_max_bytes": {
+      "host": 131072,
+      "guest": 65536
+    },
+    "poll_unchanged_omits_state": true,
+    "result_receipts_once_per_player": true,
+    "online_missions_enabled": true,
+    "paid_hosting_added": false,
+    "plan_limits_url": "https://supabase.com/pricing",
+    "service_limits_apply": true,
+    "no_secret_key_shipped": true,
+    "protocol": 2,
+    "both_players_confirm_before_start": true,
+    "host_own_action_RPC": "aamix_mp_host_action",
+    "guest_command_submitted_once": true,
+    "confirmed_visual_events": true,
+    "hidden_event_identifiers_redacted": true,
+    "adaptive_polling": true,
+    "metrics": {
+      "host_ack_ms_median": 426.5,
+      "guest_ack_ms_median": 1504.5,
+      "native_host_actions": 8,
+      "native_guest_actions": 6,
+      "host_submit_calls": 0,
+      "host_combined_calls": 8,
+      "guest_submit_calls": 6,
+      "includes_two_processes_on_one_PC": true,
+      "separate_remote_PCs_tested": false,
+      "old_version_latency_benchmark_run": false,
+      "note": "Observed timings in this run only; not a guarantee or a measured percentage improvement. Host own action path reduced from submit+commit to one combined authenticated RPC."
+    }
+  },
+  "gift_codes_count": 12,
+  "historical_validation_v0170": {
+    "version": "0.17.0",
+    "date": "2026-10-19 America/Santiago",
+    "status": "source_complete",
+    "source_distinct_checks": 77,
+    "SQL_gift_checks": 12,
+    "SQL_multiplayer_checks": 25,
+    "multiplayer_snapshot_adapter_checks": 21,
+    "gift_client_checks": 1,
+    "release_UI_checks": 8,
+    "native_online_scenarios": 10,
+    "portable_final_checks": 6,
+    "release_distinct_checks_after_portable": 83,
+    "current_failures": 0,
+    "two_separate_native_processes": true,
+    "actual_supabase_https": true,
+    "native_game_commands": 12,
+    "turn_reached": 5,
+    "synthetic_users_created_and_deleted": 2,
+    "real_emails_sent": 0,
+    "real_rewards_claimed": 0,
+    "all_SQL_fixtures_rolled_back": true,
+    "original_fields_all_fourteen_tables_identical": true,
+    "complete_AI_games_this_release": 0,
+    "full_network_match_to_deck_exhaustion": false,
+    "native_end_reason": "guest forfeit after real turns and card payment",
+    "separate_physical_computers_tested": false,
+    "legacy_suites_executed": false,
+    "large_draw_samples_executed": false,
+    "audio_driver": "Dummy",
+    "physical_speaker_listening_verified": false,
+    "sandbox_UI_notice": "Failed to read the root certificate store; local UI fixture only. Actual HTTPS two-client test ran with normal Windows certificate access and clean logs.",
+    "repairs": [
+      "Aligned client error names with actual SQL contract and repoll on permanent stale/terminal commits.",
+      "Treat null active room ID explicitly.",
+      "Hide host pending manual-payment card from guest view while still in host hand.",
+      "Unchanged polls preserve drag UI.",
+      "Cancelled room closes online table instead of allowing local actions."
+    ],
+    "final_ZIP_status": "See external INFORME_ENTREGA_v0.17.0.json for final independent ZIP startup and hash."
+  }
+}

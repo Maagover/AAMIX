@@ -1,0 +1,4 @@
+{
+  "exit_code": 0,
+  "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nPASS Windows DPAPI helper available\nPASS opt-in encrypts autofill\nPASS verified session accepted\nPASS disk bytes contain no plaintext email or tokens\nPASS new client reloads opt-in autofill\nPASS saved refresh token never establishes identity without server\nPASS saved token refresh restores verified session\nPASS rotated refresh token replaces encrypted previous token\nPASS transient failure preserves token with retry delay\nPASS revoked session clears credentials\nPASS opt-out removes stored session\nPASS sign-out revokes and forgets local session\nPASS stored credentials are bound to configured service\nPASS tampered ciphertext is rejected and forgotten\nPASS invalid server session lifetime is still rejected\nREMEMBER_V1_RESULTS {\"checks\":15,\"failures\":[]}\n"
+}

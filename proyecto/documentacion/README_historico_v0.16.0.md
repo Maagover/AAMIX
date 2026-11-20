@@ -1,0 +1,48 @@
+# AAMIX · versión 0.16.0
+
+Juego portátil completo para Windows de 64 bits. **Extrae todo el ZIP en una carpeta nueva y abre Jugar_AAMIX.bat.** Motor Godot 4.7.2 oficial incluido; no hace falta instalarlo. Clic en la intro para entrar al Inicio. La foto/nombre abre Mi cuenta; usa tu correo habitual para conservar colección y progreso. El invitado practica sin recompensas guardadas.
+
+## Restos y Tienda
+
+Restos es la moneda del juego, con icono de manzana comida inspirado en su carta. Cada cuenta recibe **100 Restos una sola vez** al acceder por primera vez a esta economía, incluidas las cuentas anteriores. El saldo aparece debajo del nombre en Inicio y arriba en Tienda. No se cobra dinero real.
+
+Tienda está en el menú principal. Hay **34 cartas**: Kajido, SoyFlaan, Papito y Transmisión Caída cuestan **500 Restos** cada una; las otras 30 cuestan **150 Restos**. Las cinco Especiales restantes cuestan 150, como las normales. No se pueden comprar Recursos ni promocionales. Cada compra entrega una copia, previa confirmación. El servidor decide precio y saldo y concede/descuenta en una sola operación. Si se pierde la respuesta, Reintentar conserva el mismo identificador y no repite la compra.
+
+## Misiones nuevas
+
+| Misión | Frecuencia | Recompensa |
+| --- | --- | --- |
+| Juega 1 partida | Diaria | 50 Restos |
+| Gana 1 partida | Diaria | 1 carta aleatoria |
+| Juega 10 partidas | Única por cuenta | 3 sobres TC |
+| Gana 10 partidas | Única por cuenta | 5 sobres TC |
+
+Las diarias reinician a las **00:00 America/Santiago**, con fecha del servidor. Jugar cuenta al terminar, ganando o perdiendo; ganar exige victoria. Reclama el premio desde Misiones. Las casillas son más pequeñas y muestran icono, recompensa y progreso. Se conservan los pagos históricos y los logros únicos cobrados no vuelven a pagarse.
+
+## Sobres
+
+La carta aleatoria se guarda como **sobre café** en Mis sobres. Tiene textura de foil, logo AAMIX y el mismo gesto de apertura cerrado→abierto, pausa y deslizamiento. Contiene una sola carta elegida uniformemente entre las **25 normales**: nunca Recurso, Especial, Singular o promocional. Sólo se ve la carta actual y una deslizada completa esta apertura.
+
+Los sobres TC siguen con sus cinco cartas y probabilidades aprobadas: Recurso sólo al inicio; normales uniformes y repetibles en 2–4; quinta normal 70% o Especial 30%. Dentro de Especiales, las cuatro Singulares tienen 5% cada una y las otras cinco 16% cada una. Nunca incluyen promociones. Ambos tipos se muestran en casillas cuadradas accionables, con cantidad; sin sobres aparece **No tienes sobres por abrir** centrado.
+
+Una apertura pendiente compartida recupera el resultado ya guardado, sin gastar el otro tipo de sobre. Deslizar y animar no vuelve a sortear ni conceder cantidades. El resultado persiste al reingresar, aunque la animación no se haya terminado.
+
+## Presentación y temas
+
+Configuración → **Visuales** permite **Tema Claro** o **Tema Oscuro**. La elección se guarda localmente entre sesiones. Ambos usan casillas opacas y mayor contraste con el fondo; el oscuro usa superficies oscuras y letras claras, también en diálogos, tienda, misiones, perfil, ayuda y registro. La madera y las ilustraciones originales se conservan.
+
+Inicio ordena las piezas flotantes así: Transmisión Caída detrás, sobre al medio, Recurso delante y logo sobre las tres. El desafío muestra los **cinco niveles**: cada futuro nivel tiene candado y oculta su mazo.
+
+Se conservan la intro, música del autor en menús, combate original en desafío, portadas y resultados, cuenta/perfil por UUID, colección, ocho códigos, cinco rivales y premios de desafío únicos. Las cuentas nuevas reciben un sobre TC al acceder y el mazo inicial se elige al entrar al desafío. Los 100 Restos se confirman antes del aviso del sobre para mantenerlo visible.
+
+## Verificación y continuidad
+
+Revisión acotada: **35 casos de economía/UI**, **18 de temas** y **25 SQL reales con rollback**. El cierre del ZIP añade 6 casos de arranque desde una extracción independiente, intro, música, confirmación y partida de invitado. Son **84 casos distintos** al cerrar la entrega; no se suman matrices ni cifras anteriores. Los reintentos se limitaron a los casos afectados. Detalle en VALIDACION_v0.16.0.md e informe externo junto al ZIP.
+
+Migración **20261019051553_aamix_economy_and_normal_packs_v0160** aplicada y verificada. Los campos anteriores de once tablas reales permanecen idénticos. Cero correos, compras o premios reales utilizados por las pruebas. No volver a aplicar migraciones registradas.
+
+Audio verificado con Dummy, sin escucha física acreditada. Las pruebas locales restringidas registraron un aviso de lectura de certificados de Windows; no hubo solicitudes a cuentas reales y la prueba final del paquete se registra aparte. Los resultados contra IA local los declara el cliente y su cola sin enviar vive en memoria; mantener el juego abierto ante error de red. Una apertura ya guardada sí se recupera desde servidor.
+
+Se conservan reglas e IA, originales, catálogo de 41 cartas, 22 avatares no promocionales y mazos históricos. Multijugador sigue En desarrollo; constructor, intercambios, diez efectos y guardado de partidas continúan pendientes. Usa esta versión para la nueva economía y sobres café. El ZIP 0.15.0 permanece intacto.
+
+Fuentes, motor, gráficos, capturas y documentación incluidos. Arte nuevo, hashes y prompts completos en `proyecto/assets/estetica_v016/PROCEDENCIA.md`; se usó ImageGen integrado y los originales permanecen intactos. Base vigente **BASE_DEL_PROYECTO_v1.12.md**, sección 24, con CONTINUIDAD.md y PROMPT_CONTINUIDAD.md.

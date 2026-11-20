@@ -1,0 +1,1 @@
+Continúa AAMIX desde AAMIX_Windows_v1.0.zip completo. Lee README, VERSION.json y CONTINUIDAD. No repitas el reset oficial ni migraciones. Mantén datos Auth, diseño, DPAPI, transporte privado filtrado, reglas y originales. Entrega nuevas versiones completas sin sobrescribir las anteriores. Pruebas dirigidas y acotadas, sin matrices masivas.

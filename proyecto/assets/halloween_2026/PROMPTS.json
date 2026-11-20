@@ -1,0 +1,21 @@
+{
+  "tool": "image_gen.imagegen",
+  "references": "Original supplied AAMIX closed/open normal pack and valley; user Halloween card PNGs retained unchanged",
+  "assets": [
+    {
+      "file": "sobre_halloween_cerrado.png",
+      "prompt": "Edit original normal-card closed foil pack: charcoal/silver foil with orange seals and orange reflected accents; preserve AAMIX logo, add small HALLOWEEN label and subtle pumpkin/web details. Whole closed pack, front view, transparent background.",
+      "generated_source": "exec-d19ece8c-ad4d-450e-86d5-3925609ff70e.png"
+    },
+    {
+      "file": "sobre_halloween_abierto.png",
+      "prompt": "Matching opened Halloween wrapper, using new closed design and original opened normal pack as reference: identical body/logo/palette/transparency, torn silver top and open flap.",
+      "generated_source": "exec-c379ef38-a37c-4868-87a3-57d86c60468f.png"
+    },
+    {
+      "file": "valle_halloween.png",
+      "prompt": "Edit original valley with same framing, natural blur and empty center; moonlit blue-gray/violet night, dark teal grass retaining detail, tiny corner pumpkins and bats. No text/UI, no baked lightning or webs.",
+      "generated_source": "exec-d288f960-bc54-42f6-932c-a7cd56d35f01.png"
+    }
+  ]
+}

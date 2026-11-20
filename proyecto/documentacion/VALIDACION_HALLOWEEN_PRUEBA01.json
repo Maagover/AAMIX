@@ -1,0 +1,55 @@
+{
+  "release": "1.9.0-preview.1",
+  "current_failures": 0,
+  "local_directed_checks": 74,
+  "native_visual_checks": 63,
+  "captures_reviewed": 8,
+  "event_receipt_ui_checks": 8,
+  "regressions_executed_this_build": {
+    "ai_low_deck_and_search": 19,
+    "blocking_visuals": 36,
+    "snapshot_privacy": 17,
+    "pack_music_fade": 28
+  },
+  "complete_ai_games": [
+    {
+      "opponent": "papito",
+      "seed": 1901,
+      "commands": 68,
+      "turns": 11,
+      "winner": 1
+    },
+    {
+      "opponent": "girabl",
+      "seed": 1902,
+      "commands": 72,
+      "turns": 12,
+      "winner": 1
+    }
+  ],
+  "sql_transaction_groups_passed": [
+    "bootstrap/packs/gifts/event-matches/missions/MP-awards/rematch/replay/cancel",
+    "authenticated-RLS/direct-writes/gateway/family-limits/friends/trade/event-missions/ordinary-packs"
+  ],
+  "sql_test_data_rolled_back": true,
+  "ordinary_random_pack_draws_in_security_group": 2,
+  "probabilities": "Exact ticket intervals: [0,2374] H01; [2375,4749] H02; [4750,7124] H03; [7125,9499] H04; [9500,9999] H05. No random-frequency quota.",
+  "two_native_processes_actual_https": true,
+  "native_first_outcome_synthetic": true,
+  "native_rematch_new_room_and_decks_verified": true,
+  "native_old_room_response_rejected": true,
+  "native_scope": "Two processes on same PC; initial room started through real confirmation; harness finalized first game, then UI request/choice/confirmation started a second real room",
+  "first_native_harness_timeout": "Synthetic first finish initially omitted revision increment; harness corrected before passing rerun",
+  "temporary_accounts_deleted": 2,
+  "temporary_sessions_remaining": 0,
+  "existing_identities_preserved": 6,
+  "github_calls_for_publication": 0,
+  "remote_PCs_tested": false,
+  "physical_speaker_listening_verified": false,
+  "restricted_native_certificate_store_notice": true,
+  "actual_native_https_tls_verified": true,
+  "historical_checks_summed": false,
+  "H03_rules_force": 2,
+  "H03_original_PNG_force_printed": 3,
+  "portable_zip_verification": "See external INFORME_HALLOWEEN_PRUEBA01.json after packaging"
+}

@@ -1,0 +1,25 @@
+{
+  "two_sequential_native_processes": true,
+  "actual_supabase_https": true,
+  "checks": 5,
+  "results": [
+    {
+      "actual_supabase_https": true,
+      "checks": 2,
+      "emails_sent": 0,
+      "failures": [],
+      "phase": 0,
+      "exit_code": 0
+    },
+    {
+      "actual_supabase_https": true,
+      "checks": 3,
+      "emails_sent": 0,
+      "failures": [],
+      "phase": 1,
+      "exit_code": 0
+    }
+  ],
+  "private_test_vault_removed": true,
+  "emails_sent": 0
+}

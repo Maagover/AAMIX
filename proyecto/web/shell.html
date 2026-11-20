@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#211c16">
+  <title>AAMIX · Web alpha</title>
+  $GODOT_HEAD_INCLUDE
+  <style>
+    *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:#211c16;color:#fff5db;font-family:system-ui,sans-serif}body{overflow:hidden}
+    #bar{position:absolute;inset:0 0 auto;min-height:44px;display:flex;align-items:center;gap:12px;padding:4px max(10px,env(safe-area-inset-right)) 4px max(10px,env(safe-area-inset-left));background:#211c16;z-index:4;font-size:14px}
+    #bar strong{font-size:16px;letter-spacing:.08em}#hint{flex:1}button{font:inherit;color:inherit;border:1px solid #8b774e;background:#403421;border-radius:8px;min-height:36px;padding:4px 12px;cursor:pointer}button:focus-visible{outline:3px solid #ffdb82}
+    #frame{position:absolute;inset:44px 0 0;overflow:auto;overscroll-behavior:none}#stage{position:relative;width:100%;height:100%;min-height:100%}#canvas{display:block;width:100%;height:100%;touch-action:none;outline:none}
+    #cover{position:absolute;inset:44px 0 0;z-index:3;background:#211c16;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:18px;padding:24px;text-align:center}#cover h1{font-size:36px;margin:0}#cover p{max-width:520px;line-height:1.5;margin:0}#play{font-size:18px;min-height:48px;min-width:170px;background:#e5bb65;color:#211c16;font-weight:700}#progress{width:min(340px,80vw);accent-color:#e5bb65}#rotate{display:none}
+    @media(pointer:coarse) and (orientation:landscape){#rotate{display:block;padding:12px;border:1px solid #8b774e;border-radius:10px}#hint{font-size:12px}}
+    @media(max-width:600px){#hint{display:none}#bar{gap:6px}#bar strong{margin-right:auto}button{padding:4px 9px}}
+  </style>
+</head>
+<body>
+  <nav id="bar" aria-label="Controles de pantalla"><strong>AAMIX</strong><span id="hint">Toca una carta y luego su destino. Mantén pulsado para leer.</span><button id="zoom" type="button" aria-label="Cambiar aumento del tablero">Zoom 100%</button><button id="fullscreen" type="button">Pantalla completa</button></nav>
+  <main id="frame"><div id="stage"><canvas id="canvas" tabindex="0" aria-label="Juego de cartas AAMIX">Tu navegador necesita WebGL 2 para ejecutar AAMIX.</canvas></div></main>
+  <section id="cover" aria-live="polite"><h1>AAMIX</h1><p id="status">La primera carga descarga el juego. Usa tu misma cuenta de PC para acceder a tu colección.</p><p id="rotate">Esta versión está diseñada para jugar con el celular en vertical.</p><button id="play" type="button">Entrar al juego</button><progress id="progress" hidden></progress></section>
+  <script src="$GODOT_URL"></script>
+  <script>
+    const config = $GODOT_CONFIG;
+    const canvas=document.getElementById('canvas');
+    config.canvasResizePolicy=0;
+    config.canvas=canvas;
+    const engine = new Engine(config);
+    const fitCanvas=()=>{const stage=document.getElementById('stage');canvas.width=Math.round(stage.clientWidth*devicePixelRatio);canvas.height=Math.round(stage.clientHeight*devicePixelRatio);};
+    new ResizeObserver(fitCanvas).observe(document.getElementById('stage'));
+    fitCanvas();
+    const cover=document.getElementById('cover'), status=document.getElementById('status'), play=document.getElementById('play'), progress=document.getElementById('progress');
+    let running=false, zoom=1;
+    document.getElementById('zoom').onclick=()=>{zoom=zoom===1?1.25:zoom===1.25?1.5:1;document.getElementById('stage').style.width=`${zoom*100}%`;document.getElementById('stage').style.height=`${zoom*100}%`;document.getElementById('zoom').textContent=`Zoom ${zoom*100}%`;};
+    document.getElementById('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();}catch{status.textContent='Este navegador no permite pantalla completa. Puedes ocultar su barra usando el modo horizontal.';if(running)alert(status.textContent);}};
+    play.onclick=async()=>{
+      play.hidden=true;progress.hidden=false;status.textContent='Cargando AAMIX…';
+      try{
+        const missing=Engine.getMissingFeatures({threads:false});
+        if(missing.length)throw new Error('Tu navegador no admite las funciones necesarias: '+missing.join(', '));
+        await engine.startGame({onProgress:(current,total)=>{if(total>0){progress.max=total;progress.value=current;status.textContent=`Descargando el juego: ${Math.round(current/total*100)}%`;}},onExit:()=>{running=false;cover.hidden=false;cover.style.display='flex';status.textContent='La sesión de juego terminó. Recarga la página para volver a entrar.';progress.hidden=true;}});
+        running=true;cover.style.display='none';document.getElementById('canvas').focus();
+      }catch(error){status.textContent='No se pudo iniciar AAMIX. '+error.message;progress.hidden=true;play.hidden=false;play.textContent='Reintentar';}
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+{
+  "provided_by_user": true,
+  "original_files_preserved": true,
+  "assets": [
+    {
+      "file": "sobre_abierto.png",
+      "original": "D:\\Maago\\Maagover\\Opening an envelope_transparent.png",
+      "bytes": 1109441,
+      "sha256": "9c5086e1cda121e0289814f8435fa390a508ff0463e0c6fc4b47ceba174bf197",
+      "size": [
+        896,
+        1200
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        0,
+        2,
+        896,
+        1200
+      ],
+      "center": [
+        62,
+        70,
+        93,
+        255
+      ]
+    },
+    {
+      "file": "sobre_cerrado.png",
+      "original": "D:\\Maago\\Maagover\\Edit_card_envelope_design_2K_20261018005406_transparent.png",
+      "bytes": 3915368,
+      "sha256": "cca7e85c51d8a856f6b04e645c0b010c74490bf871105d33c6088b84b181956a",
+      "size": [
+        1792,
+        2400
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        0,
+        0,
+        1792,
+        2400
+      ],
+      "center": [
+        60,
+        72,
+        98,
+        255
+      ]
+    },
+    {
+      "file": "panel_dorado.png",
+      "original": "D:\\Maago\\Maagover\\Group 11.png",
+      "bytes": 58375,
+      "sha256": "5df2459b6afbb595aeb5189613eec2942b2a4dd9506c098c62aa4729a2ba4ba5",
+      "size": [
+        1695,
+        1100
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        0,
+        0,
+        1695,
+        1100
+      ],
+      "center": [
+        207,
+        181,
+        107,
+        204
+      ]
+    },
+    {
+      "file": "panel_cafe.png",
+      "original": "D:\\Maago\\Maagover\\Group 12.png",
+      "bytes": 45976,
+      "sha256": "f2e3e18a377eaec558324f5fcf4d67d374104fa33936f14c1022245bbc254c51",
+      "size": [
+        1695,
+        1100
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        0,
+        0,
+        1695,
+        1100
+      ],
+      "center": [
+        125,
+        95,
+        66,
+        204
+      ]
+    },
+    {
+      "file": "boton_blanco.png",
+      "original": "D:\\Maago\\Maagover\\Group 7.png",
+      "bytes": 5317,
+      "sha256": "e461adf7565bd2d633bc2eed3f75e5d38d4d4f59d1cb5ec6ebe49f449797059c",
+      "size": [
+        905,
+        186
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        0,
+        0,
+        905,
+        186
+      ],
+      "center": [
+        255,
+        255,
+        255,
+        204
+      ]
+    },
+    {
+      "file": "boton_dorado.png",
+      "original": "D:\\Maago\\Maagover\\Group 8.png",
+      "bytes": 6743,
+      "sha256": "5ad80aafae0e8968ed13f7482aab71eee2d84a549cf8f7684013b207ae79f8b0",
+      "size": [
+        905,
+        186
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        0,
+        0,
+        905,
+        186
+      ],
+      "center": [
+        252,
+        219,
+        127,
+        204
+      ]
+    },
+    {
+      "file": "boton_cafe.png",
+      "original": "D:\\Maago\\Maagover\\Group 9.png",
+      "bytes": 5851,
+      "sha256": "707d266cb4afee4ea12208f68e2dee87b95620c9a5f8d49d1bfda1761378902d",
+      "size": [
+        905,
+        186
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        0,
+        0,
+        905,
+        186
+      ],
+      "center": [
+        149,
+        111,
+        75,
+        204
+      ]
+    },
+    {
+      "file": "panel_blanco.png",
+      "original": "D:\\Maago\\Maagover\\Group 10.png",
+      "bytes": 49922,
+      "sha256": "ef225a0b1a6388452a46998342885112936357498d1f62c1e49c19e357df84ff",
+      "size": [
+        1695,
+        1100
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        0,
+        0,
+        1695,
+        1100
+      ],
+      "center": [
+        255,
+        255,
+        255,
+        204
+      ]
+    },
+    {
+      "file": "mesa_madera.png",
+      "original": "D:\\Maago\\Maagover\\image 2.png",
+      "bytes": 19971866,
+      "sha256": "65d9a612d8b429fffaf05df85e24dd6e93f726ae7c40cb994704787eaba8aab2",
+      "size": [
+        3520,
+        2053
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        2,
+        1,
+        3517,
+        2050
+      ],
+      "center": [
+        166,
+        131,
+        104,
+        66
+      ]
+    }
+  ]
+}

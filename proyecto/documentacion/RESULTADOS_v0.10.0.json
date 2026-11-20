@@ -1,0 +1,593 @@
+{
+  "version": "0.10.0",
+  "date": "2026-10-17",
+  "native_windows": true,
+  "engine": "Godot4.7.2.stable.official.ed1daf0bf",
+  "renderer": "OpenGL Compatibility, NVIDIA RTX2060",
+  "total_script_checks": 1050,
+  "total_complete_simulations": 214,
+  "script_failures": 0,
+  "headless": {
+    "run_at_utc": "2026-10-17T19:51:11.170699+00:00",
+    "engine": "C:\\Users\\maago\\.codex\\.chatgpt-projects\\g-p-6ad0c7fad7dc8191baf5845e9f78b3cd\\work\\AAMIX_Prototipo_Local_v0.10.0\\motor\\AAMIX.exe",
+    "mode": "headless",
+    "results": [
+      {
+        "test": "test_game.gd",
+        "returncode": 0,
+        "seconds": 0.88,
+        "summary": {
+          "checks": 143,
+          "complete_simulations": 24,
+          "failures": []
+        },
+        "checks": 143,
+        "simulations": 24,
+        "errors": [],
+        "log": "C:\\Users\\maago\\.codex\\.chatgpt-projects\\g-p-6ad0c7fad7dc8191baf5845e9f78b3cd\\work\\v010-validation\\test_game.log",
+        "passed": true
+      },
+      {
+        "test": "test_v02.gd",
+        "returncode": 0,
+        "seconds": 2.09,
+        "summary": {
+          "bot_games": 88,
+          "failures": [],
+          "v02_checks": 125
+        },
+        "checks": 125,
+        "simulations": 88,
+        "errors": [],
+        "log": "C:\\Users\\maago\\.codex\\.chatgpt-projects\\g-p-6ad0c7fad7dc8191baf5845e9f78b3cd\\work\\v010-validation\\test_v02.log",
+        "passed": true
+      },
+      {
+        "test": "test_v08.gd",
+        "returncode": 0,
+        "seconds": 2.53,
+        "summary": {
+          "checks": 242,
+          "failures": [],
+          "new_complete_games": 81
+        },
+        "checks": 242,
+        "simulations": 81,
+        "errors": [],
+        "log": "C:\\Users\\maago\\.codex\\.chatgpt-projects\\g-p-6ad0c7fad7dc8191baf5845e9f78b3cd\\work\\v010-validation\\test_v08.log",
+        "passed": true
+      },
+      {
+        "test": "test_profiles.gd",
+        "returncode": 0,
+        "seconds": 5.48,
+        "summary": {
+          "profile_checks": 40,
+          "failures": 0
+        },
+        "checks": 40,
+        "simulations": 0,
+        "errors": [],
+        "log": "C:\\Users\\maago\\.codex\\.chatgpt-projects\\g-p-6ad0c7fad7dc8191baf5845e9f78b3cd\\work\\v010-validation\\test_profiles.log",
+        "passed": true
+      },
+      {
+        "test": "test_presentation_v010.gd",
+        "returncode": 0,
+        "seconds": 3.02,
+        "summary": {
+          "failures": [],
+          "presentation_v010_checks": 40
+        },
+        "checks": 40,
+        "simulations": 0,
+        "errors": [],
+        "log": "C:\\Users\\maago\\.codex\\.chatgpt-projects\\g-p-6ad0c7fad7dc8191baf5845e9f78b3cd\\work\\v010-validation\\test_presentation_v010.log",
+        "passed": true
+      }
+    ],
+    "checks": 590,
+    "simulations": 193,
+    "all_passed": true
+  },
+  "gui_regressions": [
+    {
+      "script": "test_ui_v02",
+      "exit_code": 0,
+      "results": [
+        {
+          "failures": [],
+          "ui_checks": 30
+        }
+      ]
+    },
+    {
+      "script": "test_v03",
+      "exit_code": 0,
+      "results": [
+        {
+          "failures": [],
+          "v03_checks": 54
+        }
+      ]
+    },
+    {
+      "script": "test_v04",
+      "exit_code": 0,
+      "results": [
+        {
+          "failures": [],
+          "v04_checks": 53
+        }
+      ]
+    },
+    {
+      "script": "test_v05",
+      "exit_code": 0,
+      "results": [
+        {
+          "failures": [],
+          "v05_checks": 43
+        }
+      ]
+    },
+    {
+      "script": "test_v07",
+      "exit_code": 0,
+      "results": [
+        {
+          "failures": [],
+          "v07_checks": 31
+        }
+      ]
+    },
+    {
+      "script": "test_ui_v08",
+      "exit_code": 0,
+      "results": [
+        {
+          "failures": [],
+          "v08_ui_checks": 65
+        }
+      ]
+    }
+  ],
+  "account_contract": {
+    "account_checks": 31,
+    "failures": [],
+    "live_service_tested": false
+  },
+  "collection_contract": {
+    "failures": [],
+    "real_emails_sent": 0,
+    "v09_ui_contract_checks": 38
+  },
+  "rewards_ui_contract": {
+    "failures": [],
+    "real_emails_sent": 0,
+    "rewards_ui_checks": 51
+  },
+  "maagover_current_engine": {
+    "returncode": 0,
+    "seconds": 0.88,
+    "mode": "headless",
+    "log": "C:\\Users\\maago\\.codex\\.chatgpt-projects\\g-p-6ad0c7fad7dc8191baf5845e9f78b3cd\\work\\v010-validation\\test_maagover_v010.log",
+    "result": {
+      "complete_simulations": 21,
+      "failures": [],
+      "games": [
+        {
+          "actions": 43,
+          "completed": true,
+          "deck_ids": [
+            "maago",
+            "kajido"
+          ],
+          "error": "",
+          "manual_payment": [
+            false,
+            false
+          ],
+          "seed": 11000,
+          "winner": 0
+        },
+        {
+          "actions": 86,
+          "completed": true,
+          "deck_ids": [
+            "maago",
+            "kajido"
+          ],
+          "error": "",
+          "manual_payment": [
+            true,
+            false
+          ],
+          "seed": 11001,
+          "winner": 0
+        },
+        {
+          "actions": 74,
+          "completed": true,
+          "deck_ids": [
+            "maago",
+            "kajido"
+          ],
+          "error": "",
+          "manual_payment": [
+            false,
+            true
+          ],
+          "seed": 11002,
+          "winner": 0
+        },
+        {
+          "actions": 70,
+          "completed": true,
+          "deck_ids": [
+            "kajido",
+            "maago"
+          ],
+          "error": "",
+          "manual_payment": [
+            false,
+            false
+          ],
+          "seed": 11031,
+          "winner": 1
+        },
+        {
+          "actions": 58,
+          "completed": true,
+          "deck_ids": [
+            "kajido",
+            "maago"
+          ],
+          "error": "",
+          "manual_payment": [
+            true,
+            false
+          ],
+          "seed": 11032,
+          "winner": 1
+        },
+        {
+          "actions": 119,
+          "completed": true,
+          "deck_ids": [
+            "kajido",
+            "maago"
+          ],
+          "error": "",
+          "manual_payment": [
+            false,
+            true
+          ],
+          "seed": 11033,
+          "winner": 1
+        },
+        {
+          "actions": 80,
+          "completed": true,
+          "deck_ids": [
+            "maago",
+            "papito"
+          ],
+          "error": "",
+          "manual_payment": [
+            false,
+            false
+          ],
+          "seed": 11062,
+          "winner": 1
+        },
+        {
+          "actions": 93,
+          "completed": true,
+          "deck_ids": [
+            "maago",
+            "papito"
+          ],
+          "error": "",
+          "manual_payment": [
+            true,
+            false
+          ],
+          "seed": 11063,
+          "winner": 0
+        },
+        {
+          "actions": 95,
+          "completed": true,
+          "deck_ids": [
+            "maago",
+            "papito"
+          ],
+          "error": "",
+          "manual_payment": [
+            false,
+            true
+          ],
+          "seed": 11064,
+          "winner": 0
+        },
+        {
+          "actions": 104,
+          "completed": true,
+          "deck_ids": [
+            "papito",
+            "maago"
+          ],
+          "error": "",
+          "manual_payment": [
+            false,
+            false
+          ],
+          "seed": 11093,
+          "winner": 1
+        },
+        {
+          "actions": 97,
+          "completed": true,
+          "deck_ids": [
+            "papito",
+            "maago"
+          ],
+          "error": "",
+          "manual_payment": [
+            true,
+            false
+          ],
+          "seed": 11094,
+          "winner": 0
+        },
+        {
+          "actions": 68,
+          "completed": true,
+          "deck_ids": [
+            "papito",
+            "maago"
+          ],
+          "error": "",
+          "manual_payment": [
+            false,
+            true
+          ],
+          "seed": 11095,
+          "winner": 1
+        },
+        {
+          "actions": 76,
+          "completed": true,
+          "deck_ids": [
+            "maago",
+            "flaan"
+          ],
+          "error": "",
+          "manual_payment": [
+            false,
+            false
+          ],
+          "seed": 11124,
+          "winner": 0
+        },
+        {
+          "actions": 106,
+          "completed": true,
+          "deck_ids": [
+            "maago",
+            "flaan"
+          ],
+          "error": "",
+          "manual_payment": [
+            true,
+            false
+          ],
+          "seed": 11125,
+          "winner": 0
+        },
+        {
+          "actions": 77,
+          "completed": true,
+          "deck_ids": [
+            "maago",
+            "flaan"
+          ],
+          "error": "",
+          "manual_payment": [
+            false,
+            true
+          ],
+          "seed": 11126,
+          "winner": 1
+        },
+        {
+          "actions": 74,
+          "completed": true,
+          "deck_ids": [
+            "flaan",
+            "maago"
+          ],
+          "error": "",
+          "manual_payment": [
+            false,
+            false
+          ],
+          "seed": 11155,
+          "winner": 0
+        },
+        {
+          "actions": 101,
+          "completed": true,
+          "deck_ids": [
+            "flaan",
+            "maago"
+          ],
+          "error": "",
+          "manual_payment": [
+            true,
+            false
+          ],
+          "seed": 11156,
+          "winner": 0
+        },
+        {
+          "actions": 104,
+          "completed": true,
+          "deck_ids": [
+            "flaan",
+            "maago"
+          ],
+          "error": "",
+          "manual_payment": [
+            false,
+            true
+          ],
+          "seed": 11157,
+          "winner": 1
+        },
+        {
+          "actions": 51,
+          "completed": true,
+          "deck_ids": [
+            "maago",
+            "maago"
+          ],
+          "error": "",
+          "manual_payment": [
+            false,
+            false
+          ],
+          "seed": 12000,
+          "winner": 1
+        },
+        {
+          "actions": 72,
+          "completed": true,
+          "deck_ids": [
+            "maago",
+            "maago"
+          ],
+          "error": "",
+          "manual_payment": [
+            true,
+            false
+          ],
+          "seed": 12001,
+          "winner": 0
+        },
+        {
+          "actions": 119,
+          "completed": true,
+          "deck_ids": [
+            "maago",
+            "maago"
+          ],
+          "error": "",
+          "manual_payment": [
+            false,
+            true
+          ],
+          "seed": 12002,
+          "winner": 1
+        }
+      ],
+      "maagover_v010_checks": 64
+    }
+  },
+  "backend": {
+    "project_id": "drpsedaiqyowwikhjugs",
+    "applied": [
+      {
+        "version": "20261017185851",
+        "name": "aamix_collection_starter_v090",
+        "source": "aamix_collection.sql"
+      },
+      {
+        "version": "20261017194519",
+        "name": "aamix_profiles_rewards_v0100",
+        "source": "aamix_rewards.sql"
+      }
+    ],
+    "verification_date": "2026-10-17",
+    "live_counts_before": {
+      "users": 2,
+      "starter_gifts": 1,
+      "owned_decks": 1,
+      "collection_rows": 12,
+      "collection_quantity": 40
+    },
+    "live_counts_after": {
+      "users": 2,
+      "starter_gifts": 1,
+      "owned_decks": 1,
+      "collection_rows": 12,
+      "collection_quantity": 40
+    },
+    "committed_new_reward_rows_after_tests": 0,
+    "committed_test_users": 0,
+    "tests": {
+      "test_rewards_rollback.sql": "PASS, twice; synthetic random UUIDs; every transaction rolled back",
+      "test_collection_rollback.sql": "PASS against upgraded backend; all transactions rolled back",
+      "server_draws_tested_total": 20000,
+      "last_sample_packs": 10000,
+      "last_sample_specials": 3029,
+      "last_sample_named_specials_combined": 602,
+      "last_sample_slot5_named": {
+        "0103": 148,
+        "0105": 146,
+        "0115": 141,
+        "0119": 167
+      },
+      "last_sample_slot5_other_specials": {
+        "0125": 469,
+        "0128": 481,
+        "0130": 465,
+        "0131": 505,
+        "0134": 507
+      },
+      "normal_cards_observed_in_slot5": 31,
+      "real_two_connection_concurrency_test": "NOT RUN; wallet serialization and unique constraints reviewed; sequential retries and second-client request aliases tested"
+    },
+    "advisors": {
+      "public_RLS_issues": 0,
+      "private_RLS_no_policy_info": "Three internal deny-all tables, no client SELECT grant; expected",
+      "preexisting_auth_warning": "Leaked password protection disabled; Auth configuration left unchanged",
+      "preexisting_auth_warning_remediation": "https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection",
+      "performance": "Six unused foreign-key-support indexes, informational on tiny data; no missing indexes reported"
+    },
+    "limitations": [
+      "Local AI game completion is reported by the client, not validated by an authoritative game server.",
+      "A local result lost before its completion RPC cannot be reconstructed by the server."
+    ]
+  },
+  "live_auth_settings": {
+    "email_verification_required": true,
+    "emails_sent": 0,
+    "godot_https_auth_settings": true,
+    "status": 200,
+    "transport_result": 0
+  },
+  "live_rewards_access": {
+    "http_statuses": [
+      401,
+      401,
+      401,
+      401,
+      401,
+      401,
+      401
+    ],
+    "live_rewards_anonymous_denied": true,
+    "real_emails_sent": 0,
+    "rewards_granted": 0
+  },
+  "real_emails_sent_by_agent": 0,
+  "real_concurrent_clients_verified": false,
+  "local_ai_result_server_authoritative": false,
+  "clean_zip_extract_manifest_verified": true,
+  "clean_portable_start_passed": true,
+  "status": "complete",
+  "portable_rewards_contract_checks": 51,
+  "portable_rewards_contract_failures": 0
+}

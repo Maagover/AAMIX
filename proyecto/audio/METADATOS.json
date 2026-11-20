@@ -1,0 +1,54 @@
+{
+  "inicio": {
+    "seconds": 42.667,
+    "peak": 0.79,
+    "rms": 0.1249,
+    "bpm": 90,
+    "loop_boundary_jump": 0.01031
+  },
+  "robo": {
+    "seconds": 0.18,
+    "peak": 0.62,
+    "rms": 0.0921
+  },
+  "carta": {
+    "seconds": 0.22,
+    "peak": 0.62,
+    "rms": 0.1031
+  },
+  "pago": {
+    "seconds": 0.19,
+    "peak": 0.62,
+    "rms": 0.1464
+  },
+  "ataque": {
+    "seconds": 0.34,
+    "peak": 0.62,
+    "rms": 0.0847
+  },
+  "bloqueo": {
+    "seconds": 0.31,
+    "peak": 0.62,
+    "rms": 0.1255
+  },
+  "descarte": {
+    "seconds": 0.27,
+    "peak": 0.62,
+    "rms": 0.1034
+  },
+  "barajar": {
+    "seconds": 0.46,
+    "peak": 0.62,
+    "rms": 0.0895
+  },
+  "dano": {
+    "seconds": 0.26,
+    "peak": 0.62,
+    "rms": 0.0992
+  },
+  "interfaz": {
+    "seconds": 0.12,
+    "peak": 0.44,
+    "rms": 0.1303
+  }
+}

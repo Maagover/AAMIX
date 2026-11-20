@@ -1,0 +1,9 @@
+{
+  "checks": 25,
+  "failures": 0,
+  "tc_pack_openings": 1,
+  "normal_card_samples": 10,
+  "normal_pack_openings": 1,
+  "real_rewards_claimed": 0,
+  "all_fixtures_rolled_back": true
+}

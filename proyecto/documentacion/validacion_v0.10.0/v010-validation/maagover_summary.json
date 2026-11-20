@@ -1,0 +1,328 @@
+{
+  "returncode": 0,
+  "seconds": 0.88,
+  "mode": "headless",
+  "log": "C:\\Users\\maago\\.codex\\.chatgpt-projects\\g-p-6ad0c7fad7dc8191baf5845e9f78b3cd\\work\\v010-validation\\test_maagover_v010.log",
+  "result": {
+    "complete_simulations": 21,
+    "failures": [],
+    "games": [
+      {
+        "actions": 43,
+        "completed": true,
+        "deck_ids": [
+          "maago",
+          "kajido"
+        ],
+        "error": "",
+        "manual_payment": [
+          false,
+          false
+        ],
+        "seed": 11000,
+        "winner": 0
+      },
+      {
+        "actions": 86,
+        "completed": true,
+        "deck_ids": [
+          "maago",
+          "kajido"
+        ],
+        "error": "",
+        "manual_payment": [
+          true,
+          false
+        ],
+        "seed": 11001,
+        "winner": 0
+      },
+      {
+        "actions": 74,
+        "completed": true,
+        "deck_ids": [
+          "maago",
+          "kajido"
+        ],
+        "error": "",
+        "manual_payment": [
+          false,
+          true
+        ],
+        "seed": 11002,
+        "winner": 0
+      },
+      {
+        "actions": 70,
+        "completed": true,
+        "deck_ids": [
+          "kajido",
+          "maago"
+        ],
+        "error": "",
+        "manual_payment": [
+          false,
+          false
+        ],
+        "seed": 11031,
+        "winner": 1
+      },
+      {
+        "actions": 58,
+        "completed": true,
+        "deck_ids": [
+          "kajido",
+          "maago"
+        ],
+        "error": "",
+        "manual_payment": [
+          true,
+          false
+        ],
+        "seed": 11032,
+        "winner": 1
+      },
+      {
+        "actions": 119,
+        "completed": true,
+        "deck_ids": [
+          "kajido",
+          "maago"
+        ],
+        "error": "",
+        "manual_payment": [
+          false,
+          true
+        ],
+        "seed": 11033,
+        "winner": 1
+      },
+      {
+        "actions": 80,
+        "completed": true,
+        "deck_ids": [
+          "maago",
+          "papito"
+        ],
+        "error": "",
+        "manual_payment": [
+          false,
+          false
+        ],
+        "seed": 11062,
+        "winner": 1
+      },
+      {
+        "actions": 93,
+        "completed": true,
+        "deck_ids": [
+          "maago",
+          "papito"
+        ],
+        "error": "",
+        "manual_payment": [
+          true,
+          false
+        ],
+        "seed": 11063,
+        "winner": 0
+      },
+      {
+        "actions": 95,
+        "completed": true,
+        "deck_ids": [
+          "maago",
+          "papito"
+        ],
+        "error": "",
+        "manual_payment": [
+          false,
+          true
+        ],
+        "seed": 11064,
+        "winner": 0
+      },
+      {
+        "actions": 104,
+        "completed": true,
+        "deck_ids": [
+          "papito",
+          "maago"
+        ],
+        "error": "",
+        "manual_payment": [
+          false,
+          false
+        ],
+        "seed": 11093,
+        "winner": 1
+      },
+      {
+        "actions": 97,
+        "completed": true,
+        "deck_ids": [
+          "papito",
+          "maago"
+        ],
+        "error": "",
+        "manual_payment": [
+          true,
+          false
+        ],
+        "seed": 11094,
+        "winner": 0
+      },
+      {
+        "actions": 68,
+        "completed": true,
+        "deck_ids": [
+          "papito",
+          "maago"
+        ],
+        "error": "",
+        "manual_payment": [
+          false,
+          true
+        ],
+        "seed": 11095,
+        "winner": 1
+      },
+      {
+        "actions": 76,
+        "completed": true,
+        "deck_ids": [
+          "maago",
+          "flaan"
+        ],
+        "error": "",
+        "manual_payment": [
+          false,
+          false
+        ],
+        "seed": 11124,
+        "winner": 0
+      },
+      {
+        "actions": 106,
+        "completed": true,
+        "deck_ids": [
+          "maago",
+          "flaan"
+        ],
+        "error": "",
+        "manual_payment": [
+          true,
+          false
+        ],
+        "seed": 11125,
+        "winner": 0
+      },
+      {
+        "actions": 77,
+        "completed": true,
+        "deck_ids": [
+          "maago",
+          "flaan"
+        ],
+        "error": "",
+        "manual_payment": [
+          false,
+          true
+        ],
+        "seed": 11126,
+        "winner": 1
+      },
+      {
+        "actions": 74,
+        "completed": true,
+        "deck_ids": [
+          "flaan",
+          "maago"
+        ],
+        "error": "",
+        "manual_payment": [
+          false,
+          false
+        ],
+        "seed": 11155,
+        "winner": 0
+      },
+      {
+        "actions": 101,
+        "completed": true,
+        "deck_ids": [
+          "flaan",
+          "maago"
+        ],
+        "error": "",
+        "manual_payment": [
+          true,
+          false
+        ],
+        "seed": 11156,
+        "winner": 0
+      },
+      {
+        "actions": 104,
+        "completed": true,
+        "deck_ids": [
+          "flaan",
+          "maago"
+        ],
+        "error": "",
+        "manual_payment": [
+          false,
+          true
+        ],
+        "seed": 11157,
+        "winner": 1
+      },
+      {
+        "actions": 51,
+        "completed": true,
+        "deck_ids": [
+          "maago",
+          "maago"
+        ],
+        "error": "",
+        "manual_payment": [
+          false,
+          false
+        ],
+        "seed": 12000,
+        "winner": 1
+      },
+      {
+        "actions": 72,
+        "completed": true,
+        "deck_ids": [
+          "maago",
+          "maago"
+        ],
+        "error": "",
+        "manual_payment": [
+          true,
+          false
+        ],
+        "seed": 12001,
+        "winner": 0
+      },
+      {
+        "actions": 119,
+        "completed": true,
+        "deck_ids": [
+          "maago",
+          "maago"
+        ],
+        "error": "",
+        "manual_payment": [
+          false,
+          true
+        ],
+        "seed": 12002,
+        "winner": 1
+      }
+    ],
+    "maagover_v010_checks": 64
+  }
+}

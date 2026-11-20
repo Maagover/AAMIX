@@ -1,0 +1,11 @@
+# Validación acotada · AAMIX 0.18.0
+
+62 casos de fuente: 23 SQL, 26 UI/adaptador, uno de carrera de control, dos de render de animaciones y diez escenarios nativos HTTPS. El ZIP final añade seis y su informe acredita 68. No se suman cifras históricas, matrices ni sorteos masivos.
+
+Pasaron primero 24/26 casos UI. Los dos de estrella se corrigieron normalizando los índices float de JSON a int; sólo esos dos se repitieron. El intento nativo inicial se detuvo antes de jugar porque un poll en curso hizo retornar Confirmar; se añadió prioridad y un caso específico. El flujo real retomado pasó. Un guion visual llamó a damage en vez de mill; se corrigió el test y pasaron sus dos casos sin cambiar el motor. Logs iniciales y reparados acompañan los resultados.
+
+Dos procesos nativos, dos cuentas sintéticas sin correo, animaciones activas y 14 comandos naturales hasta turno cinco. Se observaron reparto, cambiar mano, baraja, robo, pago y entrada a mesa; dos casos de render separados verificaron Cementerio y devolución a mazo con barajado. Vistas ocultas filtradas, recuperar sala y abandonar desde la mesa produjeron dos recibos únicos. No fue una partida completa hasta agotar mazo ni prueba entre computadores físicos. Métricas de esta ejecución: mediana de 427 ms para ocho acciones anfitrión y 1505 ms para seis del invitado; sin benchmark cronometrado anterior ni promesa de latencia.
+
+Los 23 asserts SQL usan rollback con dos draws deterministas; los sorteadores originales se compararon después y están restaurados. La migración conserva los importes históricos y las aperturas antiguas. Las dos cuentas nativas se eliminaron por UI oficial autenticada con doble guarda tras un fallo de conector de borrado. Catorce tablas tienen hashes idénticos de sus campos anteriores, excluyendo sólo new_card_indices de aperturas. No se usaron cuentas reales ni se alteró Auth/SMTP.
+
+Fixtures locales registran el aviso restringido de certificados Windows y la importación no pudo guardar preferencias del editor fuera del workspace. Las instancias HTTPS con acceso normal a certificados pasaron limpias. Audio con Dummy, sin escucha física. Capturas de las interfaces reales con datos aislados, motor/reglas/IA/audio/arte original conservados. El resultado final del ZIP se registra junto a la descarga.

@@ -1,0 +1,43 @@
+{
+  "project_id": "drpsedaiqyowwikhjugs",
+  "release": "0.12.0",
+  "status": "applied_verified",
+  "applied_version": "20261018035100",
+  "applied_at_utc": "2026-10-18T03:51:00Z",
+  "migration_name": "aamix_missions_and_gifts_v0120",
+  "source": "aamix_missions_and_gifts_v0120.sql",
+  "requires": "All five applied migrations through 0.11.0; see APPLIED_MIGRATIONS.json",
+  "changes_auth_smtp_or_existing_player_rows": false,
+  "reuses_legacy_play_one_ledger": true,
+  "progress_source": "Completed receipts, including pre-release records; Chile calendar day for daily and all-time count for play_ten",
+  "local_ai_completion_authority": "client_reported_not_server_validated",
+  "public_rpc_added": "aamix_claim_mission(p_mission_id text)",
+  "inventory_adds": "missions array; legacy mission singular preserved",
+  "gift_reply_adds": "reward_packs integer; old codes return zero",
+  "tests": {
+    "source": "test_missions_and_gifts_v0120_rollback.sql",
+    "status": "PASS_REAL_DATABASE_ALL_FIXTURES_ROLLED_BACK",
+    "synthetic_users_only": true,
+    "all_transactions_rolled_back": true,
+    "server_draws_sampled": 1000,
+    "real_concurrent_clients_verified": false
+  },
+  "compatibility_test": {
+    "source": "test_gift_codes_v0110_rollback.sql",
+    "adaptation": "Expected gift definitions updated from 6 to 8 by root",
+    "status": "PASS_REAL_DATABASE_ALL_FIXTURES_ROLLED_BACK",
+    "server_draws_sampled": 1000
+  },
+  "current_release_server_draws_verified": 2000,
+  "independent_live_girabl_fixture_comparison": "PASS exact 40 cards / 12 Restos",
+  "live_counts_before_and_after_qa": {"collection_quantity":85,"owned_decks":2,"code_redemptions":1,"finished_receipts":1},
+  "post_qa_state": {"new_mission_claims":0,"test_users":0,"gift_definitions":8},
+  "security_advisors": {
+    "public_RLS_issues":0,
+    "private_deny_all_tables":5,
+    "preexisting_auth_warning":"Leaked password protection disabled; Auth configuration unchanged",
+    "remediation":"https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection"
+  },
+  "metadata_validation": "8 gift codes; 3 missions; Girabl SQL matches exact legacy fixture 40 cards / 12 Restos",
+  "notes": "Root applied the frozen SQL successfully and verified both rollback suites in the real database. Actual player counts remained equal to baseline; no real reward was consumed and no test user or mission claim remained. SQL source is frozen exactly as applied, including its original preparation comment."
+}

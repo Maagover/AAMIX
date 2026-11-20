@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Absolute own-directory engine/project paths and no shell",
+    "passed": true
+  },
+  {
+    "name": "Version metadata 1.0.0.0",
+    "passed": true
+  },
+  {
+    "name": "Portable executable GUI subsystem",
+    "passed": true
+  },
+  {
+    "name": "Windows quoting preserves spaces",
+    "passed": true
+  },
+  {
+    "name": "Windows quoting doubles trailing slash and escapes quote",
+    "passed": true
+  },
+  {
+    "name": "Incomplete extraction returns clear Spanish diagnostic",
+    "passed": true
+  }
+]

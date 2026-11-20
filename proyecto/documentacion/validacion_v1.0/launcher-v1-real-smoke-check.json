@@ -1,0 +1,12 @@
+{
+  "checks": 1,
+  "launch_passed": true,
+  "scope": "Real top-level AAMIX.exe started from an external working directory; spawned the exact bundled Godot executable with the correct absolute project path.",
+  "launcher_pid": 16748,
+  "owned_game_pid": 2672,
+  "window_title": "AAMIX · versión 1.0 (DEBUG)",
+  "startup_log": "Godot 4.7.2; OpenGL 3.3 NVIDIA RTX 2060; no errors in startup log.",
+  "visual_verified": false,
+  "visual_limit": "Computer Use returned the unique game window, but capture timed out twice, including after activation. No screenshot was obtained and intro appearance is not asserted.",
+  "cleanup": "Only owned child PID 2672 was stopped after verifying parent PID and executable path; launcher exited afterward."
+}

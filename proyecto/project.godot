@@ -1,0 +1,33 @@
+config_version=5
+
+[application]
+config/name="AAMIX Online"
+config/version="1.11.1"
+config/icon="res://assets/aamix_a_white.png"
+config/windows_native_icon="res://assets/aamix_a_white.ico"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="AAMIX"
+run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+
+[display]
+window/size/viewport_width=1600
+window/size/viewport_height=1000
+window/size/window_width_override=1440
+window/size/window_height_override=900
+window/stretch/mode="canvas_items"
+window/size/viewport_width.web=480
+window/size/viewport_height.web=854
+window/stretch/aspect.web="expand"
+
+[input_devices]
+pointing/emulate_mouse_from_touch=true
+
+[editor_plugins]
+enabled=PackedStringArray("res://addons/raw_assets/plugin.cfg")
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+environment/defaults/default_clear_color=Color(0.988, 0.98, 0.961, 1)

@@ -1,0 +1,40 @@
+{
+  "version": "1.9.0-preview.2",
+  "current_failures": 0,
+  "local_checks": 67,
+  "native_visual_checks": 63,
+  "native_captures_reviewed": 10,
+  "current_regressions_executed": {
+    "block_links": 36,
+    "pack_audio": 28,
+    "event_receipt": 8
+  },
+  "server_group": {
+    "passed": true,
+    "synthetic_users_rolled_back": 1,
+    "random_packs": 10,
+    "cards_granted": 22,
+    "cases": [
+      "new_zero_halloween_supply",
+      "three_pack_kinds",
+      "atomic_balances",
+      "UUID_replay",
+      "shared_pending_queue",
+      "legacy_resume_metadata",
+      "inventory_reload",
+      "acknowledged_retry",
+      "no_event_or_promo_cards_in_ordinary_packs",
+      "H02_H05_headliners"
+    ]
+  },
+  "fixture_large_batch_cards": 500,
+  "visible_card_nodes": 2,
+  "real_emails_sent": 0,
+  "persistent_test_users": 0,
+  "game_network_requests_in_local_fixtures": 0,
+  "MP_remote_tested_this_revision": false,
+  "new_full_AI_games_this_revision": 0,
+  "physical_speaker_listening_verified": false,
+  "historical_checks_summed": false,
+  "portable_test": "See external INFORME_HALLOWEEN_PRUEBA02.json after packaging"
+}

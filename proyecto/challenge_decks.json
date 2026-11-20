@@ -1,0 +1,497 @@
+{
+  "fuente": "Mazos históricos del autor, cartas conservadas sin cambios.",
+  "mazos": [
+    {
+      "id": "maago",
+      "nombre": "Mazo Maagover",
+      "recurso_inicial": "0100",
+      "fuente": "image.png, columna MAAGOVER",
+      "cartas": [
+        {
+          "codigo": "0108",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0104",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0107",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0109",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0111",
+          "cantidad": 2
+        },
+        {
+          "codigo": "01c",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0116",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0120",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0133",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0132",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0131",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0122",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0124",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0100",
+          "cantidad": 15
+        }
+      ],
+      "portada": "0108"
+    },
+    {
+      "id": "girabl",
+      "nombre": "Mazo Girabl",
+      "recurso_inicial": "0100",
+      "fuente": "image.png, columna GIRABL",
+      "cartas": [
+        {
+          "codigo": "0127",
+          "cantidad": 3
+        },
+        {
+          "codigo": "01a",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0108",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0104",
+          "cantidad": 2
+        },
+        {
+          "codigo": "01b",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0113",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0112",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0107",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0111",
+          "cantidad": 1
+        },
+        {
+          "codigo": "01c",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0116",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0120",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0124",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0100",
+          "cantidad": 12
+        }
+      ],
+      "portada": "0127"
+    },
+    {
+      "id": "dominios",
+      "nombre": "Mazo Dominios",
+      "portada": "dominios",
+      "recurso_inicial": "0100",
+      "cartas": [
+        {
+          "codigo": "0100",
+          "cantidad": 15
+        },
+        {
+          "codigo": "0109",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0114",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0101",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0104",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0111",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0116",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0120",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0132",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0122",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0121",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0131",
+          "cantidad": 2
+        }
+      ],
+      "challenge_stage": 6,
+      "reward_cover": "custom_dominios",
+      "cover_card": "0109"
+    },
+    {
+      "id": "miku",
+      "nombre": "Mazo Miku",
+      "portada": "miku",
+      "recurso_inicial": "0100",
+      "cartas": [
+        {
+          "codigo": "0100",
+          "cantidad": 14
+        },
+        {
+          "codigo": "0107",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0104",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0108",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0114",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0101",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0111",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0110",
+          "cantidad": 1
+        },
+        {
+          "codigo": "01b",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0116",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0120",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0133",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0119",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0124",
+          "cantidad": 3
+        }
+      ],
+      "challenge_stage": 7,
+      "reward_cover": "custom_miku",
+      "cover_card": "0124"
+    },
+    {
+      "id": "tsuki_akira",
+      "nombre": "Mazo Tsuki y Akira",
+      "portada": "tsuki_akira",
+      "recurso_inicial": "0100",
+      "cartas": [
+        {
+          "codigo": "0100",
+          "cantidad": 17
+        },
+        {
+          "codigo": "01c",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0103",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0112",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0113",
+          "cantidad": 3
+        },
+        {
+          "codigo": "01a",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0104",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0127",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0116",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0120",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0117",
+          "cantidad": 1
+        }
+      ],
+      "challenge_stage": 8,
+      "reward_cover": "custom_tsuki_desafio",
+      "cover_card": "01c"
+    },
+    {
+      "id": "imbloqueable",
+      "nombre": "Mazo Imbloqueable",
+      "portada": "imbloqueable",
+      "recurso_inicial": "0100",
+      "cartas": [
+        {
+          "codigo": "0100",
+          "cantidad": 17
+        },
+        {
+          "codigo": "0102",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0107",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0108",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0128",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0104",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0129",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0116",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0120",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0124",
+          "cantidad": 3
+        }
+      ],
+      "challenge_stage": 9,
+      "reward_cover": "custom_imbloqueable",
+      "cover_card": "0128"
+    },
+    {
+      "id": "chanchuus",
+      "nombre": "Mazo Chanchuus",
+      "portada": "chanchuus",
+      "recurso_inicial": "0100",
+      "cartas": [
+        {
+          "codigo": "0100",
+          "cantidad": 15
+        },
+        {
+          "codigo": "0125",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0108",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0111",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0104",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0128",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0116",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0120",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0118",
+          "cantidad": 2
+        },
+        {
+          "codigo": "01d",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0124",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0119",
+          "cantidad": 1
+        }
+      ],
+      "challenge_stage": 10,
+      "reward_cover": "custom_chanchuus_aliado",
+      "cover_card": "0125"
+    },
+    {
+      "id": "transmision",
+      "nombre": "Transmisión Caída",
+      "portada": "transmision",
+      "recurso_inicial": "0100",
+      "cartas": [
+        {
+          "codigo": "0100",
+          "cantidad": 15
+        },
+        {
+          "codigo": "01c",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0104",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0108",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0111",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0107",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0129",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0126",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0110",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0105",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0116",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0120",
+          "cantidad": 2
+        },
+        {
+          "codigo": "01d",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0124",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0119",
+          "cantidad": 1
+        }
+      ],
+      "challenge_stage": 11,
+      "reward_cover": "custom_transmision_desafio",
+      "cover_card": "0119"
+    }
+  ]
+}

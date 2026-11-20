@@ -1,0 +1,36 @@
+{
+  "project_id": "drpsedaiqyowwikhjugs",
+  "release": "0.11.0",
+  "status": "complete_applied_and_verified",
+  "migration_name": "aamix_gift_codes_and_avatar_lock_v0110",
+  "applied_version": "20261018031742",
+  "applied_at_utc": "2026-10-18T03:17:42Z",
+  "source": "aamix_gift_codes_v0110.sql",
+  "requires": "20261017221142_aamix_packs_exclude_promotional_v0101",
+  "tests": [
+    {
+      "source": "test_gift_codes_v0110_rollback.sql",
+      "status": "PASS_REAL_DATABASE_ALL_FIXTURES_ROLLED_BACK",
+      "sampled_packs": 1000,
+      "checks": "Exact codes and quantities, Maagover40/15, 20 retries per code, per-UUID isolation, auth/ACL, atomic failure, locked promotional avatars, no promotions in packs"
+    }
+  ],
+  "pending_followup": {
+    "source": "aamix_gift_codes_index_v0110.sql",
+    "status": "applied",
+    "version": "20261018032104",
+    "name": "aamix_gift_codes_index_v0110",
+    "changes_player_rows": false
+  },
+  "mutates_existing_player_rows": false,
+  "changes_auth_or_smtp": false,
+  "public_rpc_signature_changes": false,
+  "promotional_avatar_policy": "deny_even_when_owned; future_unlocks_pending",
+  "current_avatar_aggregate_readonly": [
+    {
+      "avatar_code": "0108",
+      "profile_count": 1
+    }
+  ],
+  "notes": "Both migrations applied. Real rollback integration tests passed. No test users, real rewards or real emails committed. Do not rerun applied migrations."
+}

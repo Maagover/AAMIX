@@ -1,0 +1,12 @@
+{
+  "file": "mazo_halloween.png",
+  "tool": "image_gen.imagegen (built-in)",
+  "prompt": "Create ONE transparent-background AAMIX Halloween deck-box cover asset for a Windows card game. Reference image 1 is the established AAMIX box design/style and logo; reference image 2 is the new H05 SoyFlaan Halloween card illustration. Match reference 1's elegant dark brown embossed cardboard deck box, warm thin golden inset borders, exact three-quarter view showing front, right spine and top, same broad proportions, small soft contact shadow and realistic matte box texture. Replace ONLY the printed front illustration with the H05 illustration from reference 2: same red-haired headphone girl at her desk, pumpkin on desk, crescent moon and dark window, preserve her character design, original artist's illustrative style. Do not include the card frame, rules panel, rarity, number, shield or coin. Keep the original AAMIX logo in gold and cream large at the bottom front as on reference 1. A very small HALLOWEEN subtitle is allowed below the logo. Box has dark plum/navy art and subtle orange highlights in its trim; no white frame or white background, no extra characters. Whole box centered and fully visible, transparent background. Match reference1's 1254x1254 square canvas composition: physical box sits approximately within x236..1036 y115..1175 (proportional if output size differs), no clipping. This is a single new box design matching the existing series, no collage.",
+  "reference_roles": {
+    "style": "assets/estetica_v120/mazo_flaan.png",
+    "illustration": "assets/halloween_2026/H05.png"
+  },
+  "generated_source": "exec-c2f155e7-b86e-415b-a886-ad0cb4266ff6.png",
+  "project_asset": "assets/halloween_2026/mazo_halloween.png",
+  "original_cards_unchanged": true
+}

@@ -1,0 +1,185 @@
+{
+  "formato": "aamix.codigos_regalo",
+  "version": "1.8.0",
+  "fecha": "2026-10-24",
+  "frecuencia": "Una vez por UUID y código",
+  "autoridad": "Servidor mediante aamix_redeem_code. Este archivo informativo no concede recompensas.",
+  "codigos": [
+    {
+      "codigo": "M4Z0M44G0",
+      "nombre": "Mazo Maagover",
+      "tipo": "mazo",
+      "mazo_id": "maago",
+      "total_cartas": 40,
+      "recursos": 15,
+      "fuente_lista": "tests/fixtures/mazos_legacy.json:usuario_maagover"
+    },
+    {
+      "codigo": "P3RI",
+      "nombre": "3 copias de Peri",
+      "tipo": "cartas",
+      "cartas": [
+        {
+          "codigo": "01a",
+          "cantidad": 3
+        }
+      ],
+      "foto_perfil": "01a",
+      "alias_compatibles": [
+        "P3R1"
+      ]
+    },
+    {
+      "codigo": "B1G0T3S",
+      "nombre": "3 copias de Bigotes",
+      "tipo": "cartas",
+      "cartas": [
+        {
+          "codigo": "01b",
+          "cantidad": 3
+        }
+      ],
+      "foto_perfil": "01b",
+      "alias_compatibles": [
+        "B1GOTE5"
+      ]
+    },
+    {
+      "codigo": "SI2TYA",
+      "nombre": "Tsuki y Akira",
+      "tipo": "cartas",
+      "cartas": [
+        {
+          "codigo": "01c",
+          "cantidad": 1
+        }
+      ]
+    },
+    {
+      "codigo": "CHANCHULINES",
+      "nombre": "Granjita de Chanchuus",
+      "tipo": "cartas",
+      "cartas": [
+        {
+          "codigo": "01d",
+          "cantidad": 1
+        }
+      ]
+    },
+    {
+      "codigo": "TORNEOAAMIX1",
+      "nombre": "Dragón Tee K.O",
+      "tipo": "cartas",
+      "cartas": [
+        {
+          "codigo": "01e",
+          "cantidad": 1
+        }
+      ]
+    },
+    {
+      "codigo": "AAMIXTC",
+      "nombre": "1 sobre",
+      "tipo": "sobres",
+      "sobres": 1
+    },
+    {
+      "codigo": "M4Z0G1R4",
+      "nombre": "Mazo Girabl",
+      "tipo": "mazo",
+      "mazo_id": "girabl",
+      "total_cartas": 40,
+      "recursos": 12,
+      "fuente_lista": "tests/fixtures/mazos_legacy.json:usuario_girabl"
+    },
+    {
+      "codigo": "AAMIX50",
+      "nombre": "50 Restos",
+      "tipo": "restos",
+      "restos": 50
+    },
+    {
+      "codigo": "AAMIX100",
+      "nombre": "100 Restos",
+      "tipo": "restos",
+      "restos": 100
+    },
+    {
+      "codigo": "AAMIX1000",
+      "nombre": "1000 Restos",
+      "tipo": "restos",
+      "restos": 1000
+    },
+    {
+      "codigo": "SI2MAZO",
+      "nombre": "Diseño de mazo Tsuki y Akira",
+      "tipo": "diseno_mazo",
+      "diseno_id": "custom_tsuki_akira"
+    },
+    {
+      "codigo": "CHANCHUMAZO",
+      "nombre": "Diseño de mazo Granjita de Chanchuus",
+      "tipo": "diseno_mazo",
+      "diseno_id": "custom_chanchuus"
+    },
+    {
+      "codigo": "VIBMAZO",
+      "nombre": "Diseño de mazo Viborín",
+      "tipo": "diseno_mazo",
+      "diseno_id": "custom_viborin"
+    },
+    {
+      "codigo": "AAMIXNAVIDAD",
+      "nombre": "1 sobre TC, 50 Restos y 1 carta aleatoria",
+      "tipo": "combinado",
+      "sobres": 1,
+      "restos": 50,
+      "sobres_carta_aleatoria": 1
+    },
+    {
+      "codigo": "BIENVENIDAA",
+      "nombre": "1 sobre TC, 1 sobre carta aleatoria y 100 Restos",
+      "tipo": "paquete",
+      "sobres_tc": 1,
+      "sobres_carta_aleatoria": 1,
+      "restos": 100,
+      "evento": "bienvenida_2026",
+      "desde": "2026-10-23",
+      "hasta": "2026-10-26",
+      "timezone": "America/Santiago"
+    },
+    {
+      "codigo": "GATONEGRO",
+      "nombre": "1 Bigotes",
+      "tipo": "cartas",
+      "cartas": [
+        {
+          "codigo": "01b",
+          "cantidad": 1
+        }
+      ],
+      "evento": "halloween_2026",
+      "desde": "2026-10-30",
+      "hasta": "2026-11-01",
+      "timezone": "America/Santiago"
+    },
+    {
+      "codigo": "CUMPLEKAJIDO",
+      "nombre": "Mazo Kajido",
+      "tipo": "mazo",
+      "mazo_id": "kajido",
+      "total_cartas": 40,
+      "evento": "kajido_2026",
+      "desde": "2026-11-25",
+      "hasta": "2026-11-27",
+      "timezone": "America/Santiago"
+    }
+  ],
+  "restricciones": [
+    "Las recompensas de tipo cartas no entregan mazos ni sobres.",
+    "Los códigos de diseño de mazo desbloquean sólo una portada cosmética para mazos personalizados; no conceden cartas, Restos ni sobres.",
+    "Los códigos no consumen ni reemplazan el regalo inicial; cada recompensa sólo se entrega una vez por UUID y código.",
+    "Las promocionales continúan excluidas de todos los sobres.",
+    "Poseer una promocional no desbloquea su avatar. Desbloqueos futuros pendientes."
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "release": "1.2.0",
+  "project_id": "drpsedaiqyowwikhjugs",
+  "status": "applied_verified",
+  "base_deployment": "DEPLOYMENT_v1.1.json",
+  "new_migration": {
+    "version": "20261020033149",
+    "name": "aamix_deck_designs_v120"
+  },
+  "progress_reset": false,
+  "existing_accounts_preserved": 4,
+  "verification": {
+    "transactional_rehearsal_groups_passed": 17,
+    "sql_synthetic_accounts_rolled_back": 2,
+    "native_https_checks_passed": 10,
+    "native_https_synthetic_accounts_deleted": 1,
+    "remaining_qa_sessions": 0,
+    "remaining_qa_decks": 0,
+    "real_emails_sent": 0,
+    "real_player_auth_tests": 0,
+    "random_draws": 0
+  },
+  "entitlements": {
+    "authority": "Immutable deck_design snapshot in aamix_code_redemptions, isolated by auth.uid()",
+    "free": [
+      "custom_transmision",
+      "custom_restos"
+    ],
+    "gift_codes": {
+      "SI2MAZO": "custom_tsuki_akira",
+      "CHANCHUMAZO": "custom_chanchuus",
+      "VIBMAZO": "custom_viborin"
+    },
+    "inventory_fields": [
+      "available_custom_covers",
+      "unlocked_deck_designs"
+    ],
+    "cosmetic_only": true,
+    "pictured_card_ownership_required": false
+  },
+  "compatibility": {
+    "legacy_inventory_decks_unchanged": true,
+    "old_gift_rewards_unchanged": true,
+    "custom_deck_rpc_signature_unchanged": true,
+    "multiplayer_protocol": 3,
+    "launcher_protocol": 1
+  },
+  "security_advisors": {
+    "new_public_tables": 0,
+    "ledger_owner_select_rls_retained": true,
+    "direct_client_writes_denied": true,
+    "private_helpers_auth_uid_required": true,
+    "search_path_empty": true,
+    "private_rls_without_policies": "Intentional deny-all for API roles; unchanged historical private tables.",
+    "rls_information": "https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy",
+    "preexisting_password_leak_protection_warning_unchanged": true,
+    "password_warning_reference": "https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection"
+  },
+  "limitations": [
+    "No two remote PCs tested",
+    "No new latency or WebSocket benchmark",
+    "Trusted rules host retained"
+  ],
+  "private_credentials_in_distribution": false
+}

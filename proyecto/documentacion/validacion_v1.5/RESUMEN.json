@@ -1,0 +1,23 @@
+{
+  "release": "1.5.0",
+  "sql_groups": 43,
+  "sql_users_rolled_back": 3,
+  "ui_checks": 43,
+  "captures_reviewed": 7,
+  "https_checks": 24,
+  "https_synthetic_users_created_and_deleted": 4,
+  "https_synthetic_sessions_remaining": 0,
+  "existing_users_preserved": 4,
+  "concurrent_https_confirmations": true,
+  "regression_card_scenarios": 25,
+  "regression_card_assertions": 160,
+  "regression_snapshot_checks": 17,
+  "current_failures": 0,
+  "real_emails_sent": 0,
+  "random_simulations": 0,
+  "historical_tests_summed": false,
+  "two_remote_pcs_tested": false,
+  "latency_measured": false,
+  "realtime_retested": false,
+  "known_test_teardown_warning": "The inherited snapshot fixture reports two ObjectDB objects at shutdown; all 17 assertions pass."
+}

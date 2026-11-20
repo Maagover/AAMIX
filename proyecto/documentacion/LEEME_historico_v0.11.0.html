@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AAMIX 0.11.0</title>
+<style>body{background:#26180f;color:#fff2da;font:18px/1.6 system-ui;margin:0}main{max-width:1040px;margin:auto;padding:45px 30px}h1,h2{color:#efba79}a{color:#f5d5a1}section{padding:18px 25px;background:#38261b;border:1px solid #bc8553;border-radius:12px;margin:25px 0}strong{color:#ffe0a8}table{border-collapse:collapse;width:100%;font-size:16px}th,td{padding:10px 12px;text-align:left;border-bottom:1px solid #725039}th{color:#efba79}</style>
+</head>
+<body><main>
+<h1>AAMIX · Mesa 0.11.0</h1>
+<section><h2>Para comenzar</h2><ol><li>Extrae todo el ZIP en una carpeta nueva.</li><li>Abre <strong>Jugar_AAMIX.bat</strong>.</li><li>Ingresa con correo y código, crea tu cuenta o juega como invitado.</li></ol><p>El motor Windows de 64 bits está incluido. No necesitas instalar Godot. Las cuentas, cartas y recompensas requieren internet; como invitado puedes practicar sin cuenta con Kajido, Papito o Flaan.</p></section>
+<h2>Qué cambia</h2>
+<p>El inicio muestra dos cartas flotando detrás del logo fijo, al lado derecho. Misiones y Mis sobres usan listas a la izquierda, con cantidades, progreso y acciones a la derecha. La colección y la elección de mazo presentan sus cartas centradas.</p>
+<p>Mi cuenta ofrece <strong>22 fotos de Aliados no promocionales</strong>. El selector muestra imágenes sin nombres debajo; los nombres siguen en los tooltips. Dicky, Maagover y Girabl tienen nuevos encuadres del rostro. Las fotos promocionales quedan reservadas para futuros desbloqueos; poseer una carta no desbloquea su foto.</p>
+<p>La expansión N.º 1 se llama <strong>Transmisión Caída</strong>. El nombre conserva el mismo grupo de cartas y probabilidades del sobre.</p>
+<h2>Códigos de regalo</h2>
+<p>En Inicio abre Código de regalo, escribe el código y pulsa <strong>Canjear</strong>. Cada uno puede canjearse <strong>una vez por cuenta</strong>, independientemente de los otros y del regalo inicial. La pantalla utiliza un formulario simple; esta tabla se conserva en la documentación.</p>
+<table><thead><tr><th>Código exacto</th><th>Recompensa</th></tr></thead><tbody>
+<tr><td>M4Z0M44G0</td><td>Mazo Maagover histórico: 40 cartas, incluidos 15 Restos.</td></tr>
+<tr><td>P3RI</td><td>3 Peri; el código no lleva cero al final.</td></tr>
+<tr><td>B1G0T3S</td><td>3 Bigotes.</td></tr>
+<tr><td>SI2TYA</td><td>1 Tsuki y Akira.</td></tr>
+<tr><td>CHANCHULINES</td><td>1 Granjita de Chanchuus.</td></tr>
+<tr><td>TORNEOAAMIX1</td><td>1 Dragón Tee K.O.</td></tr>
+</tbody></table>
+<p>Los cinco códigos nuevos sólo entregan esas cartas a la colección. No conceden mazos, sobres ni fotos promocionales. Actualizar conserva los canjes anteriores y el regalo inicial; Maagover mantiene su promoción legítima 01c.</p>
+<h2>Misiones y sobres</h2>
+<p>Termina una partida, ganes o pierdas, y reclama un sobre en Misiones. Puedes reclamarlo una vez al día; el día cambia a las <strong>00:00 de America/Santiago</strong>, según el servidor.</p>
+<p>Abre el envoltorio con el mouse y desliza cada carta hacia un costado. El resultado se guarda antes de animarlo; si cierras durante una apertura, reingresa con el mismo correo para retomar las mismas cartas sin gastar otro sobre.</p>
+<p>Las promociones <strong>nunca salen en sobres</strong>. Participan 35 cartas: un Recurso, 25 normales y nueve Especiales. El Recurso siempre va primero; las posiciones 2–4 son normales uniformes y repetibles; la quinta es normal 70% o Especial 30%. Nunca hay Recursos después de la primera posición.</p>
+<p>Dentro de Especiales, Kajido, SoyFlaan, Papito y Transmisión Caída tienen 5% cada uno; las otras cinco, 16% cada una. Equivalen a 1,5% y 4,8% del total de sobres por carta, respectivamente. Canjear una promoción no la añade al grupo de sobres.</p>
+<h2>Cuenta y conexión</h2>
+<p>Reingresa con el mismo correo y un código nuevo para recuperar tu UUID, cartas, mazos y recompensas. Correo, códigos de acceso y tokens sólo viven en memoria. El regalo inicial ya elegido se conserva.</p>
+<p>Si falla registrar el final de una partida, mantén abierto el juego y reintenta en Misiones. Cerrar o cambiar cuenta pierde los resultados que aún no se enviaron. La IA juega localmente; el servidor controla identidad y duplicados, pero no valida el historial de jugadas. Una apertura de sobre ya confirmada sí persiste.</p>
+<h2>Verificación y continuidad</h2>
+<p><strong>0.11.0: 336 comprobaciones y 21 partidas simuladas aprobadas en Windows, cero fallos.</strong> Importación e interfaz real verificadas. Backend aplicado y prueba de códigos/retratos con 1.000 sobres sin promociones aprobada con cuentas sintéticas y rollback. Las repeticiones y cifras históricas no se suman a este total. La extracción, integridad y arranque del ZIP final se registran en <strong>INFORME_ENTREGA</strong>.</p>
+<p>Siguen pendientes multijugador, constructor, intercambios, diez efectos, guardado de partidas, desbloqueos promocionales y concurrencia real entre dos clientes. No repetir las migraciones ya aplicadas.</p>
+<p><a href="README.md">Instrucciones completas</a> · <a href="proyecto/documentacion/CONTINUIDAD.md">Continuidad</a> · <a href="proyecto/documentacion/BASE_DEL_PROYECTO_v1.7.md">Base vigente 1.7</a> · <a href="proyecto/documentacion/PROMPT_CONTINUIDAD.md">Prompt actualizado</a> · <a href="proyecto/documentacion/VALIDACION_v0.11.0.md">Validación 0.11.0</a> · <a href="proyecto/documentacion/BACKEND_v0.11.0.md">Backend 0.11.0</a></p>
+</main></body></html>

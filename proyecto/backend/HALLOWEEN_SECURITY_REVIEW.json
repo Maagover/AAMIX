@@ -1,0 +1,63 @@
+{
+  "status": "static_isolation_review_passed",
+  "scope": "Additive isolated schemas; only public addition is authenticated security-invoker RPC gateway",
+  "source_function_count": 147,
+  "public_method_count": 50,
+  "source_function_fingerprint": "b9d40089e50abf626c5a73d6dae15199",
+  "auth_writes": 0,
+  "source_dynamic_sql": 0,
+  "user_state_tables_copied": 0,
+  "static_reference_tables_copied": 6,
+  "rollback_runtime_probe": "Bootstrap and one Halloween pack passed before permanent migration; all synthetic data rolled back",
+  "sql_sha256": "ad60d989b845b3d6bde3912c903760113a7a654fcd3db5087feb78094419e248",
+  "limitations": "No independent external audit. Host-authoritative multiplayer retained. No remote-PC validation.",
+  "deployed_isolation_checks": {
+    "project_ref": "drpsedaiqyowwikhjugs",
+    "scope": "Only isolated preview game schemas and authenticated gateway; existing Auth identities reused",
+    "applied": true,
+    "migrations": [
+      {
+        "version": "20261026200441",
+        "name": "aamix_halloween_preview01_isolated",
+        "source": "halloween_preview01.sql",
+        "sha256": "d646190e9d407a11b58f747e47a4f788bf1157973d54edcace5cf3880bd07d37"
+      },
+      {
+        "version": "20261026200928",
+        "name": "aamix_halloween_preview01_ruleset",
+        "source": "halloween_preview01_ruleset_fix.sql",
+        "sha256": "809f58b4583f59bd2b60db01647f1f0fa5c47c0fe0191151b422ab567a8bc93f"
+      },
+      {
+        "version": "20261026221311",
+        "name": "aamix_halloween_preview01_rematch_capacity",
+        "source": "halloween_preview01_rematch_limit.sql",
+        "sha256": "407bb796d182e9a3d698886f9159d635a61b15145511a9488991e87a50a77f75"
+      }
+    ],
+    "do_not_reapply": true,
+    "no_progress_reset": true,
+    "official_functions_fingerprint": "b9d40089e50abf626c5a73d6dae15199",
+    "existing_identities_before_and_after": 6,
+    "synthetic_users_remaining": 0,
+    "synthetic_sessions_remaining": 0,
+    "preview_accounts_after_cleanup": 0,
+    "preview_tables": 46,
+    "tables_without_rls": 0,
+    "direct_client_write_grants": 0,
+    "anonymous_gateway_execute": false,
+    "foreign_keys_into_official_game_data": 0,
+    "real_user_state_copied": false,
+    "private_reference_tables_copied": [
+      "catalog_codes",
+      "base_decks",
+      "reward_catalog",
+      "gift_code_rewards",
+      "event_definitions",
+      "milestone_definitions_v170"
+    ],
+    "calendar_forced_only_in_preview": true,
+    "auth_settings_changed": false,
+    "github_published": false
+  }
+}

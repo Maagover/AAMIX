@@ -1,0 +1,65 @@
+extends RefCounted
+var b
+func _init(board):b=board
+func render_screen():
+	var margin=MarginContainer.new();margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	for edge in ["left","right","top","bottom"]:margin.add_theme_constant_override("margin_"+edge,30)
+	b.add_child(margin)
+	var content=b.box(margin,true,12)
+	var logo=CenterContainer.new();content.add_child(logo);logo.add_child(b.asset_image("logo_color.png",300,65,true))
+	content.add_child(b.centered_label("Desafío AAMIX",30,Color("fff0d2")))
+	b.challenge_page=clampi(b.challenge_page,0,b.CHALLENGES.size()-1)
+	var definition=b.CHALLENGES[b.challenge_page];var state=b.challenge_state(definition.stage)
+	var item=b.box(b.panel(content),true,12);item.size_flags_vertical=Control.SIZE_EXPAND_FILL
+	item.get_parent().size_flags_vertical=Control.SIZE_EXPAND_FILL
+	item.set_meta("challenge_stage",definition.stage)
+	item.add_child(b.centered_label("Nivel %d"%definition.stage,25,b.GOLD))
+	var unlocked=bool(state.get("unlocked",false))
+	if not unlocked:
+		var locked=CenterContainer.new();locked.size_flags_vertical=Control.SIZE_EXPAND_FILL;item.add_child(locked)
+		var v=b.box(locked);v.add_child(b.UIIcons.view("lock",180));v.add_child(b.centered_label("Bloqueado",24,b.GOLD))
+	else:
+		item.add_child(b.centered_label(definition.title,23,b.GOLD))
+		var row=b.box(item,false,30);row.size_flags_vertical=Control.SIZE_EXPAND_FILL
+		var cover=CenterContainer.new();cover.custom_minimum_size.x=340;row.add_child(cover)
+		cover.add_child(b.deck_cover(definition.deck_id,320,390))
+		var missions=b.box(row,true,12);missions.size_flags_horizontal=Control.SIZE_EXPAND_FILL;missions.alignment=BoxContainer.ALIGNMENT_CENTER
+		var first=b.panel(missions,b.PANEL,"gold");var first_row=b.box(first,false,16)
+		var desc=b.box(first_row,true,3);desc.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+		desc.add_child(b.label("Primera victoria",18,b.TEXT))
+		desc.add_child(b.label("%d sobres TC"%definition.reward_packs+(" + diseño de mazo" if definition.has("reward_cover") else ""),14,b.MUTED))
+		first_row.add_child(b.label("Completada" if state.get("completed",false) else "Pendiente",14,b.MUTED))
+		for mission in state.get("missions",[]):mission_row(missions,definition.stage,mission)
+		if state.get("missions",[]).is_empty():missions.add_child(b.label("Consultando misiones del nivel…",17,b.MUTED))
+		item.add_child(b.button("Volver a jugar" if state.get("completed",false) else "Jugar nivel",b.choose_challenge.bind(definition.stage),b.collection.busy,true))
+	var controls=b.box(content,false,18);controls.alignment=BoxContainer.ALIGNMENT_CENTER
+	for delta in [-1,1]:
+		var nav=b.button("‹" if delta<0 else "›",change_page.bind(delta),b.challenge_page+delta<0 or b.challenge_page+delta>=b.CHALLENGES.size())
+		nav.custom_minimum_size.x=65;controls.add_child(nav)
+	controls.add_child(b.button("Volver",b.open_single))
+	if not b.collection.status.is_empty():content.add_child(b.centered_label(b.collection.status,14,Color("fff0d2")))
+	if b.challenge_slide!=0:
+		arrive.call_deferred(item.get_parent(),b.challenge_slide)
+		b.challenge_slide=0
+func change_page(delta):
+	b.challenge_page=clampi(b.challenge_page+delta,0,b.CHALLENGES.size()-1);b.challenge_slide=delta;b.render()
+func arrive(control,delta):
+	await b.get_tree().process_frame
+	if not is_instance_valid(control):return
+	var destination=control.position
+	control.position.x+=float(delta)*100;control.modulate.a=0
+	var tween=b.create_tween().set_parallel(true)
+	tween.tween_property(control,"position",destination,0.23).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	tween.tween_property(control,"modulate:a",1.0,0.20)
+func mission_row(parent,stage,m):
+	var holder=b.panel(parent);holder.modulate.a=0.52 if m.get("claimed",false) else 1.0
+	var row=b.box(holder,false,12);row.alignment=BoxContainer.ALIGNMENT_CENTER
+	row.add_child(preload("res://pack_art.gd").view(Vector2(34,45)))
+	var texts=b.box(row,true,3);texts.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+	texts.add_child(b.label(m.title,17,b.TEXT));texts.add_child(b.label("Recompensa: %d sobres TC"%int(m.reward_packs),13,b.MUTED))
+	if int(m.goal)>1:
+		var bar=ProgressBar.new();bar.max_value=int(m.goal);bar.value=int(m.progress);bar.show_percentage=false;bar.custom_minimum_size.y=6;texts.add_child(bar)
+	var status=b.box(row,true,4);status.add_child(b.label("Única",11,b.MUTED));status.add_child(b.label("%d / %d"%[int(m.progress),int(m.goal)],13,b.MUTED))
+	row.add_child(b.button("Reclamada" if m.get("claimed",false) else "Reclamar",claim.bind(stage,str(m.id)),b.collection.busy or not m.get("can_claim",false)))
+func claim(stage,id):
+	if await b.collection.claim_challenge_mission(stage,id):b.celebrate_reward("¡Misión completada!","Los sobres están en Mis sobres.")

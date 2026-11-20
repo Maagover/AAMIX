@@ -1,0 +1,9 @@
+# Prompt vigente para continuar AAMIX desde 0.15.0
+
+Estamos continuando AAMIX, mi juego de cartas físico convertido en juego virtual Windows. Continúa sobre el ZIP 0.15.0 completo, sin reconstruir ni pedir recursos incluidos. Lee README, VERSION.json, CONTINUIDAD.md y sección 23 de BASE_DEL_PROYECTO_v1.11.md. Mis solicitudes posteriores prevalecen sobre documentos históricos. No avances multijugador todavía y mantén pruebas acotadas, sin repetir matrices o miles de sorteos por rutina.
+
+Mantén las reglas y IA aprobadas, los mazos históricos y todos los recursos originales. La nueva intro lleva al Inicio, un sobre TC se entrega al acceder a cuenta nueva y el mazo inicial se elige sólo al entrar al desafío. No duplicar premios ni quitar a cuentas antiguas. Confirmar rival antes de todo combate. Usa niveles con próximos mazos ocultos, resultados con las acciones solicitadas y recompensa del desafío sólo al regresar a niveles. Sobres cuadrados accionables y cartas futuras invisibles, sin bordes que anticipen Singular. Conserva MP3 del autor en menús y música original del desafío, recarga PNG e iconos de paleta AAMIX.
+
+El backend está aplicado hasta 20261018215041_aamix_welcome_challenge_v0150. No recrear cuentas/Auth/SMTP ni repetir migraciones; consultar APPLIED_MIGRATIONS.json y DEPLOYMENT_v0.15.0.json. La documentación de 0.14 conserva detalles exactos de las reglas, 4 misiones, 8 códigos, 5 niveles y probabilidades sin promocionales. El plan MULTIJUGADOR_PLAN_v0.15.md es sólo histórico.
+
+Entrega versiones completas descargables con motor, arte, fuentes y continuidad. No sobrescribas el ZIP anterior ni los archivos sincronizados de sources/. Reporta las pruebas realmente ejecutadas y sus límites; el paquete 0.15 contiene 88 casos distintos entre GUI/HTTP, SQL y arranque portable, sin sumar historia. El informe externo junto al ZIP confirma el paquete final.

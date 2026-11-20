@@ -1,0 +1,13 @@
+{
+  "host_ack_ms_median": 426.5,
+  "guest_ack_ms_median": 1504.5,
+  "native_host_actions": 8,
+  "native_guest_actions": 6,
+  "host_submit_calls": 0,
+  "host_combined_calls": 8,
+  "guest_submit_calls": 6,
+  "includes_two_processes_on_one_PC": true,
+  "separate_remote_PCs_tested": false,
+  "old_version_latency_benchmark_run": false,
+  "note": "Observed timings in this run only; not a guarantee or a measured percentage improvement. Host own action path reduced from submit+commit to one combined authenticated RPC."
+}

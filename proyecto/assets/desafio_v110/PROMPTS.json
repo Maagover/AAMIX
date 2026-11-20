@@ -1,0 +1,44 @@
+[
+  {
+    "id": "dominios",
+    "source": "exec-bf81e74f-7a70-4471-b019-533a365ab137.png",
+    "prompt": "Use case: product-mockup. Create ONE AAMIX deck box cover asset, transparent background. Image 1 is the exact geometry/style/layout reference. Image 2 is the original card illustration to place on front, preserving the depicted character identity, pose, colors and illustration style (including pixel/block or plush style). Replace only the front illustration of the reference box with the art from card \"Mog\", without the card's statistics, silver border, rule text or numbers. Match the same full upright three-quarter box, front facing left and right narrow side visible, box spans x=236..1036 y=115..1175 on a square 1254-frame canvas. Dark chocolate textured cardboard, slim double gold engraved frame, original AAMIX gold/ivory logo at lower front. A refined deep forest green accent in front art and spine distinguishes this challenge deck. No other writing, no title, no watermark, no new characters. Keep realistic box texture and the source illustration's original hand-drawn aesthetic. All six boxes in this collection must share box scale, angle, proportions, registration, border thickness and lighting. Transparent outer background, no hard cast shadow, no checkerboard.",
+    "tool": "built-in image_gen",
+    "reference": "assets/estetica_v120/mazo_maago.png"
+  },
+  {
+    "id": "miku",
+    "source": "exec-c797913b-2157-4c16-a932-d54a39361d7c.png",
+    "prompt": "Use case: product-mockup. Create ONE AAMIX deck box cover asset, transparent background. Image 1 is the exact geometry/style/layout reference. Image 2 is the original card illustration to place on front, preserving the depicted character identity, pose, colors and illustration style (including pixel/block or plush style). Replace only the front illustration of the reference box with the art from card \"Muñeco de Miku\", without the card's statistics, silver border, rule text or numbers. Match the same full upright three-quarter box, front facing left and right narrow side visible, box spans x=236..1036 y=115..1175 on a square 1254-frame canvas. Dark chocolate textured cardboard, slim double gold engraved frame, original AAMIX gold/ivory logo at lower front. A refined teal accent in front art and spine distinguishes this challenge deck. No other writing, no title, no watermark, no new characters. Keep realistic box texture and the source illustration's original hand-drawn aesthetic. All six boxes in this collection must share box scale, angle, proportions, registration, border thickness and lighting. Transparent outer background, no hard cast shadow, no checkerboard.",
+    "tool": "built-in image_gen",
+    "reference": "assets/estetica_v120/mazo_maago.png"
+  },
+  {
+    "id": "tsuki",
+    "source": "exec-bc28fc18-0f38-4137-9669-a7f34a4972fa.png",
+    "prompt": "Use case: product-mockup. Create ONE AAMIX deck box cover asset, transparent background. Image 1 is the exact geometry/style/layout reference. Image 2 is the original card illustration to place on front, preserving the depicted character identity, pose, colors and illustration style (including pixel/block or plush style). Replace only the front illustration of the reference box with the art from card \"Tsuki y Akira\", without the card's statistics, silver border, rule text or numbers. Match the same full upright three-quarter box, front facing left and right narrow side visible, box spans x=236..1036 y=115..1175 on a square 1254-frame canvas. Dark chocolate textured cardboard, slim double gold engraved frame, original AAMIX gold/ivory logo at lower front. A refined pale sky blue accent in front art and spine distinguishes this challenge deck. No other writing, no title, no watermark, no new characters. Keep realistic box texture and the source illustration's original hand-drawn aesthetic. All six boxes in this collection must share box scale, angle, proportions, registration, border thickness and lighting. Transparent outer background, no hard cast shadow, no checkerboard.",
+    "tool": "built-in image_gen",
+    "reference": "assets/estetica_v120/mazo_maago.png"
+  },
+  {
+    "id": "imbloqueable",
+    "source": "exec-4a718398-485f-4a85-8623-533010f6f361.png",
+    "prompt": "Use case: product-mockup. Create ONE AAMIX deck box cover asset, transparent background. Image 1 is the exact geometry/style/layout reference. Image 2 is the original card illustration to place on front, preserving the depicted character or scene identity, pose, colors and illustration style. Replace only the front illustration of the reference box with the art from card \"HNyko\", without the card's statistics, silver border, rule text or numbers. Match the same full upright three-quarter box, front facing left and right narrow side visible, box spans x=236..1036 y=115..1175 on a square 1254-frame canvas. Dark chocolate textured cardboard, slim double gold engraved frame, original AAMIX gold/ivory logo at lower front. A refined burgundy and antique gold accent in front art and spine distinguishes this challenge deck. No other writing, no title, no watermark, no new characters. Keep realistic box texture and the source illustration's original hand-drawn aesthetic. All six boxes in this collection must share box scale, angle, proportions, registration, border thickness and lighting. Transparent outer background, no hard cast shadow, no checkerboard.",
+    "tool": "built-in image_gen",
+    "reference": "assets/estetica_v120/mazo_maago.png"
+  },
+  {
+    "id": "chanchuus",
+    "source": "exec-2bdf9dfb-5fb6-4675-8888-58c312de1ac8.png",
+    "prompt": "Use case: product-mockup. Create ONE AAMIX deck box cover asset, transparent background. Image 1 is the exact geometry/style/layout reference. Image 2 is the original card illustration to place on front, preserving the depicted character or scene identity, pose, colors and illustration style. Replace only the front illustration of the reference box with the art from card \"Chanchuus\", without the card's statistics, silver border, rule text or numbers. Match the same full upright three-quarter box, front facing left and right narrow side visible, box spans x=236..1036 y=115..1175 on a square 1254-frame canvas. Dark chocolate textured cardboard, slim double gold engraved frame, original AAMIX gold/ivory logo at lower front. A refined pink and cyan accent in front art and spine distinguishes this challenge deck. No other writing, no title, no watermark, no new characters. Keep realistic box texture and the source illustration's original hand-drawn aesthetic. All six boxes in this collection must share box scale, angle, proportions, registration, border thickness and lighting. Transparent outer background, no hard cast shadow, no checkerboard.",
+    "tool": "built-in image_gen",
+    "reference": "assets/estetica_v120/mazo_maago.png"
+  },
+  {
+    "id": "transmision",
+    "source": "exec-f9c30bf2-bd77-4680-833d-ef6b3a927182.png",
+    "prompt": "Use case: product-mockup. Create ONE AAMIX deck box cover asset, transparent background. Image 1 is the exact geometry/style/layout reference. Image 2 is the original card illustration to place on front, preserving the depicted character or scene identity, pose, colors and illustration style. Replace only the front illustration of the reference box with the art from card \"Transmisión Caída\", without the card's statistics, silver border, rule text or numbers. Match the same full upright three-quarter box, front facing left and right narrow side visible, box spans x=236..1036 y=115..1175 on a square 1254-frame canvas. Dark chocolate textured cardboard, slim double gold engraved frame, original AAMIX gold/ivory logo at lower front. A refined storm blue and silver accent in front art and spine distinguishes this challenge deck. No other writing, no title, no watermark, no new characters. Keep realistic box texture and the source illustration's original hand-drawn aesthetic. All six boxes in this collection must share box scale, angle, proportions, registration, border thickness and lighting. Transparent outer background, no hard cast shadow, no checkerboard.",
+    "tool": "built-in image_gen",
+    "reference": "assets/estetica_v120/mazo_maago.png"
+  }
+]

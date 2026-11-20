@@ -1,0 +1,20 @@
+{
+  "version": "0.10.1",
+  "date": "2026-10-17",
+  "archive": "AAMIX_Prototipo_Local_Windows_v0.10.1.zip",
+  "source_checks": 155,
+  "simulated_games": 21,
+  "source_failures": 0,
+  "sql_sampled_packs": 11000,
+  "sql_promotional_cards": 0,
+  "sql_fixtures_rolled_back": true,
+  "real_authorized_pack_replacement_committed": true,
+  "real_replacement": "Dragón Tee K.O → El conflicto de Maagover",
+  "real_collection_total_preserved": 85,
+  "legitimate_maagover_promo_preserved": true,
+  "qa_zip_crc_and_manifest_passed": true,
+  "qa_fresh_extraction_access_and_guest_match_passed": true,
+  "qa_fresh_extraction_rewards_checks": 51,
+  "qa_fresh_extraction_rewards_failures": 0,
+  "final_archive_hash_and_final_check_record": "Adjacent entregas/INFORME_ENTREGA_v0.10.1.json and archive .sha256 file; self hash excluded from the archive."
+}

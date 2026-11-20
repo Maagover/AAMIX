@@ -1,0 +1,62 @@
+{
+  "test_game": {
+    "checks": 143,
+    "complete_simulations": 24,
+    "failures": []
+  },
+  "test_v02": {
+    "bot_games": 88,
+    "failures": [],
+    "v02_checks": 125
+  },
+  "test_ui_v02": {
+    "failures": [],
+    "ui_checks": 30
+  },
+  "test_v03": {
+    "failures": [],
+    "v03_checks": 54
+  },
+  "test_v04": {
+    "failures": [],
+    "v04_checks": 46
+  },
+  "test_v05": {
+    "failures": [],
+    "v05_checks": 43
+  },
+  "test_v07": {
+    "failures": [],
+    "v07_checks": 31
+  },
+  "test_accounts": {
+    "account_checks": 31,
+    "failures": [],
+    "live_service_tested": false
+  },
+  "test_v08": {
+    "checks": 242,
+    "failures": [],
+    "new_complete_games": 81
+  },
+  "test_ui_v08": {
+    "failures": [],
+    "v08_ui_checks": 65
+  },
+  "test_live_auth": {
+    "email_verification_required": true,
+    "emails_sent": 0,
+    "godot_https_auth_settings": true,
+    "status": 200,
+    "transport_result": 0
+  },
+  "summary": {
+    "automated_checks": 810,
+    "complete_games": 193,
+    "new_complete_games": 81,
+    "real_emails_sent": 0,
+    "live_registration_tested": false,
+    "graphics": "Linux / OpenGL Compatibility",
+    "windows_native_tested": false
+  }
+}

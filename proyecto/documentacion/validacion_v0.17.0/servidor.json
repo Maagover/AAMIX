@@ -1,0 +1,14 @@
+{
+  "wallet_gifts": {
+    "checks": 12,
+    "failures": 0,
+    "all_fixtures_rolled_back": true
+  },
+  "multiplayer": {
+    "checks": 25,
+    "failures": 0,
+    "all_fixtures_rolled_back": true
+  },
+  "real_players_touched": 0,
+  "real_emails_sent": 0
+}

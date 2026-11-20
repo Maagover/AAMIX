@@ -1,0 +1,9 @@
+{
+  "groups": 17,
+  "status": "passed",
+  "writes": "transaction rolls back next",
+  "random_draws": 0,
+  "synthetic_accounts": 2,
+  "rolled_back": true,
+  "existing_users_preserved": 4
+}

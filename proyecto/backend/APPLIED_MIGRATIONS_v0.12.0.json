@@ -1,0 +1,94 @@
+{
+  "project_id": "drpsedaiqyowwikhjugs",
+  "current_release": "0.12.0",
+  "verification_date": "2026-10-18",
+  "applied": [
+    {
+      "version": "20261017185851",
+      "name": "aamix_collection_starter_v090",
+      "source": "aamix_collection.sql"
+    },
+    {
+      "version": "20261017194519",
+      "name": "aamix_profiles_rewards_v0100",
+      "source": "aamix_rewards.sql"
+    },
+    {
+      "version": "20261017221142",
+      "name": "aamix_packs_exclude_promotional_v0101",
+      "sources": [
+        "aamix_no_promo_packs.sql",
+        "promo_repair_admin.sql"
+      ],
+      "method": "Supabase dashboard SQL, transaction and schema_migrations record; connector apply_migration failed with expired requestState"
+    },
+    {
+      "version": "20261018031742",
+      "name": "aamix_gift_codes_and_avatar_lock_v0110",
+      "source": "aamix_gift_codes_v0110.sql",
+      "method": "Supabase apply_migration connector"
+    },
+    {
+      "version": "20261018032104",
+      "name": "aamix_gift_codes_index_v0110",
+      "source": "aamix_gift_codes_index_v0110.sql",
+      "method": "Supabase apply_migration connector"
+    },
+    {
+      "version": "20261018035100",
+      "name": "aamix_missions_and_gifts_v0120",
+      "source": "aamix_missions_and_gifts_v0120.sql",
+      "method": "Supabase apply_migration connector"
+    }
+  ],
+  "tests": {
+    "test_missions_and_gifts_v0120_rollback.sql": {
+      "passed": true,
+      "server_pack_draws": 1000,
+      "daily_play_one_legacy_preserved": true,
+      "daily_win_one": true,
+      "lifetime_play_ten": true,
+      "historic_finished_receipts_counted": true,
+      "independent_claims": true,
+      "chile_midnight_with_other_session_timezone": true,
+      "retries_per_claim_and_code": 20,
+      "gift_pack_and_exact_girabl_40_12": true,
+      "auth_and_RLS": true,
+      "atomic_overflow_rollback": true,
+      "all_fixtures_rolled_back": true
+    },
+    "test_gift_codes_v0110_rollback.sql": {
+      "passed": true,
+      "catalogue_code_count_updated_to": 8,
+      "server_pack_draws": 1000,
+      "old_gifts_and_promotional_avatar_locks_preserved": true,
+      "all_fixtures_rolled_back": true
+    }
+  },
+  "post_test_state": {
+    "qa_accounts_remaining": 0,
+    "real_collection_quantity_before": 85,
+    "real_collection_quantity_after": 85,
+    "owned_decks_before_and_after": 2,
+    "redemptions_before_and_after": 1,
+    "completed_receipts_before_and_after": 1,
+    "new_real_mission_claims": 0,
+    "real_rewards_redeemed_by_agent": 0,
+    "gift_code_definitions": 8,
+    "server_girabl_matches_original_fixture": true,
+    "girabl_cards": 40,
+    "girabl_resources": 12,
+    "promotional_cards_in_test_packs": 0,
+    "eligible_pack_pool": 35
+  },
+  "advisors": {
+    "public_RLS_issues": 0,
+    "private_deny_all_RLS_tables": 5,
+    "preexisting_auth_warning_unchanged": "Leaked password protection disabled; Auth and SMTP configuration unchanged"
+  },
+  "historical_v0110_record": "APPLIED_MIGRATIONS_v0.11.0.json",
+  "limitations": [
+    "Game results for daily missions are client reported, not server verified gameplay.",
+    "Real simultaneous two-client concurrency and new real mailbox access were not tested."
+  ]
+}

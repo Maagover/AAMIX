@@ -1,0 +1,21 @@
+{
+  "release": "1.8.0",
+  "display_name": "AAMIX Online v1.0",
+  "project_ref": "drpsedaiqyowwikhjugs",
+  "migration": {
+    "version": "20261024033521",
+    "name": "aamix_online_final_v180"
+  },
+  "applied": true,
+  "sql_checks": 35,
+  "qa_users_persistent": 0,
+  "existing_users": 4,
+  "no_reset": true,
+  "security": "Existing12INFO private RLS tables and prior password protection notice; new tombstones have explicit denial policy",
+  "welcome_dates": [
+    "2026-10-23",
+    "2026-10-26"
+  ],
+  "repeat_challenge_restos": 5,
+  "stable_launcher_protocol": 1
+}

@@ -1,0 +1,37 @@
+{
+  "release": "0.8.1",
+  "account_contract_checks": 31,
+  "account_contract_failures": 0,
+  "headless_contract_smoke_checks": 30,
+  "graphics": "Linux · X11 · OpenGL Compatibility",
+  "native_windows": "Motor oficial de Windows idéntico a 0.8; ejecución nativa de esta entrega pendiente de la prueba del autor.",
+  "live_https_auth_settings": {
+    "passed": true,
+    "http_status": 200,
+    "email_verification_required": true,
+    "emails_sent": 0
+  },
+  "shipped_registration_form_enabled": true,
+  "shipped_login_form_enabled": true,
+  "live_email_delivery_tested": false,
+  "first_live_account_verified": false,
+  "security_advisor_alerts": 0,
+  "rules_decks_catalogue_audio_animations_and_windows_engine_identical_to_v08": true,
+  "unchanged_files": {
+    "game.gd": true,
+    "ai.gd": true,
+    "account.gd": true,
+    "drop_surface.gd": true,
+    "motion.gd": true,
+    "sound.gd": true,
+    "card_image.gd": true,
+    "card_corners.gdshader": true,
+    "card_corners.tres": true,
+    "main.tscn": true,
+    "data/mazos_prueba.json": true,
+    "data/catalogo_edicion_1.json": true,
+    "data/reglas_vigentes.json": true,
+    "windows_engine_same": true
+  },
+  "test_data": "Servidor HTTP local, identidades ficticias; sin envío de correos reales"
+}

@@ -1,0 +1,2062 @@
+{
+  "formato": "aamix.catalogo",
+  "version": "1.9.0-preview.1",
+  "fecha": "2026-10-26",
+  "idioma": "es",
+  "edicion": {
+    "id": "edicion_1",
+    "numero": 1,
+    "nombre_oficial": null,
+    "descripcion": "Primera edición y seis cartas promocionales recibidas del autor."
+  },
+  "estado": "41 cartas originales más cinco variantes Halloween; prueba separada, sin publicar.",
+  "fuente": {
+    "archivos": [
+      "N°1.rar",
+      "01TCPromocionales.rar",
+      "image.png"
+    ],
+    "total_cartas": 41,
+    "imagenes_activas": 41,
+    "nota": "La imagen activa de 0117 incorpora la retirada de la cláusula de fin de turno. Su fuente histórica está en fuentes_originales/. Escuela de Vuelo usa 0131 en los datos, aunque su fuente aún muestra la errata 0134."
+  },
+  "convenciones": {
+    "coste_recurso": null,
+    "fuerza_solo_para_aliados": true,
+    "palabras_clave": "Solo características impresas incondicionales. Las otorgadas por efectos condicionales no se registran como permanentes.",
+    "etiquetas_mecanicas": "Índice descriptivo para planificar; no es código ejecutable de habilidades.",
+    "rareza": "No se asignan rarezas a los puntos de color sin la leyenda del autor. La condición promocional sí está documentada.",
+    "referencias": "Los nombres mencionados en habilidades se vinculan a identificadores; los títulos de las cartas no implican referencias mecánicas.",
+    "normalizacion": "Se conservan los textos y su capitalización; solo se unifican saltos de línea por párrafo.",
+    "texto_juego": "Usar texto_juego para las aclaraciones vigentes; texto_impreso conserva el texto de la imagen activa. Las habilidades deben programarse expresamente."
+  },
+  "correcciones": [
+    {
+      "id": "C01",
+      "carta": "0131",
+      "campo": "codigo",
+      "valor_impreso": "0134",
+      "valor_corregido": "0131",
+      "motivo": "Errata confirmada por el autor; 0134 corresponde a Guitarramala.",
+      "autorizacion": "Conversación del 16 de octubre de 2026.",
+      "imagen_modificada": false
+    },
+    {
+      "id": "C02",
+      "carta": "0117",
+      "campo": "texto_juego_e_imagen",
+      "motivo": "El autor retira el efecto que terminaba el turno.",
+      "imagen_modificada": true,
+      "fecha": "2026-10-16"
+    },
+    {
+      "id": "C03",
+      "carta": "0124",
+      "campo": "interpretacion_bono",
+      "valor_confirmado": "+4 sobre la Fuerza base para Maagover o Dicky; +1 para otros portadores.",
+      "imagen_modificada": false,
+      "fecha": "2026-10-16"
+    },
+    {
+      "id": "C04",
+      "carta": "01b",
+      "campo": "texto_juego",
+      "imagen_modificada": false,
+      "motivo": "El autor aclara una vez en cada turno del dueño."
+    },
+    {
+      "id": "C05",
+      "carta": "0111",
+      "campo": "texto_juego",
+      "imagen_modificada": false,
+      "motivo": "El autor aclara los bonos de Azul según su zona y el bloqueo."
+    }
+  ],
+  "cartas": [
+    {
+      "id": "aamix_e1_0100",
+      "codigo": "0100",
+      "edicion_id": "edicion_1",
+      "nombre": "Restos",
+      "clase": "Recurso",
+      "coste": null,
+      "fuerza": null,
+      "tipo_aliado": null,
+      "texto_impreso": "",
+      "palabras_clave": [],
+      "maximo_copias_mazo": null,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/100.jpg",
+        "archivo_fuente": "100.jpg",
+        "codigo_impreso": "0100",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "848a1c7c5e5aa919b332bdbe637d54a73a62c53fe041c7e5af612d3fc49674ba",
+        "bytes": 1736871
+      },
+      "etiquetas_mecanicas": [],
+      "implementacion": {
+        "estado": "programada_en_prototipo_0_2",
+        "efectos": null,
+        "pendientes": [],
+        "archivo_motor": "game.gd"
+      },
+      "subcoleccion": "principal",
+      "texto_juego": ""
+    },
+    {
+      "id": "aamix_e1_0101",
+      "codigo": "0101",
+      "edicion_id": "edicion_1",
+      "nombre": "Nonungus",
+      "clase": "Aliado",
+      "coste": 2,
+      "fuerza": 2,
+      "tipo_aliado": "Fundamental",
+      "texto_impreso": "Al entrar en juego, puedes buscar un Sam en tu mazo y ponerlo en tu mano. Luego baraja el Mazo.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [
+        {
+          "nombre_en_texto": "Sam",
+          "codigo": "0114",
+          "estado": "coincide_nombre"
+        }
+      ],
+      "imagen": {
+        "ruta": "imagenes/101.jpg",
+        "archivo_fuente": "101.jpg",
+        "codigo_impreso": "0101",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "76d90c4a63be252d22f5e186ee8a913c1e0c819e85650d2fbb239c71cf76ce1e",
+        "bytes": 1633155
+      },
+      "etiquetas_mecanicas": [
+        "buscar_mazo",
+        "entrada_en_juego"
+      ],
+      "implementacion": {
+        "archivo_motor": "game.gd",
+        "pendientes": [],
+        "estado": "programada_v1.3",
+        "efectos": [
+          "Entrada: busca un Sam en el Mazo propio, lo muestra, lo pone en Mano y baraja; búsqueda opcional."
+        ]
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Al entrar en juego, puedes buscar un Sam en tu mazo y ponerlo en tu mano. Luego baraja el Mazo."
+    },
+    {
+      "id": "aamix_e1_0102",
+      "codigo": "0102",
+      "edicion_id": "edicion_1",
+      "nombre": "elDepul",
+      "clase": "Aliado",
+      "coste": 3,
+      "fuerza": 1,
+      "tipo_aliado": "Lucha",
+      "texto_impreso": "Imbloqueable.\nSi este aliado es derrotado durante tu Fase de Defensa, puedes buscar un Aliado de tu Cementerio y barajarlo en tu mazo.",
+      "palabras_clave": [
+        "Imbloqueable"
+      ],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/102.jpg",
+        "archivo_fuente": "102.jpg",
+        "codigo_impreso": "0102",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "83c85e481fba98c4cdc649adb6ea1194cf8a62eb4382781ddfa3016efd8d6b59",
+        "bytes": 1809192
+      },
+      "etiquetas_mecanicas": [
+        "recuperar_cementerio",
+        "derrota"
+      ],
+      "implementacion": {
+        "estado": "programada_prototipo_0.8",
+        "efectos": [
+          "Recuperación al ser derrotado bloqueando"
+        ],
+        "pendientes": []
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Imbloqueable.\nSi este aliado es derrotado durante tu Fase de Defensa, puedes buscar un Aliado de tu Cementerio y barajarlo en tu mazo."
+    },
+    {
+      "id": "aamix_e1_0103",
+      "codigo": "0103",
+      "edicion_id": "edicion_1",
+      "nombre": "SoyFlaan",
+      "clase": "Aliado",
+      "coste": 5,
+      "fuerza": 2,
+      "tipo_aliado": "Lucha",
+      "texto_impreso": "Singular.\nSi tienes a Yuri y Celia en juego, este aliado se vuelve Imbloqueable.\nEste aliado gana +1 de Fuerza por cada Yuri y Celia en juego.",
+      "palabras_clave": [
+        "Singular"
+      ],
+      "maximo_copias_mazo": 1,
+      "aliases": [],
+      "referencias": [
+        {
+          "nombre_en_texto": "Yuri",
+          "codigo": "0112",
+          "estado": "coincide_nombre"
+        },
+        {
+          "nombre_en_texto": "Celia",
+          "codigo": "0113",
+          "estado": "coincide_nombre"
+        }
+      ],
+      "imagen": {
+        "ruta": "imagenes/103.jpg",
+        "archivo_fuente": "103.jpg",
+        "codigo_impreso": "0103",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "29e71eb400dc8c1642068179fda507dc16f5e6bda976fcfce96ea49f30ddb9a5",
+        "bytes": 1641075
+      },
+      "etiquetas_mecanicas": [
+        "bonificacion_continua",
+        "imbloqueable_condicional"
+      ],
+      "implementacion": {
+        "estado": "programada_prototipo_0.8",
+        "efectos": [
+          "Bonos continuos por Yuri y Celia"
+        ],
+        "pendientes": []
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Singular.\nSi tienes a Yuri y Celia en juego, este aliado se vuelve Imbloqueable.\nEste aliado gana +1 de Fuerza por cada Yuri y Celia en juego."
+    },
+    {
+      "id": "aamix_e1_0104",
+      "codigo": "0104",
+      "edicion_id": "edicion_1",
+      "nombre": "Javieriv",
+      "clase": "Aliado",
+      "coste": 2,
+      "fuerza": 2,
+      "tipo_aliado": "Fundamental",
+      "texto_impreso": "Al entrar en juego, puedes buscar un Aliado de Coste 3 o menos en tu Mazo y ponerlo en tu Mano, luego baraja el Mazo.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/104.jpg",
+        "archivo_fuente": "104.jpg",
+        "codigo_impreso": "0104",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "11866ea5c4a2bcddcf2c4ba678a6a9ae23eeb4c489979d79dd6dfa42abf927e9",
+        "bytes": 1590534
+      },
+      "etiquetas_mecanicas": [
+        "buscar_mazo",
+        "entrada_en_juego"
+      ],
+      "implementacion": {
+        "estado": "programada_en_prototipo_0_2",
+        "efectos": null,
+        "pendientes": [],
+        "archivo_motor": "game.gd"
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Al entrar en juego, puedes buscar un Aliado de Coste 3 o menos en tu Mazo y ponerlo en tu Mano, luego baraja el Mazo."
+    },
+    {
+      "id": "aamix_e1_0105",
+      "codigo": "0105",
+      "edicion_id": "edicion_1",
+      "nombre": "Kajido",
+      "clase": "Aliado",
+      "coste": 7,
+      "fuerza": 3,
+      "tipo_aliado": "Fundamental",
+      "texto_impreso": "Singular.\nCuando entra en juego, puedes elegir 2 Aliados de Coste 3 o menos de tu Cementerio y barajarlos en tu Mazo.\nEste Aliado gana +1 de Fuerza por cada Aliado Fundamental y/o Lucha que tengas en juego.",
+      "palabras_clave": [
+        "Singular"
+      ],
+      "maximo_copias_mazo": 1,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/105.jpg",
+        "archivo_fuente": "105.jpg",
+        "codigo_impreso": "0105",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "f45b765f32c766c6edade6150185c705931e0a3145ee084066765f6435ab4021",
+        "bytes": 1757396
+      },
+      "etiquetas_mecanicas": [
+        "recuperar_cementerio",
+        "entrada_en_juego",
+        "bonificacion_continua"
+      ],
+      "implementacion": {
+        "estado": "programada_prototipo_0.8",
+        "efectos": [
+          "Recuperación exacta de dos y bono por Tipo"
+        ],
+        "pendientes": []
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Singular.\nCuando entra en juego, puedes elegir 2 Aliados de Coste 3 o menos de tu Cementerio y barajarlos en tu Mazo.\nEste Aliado gana +1 de Fuerza por cada Aliado Fundamental y/o Lucha que tengas en juego.",
+      "aclaraciones_confirmadas": [
+        "El conteo de Aliados de Tipo Lucha y/o Fundamental incluye a esta carta, porque también cumple el criterio."
+      ]
+    },
+    {
+      "id": "aamix_e1_0106",
+      "codigo": "0106",
+      "edicion_id": "edicion_1",
+      "nombre": "Oscarksss",
+      "clase": "Aliado",
+      "coste": 1,
+      "fuerza": 1,
+      "tipo_aliado": "Lucha",
+      "texto_impreso": "Si tienes 3 Oscarksss en juego, puedes buscar un Papito en tu Mazo o Cementerio y ponerlo en tu mano, luego baraja el mazo.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [
+        {
+          "nombre_en_texto": "Oscarksss",
+          "codigo": "0106",
+          "estado": "coincide_nombre"
+        },
+        {
+          "nombre_en_texto": "Papito",
+          "codigo": "0115",
+          "estado": "coincide_nombre"
+        }
+      ],
+      "imagen": {
+        "ruta": "imagenes/106.jpg",
+        "archivo_fuente": "106.jpg",
+        "codigo_impreso": "0106",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "ce563f1b85ed81c09b1f96d268d4656e44aa47b21767096b0f02c95a655466bf",
+        "bytes": 1641003
+      },
+      "etiquetas_mecanicas": [
+        "buscar_mazo",
+        "recuperar_cementerio",
+        "habilidad_activable"
+      ],
+      "implementacion": {
+        "estado": "programada_prototipo_0.8",
+        "efectos": [
+          "Búsqueda de Papito con tres Oscarksss"
+        ],
+        "pendientes": []
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Si tienes 3 Oscarksss en juego, puedes buscar un Papito en tu Mazo o Cementerio y ponerlo en tu mano, luego baraja el mazo."
+    },
+    {
+      "id": "aamix_e1_0107",
+      "codigo": "0107",
+      "edicion_id": "edicion_1",
+      "nombre": "Dicky",
+      "clase": "Aliado",
+      "coste": 2,
+      "fuerza": 1,
+      "tipo_aliado": "Lucha",
+      "texto_impreso": "Imbloqueable.\nCuando entra en juego, puedes buscar un Muñeco Miku en tu Mazo y ponerlo en tu Mano, luego baraja el Mazo.",
+      "palabras_clave": [
+        "Imbloqueable"
+      ],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [
+        {
+          "nombre_en_texto": "Muñeco Miku",
+          "codigo": "0124",
+          "estado": "alias_equivalente"
+        }
+      ],
+      "imagen": {
+        "ruta": "imagenes/107.jpg",
+        "archivo_fuente": "107.jpg",
+        "codigo_impreso": "0107",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "4e84560145e1ff1fd9a833d80eaae5489559d41b02890352f14db249bd0fa3e0",
+        "bytes": 1613199
+      },
+      "etiquetas_mecanicas": [
+        "buscar_mazo",
+        "entrada_en_juego"
+      ],
+      "implementacion": {
+        "estado": "programada_en_prototipo_0_2",
+        "efectos": null,
+        "pendientes": [],
+        "archivo_motor": "game.gd"
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Imbloqueable.\nCuando entra en juego, puedes buscar un Muñeco Miku en tu Mazo y ponerlo en tu Mano, luego baraja el Mazo."
+    },
+    {
+      "id": "aamix_e1_0108",
+      "codigo": "0108",
+      "edicion_id": "edicion_1",
+      "nombre": "Maagover",
+      "clase": "Aliado",
+      "coste": 1,
+      "fuerza": 1,
+      "tipo_aliado": "Lucha",
+      "texto_impreso": "Al entrar en juego, puedes ver las 3 primeras cartas de tu Mazo, y reubicarlas en el orden que quieras.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/108.jpg",
+        "archivo_fuente": "108.jpg",
+        "codigo_impreso": "0108",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "15f9d347fc8c92aef3a191e828dd2125af0e61a7fb271bfe363e012e99701fa7",
+        "bytes": 1710167
+      },
+      "etiquetas_mecanicas": [
+        "mirar_mazo",
+        "ordenar_tope",
+        "entrada_en_juego"
+      ],
+      "implementacion": {
+        "estado": "programada_en_prototipo_0_2",
+        "efectos": null,
+        "pendientes": [],
+        "archivo_motor": "game.gd"
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Al entrar en juego, puedes ver las 3 primeras cartas de tu Mazo, y reubicarlas en el orden que quieras."
+    },
+    {
+      "id": "aamix_e1_0109",
+      "codigo": "0109",
+      "edicion_id": "edicion_1",
+      "nombre": "Mog",
+      "clase": "Aliado",
+      "coste": 3,
+      "fuerza": 3,
+      "tipo_aliado": "Fundamental",
+      "texto_impreso": "Este aliado gana +2 de Fuerza si hay una Carta de Dominio en juego.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/109.jpg",
+        "archivo_fuente": "109.jpg",
+        "codigo_impreso": "0109",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "f07f0ba5d5811fc49709147428aa4f12734894a1f3d071109804ce4d6adeb0c3",
+        "bytes": 1519817
+      },
+      "etiquetas_mecanicas": [
+        "bonificacion_continua"
+      ],
+      "implementacion": {
+        "estado": "programada_en_prototipo_0_2",
+        "efectos": null,
+        "pendientes": [],
+        "archivo_motor": "game.gd"
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Este aliado gana +2 de Fuerza si hay una Carta de Dominio en juego."
+    },
+    {
+      "id": "aamix_e1_0110",
+      "codigo": "0110",
+      "edicion_id": "edicion_1",
+      "nombre": "Feranando",
+      "clase": "Aliado",
+      "coste": 3,
+      "fuerza": 3,
+      "tipo_aliado": "Fundamental",
+      "texto_impreso": "Cuando este Aliado entra en juego, puedes enviar una Carta Dominio o una Carta Objeto en juego al Cementerio de su dueño.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [
+        "Fernando"
+      ],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/110.jpg",
+        "archivo_fuente": "110.jpg",
+        "codigo_impreso": "0110",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "476dc1f42286b666e189a9d32dbd43c31ffe5c3e7965b3da168e4de4ebb1e157",
+        "bytes": 1873844
+      },
+      "etiquetas_mecanicas": [
+        "entrada_en_juego",
+        "enviar_a_cementerio"
+      ],
+      "implementacion": {
+        "estado": "programada_prototipo_0.8",
+        "efectos": [
+          "Descarte de Dominio u Objeto al entrar"
+        ],
+        "pendientes": []
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Cuando este Aliado entra en juego, puedes enviar una Carta Dominio o una Carta Objeto en juego al Cementerio de su dueño."
+    },
+    {
+      "id": "aamix_e1_0111",
+      "codigo": "0111",
+      "edicion_id": "edicion_1",
+      "nombre": "Azul",
+      "clase": "Aliado",
+      "coste": 2,
+      "fuerza": 2,
+      "tipo_aliado": "Lucha",
+      "texto_impreso": "Cuando ataca, este aliado gana +1 de Fuerza.\nCuando defiende, este aliado gana +2 de Fuerza.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/111.jpg",
+        "archivo_fuente": "111.jpg",
+        "codigo_impreso": "0111",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "c9fa548d161d132c8ec3bff84e10b175bd6a6101327a48072355bbbc2d65f029",
+        "bytes": 1981311
+      },
+      "etiquetas_mecanicas": [
+        "bonificacion_combate"
+      ],
+      "implementacion": {
+        "estado": "programada_en_prototipo_0_2",
+        "efectos": null,
+        "pendientes": [],
+        "archivo_motor": "game.gd"
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Mientras está en la Línea de Ataque, este Aliado gana +1 de Fuerza.\nMientras bloquea, gana +2 de Fuerza.\nEn la Línea de Defensa sin bloquear no tiene estas bonificaciones."
+    },
+    {
+      "id": "aamix_e1_0112",
+      "codigo": "0112",
+      "edicion_id": "edicion_1",
+      "nombre": "Yuri",
+      "clase": "Aliado",
+      "coste": 1,
+      "fuerza": 1,
+      "tipo_aliado": "Salvaje",
+      "texto_impreso": "Ágil.\nEste Aliado gana +1 de Fuerza por cada Celia que tengas en juego.",
+      "palabras_clave": [
+        "Ágil"
+      ],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [
+        {
+          "nombre_en_texto": "Celia",
+          "codigo": "0113",
+          "estado": "coincide_nombre"
+        }
+      ],
+      "imagen": {
+        "ruta": "imagenes/112.jpg",
+        "archivo_fuente": "112.jpg",
+        "codigo_impreso": "0112",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "650c6e10b711dd637ae87f36f45d057e6dd21483564b196338aa7aa491f0fea9",
+        "bytes": 1724808
+      },
+      "etiquetas_mecanicas": [
+        "bonificacion_continua"
+      ],
+      "implementacion": {
+        "estado": "programada_en_prototipo_0_2",
+        "efectos": null,
+        "pendientes": [],
+        "archivo_motor": "game.gd"
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Ágil.\nEste Aliado gana +1 de Fuerza por cada Celia que tengas en juego."
+    },
+    {
+      "id": "aamix_e1_0113",
+      "codigo": "0113",
+      "edicion_id": "edicion_1",
+      "nombre": "Celia",
+      "clase": "Aliado",
+      "coste": 1,
+      "fuerza": 1,
+      "tipo_aliado": "Salvaje",
+      "texto_impreso": "Este Aliado gana +1 de Fuerza por cada Yuri que tengas en juego.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [
+        {
+          "nombre_en_texto": "Yuri",
+          "codigo": "0112",
+          "estado": "coincide_nombre"
+        }
+      ],
+      "imagen": {
+        "ruta": "imagenes/113.jpg",
+        "archivo_fuente": "113.jpg",
+        "codigo_impreso": "0113",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "035a5a1542681634e37d19f724e9f14b48a87ece6ee96669a4a058521b40d728",
+        "bytes": 1706302
+      },
+      "etiquetas_mecanicas": [
+        "bonificacion_continua"
+      ],
+      "implementacion": {
+        "estado": "programada_en_prototipo_0_2",
+        "efectos": null,
+        "pendientes": [],
+        "archivo_motor": "game.gd"
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Este Aliado gana +1 de Fuerza por cada Yuri que tengas en juego."
+    },
+    {
+      "id": "aamix_e1_0114",
+      "codigo": "0114",
+      "edicion_id": "edicion_1",
+      "nombre": "Sam",
+      "clase": "Aliado",
+      "coste": 2,
+      "fuerza": 2,
+      "tipo_aliado": "Salvaje",
+      "texto_impreso": "Al entrar en juego, puedes buscar una Carta de Evento de Coste 2 o menos en tu Mazo y ponerla en tu mano. Luego baraja el mazo.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/114.jpg",
+        "archivo_fuente": "114.jpg",
+        "codigo_impreso": "0114",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "965e5d6771d8fa054b28f7c5c027cda8b9dac08c016cfedd37f29c31ccf3bd89",
+        "bytes": 1519487
+      },
+      "etiquetas_mecanicas": [
+        "buscar_mazo",
+        "entrada_en_juego"
+      ],
+      "implementacion": {
+        "estado": "programada_prototipo_0.8",
+        "efectos": [
+          "Búsqueda de Evento C≤2 al entrar"
+        ],
+        "pendientes": []
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Al entrar en juego, puedes buscar una Carta de Evento de Coste 2 o menos en tu Mazo y ponerla en tu mano. Luego baraja el mazo."
+    },
+    {
+      "id": "aamix_e1_0115",
+      "codigo": "0115",
+      "edicion_id": "edicion_1",
+      "nombre": "Papito",
+      "clase": "Aliado",
+      "coste": 4,
+      "fuerza": 4,
+      "tipo_aliado": "Salvaje",
+      "texto_impreso": "Singular.\nAl entrar en juego, baraja todos los Oscarksss que tengas en juego.\nSi barajaste 3 Oscarksss o más, este Aliado gana +2 de Fuerza, Ágil e Imbloqueable.",
+      "palabras_clave": [
+        "Singular"
+      ],
+      "maximo_copias_mazo": 1,
+      "aliases": [],
+      "referencias": [
+        {
+          "nombre_en_texto": "Oscarksss",
+          "codigo": "0106",
+          "estado": "coincide_nombre"
+        }
+      ],
+      "imagen": {
+        "ruta": "imagenes/115.jpg",
+        "archivo_fuente": "115.jpg",
+        "codigo_impreso": "0115",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "a30caceeec8ac442d04f0bbdcc0449814e932b69abf37c190c431a80a8016b39",
+        "bytes": 1776655
+      },
+      "etiquetas_mecanicas": [
+        "entrada_en_juego",
+        "barajar_aliados",
+        "bonificacion_condicional",
+        "agil_condicional",
+        "imbloqueable_condicional"
+      ],
+      "implementacion": {
+        "estado": "programada_prototipo_0.8",
+        "efectos": [
+          "Barajado de Oscarksss y mejora condicional"
+        ],
+        "pendientes": []
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Singular.\nAl entrar en juego, baraja todos los Oscarksss que tengas en juego.\nSi barajaste 3 Oscarksss o más, este Aliado gana +2 de Fuerza, Ágil e Imbloqueable."
+    },
+    {
+      "id": "aamix_e1_0116",
+      "codigo": "0116",
+      "edicion_id": "edicion_1",
+      "nombre": "El conflicto de Maagover",
+      "clase": "Evento",
+      "coste": 1,
+      "fuerza": null,
+      "tipo_aliado": null,
+      "texto_impreso": "Escoge un Aliado rival de Coste 2 o menos, tu rival lo baraja en su Mazo.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/116.jpg",
+        "archivo_fuente": "116.jpg",
+        "codigo_impreso": "0116",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "18566228b80265c3561e383649d6086f3b9ddb6eab1cb2ba648dbd4d8af40357",
+        "bytes": 1697711
+      },
+      "etiquetas_mecanicas": [
+        "barajar_aliado_rival"
+      ],
+      "implementacion": {
+        "estado": "programada_en_prototipo_0_2",
+        "efectos": null,
+        "pendientes": [],
+        "archivo_motor": "game.gd"
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Escoge un Aliado rival de Coste 2 o menos, tu rival lo baraja en su Mazo."
+    },
+    {
+      "id": "aamix_e1_0117",
+      "codigo": "0117",
+      "edicion_id": "edicion_1",
+      "nombre": "Desaparición de Papito",
+      "clase": "Evento",
+      "coste": 3,
+      "fuerza": null,
+      "tipo_aliado": null,
+      "texto_impreso": "Busca un Aliado Singular en tu Mazo y ponlo en tu Mano.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/117_actualizada.png",
+        "archivo_fuente": "117.jpg",
+        "codigo_impreso": "0117",
+        "ancho": 1076,
+        "alto": 1462,
+        "sha256": "2769deb576b8f8a95410b3d036ead49231f542ab677cc109525c3f9ccf49a07a",
+        "bytes": 3019023,
+        "ruta_original": "fuentes_originales/117.jpg",
+        "edicion_confirmada": "Retirada la cláusula que terminaba el turno, por petición del autor."
+      },
+      "etiquetas_mecanicas": [
+        "buscar_mazo"
+      ],
+      "implementacion": {
+        "estado": "programada_prototipo_0.8",
+        "efectos": [
+          "Búsqueda de Aliado Singular, sin terminar turno"
+        ],
+        "pendientes": []
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Busca un Aliado Singular en tu Mazo y ponlo en tu Mano.",
+      "aclaraciones_confirmadas": [
+        "La carta busca un Aliado Singular y lo pone en la Mano; no termina el turno."
+      ]
+    },
+    {
+      "id": "aamix_e1_0118",
+      "codigo": "0118",
+      "edicion_id": "edicion_1",
+      "nombre": "Caída de elDepul",
+      "clase": "Evento",
+      "coste": 2,
+      "fuerza": null,
+      "tipo_aliado": null,
+      "texto_impreso": "Tu rival quema el último Aliado que haya caído a su cementerio.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/118.jpg",
+        "archivo_fuente": "118.jpg",
+        "codigo_impreso": "0118",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "bd7aacbd3de19c4246d24a4d4696a01783024b87d510479c7c0cbbe7c92f75e2",
+        "bytes": 1574494
+      },
+      "etiquetas_mecanicas": [
+        "quemar_cementerio"
+      ],
+      "implementacion": {
+        "archivo_motor": "game.gd",
+        "pendientes": [],
+        "estado": "programada_v1.3",
+        "efectos": [
+          "Quema automáticamente el último Aliado que permanece en el Cementerio rival. No puede jugarse sin un Aliado allí."
+        ]
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Tu rival quema el último Aliado que haya caído a su cementerio."
+    },
+    {
+      "id": "aamix_e1_0119",
+      "codigo": "0119",
+      "edicion_id": "edicion_1",
+      "nombre": "Transmisión caída",
+      "clase": "Evento",
+      "coste": 5,
+      "fuerza": null,
+      "tipo_aliado": null,
+      "texto_impreso": "Singular.\nQuema todos los Aliados en juego.",
+      "palabras_clave": [
+        "Singular"
+      ],
+      "maximo_copias_mazo": 1,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/119.jpg",
+        "archivo_fuente": "119.jpg",
+        "codigo_impreso": "0119",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "2412c24dac7be93403b6f4bedc3f93514f8bcf262cc65c97d175037f1a8facc8",
+        "bytes": 1697818
+      },
+      "etiquetas_mecanicas": [
+        "quemar_aliados"
+      ],
+      "implementacion": {
+        "estado": "programada_prototipo_0.8",
+        "efectos": [
+          "Quemar todos los Aliados"
+        ],
+        "pendientes": []
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Singular.\nQuema todos los Aliados en juego."
+    },
+    {
+      "id": "aamix_e1_0120",
+      "codigo": "0120",
+      "edicion_id": "edicion_1",
+      "nombre": "Raid de Nanchy",
+      "clase": "Evento",
+      "coste": 3,
+      "fuerza": null,
+      "tipo_aliado": null,
+      "texto_impreso": "Busca hasta 3 Aliados de Coste 2 o menos en tu Mazo y ponlos en tu Mano, luego baraja tu Mazo.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/120.jpg",
+        "archivo_fuente": "120.jpg",
+        "codigo_impreso": "0120",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "ff1b022b0aa2c516ce6e3cbfe6ac1aa666b4b26ea726c941de571b1b0f02f5ff",
+        "bytes": 1865239
+      },
+      "etiquetas_mecanicas": [
+        "buscar_mazo"
+      ],
+      "implementacion": {
+        "estado": "programada_en_prototipo_0_2",
+        "efectos": null,
+        "pendientes": [
+          "P06"
+        ],
+        "archivo_motor": "game.gd"
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Busca hasta 3 Aliados de Coste 2 o menos en tu Mazo y ponlos en tu Mano, luego baraja tu Mazo."
+    },
+    {
+      "id": "aamix_e1_0121",
+      "codigo": "0121",
+      "edicion_id": "edicion_1",
+      "nombre": "Templo de Ow",
+      "clase": "Dominio",
+      "coste": 3,
+      "fuerza": null,
+      "tipo_aliado": null,
+      "texto_impreso": "Mientras este dominio esté activo no se pueden jugar Cartas de Objeto.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/121.jpg",
+        "archivo_fuente": "121.jpg",
+        "codigo_impreso": "0121",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "e17635548ac9e364691522ef4274627492d7876fffcbcbef11b09c457d38f28d",
+        "bytes": 1717722
+      },
+      "etiquetas_mecanicas": [
+        "prohibir_objetos"
+      ],
+      "implementacion": {
+        "archivo_motor": "game.gd",
+        "pendientes": [],
+        "estado": "programada_v1.3",
+        "efectos": [
+          "Impide jugar Objetos a ambos jugadores mientras permanece activo; no retira Objetos ya equipados."
+        ]
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Mientras este dominio esté activo no se pueden jugar Cartas de Objeto."
+    },
+    {
+      "id": "aamix_e1_0122",
+      "codigo": "0122",
+      "edicion_id": "edicion_1",
+      "nombre": "Talca",
+      "clase": "Dominio",
+      "coste": 4,
+      "fuerza": null,
+      "tipo_aliado": null,
+      "texto_impreso": "Mientras este Dominio esté activo, los Aliados Imbloqueables pueden ser bloqueados.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/122.jpg",
+        "archivo_fuente": "122.jpg",
+        "codigo_impreso": "0122",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "ef8304a7ec38cfe761a386a511c82a33eb04be8e7a154ad037858dd19570b691",
+        "bytes": 1876147
+      },
+      "etiquetas_mecanicas": [
+        "permitir_bloqueo_imbloqueables"
+      ],
+      "implementacion": {
+        "estado": "programada_en_prototipo_0_2",
+        "efectos": null,
+        "pendientes": [],
+        "archivo_motor": "game.gd"
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Mientras este Dominio esté activo, los Aliados Imbloqueables pueden ser bloqueados."
+    },
+    {
+      "id": "aamix_e1_0123",
+      "codigo": "0123",
+      "edicion_id": "edicion_1",
+      "nombre": "Pastelito de manjar",
+      "clase": "Objeto",
+      "coste": 2,
+      "fuerza": null,
+      "tipo_aliado": null,
+      "texto_impreso": "Una vez por turno, si el Aliado portador es Tipo Lucha, puedes buscar un Aliado de Coste 2 o menos en tu Mazo y ponerlo en tu Mano. Luego baraja tu Mazo.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/123.jpg",
+        "archivo_fuente": "123.jpg",
+        "codigo_impreso": "0123",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "d1e3bfb136eb7dd9ceb7ba59d2c74aaca712d1f8077b26205f9c906ea5c7a4ab",
+        "bytes": 1610591
+      },
+      "etiquetas_mecanicas": [
+        "habilidad_activable",
+        "una_vez_por_turno",
+        "buscar_mazo"
+      ],
+      "implementacion": {
+        "estado": "programada_prototipo_0.8",
+        "efectos": [
+          "Búsqueda una vez por turno propio con portador Lucha"
+        ],
+        "pendientes": []
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Una vez por turno, si el Aliado portador es Tipo Lucha, puedes buscar un Aliado de Coste 2 o menos en tu Mazo y ponerlo en tu Mano. Luego baraja tu Mazo."
+    },
+    {
+      "id": "aamix_e1_0124",
+      "codigo": "0124",
+      "edicion_id": "edicion_1",
+      "nombre": "Muñeco de Miku",
+      "clase": "Objeto",
+      "coste": 2,
+      "fuerza": null,
+      "tipo_aliado": null,
+      "texto_impreso": "El Aliado portador gana +1 de Fuerza.\nSi el Aliado portador es Maagover o Dicky gana +4 de Fuerza.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [
+        "Muñeco Miku"
+      ],
+      "referencias": [
+        {
+          "nombre_en_texto": "Maagover",
+          "codigo": "0108",
+          "estado": "coincide_nombre"
+        },
+        {
+          "nombre_en_texto": "Dicky",
+          "codigo": "0107",
+          "estado": "coincide_nombre"
+        }
+      ],
+      "imagen": {
+        "ruta": "imagenes/124.jpg",
+        "archivo_fuente": "124.jpg",
+        "codigo_impreso": "0124",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "401ea1ed5c79941a03f9858457943759d70333cab7146079bfa6db6df4d86431",
+        "bytes": 1634905
+      },
+      "etiquetas_mecanicas": [
+        "bonificacion_continua",
+        "bonificacion_condicional"
+      ],
+      "implementacion": {
+        "estado": "programada_en_prototipo_0_2",
+        "efectos": null,
+        "pendientes": [],
+        "archivo_motor": "game.gd"
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "El Aliado portador gana +1 de Fuerza. Si el portador es Maagover o Dicky, gana +4 de Fuerza en lugar de +1.",
+      "aclaraciones_confirmadas": [
+        "El bono es +4 en total para Maagover o Dicky; su Fuerza base 1 pasa a 5. No se suma el bono genérico +1 al bono especial +4."
+      ],
+      "configuracion_confirmada": {
+        "bono_si_portador_nombre": [
+          "Maagover",
+          "Dicky"
+        ],
+        "bono_especial": 4,
+        "bono_otros": 1,
+        "acumular_bono_generico_y_especial": false
+      }
+    },
+    {
+      "id": "aamix_e1_0125",
+      "codigo": "0125",
+      "edicion_id": "edicion_1",
+      "nombre": "Chanchuus",
+      "clase": "Aliado",
+      "coste": 4,
+      "fuerza": 3,
+      "tipo_aliado": "Lucha",
+      "texto_impreso": "La Fuerza y el Coste de este Aliado no pueden verse afectados por las habilidades o los efectos de otras Cartas.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/125.jpg",
+        "archivo_fuente": "125.jpg",
+        "codigo_impreso": "0125",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "922665c45956864e691d71c65a8543cc3ff780aeb36be47bf9b3243efc76029d",
+        "bytes": 1937742
+      },
+      "etiquetas_mecanicas": [
+        "inmunidad_fuerza_coste"
+      ],
+      "implementacion": {
+        "archivo_motor": "game.gd",
+        "pendientes": [],
+        "estado": "programada_v1.3",
+        "efectos": [
+          "Fuerza y Coste impresos inmunes a modificaciones de otras cartas; conserva otras habilidades de Objetos equipados."
+        ]
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "La Fuerza y el Coste de este Aliado no pueden verse afectados por las habilidades o los efectos de otras Cartas."
+    },
+    {
+      "id": "aamix_e1_0126",
+      "codigo": "0126",
+      "edicion_id": "edicion_1",
+      "nombre": "Viborín",
+      "clase": "Aliado",
+      "coste": 3,
+      "fuerza": 2,
+      "tipo_aliado": "Salvaje",
+      "texto_impreso": "Mientras este Aliado esté en juego, una vez por turno, puedes enviar uno de tus Aliados a tu Cementerio, si lo haces, este Aliado gana +3 de Fuerza hasta el final del turno.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/126.jpg",
+        "archivo_fuente": "126.jpg",
+        "codigo_impreso": "0126",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "770b85f1a37b607c47539f5929177d794e3d36d43250bfdbe3cf94a35ddf707f",
+        "bytes": 1698260
+      },
+      "etiquetas_mecanicas": [
+        "habilidad_activable",
+        "una_vez_por_turno",
+        "enviar_a_cementerio",
+        "bonificacion_temporal"
+      ],
+      "implementacion": {
+        "archivo_motor": "game.gd",
+        "pendientes": [],
+        "estado": "programada_v1.3",
+        "efectos": [
+          "Una vez por turno propio, elige y envía un Aliado propio al Cementerio para ganar +3 de Fuerza hasta el final de ese turno. Cancelar no consume el uso."
+        ]
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Mientras este Aliado esté en juego, una vez por turno, puedes enviar uno de tus Aliados a tu Cementerio, si lo haces, este Aliado gana +3 de Fuerza hasta el final del turno."
+    },
+    {
+      "id": "aamix_e1_0127",
+      "codigo": "0127",
+      "edicion_id": "edicion_1",
+      "nombre": "Girabl",
+      "clase": "Aliado",
+      "coste": 3,
+      "fuerza": 2,
+      "tipo_aliado": "Lucha",
+      "texto_impreso": "Ágil.\nSi tienes a Peri en juego, este aliado gana +2 de Fuerza.",
+      "palabras_clave": [
+        "Ágil"
+      ],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [
+        {
+          "nombre_en_texto": "Peri",
+          "codigo": "01a",
+          "estado": "coincide_nombre"
+        }
+      ],
+      "imagen": {
+        "ruta": "imagenes/127.jpg",
+        "archivo_fuente": "127.jpg",
+        "codigo_impreso": "0127",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "a2097083b940715ed55a61f1a2bf67b0f451c248f5d53692529b27a56ffd65aa",
+        "bytes": 1761259
+      },
+      "etiquetas_mecanicas": [
+        "bonificacion_continua"
+      ],
+      "implementacion": {
+        "estado": "programada_en_prototipo_0_2",
+        "efectos": null,
+        "pendientes": [],
+        "archivo_motor": "game.gd"
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Ágil.\nSi tienes a Peri en juego, este aliado gana +2 de Fuerza."
+    },
+    {
+      "id": "aamix_e1_0128",
+      "codigo": "0128",
+      "edicion_id": "edicion_1",
+      "nombre": "HNyko",
+      "clase": "Aliado",
+      "coste": 4,
+      "fuerza": 4,
+      "tipo_aliado": "Lucha",
+      "texto_impreso": "Imbloqueable.\nCuando este Aliado es derrotado, tu rival envía 2 Cartas de su Mazo a su Cementerio.",
+      "palabras_clave": [
+        "Imbloqueable"
+      ],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/128.jpg",
+        "archivo_fuente": "128.jpg",
+        "codigo_impreso": "0128",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "0aab25610de2abd32299c1777e68437290d0f7e6dbaeedaf0a7ea2c47b4b7964",
+        "bytes": 1677090
+      },
+      "etiquetas_mecanicas": [
+        "derrota",
+        "daño_mazo"
+      ],
+      "implementacion": {
+        "archivo_motor": "game.gd",
+        "pendientes": [],
+        "estado": "programada_v1.3",
+        "efectos": [
+          "Imbloqueable. Al ser derrotado en combate envía dos cartas del Mazo rival al Cementerio, incluso si Granjita reemplaza su destino por Quemadas."
+        ]
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Imbloqueable.\nCuando este Aliado es derrotado, tu rival envía 2 Cartas de su Mazo a su Cementerio."
+    },
+    {
+      "id": "aamix_e1_0129",
+      "codigo": "0129",
+      "edicion_id": "edicion_1",
+      "nombre": "Almenta",
+      "clase": "Aliado",
+      "coste": 2,
+      "fuerza": 2,
+      "tipo_aliado": "Fundamental",
+      "texto_impreso": "Mientras este Aliado esté en juego, una vez por turno, puedes pagar una Carta Recurso para que uno de tus Aliados sea Imbloqueable hasta el final de ese turno.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/129.jpg",
+        "archivo_fuente": "129.jpg",
+        "codigo_impreso": "0129",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "027093f86078f309858311fd06965c381f951d9a441c7b378a683556a150d778",
+        "bytes": 1602127
+      },
+      "etiquetas_mecanicas": [
+        "habilidad_activable",
+        "una_vez_por_turno",
+        "pagar_recurso",
+        "imbloqueable_temporal"
+      ],
+      "implementacion": {
+        "archivo_motor": "game.gd",
+        "pendientes": [],
+        "estado": "programada_v1.3",
+        "efectos": [
+          "Una vez por turno propio, elige un Aliado propio y paga un Recurso para darle Imbloqueable hasta el final del turno. Compatible con pago manual y cancelación."
+        ]
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Mientras este Aliado esté en juego, una vez por turno, puedes pagar una Carta Recurso para que uno de tus Aliados sea Imbloqueable hasta el final de ese turno."
+    },
+    {
+      "id": "aamix_e1_0130",
+      "codigo": "0130",
+      "edicion_id": "edicion_1",
+      "nombre": "Serandimini",
+      "clase": "Aliado",
+      "coste": 5,
+      "fuerza": 3,
+      "tipo_aliado": "Lucha",
+      "texto_impreso": "Cuando tu rival juegue una carta, puedes barajar una Serandimini en juego para anular la carta de tu rival.\n(No puedes anular Cartas Recurso)",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [
+        {
+          "nombre_en_texto": "Serandimini",
+          "codigo": "0130",
+          "estado": "coincide_nombre"
+        }
+      ],
+      "imagen": {
+        "ruta": "imagenes/130.jpg",
+        "archivo_fuente": "130.jpg",
+        "codigo_impreso": "0130",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "e31122aedb437160b7dbf01c8dfd323c16bd1055a32fb43b0d1ae115a8cc4cbf",
+        "bytes": 1434631
+      },
+      "etiquetas_mecanicas": [
+        "anular",
+        "respuesta_a_carta",
+        "barajar_aliado"
+      ],
+      "implementacion": {
+        "estado": "programada_prototipo_0.8",
+        "efectos": [
+          "Anulación antes de resolver la carta rival, tras el pago"
+        ],
+        "pendientes": []
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Cuando tu rival juegue una carta, puedes barajar una Serandimini en juego para anular la carta de tu rival.\n(No puedes anular Cartas Recurso)"
+    },
+    {
+      "id": "aamix_e1_0131",
+      "codigo": "0131",
+      "edicion_id": "edicion_1",
+      "nombre": "Escuela de Vuelo",
+      "clase": "Dominio",
+      "coste": 3,
+      "fuerza": null,
+      "tipo_aliado": null,
+      "texto_impreso": "Mientras este Dominio esté activo, ningún jugador puede tener más de 4 Aliados en juego.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [
+        "Escuela de Aviación"
+      ],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/131.jpg",
+        "archivo_fuente": "131.jpg",
+        "codigo_impreso": "0134",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "9535ab3d446fd1607ea6711e75e6185fe7f3189f04fbd760e3d389e9ff440b77",
+        "bytes": 1516284
+      },
+      "etiquetas_mecanicas": [
+        "limitar_aliados"
+      ],
+      "implementacion": {
+        "estado": "programada_en_prototipo_0_2",
+        "efectos": null,
+        "pendientes": [],
+        "archivo_motor": "game.gd"
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Mientras este Dominio esté activo, ningún jugador puede tener más de 4 Aliados en juego.",
+      "aclaraciones_confirmadas": [
+        "Cada dueño escoge cuáles de sus Aliados permanecen hasta el límite de cuatro. El resto se descarta a su Cementerio."
+      ]
+    },
+    {
+      "id": "aamix_e1_0132",
+      "codigo": "0132",
+      "edicion_id": "edicion_1",
+      "nombre": "Descubrimiento Ancestral",
+      "clase": "Evento",
+      "coste": 2,
+      "fuerza": null,
+      "tipo_aliado": null,
+      "texto_impreso": "Busca una Carta Dominio en tu Mazo y ponla en tu Mano.\nLuego baraja el Mazo.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/132.jpg",
+        "archivo_fuente": "132.jpg",
+        "codigo_impreso": "0132",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "055b64b9f89fce581503f004372b99c8eee102c513b9d39e12147b8168d60c0b",
+        "bytes": 1604983
+      },
+      "etiquetas_mecanicas": [
+        "buscar_mazo"
+      ],
+      "implementacion": {
+        "estado": "programada_en_prototipo_0_2",
+        "efectos": null,
+        "pendientes": [
+          "P06"
+        ],
+        "archivo_motor": "game.gd"
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Busca una Carta Dominio en tu Mazo y ponla en tu Mano.\nLuego baraja el Mazo."
+    },
+    {
+      "id": "aamix_e1_0133",
+      "codigo": "0133",
+      "edicion_id": "edicion_1",
+      "nombre": "Muerte de Akira",
+      "clase": "Evento",
+      "coste": 4,
+      "fuerza": null,
+      "tipo_aliado": null,
+      "texto_impreso": "Destruye una carta en juego.\n(No puedes destruir Cartas Recurso)",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/133.jpg",
+        "archivo_fuente": "133.jpg",
+        "codigo_impreso": "0133",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "bc41f85aed7a63a5b4baa4ade213ff90fc4457a85620f8fb84f2f3597bf7db56",
+        "bytes": 1602413
+      },
+      "etiquetas_mecanicas": [
+        "destruir"
+      ],
+      "implementacion": {
+        "estado": "programada_en_prototipo_0_2",
+        "efectos": null,
+        "pendientes": [],
+        "archivo_motor": "game.gd"
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Destruye una carta en juego.\n(No puedes destruir Cartas Recurso)"
+    },
+    {
+      "id": "aamix_e1_0134",
+      "codigo": "0134",
+      "edicion_id": "edicion_1",
+      "nombre": "Guitarramala",
+      "clase": "Aliado",
+      "coste": 7,
+      "fuerza": 4,
+      "tipo_aliado": "Fundamental",
+      "texto_impreso": "Cuando entra en juego, destruye todas las Cartas Dominio y las Cartas Objeto en el campo de batalla.\nPuedes jugar este Aliado desde tu Cementerio pagando su Coste.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/134.jpg",
+        "archivo_fuente": "134.jpg",
+        "codigo_impreso": "0134",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "5158dc938eb2cad1ca03ccc396117fa42c75487f0e909eb7794cf587482ec597",
+        "bytes": 1790735
+      },
+      "etiquetas_mecanicas": [
+        "entrada_en_juego",
+        "destruir",
+        "jugar_desde_cementerio"
+      ],
+      "implementacion": {
+        "estado": "programada_prototipo_0.8",
+        "efectos": [
+          "Destrucción de Objetos y Dominio; jugada desde Cementerio"
+        ],
+        "pendientes": []
+      },
+      "subcoleccion": "principal",
+      "texto_juego": "Cuando entra en juego, destruye todas las Cartas Dominio y las Cartas Objeto en el campo de batalla.\nPuedes jugar este Aliado desde tu Cementerio pagando su Coste."
+    },
+    {
+      "id": "aamix_e1_01a",
+      "codigo": "01a",
+      "edicion_id": "edicion_1",
+      "subcoleccion": "promocionales",
+      "nombre": "Peri",
+      "clase": "Aliado",
+      "coste": 2,
+      "fuerza": 2,
+      "tipo_aliado": "Salvaje",
+      "texto_impreso": "Ágil.\nSi tienes a Girabl en juego, este aliado gana Imbloqueable.",
+      "texto_juego": "Ágil.\nSi tienes a Girabl en juego, este aliado gana Imbloqueable.",
+      "palabras_clave": [
+        "Ágil"
+      ],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [
+        {
+          "nombre_en_texto": "Girabl",
+          "codigo": "0127",
+          "estado": "coincide_nombre"
+        }
+      ],
+      "imagen": {
+        "ruta": "imagenes/promocionales/135.jpg",
+        "archivo_fuente": "135.jpg",
+        "archivo_comprimido_fuente": "01TCPromocionales.rar",
+        "codigo_impreso": "01a",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "c2ea10d231d68b72bda57efd96df71407994772edb1b37a8b3f5e060d3bce821",
+        "bytes": 1523466
+      },
+      "etiquetas_mecanicas": [
+        "agil",
+        "imbloqueable_condicional"
+      ],
+      "implementacion": {
+        "estado": "programada_en_prototipo_0_2",
+        "efectos": null,
+        "pendientes": [],
+        "archivo_motor": "game.gd"
+      }
+    },
+    {
+      "id": "aamix_e1_01b",
+      "codigo": "01b",
+      "edicion_id": "edicion_1",
+      "subcoleccion": "promocionales",
+      "nombre": "Bigotes",
+      "clase": "Aliado",
+      "coste": 2,
+      "fuerza": 1,
+      "tipo_aliado": "Salvaje",
+      "texto_impreso": "Mientras este Aliado esté en juego, una vez por turno, puedes buscar una Carta de Objeto en tu Mazo y ponerla en tu Mano, luego baraja el Mazo.",
+      "texto_juego": "Mientras este Aliado esté en juego, una vez en cada uno de tus turnos, puedes buscar una Carta de Objeto en tu Mazo y ponerla en tu Mano, luego baraja el Mazo.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/promocionales/136.jpg",
+        "archivo_fuente": "136.jpg",
+        "archivo_comprimido_fuente": "01TCPromocionales.rar",
+        "codigo_impreso": "01b",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "15273346920458333d02f1ac6ff6de565ec82032ab14afdc9232869d89bdabc2",
+        "bytes": 1590360
+      },
+      "etiquetas_mecanicas": [
+        "habilidad_activable",
+        "una_vez_por_turno",
+        "buscar_mazo"
+      ],
+      "implementacion": {
+        "estado": "programada_en_prototipo_0_2",
+        "efectos": null,
+        "pendientes": [],
+        "archivo_motor": "game.gd"
+      }
+    },
+    {
+      "id": "aamix_e1_01c",
+      "codigo": "01c",
+      "edicion_id": "edicion_1",
+      "subcoleccion": "promocionales",
+      "nombre": "Tsuki y Akira",
+      "clase": "Aliado",
+      "coste": 1,
+      "fuerza": 4,
+      "tipo_aliado": "Salvaje",
+      "texto_impreso": "Singular.\nÁgil.",
+      "texto_juego": "Singular.\nÁgil.",
+      "palabras_clave": [
+        "Singular",
+        "Ágil"
+      ],
+      "maximo_copias_mazo": 1,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/promocionales/137.jpg",
+        "archivo_fuente": "137.jpg",
+        "archivo_comprimido_fuente": "01TCPromocionales.rar",
+        "codigo_impreso": "01c",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "308ce43eb26b1840c4d6cbf8b8827e3065f0b71d7bbda15302ccf40199bb7dc1",
+        "bytes": 1656997
+      },
+      "etiquetas_mecanicas": [
+        "agil"
+      ],
+      "implementacion": {
+        "estado": "programada_en_prototipo_0_2",
+        "efectos": null,
+        "pendientes": [],
+        "archivo_motor": "game.gd"
+      }
+    },
+    {
+      "id": "aamix_e1_01d",
+      "codigo": "01d",
+      "edicion_id": "edicion_1",
+      "subcoleccion": "promocionales",
+      "nombre": "Granjita de Chanchuus",
+      "clase": "Dominio",
+      "coste": 3,
+      "fuerza": null,
+      "tipo_aliado": null,
+      "texto_impreso": "Mientras este Dominio está activo, los Aliados en juego que sean derrotados se queman en lugar de ir al Cementerio.",
+      "texto_juego": "Mientras este Dominio está activo, los Aliados en juego que sean derrotados se queman en lugar de ir al Cementerio.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/promocionales/138.jpg",
+        "archivo_fuente": "138.jpg",
+        "archivo_comprimido_fuente": "01TCPromocionales.rar",
+        "codigo_impreso": "01d",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "e9829adc7b282b6c8d6cee9cb7db4ce7fca8d9ef023c8836f5f93c25fac4f3cd",
+        "bytes": 1664814
+      },
+      "etiquetas_mecanicas": [
+        "reemplazo_destino",
+        "quemar_aliados",
+        "derrota"
+      ],
+      "implementacion": {
+        "archivo_motor": "game.gd",
+        "pendientes": [],
+        "estado": "programada_v1.3",
+        "efectos": [
+          "Los Aliados derrotados en combate van a Quemadas; no afecta descartes, sacrificios o envíos por efectos. Objetos equipados van al Cementerio."
+        ]
+      }
+    },
+    {
+      "id": "aamix_e1_01e",
+      "codigo": "01e",
+      "edicion_id": "edicion_1",
+      "subcoleccion": "promocionales",
+      "nombre": "Dragón Tee K.O",
+      "clase": "Aliado",
+      "coste": 5,
+      "fuerza": 4,
+      "tipo_aliado": "Salvaje",
+      "texto_impreso": "Singular.\nSi este Aliado tiene alguna Carta Objeto equipada, gana +2 de Fuerza.",
+      "texto_juego": "Singular.\nSi este Aliado tiene alguna Carta Objeto equipada, gana +2 de Fuerza.",
+      "palabras_clave": [
+        "Singular"
+      ],
+      "maximo_copias_mazo": 1,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "imagenes/promocionales/139.jpg",
+        "archivo_fuente": "139.jpg",
+        "archivo_comprimido_fuente": "01TCPromocionales.rar",
+        "codigo_impreso": "01e",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "244501b1f3584ed55810d0548c6155a10158f1795e6bf281bd7ca86d5480d681",
+        "bytes": 3811295
+      },
+      "etiquetas_mecanicas": [
+        "bonificacion_continua",
+        "objeto_equipado"
+      ],
+      "implementacion": {
+        "archivo_motor": "game.gd",
+        "pendientes": [],
+        "estado": "programada_v1.3",
+        "efectos": [
+          "Singular. Mientras tiene un Objeto equipado gana +2 de Fuerza, acumulable con el bono del Objeto."
+        ]
+      }
+    },
+    {
+      "id": "aamix_e1_01f",
+      "codigo": "01f",
+      "edicion_id": "edicion_1",
+      "subcoleccion": "promocionales",
+      "nombre": "Almas Perdidas",
+      "clase": "Aliado",
+      "coste": 2,
+      "fuerza": 1,
+      "tipo_aliado": "Salvaje",
+      "texto_impreso": "Singular.\nEste Aliado gana +1 de Fuerza por cada otro Almas Perdidas en juego.",
+      "texto_juego": "Singular.\nEste Aliado gana +1 de Fuerza por cada otro Almas Perdidas en juego.",
+      "palabras_clave": [
+        "Singular"
+      ],
+      "maximo_copias_mazo": 1,
+      "aliases": [],
+      "referencias": [
+        {
+          "nombre_en_texto": "Almas Perdidas",
+          "codigo": "01f",
+          "estado": "coincide_nombre"
+        }
+      ],
+      "imagen": {
+        "ruta": "imagenes/promocionales/140.jpg",
+        "archivo_fuente": "140.jpg",
+        "archivo_comprimido_fuente": "01TCPromocionales.rar",
+        "codigo_impreso": "01f",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "87f30bd83fc49ced9a318aa08c5e25c34652032045723f3550ffcf4c3fc7ff73",
+        "bytes": 5190063
+      },
+      "etiquetas_mecanicas": [
+        "bonificacion_continua",
+        "contar_otros_aliados"
+      ],
+      "implementacion": {
+        "archivo_motor": "game.gd",
+        "pendientes": [],
+        "estado": "programada_v1.3",
+        "efectos": [
+          "Singular. Gana +1 de Fuerza por cada otro Almas Perdidas en juego entre ambos jugadores."
+        ]
+      }
+    },
+    {
+      "id": "aamix_e1_0104",
+      "codigo": "H01",
+      "edicion_id": "edicion_1",
+      "nombre": "Javieriv",
+      "clase": "Aliado",
+      "coste": 2,
+      "fuerza": 2,
+      "tipo_aliado": "Fundamental",
+      "texto_impreso": "Al entrar en juego, puedes buscar un Aliado de Coste 3 o menos en tu Mazo y ponerlo en tu Mano, luego baraja el Mazo.",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "assets/halloween_2026/H01.png",
+        "archivo_fuente": "104.jpg",
+        "codigo_impreso": "0104",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "11866ea5c4a2bcddcf2c4ba678a6a9ae23eeb4c489979d79dd6dfa42abf927e9",
+        "bytes": 1590534
+      },
+      "etiquetas_mecanicas": [
+        "buscar_mazo",
+        "entrada_en_juego"
+      ],
+      "implementacion": {
+        "estado": "programada_en_prototipo_0_2",
+        "efectos": null,
+        "pendientes": [],
+        "archivo_motor": "game.gd"
+      },
+      "subcoleccion": "halloween",
+      "texto_juego": "Al entrar en juego, puedes buscar un Aliado de Coste 3 o menos en tu Mazo y ponerlo en tu Mano, luego baraja el Mazo.",
+      "codigo_base": "0104",
+      "event_exclusive": true,
+      "event_id": "halloween_2026",
+      "collection_visible_from": "2026-10-30"
+    },
+    {
+      "id": "aamix_e1_0130",
+      "codigo": "H02",
+      "edicion_id": "edicion_1",
+      "nombre": "Serandimini",
+      "clase": "Aliado",
+      "coste": 5,
+      "fuerza": 3,
+      "tipo_aliado": "Lucha",
+      "texto_impreso": "Cuando tu rival juegue una carta, puedes barajar una Serandimini en juego para anular la carta de tu rival.\n(No puedes anular Cartas Recurso)",
+      "palabras_clave": [],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [
+        {
+          "nombre_en_texto": "Serandimini",
+          "codigo": "0130",
+          "estado": "coincide_nombre"
+        }
+      ],
+      "imagen": {
+        "ruta": "assets/halloween_2026/H02.png",
+        "archivo_fuente": "130.jpg",
+        "codigo_impreso": "0130",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "e31122aedb437160b7dbf01c8dfd323c16bd1055a32fb43b0d1ae115a8cc4cbf",
+        "bytes": 1434631
+      },
+      "etiquetas_mecanicas": [
+        "anular",
+        "respuesta_a_carta",
+        "barajar_aliado"
+      ],
+      "implementacion": {
+        "estado": "programada_prototipo_0.8",
+        "efectos": [
+          "Anulación antes de resolver la carta rival, tras el pago"
+        ],
+        "pendientes": []
+      },
+      "subcoleccion": "halloween",
+      "texto_juego": "Cuando tu rival juegue una carta, puedes barajar una Serandimini en juego para anular la carta de tu rival.\n(No puedes anular Cartas Recurso)",
+      "codigo_base": "0130",
+      "event_exclusive": true,
+      "event_id": "halloween_2026",
+      "collection_visible_from": "2026-10-30"
+    },
+    {
+      "id": "aamix_e1_0127",
+      "codigo": "H03",
+      "edicion_id": "edicion_1",
+      "nombre": "Girabl",
+      "clase": "Aliado",
+      "coste": 3,
+      "fuerza": 2,
+      "tipo_aliado": "Lucha",
+      "texto_impreso": "Ágil.\nSi tienes a Peri en juego, este aliado gana +2 de Fuerza.",
+      "palabras_clave": [
+        "Ágil"
+      ],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [
+        {
+          "nombre_en_texto": "Peri",
+          "codigo": "01a",
+          "estado": "coincide_nombre"
+        }
+      ],
+      "imagen": {
+        "ruta": "assets/halloween_2026/H03.png",
+        "archivo_fuente": "127.jpg",
+        "codigo_impreso": "0127",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "a2097083b940715ed55a61f1a2bf67b0f451c248f5d53692529b27a56ffd65aa",
+        "bytes": 1761259
+      },
+      "etiquetas_mecanicas": [
+        "bonificacion_continua"
+      ],
+      "implementacion": {
+        "estado": "programada_en_prototipo_0_2",
+        "efectos": null,
+        "pendientes": [],
+        "archivo_motor": "game.gd"
+      },
+      "subcoleccion": "halloween",
+      "texto_juego": "Ágil.\nSi tienes a Peri en juego, este aliado gana +2 de Fuerza.",
+      "codigo_base": "0127",
+      "event_exclusive": true,
+      "event_id": "halloween_2026",
+      "collection_visible_from": "2026-10-30"
+    },
+    {
+      "id": "aamix_e1_0102",
+      "codigo": "H04",
+      "edicion_id": "edicion_1",
+      "nombre": "elDepul",
+      "clase": "Aliado",
+      "coste": 3,
+      "fuerza": 1,
+      "tipo_aliado": "Lucha",
+      "texto_impreso": "Imbloqueable.\nSi este aliado es derrotado durante tu Fase de Defensa, puedes buscar un Aliado de tu Cementerio y barajarlo en tu mazo.",
+      "palabras_clave": [
+        "Imbloqueable"
+      ],
+      "maximo_copias_mazo": 3,
+      "aliases": [],
+      "referencias": [],
+      "imagen": {
+        "ruta": "assets/halloween_2026/H04.png",
+        "archivo_fuente": "102.jpg",
+        "codigo_impreso": "0102",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "83c85e481fba98c4cdc649adb6ea1194cf8a62eb4382781ddfa3016efd8d6b59",
+        "bytes": 1809192
+      },
+      "etiquetas_mecanicas": [
+        "recuperar_cementerio",
+        "derrota"
+      ],
+      "implementacion": {
+        "estado": "programada_prototipo_0.8",
+        "efectos": [
+          "Recuperación al ser derrotado bloqueando"
+        ],
+        "pendientes": []
+      },
+      "subcoleccion": "halloween",
+      "texto_juego": "Imbloqueable.\nSi este aliado es derrotado durante tu Fase de Defensa, puedes buscar un Aliado de tu Cementerio y barajarlo en tu mazo.",
+      "codigo_base": "0102",
+      "event_exclusive": true,
+      "event_id": "halloween_2026",
+      "collection_visible_from": "2026-10-30"
+    },
+    {
+      "id": "aamix_e1_0103",
+      "codigo": "H05",
+      "edicion_id": "edicion_1",
+      "nombre": "SoyFlaan",
+      "clase": "Aliado",
+      "coste": 5,
+      "fuerza": 2,
+      "tipo_aliado": "Lucha",
+      "texto_impreso": "Singular.\nSi tienes a Yuri y Celia en juego, este aliado se vuelve Imbloqueable.\nEste aliado gana +1 de Fuerza por cada Yuri y Celia en juego.",
+      "palabras_clave": [
+        "Singular"
+      ],
+      "maximo_copias_mazo": 1,
+      "aliases": [],
+      "referencias": [
+        {
+          "nombre_en_texto": "Yuri",
+          "codigo": "0112",
+          "estado": "coincide_nombre"
+        },
+        {
+          "nombre_en_texto": "Celia",
+          "codigo": "0113",
+          "estado": "coincide_nombre"
+        }
+      ],
+      "imagen": {
+        "ruta": "assets/halloween_2026/H05.png",
+        "archivo_fuente": "103.jpg",
+        "codigo_impreso": "0103",
+        "ancho": 1632,
+        "alto": 2220,
+        "sha256": "29e71eb400dc8c1642068179fda507dc16f5e6bda976fcfce96ea49f30ddb9a5",
+        "bytes": 1641075
+      },
+      "etiquetas_mecanicas": [
+        "bonificacion_continua",
+        "imbloqueable_condicional"
+      ],
+      "implementacion": {
+        "estado": "programada_prototipo_0.8",
+        "efectos": [
+          "Bonos continuos por Yuri y Celia"
+        ],
+        "pendientes": []
+      },
+      "subcoleccion": "halloween",
+      "texto_juego": "Singular.\nSi tienes a Yuri y Celia en juego, este aliado se vuelve Imbloqueable.\nEste aliado gana +1 de Fuerza por cada Yuri y Celia en juego.",
+      "codigo_base": "0103",
+      "event_exclusive": true,
+      "event_id": "halloween_2026",
+      "collection_visible_from": "2026-10-30"
+    }
+  ],
+  "pendientes": [
+    {
+      "id": "P04",
+      "prioridad": "revisar_antes_de_programar_habilidad",
+      "cartas": [
+        "0106",
+        "0123"
+      ],
+      "pregunta": "Otras habilidades previas mantienen su comportamiento vigente; Viborín y Almenta resueltas en P04-v130.",
+      "respuesta": null
+    },
+    {
+      "id": "P06",
+      "prioridad": "revisar_antes_de_programar_habilidad",
+      "cartas": [
+        "0102",
+        "0105",
+        "0120",
+        "0132"
+      ],
+      "pregunta": "Confirmar regla común de búsquedas fallidas, cantidades exactas frente a hasta y barajado posterior cuando el texto no lo indica.",
+      "respuesta": null
+    },
+    {
+      "id": "P07",
+      "prioridad": "revisar_antes_de_programar_habilidad",
+      "cartas": [
+        "0130"
+      ],
+      "pregunta": "Para pagar la anulación de Serandimini, ¿solo se puede barajar una Serandimini propia? Definir el orden de respuestas y habilidades simultáneas.",
+      "respuesta": null
+    },
+    {
+      "id": "P10",
+      "prioridad": "revisar_antes_de_programar_orden_de_dano",
+      "cartas": [],
+      "pregunta": "El daño se procesa por cada atacante por separado. Si importa el orden, ¿lo escoge el atacante u otro criterio?",
+      "respuesta": null
+    }
+  ],
+  "siguiente_etapa": "Conservar reglas y validar interacciones adicionales según aclaraciones posteriores del autor.",
+  "resoluciones": [
+    {
+      "id": "P01",
+      "fecha": "2026-10-16",
+      "estado": "resuelta_por_autor",
+      "respuesta": "Los dueños eligen las cartas que permanecen; los excedentes se descartan al Cementerio."
+    },
+    {
+      "id": "P02",
+      "fecha": "2026-10-16",
+      "estado": "resuelta_por_autor",
+      "respuesta": "Muñeco de Miku otorga +4 en total a Maagover o Dicky: quedan con Fuerza 5."
+    },
+    {
+      "id": "P03",
+      "fecha": "2026-10-16",
+      "estado": "resuelta_por_autor",
+      "respuesta": "El autor elimina el efecto de terminar el turno de Desaparición de Papito."
+    },
+    {
+      "id": "P09",
+      "fecha": "2026-10-16",
+      "estado": "resuelta_por_autor",
+      "respuesta": "Se recibió Peri, código promocional 01a. La referencia de Girabl queda vinculada."
+    },
+    {
+      "id": "P04-Bigotes",
+      "fecha": "2026-10-16",
+      "estado": "resuelta_por_autor",
+      "respuesta": "Una vez por turno, en cada turno del dueño de Bigotes; no durante el turno rival."
+    },
+    {
+      "id": "P08",
+      "fecha": "2026-10-16",
+      "estado": "resuelta_por_autor",
+      "respuesta": "Azul gana +1 mientras está en Ataque y +2 mientras bloquea. En Defensa sin bloquear pierde el bono."
+    },
+    {
+      "respuesta": "Viborín y Almenta sólo pueden activar su habilidad durante el turno de su dueño, una vez por turno propio.",
+      "fecha": "2026-10-20",
+      "id": "P04-v130",
+      "estado": "resuelta_por_autor"
+    },
+    {
+      "respuesta": "Derrotado es únicamente en combate. Destruido incluye combate y efectos de otras cartas.",
+      "fecha": "2026-10-20",
+      "id": "P05",
+      "estado": "resuelta_por_autor"
+    },
+    {
+      "respuesta": "Impedir jugar Caída de elDepul si el rival no tiene un Aliado en su Cementerio.",
+      "fecha": "2026-10-20",
+      "id": "P06-Caida-v130",
+      "estado": "resuelta_por_autor"
+    }
+  ]
+}

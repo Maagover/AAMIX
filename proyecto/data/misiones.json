@@ -1,0 +1,127 @@
+{
+  "formato": "aamix.misiones",
+  "version": "1.7.0",
+  "fecha": "2026-10-21",
+  "autoridad": "Servidor. Se conservan recibos y reclamos históricos. Reclamar explícitamente.",
+  "timezone": "America/Santiago",
+  "reinicio_diarias": "00:00",
+  "apartados": [
+    "Misiones diarias",
+    "Misiones históricas",
+    "Evento"
+  ],
+  "eventos": "eventos.json (informativo; disponibilidad real del servidor)",
+  "misiones": [
+    {
+      "id": "play_one",
+      "nombre": "Juega 1 partida",
+      "frecuencia": "diaria",
+      "objetivo": 1,
+      "recompensa_restos": 25
+    },
+    {
+      "id": "win_one",
+      "nombre": "Gana 1 partida",
+      "frecuencia": "diaria",
+      "objetivo": 1,
+      "recompensa_sobres_carta_aleatoria": 1
+    },
+    {
+      "id": "play_ten",
+      "nombre": "Juega 10 partidas",
+      "frecuencia": "una_vez_por_UUID",
+      "objetivo": 10,
+      "recompensa_sobres_tc": 3
+    },
+    {
+      "id": "win_ten",
+      "nombre": "Gana 10 partidas",
+      "frecuencia": "una_vez_por_UUID",
+      "objetivo": 10,
+      "recompensa_sobres_tc": 5
+    }
+  ],
+  "historicas_v150": [
+    {
+      "id": "play_fifty",
+      "titulo": "Juega 50 partidas",
+      "objetivo": 50,
+      "recompensa": {
+        "sobres_carta_aleatoria": 10
+      }
+    },
+    {
+      "id": "win_fifty",
+      "titulo": "Gana 50 partidas",
+      "objetivo": 50,
+      "recompensa": {
+        "sobres_tc": 7
+      }
+    },
+    {
+      "id": "win_five_kajido",
+      "titulo": "Gana 5 partidas con un mazo que incluya a Kajido",
+      "objetivo": 5,
+      "carta_en_mazo_inicial": "0105",
+      "recompensa": {
+        "restos": 200
+      }
+    },
+    {
+      "id": "win_five_flaan",
+      "titulo": "Gana 5 partidas con un mazo que incluya a SoyFlaan",
+      "objetivo": 5,
+      "carta_en_mazo_inicial": "0103",
+      "recompensa": {
+        "restos": 200
+      }
+    },
+    {
+      "id": "win_five_papito",
+      "titulo": "Gana 5 partidas con un mazo que incluya a Papito",
+      "objetivo": 5,
+      "carta_en_mazo_inicial": "0115",
+      "recompensa": {
+        "restos": 200
+      }
+    }
+  ],
+  "historicas_fotos_v170": [
+    {
+      "id": "collect_ten_sam",
+      "carta": "0114",
+      "objetivo": 10,
+      "condicion": "Alcanzar10 copias poseídas simultáneamente; completada permanentemente al llegar",
+      "recompensa": {
+        "foto_perfil": "0114"
+      }
+    },
+    {
+      "id": "collect_ten_yuri",
+      "carta": "0112",
+      "objetivo": 10,
+      "condicion": "Alcanzar10 copias poseídas simultáneamente; completada permanentemente al llegar",
+      "recompensa": {
+        "foto_perfil": "0112"
+      }
+    },
+    {
+      "id": "collect_ten_celia",
+      "carta": "0113",
+      "objetivo": 10,
+      "condicion": "Alcanzar10 copias poseídas simultáneamente; completada permanentemente al llegar",
+      "recompensa": {
+        "foto_perfil": "0113"
+      }
+    },
+    {
+      "id": "collect_ten_viborin",
+      "carta": "0126",
+      "objetivo": 10,
+      "condicion": "Alcanzar10 copias poseídas simultáneamente; completada permanentemente al llegar",
+      "recompensa": {
+        "foto_perfil": "0126"
+      }
+    }
+  ]
+}

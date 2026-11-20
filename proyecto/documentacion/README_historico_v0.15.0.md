@@ -1,0 +1,37 @@
+# AAMIX · versión 0.15.0
+
+Versión portátil completa para Windows de 64 bits. Extrae **todo el ZIP en una carpeta nueva** y abre **Jugar_AAMIX.bat**. No necesitas instalar Godot ni mezclar archivos anteriores.
+
+La intro muestra el logo con fade de 2,5 segundos y «Haz click para jugar». Haz clic en cualquier parte para ir al Inicio. Allí la foto/nombre abre Mi cuenta; puedes acceder con el mismo correo de siempre o practicar como invitado. Internet es necesario para guardar cuenta, colección y recompensas.
+
+## Cambios de esta versión
+
+- Inicio con identidad sin fondo, nombre claro y acciones superiores compactas. Código de regalo lleva icono. El sobre flota detrás de las dos cartas y el logo queda delante.
+- Partida individual presenta dado/Partida Aleatoria a la izquierda y espadas/Desafío AAMIX a la derecha, con Volver centrado debajo. Todas las partidas tienen una confirmación con el rival real y Comenzar.
+- Desafío usa «Nivel» y «Recompensa: N sobre(s) TC». Sólo se ve el siguiente nivel bloqueado, con candado; los futuros mazos permanecen ocultos. Los niveles ganados dicen Completado sin repetir el premio.
+- Al perder un desafío: Revancha o Volver. Al ganar: Siguiente lleva a niveles, donde aparece la recompensa una vez registrada. Revancha conserva el mismo rival y vuelve al resumen previo.
+- Mis sobres muestra un sobre cuadrado centrado con portada, expansión y cantidad; el propio sobre se presiona para abrir. Si no hay sobres, no hay casilla ni cantidad cero.
+- La apertura mantiene cerrado→abierto, flash/sonido y pausa extra del sobre roto. Se ve una sola carta de frente: las siguientes no asoman por ningún borde. Desliza para revelarlas; las cuatro Singulares mantienen brillo/sonido al llegar a la quinta posición.
+- Las cuentas nuevas reciben **un sobre TC** al acceder. El **mazo inicial** se elige únicamente al entrar al Desafío AAMIX. Las cuentas con mazo inicial previo conservan su regalo y cantidades.
+- Renser - Arcade Coins, aportada por el autor, acompaña intro/menús en bucle. El desafío tiene una nueva composición original de batalla a 158 BPM; la aleatoria conserva su pista de combate. Los ajustes de volumen/silencio se mantienen.
+- Los botones Actualizar se sustituyen por un icono PNG de recarga. Se retiran los avisos redundantes de cartas guardadas. Multijugador conserva En desarrollo.
+
+## Progreso y contenido vigente
+
+Los cinco niveles son Papito → Flaan → Kajido → Maagover → Girabl; primera victoria entrega 1/1/1/2/3 sobres TC. Cada premio es único por cuenta y nivel. Repetir no vuelve a cobrarlo.
+
+Misiones: Juega 1 partida, diaria a medianoche de Chile, 1 sobre; Gana 1 partida, única, 1 sobre; Juega 10 partidas, única, 3 sobres; Gana 10 partidas, única, 5 sobres. Se conservan reclamos y premios históricos.
+
+Los ocho códigos aprobados mantienen sus premios: M4Z0M44G0 (Mazo Maagover); P3RI (Peri×3); B1G0T3S (Bigotes×3); SI2TYA (Tsuki y Akira×1); CHANCHULINES (Granjita de Chanchuus×1); TORNEOAAMIX1 (Dragón Tee K.O×1); AAMIXTC (sobre TC×1); M4Z0G1R4 (Mazo Girabl). Cada uno se canjea una sola vez por UUID.
+
+Los sobres nunca incluyen promociones: Recurso en posición 1; normales uniformes y repetibles en 2–4; posición 5 normal 70% o Especial 30%. Dentro de Especiales, Kajido/SoyFlaan/Papito/Transmisión Caída tienen 5% cada una y las otras cinco 16% cada una. El resultado y cantidades se guardan antes de la animación; una apertura pendiente se recupera al reingresar sin gastar otro sobre.
+
+Se conservan colección de 41 cartas (35 regulares + 6 promocionales en fila separada), 22 avatares no promocionales, portadas originales, madera y reglas/IA aprobadas. Diez efectos de carta, constructor, intercambios, guardado de partidas y red jugable siguen pendientes. Los resultados de la IA local los declara el cliente; la cola de resultados sin enviar vive en memoria, por lo que conviene mantener el juego abierto ante un error de red.
+
+## Verificación y continuidad
+
+Revisión acotada de 62 casos de interfaz/HTTP aislado y 20 casos SQL reales con rollback. La prueba del paquete final añade 6 casos de arranque, música, intro, confirmación y partida de invitado. El informe externo `INFORME_ENTREGA_v0.15.0.json`, junto al ZIP, registra el cierre y el hash del paquete final. Las cifras anteriores no se suman ni se ejecutan de nuevo.
+
+La migración **20261018215041_aamix_welcome_challenge_v0150** ya está aplicada y verificada. Los hashes de diez tablas reales coinciden antes/después. No se enviaron correos ni canjearon premios reales. Ver `proyecto/backend/DEPLOYMENT_v0.15.0.json`; no repetir migraciones.
+
+La reproducción/disparo de audio se comprobó con controlador Dummy; no se acredita escucha física. El ZIP incluye fuente, motor oficial, recursos, capturas y documentación. Los originales y el ZIP 0.14.0 se preservan. Base vigente: `proyecto/documentacion/BASE_DEL_PROYECTO_v1.11.md`, sección 23; continuar con CONTINUIDAD.md y PROMPT_CONTINUIDAD.md. El antiguo plan de multijugador es sólo referencia histórica.

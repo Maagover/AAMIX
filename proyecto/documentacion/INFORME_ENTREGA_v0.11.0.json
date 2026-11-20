@@ -1,0 +1,38 @@
+{
+  "version": "0.11.0",
+  "date": "2026-10-18",
+  "source_checks": 336,
+  "source_failures": 0,
+  "complete_simulations": 21,
+  "sql_integration_test_passed": true,
+  "server_test_pack_draws": 1000,
+  "promotional_cards_in_pack_samples": 0,
+  "new_codes_per_account_once": {
+    "P3RI": {
+      "01a": 3
+    },
+    "B1G0T3S": {
+      "01b": 3
+    },
+    "SI2TYA": {
+      "01c": 1
+    },
+    "CHANCHULINES": {
+      "01d": 1
+    },
+    "TORNEOAAMIX1": {
+      "01e": 1
+    }
+  },
+  "maagover_preserved": true,
+  "eligible_profile_avatars": 22,
+  "promotional_avatar_unlocks": false,
+  "qa_archive": {
+    "crc_and_manifest_passed": true,
+    "fresh_extract_without_cache": true,
+    "start_and_guest_match_passed": true,
+    "rewards_contract_checks": 71,
+    "rewards_contract_failures": 0
+  },
+  "final_archive_record": "The adjacent entregas/INFORME_ENTREGA_v0.11.0.json contains final archive hash and final smoke check. This internal record avoids a circular self hash."
+}

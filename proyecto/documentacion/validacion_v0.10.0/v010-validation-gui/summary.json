@@ -1,0 +1,62 @@
+[
+  {
+    "script": "test_ui_v02",
+    "exit_code": 0,
+    "results": [
+      {
+        "failures": [],
+        "ui_checks": 30
+      }
+    ]
+  },
+  {
+    "script": "test_v03",
+    "exit_code": 0,
+    "results": [
+      {
+        "failures": [],
+        "v03_checks": 54
+      }
+    ]
+  },
+  {
+    "script": "test_v04",
+    "exit_code": 0,
+    "results": [
+      {
+        "failures": [],
+        "v04_checks": 53
+      }
+    ]
+  },
+  {
+    "script": "test_v05",
+    "exit_code": 0,
+    "results": [
+      {
+        "failures": [],
+        "v05_checks": 43
+      }
+    ]
+  },
+  {
+    "script": "test_v07",
+    "exit_code": 0,
+    "results": [
+      {
+        "failures": [],
+        "v07_checks": 31
+      }
+    ]
+  },
+  {
+    "script": "test_ui_v08",
+    "exit_code": 0,
+    "results": [
+      {
+        "failures": [],
+        "v08_ui_checks": 65
+      }
+    ]
+  }
+]

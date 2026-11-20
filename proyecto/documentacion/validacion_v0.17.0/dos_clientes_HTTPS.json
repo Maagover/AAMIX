@@ -1,0 +1,43 @@
+{
+  "two_separate_native_processes": true,
+  "actual_supabase_https": true,
+  "emails_sent": 0,
+  "results": [
+    {
+      "actions": 7,
+      "failures": [],
+      "got_setup": true,
+      "payment_finished": true,
+      "private_views": true,
+      "recovered": false,
+      "role": 0,
+      "room_id": "cbcc136b-cc46-4370-886c-7ea0c6018051",
+      "turns_seen": [
+        0,
+        1,
+        3
+      ],
+      "exit_code": 0,
+      "script_error": false,
+      "native_error": false
+    },
+    {
+      "actions": 5,
+      "failures": [],
+      "got_setup": true,
+      "payment_finished": false,
+      "private_views": true,
+      "recovered": true,
+      "role": 1,
+      "room_id": "",
+      "turns_seen": [
+        0,
+        2,
+        4
+      ],
+      "exit_code": 0,
+      "script_error": false,
+      "native_error": false
+    }
+  ]
+}

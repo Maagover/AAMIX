@@ -1,0 +1,45 @@
+{
+  "version": "0.12.0",
+  "date": "2026-10-18",
+  "source_checks": 582,
+  "source_failures": 0,
+  "complete_AI_simulations": 48,
+  "server_integration_tests_passed": true,
+  "server_pack_draws": 2000,
+  "promotional_cards_in_test_packs": 0,
+  "missions": [
+    {
+      "id": "play_one",
+      "scope": "daily",
+      "target": 1,
+      "reward_packs": 1
+    },
+    {
+      "id": "win_one",
+      "scope": "daily",
+      "target": 1,
+      "reward_packs": 1
+    },
+    {
+      "id": "play_ten",
+      "scope": "lifetime_once",
+      "target": 10,
+      "reward_packs": 5
+    }
+  ],
+  "daily_reset": "00:00 America/Santiago",
+  "new_codes": {
+    "AAMIXTC": "1 pack, once per account",
+    "M4Z0G1R4": "Exact historic Girabl deck,40 cards/12 Resources,once per account"
+  },
+  "real_rewards_redeemed_by_agent": 0,
+  "real_mission_claims_by_agent": 0,
+  "qa_archive": {
+    "crc_and_manifest_passed": true,
+    "fresh_extract_without_cache": true,
+    "start_and_guest_match_passed": true,
+    "rewards_contract_checks": 98,
+    "rewards_contract_failures": 0
+  },
+  "final_archive_record": "The adjacent entregas/INFORME_ENTREGA_v0.12.0.json contains the final archive hash and final smoke check. This internal record avoids a circular self hash."
+}

@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "sql_writes": "rolled back",
+  "random_draws": 0,
+  "existing_accounts_preserved": 4,
+  "migration": "20261020022913",
+  "sql_groups": 31,
+  "https_checks": 22,
+  "remaining_qa_sessions": 0,
+  "synthetic_http_accounts_deleted": 2
+}

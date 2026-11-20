@@ -1,0 +1,174 @@
+{
+  "formato": "aamix.mazos_prueba",
+  "version": "0.8.0",
+  "edicion_id": "edicion_1",
+  "fuente": "Tres listas de mazos del autor",
+  "aclaraciones": [
+    "Fernando en la lista Kajido corresponde a Feranando, código 0110, según la imagen de la carta."
+  ],
+  "mazos": [
+    {
+      "id": "kajido",
+      "nombre": "Mazo Kajido",
+      "portada": "0105",
+      "recurso_inicial": "0100",
+      "fuente": "image(2).png",
+      "cartas": [
+        {
+          "codigo": "0105",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0104",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0110",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0111",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0102",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0134",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0108",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0117",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0116",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0120",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0123",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0100",
+          "cantidad": 18
+        }
+      ]
+    },
+    {
+      "id": "papito",
+      "nombre": "Mazo Papito",
+      "portada": "0115",
+      "recurso_inicial": "0100",
+      "fuente": "image(4).png",
+      "cartas": [
+        {
+          "codigo": "0106",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0104",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0108",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0111",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0115",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0116",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0120",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0117",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0133",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0119",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0100",
+          "cantidad": 18
+        }
+      ]
+    },
+    {
+      "id": "flaan",
+      "nombre": "Mazo Flaan",
+      "portada": "0103",
+      "recurso_inicial": "0100",
+      "fuente": "image(3).png",
+      "cartas": [
+        {
+          "codigo": "0103",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0112",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0113",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0104",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0114",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0108",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0102",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0130",
+          "cantidad": 1
+        },
+        {
+          "codigo": "0116",
+          "cantidad": 2
+        },
+        {
+          "codigo": "0120",
+          "cantidad": 3
+        },
+        {
+          "codigo": "0100",
+          "cantidad": 18
+        }
+      ]
+    }
+  ]
+}

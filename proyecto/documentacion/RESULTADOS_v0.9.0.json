@@ -1,0 +1,118 @@
+{
+  "version": "0.9.0",
+  "date": "2026-10-17",
+  "native_windows": true,
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "renderer": "OpenGL Compatibility, NVIDIA RTX 2060",
+  "rule_checks_current": 242,
+  "current_deck_simulations": 81,
+  "ui_gameplay_checks": 65,
+  "auth_local_contract_checks": 31,
+  "new_access_collection_ui_contract_checks": 38,
+  "additional_regressions": [
+    {
+      "script": "test_game",
+      "exit_code": 0,
+      "results": [
+        {
+          "checks": 143,
+          "complete_simulations": 24,
+          "failures": []
+        }
+      ]
+    },
+    {
+      "script": "test_v02",
+      "exit_code": 0,
+      "results": [
+        {
+          "bot_games": 88,
+          "failures": [],
+          "v02_checks": 125
+        }
+      ]
+    },
+    {
+      "script": "test_ui_v02",
+      "exit_code": 0,
+      "results": [
+        {
+          "failures": [],
+          "ui_checks": 30
+        }
+      ]
+    },
+    {
+      "script": "test_v03",
+      "exit_code": 0,
+      "results": [
+        {
+          "failures": [],
+          "v03_checks": 54
+        }
+      ]
+    },
+    {
+      "script": "test_v04",
+      "exit_code": 0,
+      "results": [
+        {
+          "failures": [],
+          "v04_checks": 46
+        }
+      ]
+    },
+    {
+      "script": "test_v05",
+      "exit_code": 0,
+      "results": [
+        {
+          "failures": [],
+          "v05_checks": 43
+        }
+      ]
+    },
+    {
+      "script": "test_v07",
+      "exit_code": 0,
+      "results": [
+        {
+          "failures": [],
+          "v07_checks": 31
+        }
+      ]
+    }
+  ],
+  "database_test": "PASS: three exact deck lists and collection maps, 20 retries, UUID isolation, direct write denial, verified email, rollback",
+  "backend_migration": "20261017185851_aamix_collection_starter_v090",
+  "live_https_auth_settings": 200,
+  "live_rpc_without_session_statuses": [
+    401,
+    401
+  ],
+  "real_emails_sent_by_agent": 0,
+  "gift_claims_committed_by_agent": 0,
+  "test_accounts_remaining": 0,
+  "real_concurrent_clients_verified": false,
+  "concurrency_note": "Parallel connector requests were serialized. Timing assertion detected no overlap; do not count as concurrent validation. Unique UUID and ON CONFLICT gate are implemented and inspected.",
+  "live_email_access": "Author confirmed functional before this release. No new mailbox test by agent.",
+  "live_award_then_new_email_login_tested": false,
+  "unmodified_core": [
+    "game.gd",
+    "ai.gd",
+    "account.gd",
+    "drop_surface.gd",
+    "card_image.gd",
+    "motion.gd",
+    "data/catalogo_edicion_1.json",
+    "data/mazos_prueba.json",
+    "data/reglas_vigentes.json",
+    "data/cuentas.json"
+  ],
+  "total_script_checks": 848,
+  "total_complete_simulations": 193,
+  "clean_zip_extract_manifest_verified": true,
+  "clean_portable_windows_access_and_guest_match_passed": true,
+  "clean_portable_ui_contract_checks": 38,
+  "clean_portable_ui_contract_failures": 0
+}

@@ -1,0 +1,12 @@
+{
+  "checks": 20,
+  "failures": 0,
+  "suite": "test_welcome_v0150_rollback.sql",
+  "synthetic_users": 5,
+  "all_fixtures_rolled_back": true,
+  "real_rewards_claimed": 0,
+  "real_emails_sent": 0,
+  "large_pack_draw_suites_run": false,
+  "welcome_retry_calls": 10,
+  "true_parallel_connections_tested": false
+}

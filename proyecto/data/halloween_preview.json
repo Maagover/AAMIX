@@ -1,0 +1,99 @@
+{
+  "mode": "official_calendar",
+  "scheduled_dates": [
+    "2026-10-30",
+    "2026-11-01"
+  ],
+  "active_for_testing": false,
+  "mp_victory_packs": 1,
+  "pack_probabilities": {
+    "H01": 0.2375,
+    "H02": 0.2375,
+    "H03": 0.2375,
+    "H04": 0.2375,
+    "H05": 0.05
+  },
+  "initial_test_packs": 0,
+  "event": {
+    "id": "halloween_2026",
+    "title": "EVENTO HALLOWEEN",
+    "card_code": "H05",
+    "start_day": "2026-10-30",
+    "end_day": "2026-11-01",
+    "battle": true,
+    "battle_id": "halloween",
+    "preview": false,
+    "summary": "La festividad del terror se toma AAMIX, encuentra las cinco Cartas Exclusivas del evento y completa las misiones para obtener recompensas. Durante este evento, los ganadores de batallas multijugador recibirán 1 Sobre AAMIX Halloween.",
+    "missions": [
+      {
+        "id": "play_three",
+        "title": "Juega 3 partidas",
+        "target": 3,
+        "metric": "played",
+        "scope": "event",
+        "reward": {
+          "halloween_packs": 1
+        }
+      },
+      {
+        "id": "play_five",
+        "title": "Juega 5 partidas",
+        "target": 5,
+        "metric": "played",
+        "scope": "event",
+        "reward": {
+          "halloween_packs": 2
+        }
+      },
+      {
+        "id": "win_three",
+        "title": "Gana 3 partidas",
+        "target": 3,
+        "metric": "wins",
+        "scope": "event",
+        "reward": {
+          "halloween_packs": 2
+        }
+      },
+      {
+        "id": "trade_one",
+        "title": "Intercambia 1 carta",
+        "target": 1,
+        "metric": "trades",
+        "scope": "event",
+        "reward": {
+          "halloween_packs": 1
+        }
+      },
+      {
+        "id": "friend_one",
+        "title": "Añade 1 Amigo",
+        "target": 1,
+        "metric": "friends",
+        "scope": "event",
+        "reward": {
+          "halloween_packs": 1
+        }
+      },
+      {
+        "id": "event_win_five",
+        "title": "Gana 5 veces la Partida de Evento",
+        "target": 5,
+        "metric": "event_wins",
+        "scope": "event",
+        "reward": {
+          "cards": [
+            {
+              "codigo": "H05",
+              "cantidad": 1
+            }
+          ]
+        }
+      }
+    ],
+    "featured_cards": [
+      "H02",
+      "H05"
+    ]
+  }
+}

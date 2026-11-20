@@ -1,0 +1,32 @@
+{
+  "batalla": {
+    "seconds": 51.8919,
+    "peak": 0.74,
+    "rms": 0.1571,
+    "channels": 2,
+    "sample_rate": 22050,
+    "sha256": "177b5eb6b66d0127c3294d5ed2649c0f8a86399937fa22399a17563e5bfd63fd",
+    "origin": "Original AAMIX synthesis; no external samples or existing melodies",
+    "bpm": 148,
+    "bars": 32,
+    "loop_boundary_jump": 0.000409
+  },
+  "popup": {
+    "seconds": 0.23,
+    "peak": 0.34,
+    "rms": 0.1452,
+    "channels": 1,
+    "sample_rate": 22050,
+    "sha256": "7df6e9898ef42c2b628ccc6f10f53f21ed75767771faaeaae3b479a2249988f6",
+    "origin": "Original AAMIX synthesis; no external samples or existing melodies"
+  },
+  "singular": {
+    "seconds": 1.05,
+    "peak": 0.45,
+    "rms": 0.11,
+    "channels": 1,
+    "sample_rate": 22050,
+    "sha256": "2a0408e051b1dc7e10729671c4fe7311a2f44e4383827a1a53f9ef5a11ac0947",
+    "origin": "Original AAMIX synthesis; no external samples or existing melodies"
+  }
+}

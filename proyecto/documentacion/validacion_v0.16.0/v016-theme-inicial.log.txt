@@ -1,0 +1,121 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 596.36 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 2060
+
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)
+SCRIPT ERROR: Parse Error: Member "owner" redefined (original in native class 'Node')
+   at: GDScript::reload (res://shop_ui.gd:4)
+   GDScript backtrace (most recent call first):
+       [0] run (res://tests/test_theme_v016.gd:123)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://main.gd:0)
+   GDScript backtrace (most recent call first):
+       [0] run (res://tests/test_theme_v016.gd:123)
+ERROR: Failed to load script "res://main.gd" with error "Compilation failed".
+   at: load (modules/gdscript/gdscript_resource_format.cpp:46)
+   GDScript backtrace (most recent call first):
+       [0] run (res://tests/test_theme_v016.gd:123)
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'GDScript'.
+   at: _ready (res://main.gd:132)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://main.gd:132)
+       [1] run (res://tests/test_theme_v016.gd:124)
+SCRIPT ERROR: Invalid assignment of property or key 'theme' with value of type 'Theme' on a base object of type 'Nil'.
+   at: set_visual_theme (res://main.gd:2022)
+   GDScript backtrace (most recent call first):
+       [0] set_visual_theme (res://main.gd:2022)
+       [1] run (res://tests/test_theme_v016.gd:130)
+       [2] settle (res://tests/test_theme_v016.gd:52)
+SCRIPT ERROR: Invalid access to property or key 'busy' on a base object of type 'Nil'.
+   at: show_configuration (res://main.gd:1983)
+   GDScript backtrace (most recent call first):
+       [0] show_configuration (res://main.gd:1983)
+       [1] run (res://tests/test_theme_v016.gd:132)
+       [2] settle (res://tests/test_theme_v016.gd:52)
+ERROR: Can't take value from empty array.
+   at: back (core/variant/array.cpp:360)
+   GDScript backtrace (most recent call first):
+       [0] run (res://tests/test_theme_v016.gd:134)
+       [1] settle (res://tests/test_theme_v016.gd:52)
+SCRIPT ERROR: Invalid call. Nonexistent function 'get_children' in base 'Nil'.
+   at: text (res://tests/test_theme_v016.gd:26)
+   GDScript backtrace (most recent call first):
+       [0] text (res://tests/test_theme_v016.gd:26)
+       [1] run (res://tests/test_theme_v016.gd:135)
+       [2] settle (res://tests/test_theme_v016.gd:52)
+SCRIPT ERROR: Invalid call. Nonexistent function 'get_children' in base 'Nil'.
+   at: text (res://tests/test_theme_v016.gd:26)
+   GDScript backtrace (most recent call first):
+       [0] text (res://tests/test_theme_v016.gd:26)
+       [1] run (res://tests/test_theme_v016.gd:136)
+       [2] settle (res://tests/test_theme_v016.gd:52)
+FAIL: Configuration exposes Sound and functional Visuals choices
+FAIL: Light preference is persisted in visual.cfg
+SCRIPT ERROR: Invalid assignment of property or key 'visible' with value of type 'bool' on a base object of type 'Nil'.
+   at: background (res://main.gd:321)
+   GDScript backtrace (most recent call first):
+       [0] background (res://main.gd:321)
+       [1] _render_content (res://main.gd:490)
+       [2] render (res://main.gd:459)
+       [3] switch_screen (res://tests/test_theme_v016.gd:67)
+       [4] run (res://tests/test_theme_v016.gd:144)
+       [5] shot (res://tests/test_theme_v016.gd:62)
+SCRIPT ERROR: Invalid assignment of property or key 'visible' with value of type 'bool' on a base object of type 'Nil'.
+   at: background (res://main.gd:321)
+   GDScript backtrace (most recent call first):
+       [0] background (res://main.gd:321)
+       [1] _render_content (res://main.gd:490)
+       [2] render (res://main.gd:459)
+       [3] switch_screen (res://tests/test_theme_v016.gd:67)
+       [4] run (res://tests/test_theme_v016.gd:155)
+       [5] shot (res://tests/test_theme_v016.gd:62)
+SCRIPT ERROR: Invalid assignment of property or key 'visible' with value of type 'bool' on a base object of type 'Nil'.
+   at: background (res://main.gd:321)
+   GDScript backtrace (most recent call first):
+       [0] background (res://main.gd:321)
+       [1] _render_content (res://main.gd:490)
+       [2] render (res://main.gd:459)
+       [3] switch_screen (res://tests/test_theme_v016.gd:67)
+       [4] run (res://tests/test_theme_v016.gd:159)
+       [5] shot (res://tests/test_theme_v016.gd:62)
+SCRIPT ERROR: Invalid assignment of property or key 'visible' with value of type 'bool' on a base object of type 'Nil'.
+   at: background (res://main.gd:321)
+   GDScript backtrace (most recent call first):
+       [0] background (res://main.gd:321)
+       [1] _render_content (res://main.gd:490)
+       [2] render (res://main.gd:459)
+       [3] switch_screen (res://tests/test_theme_v016.gd:67)
+       [4] run (res://tests/test_theme_v016.gd:164)
+       [5] shot (res://tests/test_theme_v016.gd:62)
+SCRIPT ERROR: Invalid call. Nonexistent function 'render_screen' in base 'Nil'.
+   at: _render_content (res://main.gd:501)
+   GDScript backtrace (most recent call first):
+       [0] _render_content (res://main.gd:501)
+       [1] render (res://main.gd:459)
+       [2] switch_screen (res://tests/test_theme_v016.gd:67)
+       [3] run (res://tests/test_theme_v016.gd:164)
+       [4] shot (res://tests/test_theme_v016.gd:62)
+FAIL: Six-column shop fits 1600px and keeps balance in header
+FAIL: Light shop price controls have readable text and warm flat surfaces
+SCRIPT ERROR: Invalid access to property or key 'busy' on a base object of type 'Nil'.
+   at: show_configuration (res://main.gd:1983)
+   GDScript backtrace (most recent call first):
+       [0] show_configuration (res://main.gd:1983)
+       [1] run (res://tests/test_theme_v016.gd:170)
+       [2] shot (res://tests/test_theme_v016.gd:62)
+ERROR: Can't take value from empty array.
+   at: back (core/variant/array.cpp:360)
+   GDScript backtrace (most recent call first):
+       [0] run (res://tests/test_theme_v016.gd:171)
+       [1] shot (res://tests/test_theme_v016.gd:62)
+SCRIPT ERROR: Invalid call. Nonexistent function 'get_children' in base 'Nil'.
+   at: text (res://tests/test_theme_v016.gd:26)
+   GDScript backtrace (most recent call first):
+       [0] text (res://tests/test_theme_v016.gd:26)
+       [1] run (res://tests/test_theme_v016.gd:171)
+       [2] shot (res://tests/test_theme_v016.gd:62)
+SCRIPT ERROR: Invalid access to property or key 'pressed' on a base object of type 'Nil'.
+   at: run (res://tests/test_theme_v016.gd:171)
+   GDScript backtrace (most recent call first):
+       [0] run (res://tests/test_theme_v016.gd:171)
+       [1] shot (res://tests/test_theme_v016.gd:62)

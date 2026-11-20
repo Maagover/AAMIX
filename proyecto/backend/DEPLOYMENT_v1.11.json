@@ -1,0 +1,10 @@
+{
+  "project_ref": "drpsedaiqyowwikhjugs",
+  "version": "1.11.0",
+  "applied_migration": "20261031201203",
+  "name": "aamix_challenge_missions_v111",
+  "already_applied_during_preview": true,
+  "new_migrations_this_revision": 0,
+  "account_resets_this_revision": 0,
+  "previous_clients_compatible": true
+}

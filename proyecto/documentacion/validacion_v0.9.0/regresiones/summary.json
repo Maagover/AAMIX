@@ -1,0 +1,74 @@
+[
+  {
+    "script": "test_game",
+    "exit_code": 0,
+    "results": [
+      {
+        "checks": 143,
+        "complete_simulations": 24,
+        "failures": []
+      }
+    ]
+  },
+  {
+    "script": "test_v02",
+    "exit_code": 0,
+    "results": [
+      {
+        "bot_games": 88,
+        "failures": [],
+        "v02_checks": 125
+      }
+    ]
+  },
+  {
+    "script": "test_ui_v02",
+    "exit_code": 0,
+    "results": [
+      {
+        "failures": [],
+        "ui_checks": 30
+      }
+    ]
+  },
+  {
+    "script": "test_v03",
+    "exit_code": 0,
+    "results": [
+      {
+        "failures": [],
+        "v03_checks": 54
+      }
+    ]
+  },
+  {
+    "script": "test_v04",
+    "exit_code": 0,
+    "results": [
+      {
+        "failures": [],
+        "v04_checks": 46
+      }
+    ]
+  },
+  {
+    "script": "test_v05",
+    "exit_code": 0,
+    "results": [
+      {
+        "failures": [],
+        "v05_checks": 43
+      }
+    ]
+  },
+  {
+    "script": "test_v07",
+    "exit_code": 0,
+    "results": [
+      {
+        "failures": [],
+        "v07_checks": 31
+      }
+    ]
+  }
+]

@@ -1,0 +1,52 @@
+{
+  "release": "1.6.0",
+  "project_id": "drpsedaiqyowwikhjugs",
+  "status": "applied_verified",
+  "base_deployment": "DEPLOYMENT_v1.5.json",
+  "new_migrations": [
+    {
+      "version": "20261021181710",
+      "name": "aamix_trade_rooms_v160"
+    }
+  ],
+  "progress_reset": false,
+  "ruleset_version": "1.3",
+  "multiplayer_protocol": 3,
+  "snapshot_protocol": 1,
+  "launcher_protocol": 1,
+  "minimum_launcher": 1,
+  "public_rpc": [
+    "aamix_trade_room_create",
+    "aamix_trade_room_poll",
+    "aamix_trade_room_action"
+  ],
+  "private_tables": [
+    "trade_rooms_v160",
+    "trade_members_v160"
+  ],
+  "legacy_trade_rpc": "Return AAMIX_TRADE_UPDATE_REQUIRED; non-trade RPC contracts preserved",
+  "legacy_open_offers": "Cancelled without transfers; completed history retained",
+  "validation": {
+    "release": "1.6.0",
+    "sql_groups": 41,
+    "sql_synthetic_users_rolled_back": 3,
+    "ui_checks": 30,
+    "captures_reviewed": 6,
+    "https_checks": 50,
+    "https_actual_ui_buttons": true,
+    "https_synthetic_users_created_and_deleted": 2,
+    "https_synthetic_sessions_remaining": 0,
+    "existing_users_preserved": 4,
+    "concurrent_https_confirmations": true,
+    "regression_snapshot_checks": 17,
+    "current_failures": 0,
+    "real_emails_sent": 0,
+    "random_simulations": 0,
+    "historical_tests_summed": false,
+    "two_remote_pcs_tested": false,
+    "latency_measured": false,
+    "realtime_retested": false,
+    "card_effects_changed": false
+  },
+  "security_advisors": "No new findings; the same 12 private-table INFO notices and prior leaked-password-protection WARN remain."
+}

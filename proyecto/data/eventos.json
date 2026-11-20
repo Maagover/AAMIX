@@ -1,0 +1,256 @@
+{
+  "timezone": "America/Santiago",
+  "authority": "server",
+  "events": [
+    {
+      "id": "bienvenida_2026",
+      "title": "Evento Bienvenida",
+      "card_code": "0100",
+      "start_day": "2026-10-23",
+      "end_day": "2026-10-26",
+      "summary": "Celebramos la llegada de AAMIX Online. Durante este fin de semana, disfruta de 25 restos diarios y completa misiones para obtener recompensas.",
+      "missions": [
+        {
+          "id": "login",
+          "title": "Inicia sesión",
+          "target": 1,
+          "reward": {
+            "restos": 25
+          },
+          "metric": "login",
+          "scope": "daily"
+        },
+        {
+          "id": "play_one",
+          "title": "Juega 1 partida",
+          "target": 1,
+          "reward": {
+            "restos": 25
+          },
+          "metric": "played",
+          "scope": "event"
+        },
+        {
+          "id": "win_one",
+          "title": "Gana 1 partida",
+          "target": 1,
+          "reward": {
+            "normal_packs": 1
+          },
+          "metric": "wins",
+          "scope": "event"
+        },
+        {
+          "id": "play_three",
+          "title": "Juega 3 partidas",
+          "target": 3,
+          "reward": {
+            "restos": 50
+          },
+          "metric": "played",
+          "scope": "event"
+        },
+        {
+          "id": "win_three",
+          "title": "Gana 3 partidas",
+          "target": 3,
+          "reward": {
+            "packs": 2
+          },
+          "metric": "wins",
+          "scope": "event"
+        }
+      ]
+    },
+    {
+      "id": "halloween_2026",
+      "title": "EVENTO HALLOWEEN",
+      "card_code": "H05",
+      "start_day": "2026-10-30",
+      "end_day": "2026-11-01",
+      "battle": true,
+      "battle_id": "halloween",
+      "summary": "La festividad del terror se toma AAMIX, encuentra las cinco Cartas Exclusivas del evento y completa las misiones para obtener recompensas. Durante este evento, los ganadores de batallas multijugador recibirán 1 Sobre AAMIX Halloween.",
+      "missions": [
+        {
+          "id": "play_three",
+          "title": "Juega 3 partidas",
+          "target": 3,
+          "metric": "played",
+          "scope": "event",
+          "reward": {
+            "halloween_packs": 1
+          }
+        },
+        {
+          "id": "play_five",
+          "title": "Juega 5 partidas",
+          "target": 5,
+          "metric": "played",
+          "scope": "event",
+          "reward": {
+            "halloween_packs": 2
+          }
+        },
+        {
+          "id": "win_three",
+          "title": "Gana 3 partidas",
+          "target": 3,
+          "metric": "wins",
+          "scope": "event",
+          "reward": {
+            "halloween_packs": 2
+          }
+        },
+        {
+          "id": "trade_one",
+          "title": "Intercambia 1 carta",
+          "target": 1,
+          "metric": "trades",
+          "scope": "event",
+          "reward": {
+            "halloween_packs": 1
+          }
+        },
+        {
+          "id": "friend_one",
+          "title": "Añade 1 Amigo",
+          "target": 1,
+          "metric": "friends",
+          "scope": "event",
+          "reward": {
+            "halloween_packs": 1
+          }
+        },
+        {
+          "id": "event_win_five",
+          "title": "Gana 5 veces la Partida de Evento",
+          "target": 5,
+          "metric": "event_wins",
+          "scope": "event",
+          "reward": {
+            "cards": [
+              {
+                "codigo": "H05",
+                "cantidad": 1
+              }
+            ]
+          }
+        }
+      ],
+      "featured_cards": [
+        "H02",
+        "H05"
+      ]
+    },
+    {
+      "id": "javieriv_2026",
+      "title": "Cumpleaños Javieriv",
+      "card_code": "0104",
+      "start_day": "2026-11-12",
+      "end_day": "2026-11-14",
+      "summary": "Este 13/11 celebramos el cumpleaños de Javieriv. Completa las misiones para obtener cartas Javieriv de recompensa.",
+      "missions": [
+        {
+          "id": "play_one",
+          "title": "Juega 1 partida",
+          "target": 1,
+          "reward": {
+            "restos": 25,
+            "cards": [
+              {
+                "codigo": "0104",
+                "cantidad": 1
+              }
+            ]
+          },
+          "metric": "played",
+          "scope": "event"
+        },
+        {
+          "id": "win_one_javieriv",
+          "title": "Gana 1 partida con un mazo que incluya al menos 1 Javieriv",
+          "target": 1,
+          "reward": {
+            "normal_packs": 1,
+            "cards": [
+              {
+                "codigo": "0104",
+                "cantidad": 1
+              }
+            ]
+          },
+          "metric": "wins",
+          "scope": "event",
+          "required_card": "0104"
+        },
+        {
+          "id": "win_three_javieriv",
+          "title": "Gana 3 partidas con un mazo que incluya al menos 1 Javieriv",
+          "target": 3,
+          "reward": {
+            "packs": 1,
+            "cards": [
+              {
+                "codigo": "0104",
+                "cantidad": 1
+              }
+            ]
+          },
+          "metric": "wins",
+          "scope": "event",
+          "required_card": "0104"
+        }
+      ]
+    },
+    {
+      "id": "kajido_2026",
+      "title": "Cumpleaños Kajido",
+      "card_code": "0105",
+      "start_day": "2026-11-25",
+      "end_day": "2026-11-27",
+      "summary": "Este 26/11 celebramos el cumpleaños de Kajido. Completa las misiones para obtener una carta Kajido de recompensa.",
+      "missions": [
+        {
+          "id": "play_one",
+          "title": "Juega 1 partida",
+          "target": 1,
+          "reward": {
+            "restos": 25
+          },
+          "metric": "played",
+          "scope": "event"
+        },
+        {
+          "id": "win_one_kajido",
+          "title": "Gana 1 partida con Mazo Kajido",
+          "target": 1,
+          "reward": {
+            "restos": 50,
+            "deck_design": "custom_kajido"
+          },
+          "metric": "wins",
+          "scope": "event",
+          "deck_id": "kajido"
+        },
+        {
+          "id": "win_three_kajido",
+          "title": "Gana 3 partidas con Mazo Kajido",
+          "target": 3,
+          "reward": {
+            "restos": 100,
+            "cards": [
+              {
+                "codigo": "0105",
+                "cantidad": 1
+              }
+            ]
+          },
+          "metric": "wins",
+          "scope": "event",
+          "deck_id": "kajido"
+        }
+      ]
+    }
+  ]
+}

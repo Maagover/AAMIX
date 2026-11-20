@@ -1,0 +1,50 @@
+# AAMIX · versión 0.18.0
+
+Juego completo y portátil para Windows de 64 bits. **Extrae todo en una carpeta nueva y abre Jugar_AAMIX.bat.** Motor Godot oficial incluido. Usa tu cuenta habitual para conservar colección y progreso. Para multijugador, ambos jugadores deben usar esta versión.
+
+## Sobres
+
+Las cartas permanecen juntas, perfectamente frontales, sin rotación ni desplazamientos entre capas. Al mover la primera hacia un costado se ve inmediatamente la siguiente. Todas usan los mismos límites, evitando que un borde inclinado adelante la rareza de una carta posterior. Se conservan los sobres cerrado/abierto, pausa, sonido, gesto y efecto de las cuatro Singulares.
+
+Una estrella pequeña y estática en la esquina identifica una carta nueva para tu colección. El servidor lo decide antes de conceder el contenido y lo guarda con esa apertura. Si una carta se repite en el mismo sobre y no la tenías, sólo su primera copia lleva estrella. Recargar o volver a ingresar conserva esa marca; no vuelve a sortear ni a entregar cartas. Las aperturas anteriores a esta actualización mantienen sus cartas y no reciben marcas inferidas.
+
+TC mantiene sus cinco posiciones y probabilidades aprobadas, sin promociones. El sobre café sigue con una sola carta normal. No cambian cantidades, precios ni códigos.
+
+## Multijugador
+
+1. Ambos acceden a sus cuentas y eligen un mazo propio. Uno crea la sala y comparte el código; el otro se une.
+2. **Cada jugador pulsa Confirmar dentro de la sala.** Se muestra quién confirmó y la partida sólo empieza cuando ambos lo hicieron.
+3. El anfitrión mantiene abierto el juego. Retomar sala recupera el estado confirmado tras una interrupción.
+
+Se recuperaron las animaciones de reparto, robo, cambiar mano, barajar, pagos, combate, Cementerio y otras zonas. Los movimientos ocultos usan dorsos e identificadores anónimos para el invitado; una carta que se vuelve pública se muestra con su imagen. Retomar una sala aplica la instantánea actual sin volver a reproducir acciones pasadas.
+
+La sincronización elimina esperas y reenvíos innecesarios. Cada jugada propia del anfitrión usa una sola petición que registra y confirma la acción atómicamente, en lugar de submit y commit separados. El invitado envía una vez y consulta el resultado. Las consultas se aceleran cuando se espera al rival, omiten instantáneas sin cambios y ya no repiten ambos mazos completos. Las animaciones online son más breves y las consultas de fondo no pueden ignorar una confirmación o un abandono.
+
+En la prueba real de esta entrega, ocho acciones del anfitrión tuvieron una mediana de confirmación de 427 ms y seis del invitado de 1505 ms, con animaciones activadas. Son observaciones de dos procesos en un mismo computador contra HTTPS real; no son una garantía de latencia ni una comparación cronometrada con 0.17. La conexión y el anfitrión siguen influyendo.
+
+Se conserva la beta entre amigos con anfitrión de confianza: éste ejecuta el motor completo, sin arbitraje competitivo independiente. Supabase existente, cuota gratuita, ocho salas como máximo, una por cuenta, dos horas por sala y 180 segundos de reconexión. No hay emparejamiento público ni ranking.
+
+## Misiones y abandono
+
+| Misión | Frecuencia | Recompensa |
+| --- | --- | --- |
+| Juega 1 partida | Diaria | **25 Restos** |
+| Gana 1 partida | Diaria | 1 carta aleatoria |
+| Juega 10 partidas | Única | 3 sobres TC |
+| Gana 10 partidas | Única | 5 sobres TC |
+
+Las diarias reinician a medianoche de Chile. Los reclamos históricos de 50 Restos conservan lo recibido y no pueden cobrarse otra vez. Los demás premios permanecen iguales.
+
+El tablero añade **Abandonar partida** tanto contra la IA como online. Pide confirmación y cuenta como derrota; cancelar mantiene la partida. Los resultados se registran una sola vez. Cancelar una sala antes de comenzar continúa sin contar como partida terminada.
+
+La colección ya no muestra el aviso de que una carta catalogada tiene un efecto pendiente. Esto cambia su presentación; las reglas y habilidades implementadas se conservan.
+
+## Verificación y continuidad
+
+62 casos de fuente aprobados: 23 SQL con rollback, 26 de interfaz y adaptador, uno de prioridad sobre consultas de fondo, dos de animación real y diez escenarios online. Los seis casos del ZIP final completan 68 al cerrarse la entrega; ver el informe externo. Se repitieron sólo los casos afectados por una reparación, sin matrices históricas ni sorteos masivos.
+
+Dos procesos nativos con cuentas sintéticas jugaron 14 comandos reales hasta turno 5, con confirmación, mulligan, barajado, pago, vistas privadas, reconexión y abandono. Hubo un recibo de victoria y otro de derrota. No fue una partida completa hasta agotar un mazo ni una prueba entre dos computadores físicos. Audio con Dummy, sin escucha física acreditada.
+
+Migración **20261019141339_aamix_rooms_and_pack_presentation_v0180** aplicada y verificada. Las dos cuentas sintéticas se eliminaron y los campos anteriores de catorce tablas reales conservan sus hashes. Las funciones de sorteo originales se restauraron después del fixture SQL. No se alteraron cuentas reales, Auth, SMTP, reglas, IA, gráficos, música ni ZIP anteriores.
+
+Fuente, motor, recursos, capturas y documentación incluidos. Base vigente **BASE_DEL_PROYECTO_v1.14.md**, sección 26. Contrato en backend/PRESENTATION_v0.18.0.md y resultados en VALIDACION_v0.18.0.md.
