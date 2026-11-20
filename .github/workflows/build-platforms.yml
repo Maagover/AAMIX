@@ -1,0 +1,81 @@
+name: AAMIX PC and Web
+on:
+  push:
+    branches: [main, web-mobile]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: aamix-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Restore the complete shared source on first setup
+        shell: bash
+        run: |
+          if [ ! -f proyecto/assets/aamix_a_white.png ]; then
+            python3 - <<'PY'
+          from pathlib import Path
+          import zipfile
+          root = Path.cwd().resolve()
+          with zipfile.ZipFile(root/'AAMIX_portrait_source_overlay.zip') as archive:
+              for entry in archive.infolist():
+                  if entry.is_dir() or entry.filename.startswith(('.git/', '.github/')):
+                      continue
+                  target = (root/entry.filename).resolve()
+                  if not target.is_relative_to(root):
+                      raise RuntimeError('Invalid overlay path')
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  target.write_bytes(archive.read(entry))
+          PY
+            python3 scripts/import-original-source.py
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add proyecto platform scripts .gitignore toolchain.json MOVIL_VERTICAL.md README.md
+            git commit -m 'Import verified PC source and shared portrait web client'
+            git push origin HEAD:"${GITHUB_REF_NAME}"
+          fi
+          echo "SOURCE_COMMIT=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+      - name: Prepare official Godot tools
+        run: node scripts/setup-tools.mjs
+      - name: Test and export PC and Web from the same source
+        run: node scripts/build.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: AAMIX-web-${{ github.sha }}
+          path: build/web
+      - uses: actions/upload-artifact@v4
+        with:
+          name: AAMIX-windows-${{ github.sha }}
+          path: build/windows
+      - uses: actions/upload-artifact@v4
+        with:
+          name: AAMIX-verification-${{ github.sha }}
+          path: build/*.json
+      - uses: actions/upload-pages-artifact@v4
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        with:
+          path: build/web
+  deploy-web:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
