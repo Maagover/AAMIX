@@ -40,8 +40,9 @@ func icon(parent, caption, action):
 		var center=CenterContainer.new();center.mouse_filter=Control.MOUSE_FILTER_IGNORE;center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);node.add_child(center);center.add_child(art)
 		art.mouse_filter=Control.MOUSE_FILTER_IGNORE
 	else:
-		node.text={"Volver":"‹","Inicio":"⌂","Salir":"×","Registro":"≡"}.get(caption,caption)
-		node.add_theme_font_size_override("font_size",25)
+		node.text={"Volver":"‹","Inicio":"Inicio","Salir":"×","Registro":"="}.get(caption,caption)
+		node.add_theme_font_size_override("font_size",15 if caption=="Inicio" else 25)
+		if caption=="Inicio":node.custom_minimum_size.x=64
 	return node
 
 func page(title, back = Callable(), paper = true):
@@ -505,7 +506,7 @@ func fit_tree(node, width):
 		if node.custom_minimum_size.x>width:node.custom_minimum_size.x=width
 		if node is Label:
 			node.autowrap_mode=TextServer.AUTOWRAP_OFF if node.get_meta("mobile_no_wrap",false) else TextServer.AUTOWRAP_WORD_SMART
-			node.text=node.text.replace(String.chr(26)," / ")
+			node.text=node.text.replace(String.chr(26)," / ").replace("→"," a ").replace("doble clic","pulsación larga")
 			if node.get_theme_font_size("font_size")>26:node.add_theme_font_size_override("font_size",26)
 		if node is Button:
 			if node.get_combined_minimum_size().x>width:node.clip_text=true
