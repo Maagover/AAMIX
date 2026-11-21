@@ -27,4 +27,8 @@ En Supabase se guard� Site URL https://aamix.cl/ y se a�adi� ese destino a
 
 ## Reinicio solicitado
 
-El reinicio de cuentas solicitado se gestiona por separado del despliegue. Completar y probar el nuevo flujo publicado antes de realizarlo. Las versiones PC y web comparten el mismo servicio de cuentas.
+Se complet� el reinicio solicitado despu�s de publicar y comprobar la carga del juego, el formulario por contrase�a y la navegaci�n hasta una partida. Se revocaron las sesiones anteriores antes de eliminar las cuentas. Los jugadores deben volver a registrarse. Las versiones PC y web comparten el mismo servicio de cuentas.
+
+## Despliegue verificado
+
+C�digo publicado: ab4b64ac30ffc3fe183e6d93b0216adc3daacd77. GitHub Actions 44862597273 termin� correctamente, con las 410 comprobaciones y ambas exportaciones. La web se verific� en https://aamix.cl/ con HTTPS, acceso por correo y contrase�a, navegaci�n como invitado y tablero nuevo. La prueba de entrega de correo y recuperaci�n con un buz�n real sigue pendiente.
