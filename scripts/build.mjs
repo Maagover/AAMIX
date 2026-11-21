@@ -17,8 +17,12 @@ async function run(name,args) {
   console.log(`${name}: passed${summary?' '+summary:''}`);
 }
 await run('import',['--editor','--import']);
+const authResult=spawnSync(process.execPath,[path.join(root,'scripts/test-auth.mjs')],{env:{...process.env,GODOT_BIN:engine},encoding:'utf8',maxBuffer:1024*1024});
+if(authResult.status!==0)throw new Error(authResult.stdout+authResult.stderr);
+const authReport=JSON.parse(authResult.stdout.trim());reports.push(authReport);console.log('password-auth: passed '+JSON.stringify(authReport));
 await run('input',['--script','res://tests/test_web_input.gd']);
 await run('regression',['--script','res://tests/test_v111_release.gd']);
+await run('interactions',['--script','res://tests/test_mobile_interactions.gd']);
 await run('portrait',['--script','res://tests/test_mobile_portrait.gd']);
 for(const [name,preset] of [['web','Web'],['windows','Windows Desktop']]){
   await fs.mkdir(path.join(build,name),{recursive:true});
@@ -27,7 +31,7 @@ for(const [name,preset] of [['web','Web'],['windows','Windows Desktop']]){
 }
 await fs.copyFile(path.join(root,'platform','windows','AAMIX.Session.exe'),path.join(build,'windows','AAMIX.Session.exe'));
 const metadata=JSON.parse(await fs.readFile(path.join(project,'VERSION.json'),'utf8'));
-const report={built_at:new Date().toISOString(),source_commit:process.env.SOURCE_COMMIT||process.env.GITHUB_SHA||null,base_version:metadata.version,channel:'portrait-alpha',reports};
+const report={built_at:new Date().toISOString(),source_commit:process.env.SOURCE_COMMIT||process.env.GITHUB_SHA||null,base_version:metadata.version,channel:'portrait-reference-password-preview',reports};
 await fs.writeFile(path.join(build,'verification.json'),JSON.stringify(report,null,2));
 await fs.writeFile(path.join(build,'web','build-info.json'),JSON.stringify(report,null,2));
 await fs.copyFile(path.join(build,'verification.json'),path.join(build,'windows','verification.json'));

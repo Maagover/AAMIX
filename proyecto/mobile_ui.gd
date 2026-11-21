@@ -98,7 +98,7 @@ func render_screen():
 		"deck_builder": builder()
 		"table": table()
 		_: return false
-	fit_tree(page_root,minf(WIDTH,b.get_viewport_rect().size.x)-24)
+	if b.screen!="table":fit_tree(page_root,minf(WIDTH,b.get_viewport_rect().size.x)-24)
 	return true
 
 func intro():
@@ -193,7 +193,9 @@ func versus():
 	button(body,"Preparando…" if b.rewards.preparing else "Comenzar",b.begin_prepared_match,b.rewards.preparing or b.collection.busy or b.account.busy,true)
 
 func account():
-	var body = page("Mi cuenta" if b.account.signed_in() else "Iniciar sesión")
+	var body = page("Mi cuenta" if b.account.signed_in() else "Iniciar sesión",b.account_back)
+	if b.account.password_recovery:
+		password_form(body);return
 	if b.account.signed_in():
 		var row = b.box(body,false,12)
 		row.add_child(b.profiles.avatar(b.profiles.current_code(),72))
@@ -209,23 +211,26 @@ func account():
 	var tabs = b.box(body,false,8)
 	button(tabs,"Ingresar",b.account_mode.bind(false),b.account.busy,not b.account_register)
 	button(tabs,"Crear cuenta",b.account_mode.bind(true),b.account.busy,b.account_register)
-	text(body,"Ingresa con tu correo y el código que recibirás.",18)
-	if b.account_register and not b.account.code_sent:
-		b.account_field(body,"Nombre visible",b.account_nickname,"Cómo te verán tus amigos","account_nickname",b.account.busy)
-	b.account_field(body,"Correo",b.account.pending_email if b.account.code_sent else b.account_email,"tu@correo.com","account_email",b.account.busy or b.account.code_sent)
-	if b.account.code_sent:
-		var field = b.account_field(body,"Código recibido",b.account_code,"Código del correo","account_code",b.account.busy)
-		field.text_submitted.connect(func(_value):b.account.verify_code(b.account_code))
-		button(body,"Verificar e ingresar",func():b.account.verify_code(b.account_code),b.account.busy,true)
-		button(body,"Reenviar código",b.send_account_code,b.account.busy)
-		button(body,"Usar otro correo",b.account_mode.bind(b.account_register),b.account.busy)
-	else: button(body,"Enviar código",b.send_account_code,not b.account.configured or not b.account.registration_ready or b.account.busy,true)
-	text(body,b.account.status,16)
-	button(body,"Jugar como invitado",b.play_guest,b.account.busy)
+	password_form(body)
 
 func signed_body(title):
 	if not b.account.signed_in(): b.screen="account";account();return null
 	return page(title)
+
+func password_form(parent):
+	var recovering=b.account.password_recovery
+	text(parent,"Elige tu nueva contraseña." if recovering else "Ingresa con tu correo y contraseña.",18)
+	if b.account_register and not recovering:b.account_field(parent,"Nombre visible",b.account_nickname,"Cómo te verán tus amigos","account_nickname",b.account.busy)
+	if not recovering:b.account_field(parent,"Correo",b.account_email,"tu@correo.com","account_email",b.account.busy)
+	var field=b.account_field(parent,"Nueva contraseña" if recovering else "Contraseña",b.account_password,"Mínimo 8 caracteres","account_password",b.account.busy)
+	if b.account_register or recovering:b.account_field(parent,"Repetir contraseña",b.account_password_confirm,"Repite tu contraseña","account_password_confirm",b.account.busy)
+	field.text_submitted.connect(func(_value):b.submit_password_account())
+	button(parent,"Guardar contraseña" if recovering else ("Crear cuenta" if b.account_register else "Ingresar"),b.submit_password_account,b.account.busy or not b.account.configured,true)
+	if not recovering:
+		button(parent,"Olvidé mi contraseña",func():b.account.request_password_reset(b.account_email),b.account.busy)
+		text(parent,"Al registrarte, confirma tu correo con el enlace que recibirás. Los próximos ingresos usan tu contraseña.",15)
+	text(parent,b.account.status,16)
+	if not recovering:button(parent,"Jugar como invitado",b.play_guest,b.account.busy)
 
 func collection_tabs(parent):
 	var tabs = b.box(parent,false,6)
@@ -305,7 +310,7 @@ func rewards():
 	if b.screen in ["missions","event"]:
 		var tabs=b.box(body,false,6)
 		for entry in [["Diarias","daily"],["Históricas","lifetime"],["Evento","event"]]:
-			var choose=button(tabs,entry[0],b.rewards.change_mission_tab.bind(entry[1]),false,b.rewards.mission_tab==entry[1])
+			var choose=button(tabs,entry[0],select_mission_tab.bind(entry[1]),false,b.rewards.mission_tab==entry[1])
 			choose.add_theme_font_size_override("font_size",15)
 		if b.screen=="event" or b.rewards.mission_tab=="event":b.rewards.render_event(body)
 		else:b.rewards.render_mission(body)
@@ -328,6 +333,11 @@ func rewards():
 				if int(pack[1])>1:button(info,"Abrir todos",b.rewards.start_opening.bind(pack[0],true),b.collection.busy or b.rewards.opening_in_flight)
 			if empty:text(body,"No tienes sobres por abrir",22,true)
 	if b.collection.status!="":text(body,b.collection.status,16)
+
+func select_mission_tab(tab):
+	b.rewards.mission_tab=tab
+	b.screen="event" if tab=="event" else "missions"
+	b.render()
 
 func challenges():
 	var body=signed_body("Desafío AAMIX")
@@ -511,7 +521,9 @@ func fit_tree(node, width):
 		if node is Button:
 			if node.get_combined_minimum_size().x>width:node.clip_text=true
 			node.tooltip_text=node.text if node.tooltip_text.is_empty() else node.tooltip_text
-		if node is ScrollContainer:node.horizontal_scroll_mode=ScrollContainer.SCROLL_MODE_DISABLED
+		if node is ScrollContainer:
+			node.scroll_deadzone=24
+			if not node.has_meta("allow_horizontal_scroll"):node.horizontal_scroll_mode=ScrollContainer.SCROLL_MODE_DISABLED
 		if node is GridContainer:
 			var largest=0.0
 			for child in node.get_children():
@@ -531,87 +543,10 @@ func fit_overlays():
 		if is_instance_valid(shade):fit_tree(shade,minf(440,b.get_viewport_rect().size.x-24))
 
 func table():
-	var root=page("",Callable(),false)
-	root.add_theme_constant_override("separation",5)
-	var header=b.box(root,false,5)
-	header.add_child(b.home_logo(100,27))
-	text(header,("TU TURNO" if b.game.active==b.human else "TURNO RIVAL")+" · %d" % b.game.turn,12,true,Color("fff3d1"))
-	icon(header,"Ajustes",b.show_configuration)
-	icon(header,"Registro",b.show_log)
-	icon(header,"Salir",b.confirm_abandon_match)
-	if b.tutorial.active:
-		var guide=b.box(b.panel(root),true,5)
-		text(guide,str(b.tutorial.messages.get(b.tutorial.step,"")).replace("Haz doble clic","Mantén pulsado"),15)
-		if b.tutorial.step in ["new_turn","blocking_intro","ability_intro","object_intro","object_done","domain_done","unblock_intro","singular_intro","singular","finish"]:button(guide,"Partida de práctica" if b.tutorial.step=="finish" else "Continuar",b.tutorial.next,false,true)
-	b.opponent_hand(root)
-	var piles=b.box(root,false,4)
-	for z in ["resources","paid","deck","graveyard","burned"]:mobile_pile(piles,z,b.computer,false)
-	mobile_lane(root,b.computer,"defense","DEFENSA RIVAL")
-	mobile_lane(root,b.computer,"attack","ATAQUE RIVAL")
-	var domain_center=CenterContainer.new();root.add_child(domain_center)
-	var domain=b.zone(domain_center,"domain",-1,b.game.domain_uid)
-	domain.custom_minimum_size=Vector2(105,62);domain.set_meta("shared_domain",true);domain.set_meta("pile",true)
-	var row=b.box(domain,false,5);text(row,"DOMINIO",11,true)
-	if b.game.domain_uid!=-1:row.add_child(b.image_card(b.game.domain_uid,36,50))
-	b.attach_indicator(domain)
-	var own=b.box(root,false,6)
-	var side=b.box(own,true,4);side.custom_minimum_size.x=58
-	for z in ["paid","deck","resources","graveyard","burned"]:mobile_pile(side,z,b.human,true)
-	var lanes=b.box(own,true,5);lanes.size_flags_horizontal=Control.SIZE_EXPAND_FILL
-	mobile_lane(lanes,b.human,"attack","TU ATAQUE")
-	mobile_lane(lanes,b.human,"defense","TU DEFENSA")
-	var hand=b.zone(root,"hand",b.human)
-	var hand_body=b.box(hand,true,3)
-	var hand_count=b.label("",12,b.MUTED);hand_body.add_child(hand_count);b.register_count(hand_count,b.human,"hand","TU MANO · "," cartas")
-	var hand_scroll=ScrollContainer.new();hand_scroll.horizontal_scroll_mode=ScrollContainer.SCROLL_MODE_AUTO;hand_scroll.vertical_scroll_mode=ScrollContainer.SCROLL_MODE_DISABLED;hand_scroll.custom_minimum_size.y=101;hand_body.add_child(hand_scroll);b.hand_scroll=hand_scroll
-	var cards_row=b.box(hand_scroll,false,2)
-	for uid in b.game.players[b.human].hand:b.card(cards_row,uid,"hand",b.human,62,88)
-	b.action_panel=b.panel(root)
-	b.action_panel.set_meta("actions",true)
-	b.action_bar(b.action_panel)
-	for node in b.interface_nodes(b.action_panel):
-		if node is Label:
-			node.custom_minimum_size.x=0
-			node.add_theme_font_size_override("font_size",13)
-			if node.text.begins_with("Arrastra"):node.text=node.text.replace("Arrastra","Toca").replace("se sueltan","se juegan")
-			if node.text=="ACCIONES" or node.text.is_empty() or (b.game.phase in ["main","after_combat"] and b.game.pending.is_empty() and b.game.payment_request.is_empty() and b.game.error.is_empty()):node.hide()
-		if node is Button:
-			node.custom_minimum_size=Vector2((minf(WIDTH,b.get_viewport_rect().size.x)-64)/2.0,44)
-			node.add_theme_font_size_override("font_size",14)
-	if b.tutorial.active:b.tutorial.decorate_board()
-	for uid in b.moving_uids:b.hide_visual_uid(uid)
-	if not b.presenting:
-		if not b.game.pending.is_empty() and int(b.game.pending.player)==b.human and b.game.pending.kind not in ["end_discard","limit_keep"] and not b.choice_dismissed:b.show_choice()
-		elif b.game.winner!=-1 and not b.overlay_shades.any(func(n):return n.get_meta("overlay_kind","")=="result"):b.show_winner()
+	preload("res://mobile_table.gd").new(b).render()
 
-func mobile_pile(parent,zone,owner,own):
-	var cards=b.game.players[owner][zone]
-	var uid=-1 if cards.is_empty() or zone=="deck" else cards.back()
-	if zone=="paid" and not b.game.reserved[owner].is_empty():uid=b.game.reserved[owner].back()
-	var holder=b.zone(parent,zone,owner,uid)
-	holder.set_meta("pile",true);holder.size_flags_horizontal=Control.SIZE_EXPAND_FILL
-	var body=b.box(holder,not own,0)
-	body.mouse_filter=Control.MOUSE_FILTER_IGNORE
-	var names={"resources":"RECURSOS","paid":"PAGADAS","deck":"MAZO","graveyard":"CEMENTERIO","burned":"QUEMADAS"}
-	var caption={"resources":"REC.","paid":"PAG.","deck":"MAZO","graveyard":"CEM.","burned":"QUEM."}.get(zone,zone) if own else names[zone]
-	var title=b.centered_label(caption,8 if own else 9,b.MUTED);body.add_child(title)
-	title.set_meta("mobile_no_wrap",true)
-	holder.tooltip_text=names[zone]
-	var count=b.centered_label("",16,b.TEXT);count.set_meta("mobile_no_wrap",true);body.add_child(count);b.register_count(count,owner,zone)
-	if own and zone in ["graveyard","burned"]:
-		holder.clicked=b.inspect_zone.bind(owner,zone)
-	if own and zone=="deck":
-		holder.set_meta("pile_image",count)
-	b.attach_indicator(holder)
-
-func mobile_lane(parent,owner,zone,title):
-	var holder=b.zone(parent,zone,owner)
-	holder.custom_minimum_size.y=87
-	var row=b.box(holder,false,4)
-	var label=b.label(title.replace(" ","\n"),10,b.MUTED);label.custom_minimum_size.x=44;label.mouse_filter=Control.MOUSE_FILTER_IGNORE;row.add_child(label)
-	var scroll=ScrollContainer.new();scroll.size_flags_horizontal=Control.SIZE_EXPAND_FILL;scroll.vertical_scroll_mode=ScrollContainer.SCROLL_MODE_DISABLED;row.add_child(scroll)
-	var cards=b.box(scroll,false,4)
-	var current=b.game.players[owner][zone].duplicate()
-	if owner==b.human and zone=="defense":current=current.filter(func(u):return u not in b.draft)
-	if owner==b.human and zone=="attack":current.append_array(b.draft)
-	for uid in current:b.card(cards,uid,"draft_attack" if uid in b.draft else zone,owner,48,66,uid in b.draft or b.block_marker_visible(uid))
+func refit_table():
+	var stage=b.get_node_or_null("ReferenceBoard")
+	if stage==null:return
+	var size=b.get_viewport_rect().size;var ratio=minf(size.x/916.0,size.y/1717.0)
+	stage.scale=Vector2.ONE*ratio;stage.position=(size-Vector2(916,1717)*ratio)/2

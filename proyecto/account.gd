@@ -25,6 +25,70 @@ var remembered_session_path = "user://remembered_session.bin"
 var refresh_retry_at = 0.0
 var storage_error = ""
 var _saved_refresh_token = ""
+var password_recovery = false
+
+func validate_credentials(email, password):
+	var pattern=RegEx.new();pattern.compile("^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$")
+	if str(email).length()>254 or pattern.search(str(email).strip_edges())==null:return "Escribe un correo válido."
+	if str(password).length()<8 or str(password).length()>128:return "La contraseña debe tener entre 8 y 128 caracteres."
+	return ""
+
+func sign_in_password(email, password):
+	if busy:return false
+	var validation=validate_credentials(email,password)
+	if validation!="":return fail(validation)
+	var reply=await send("/token?grant_type=password",{"email":str(email).strip_edges().to_lower(),"password":password})
+	if not reply.ok:return fail(reply.message)
+	if not accept_session(reply.data):return fail("No pudimos validar la sesión. Intenta ingresar nuevamente.")
+	password_recovery=false;status="Sesión iniciada.";changed.emit();return true
+
+func register_password(email,password,nickname):
+	if busy:return false
+	var validation=validate_credentials(email,password)
+	if validation!="":return fail(validation)
+	var name_to_use=str(nickname).strip_edges()
+	if name_to_use.length()<2 or name_to_use.length()>24:return fail("Tu nombre visible debe tener entre 2 y 24 caracteres.")
+	var reply=await send("/signup?redirect_to=https%3A%2F%2Faamix.cl%2F",{"email":str(email).strip_edges().to_lower(),"password":password,"data":{"display_name":name_to_use}})
+	if not reply.ok:return fail(reply.message)
+	if reply.data.has("access_token"):
+		if not accept_session(reply.data):return fail("No pudimos validar la sesión. Intenta ingresar.")
+		status="Cuenta creada."
+	else:status="Revisa tu correo y confirma tu cuenta mediante el enlace. Luego ingresa con tu correo y contraseña."
+	changed.emit();return true
+
+func request_password_reset(email):
+	if busy:return false
+	var validation=validate_credentials(email,"validation-only")
+	if validation!="":return fail(validation)
+	var reply=await send("/recover?redirect_to=https%3A%2F%2Faamix.cl%2F",{"email":str(email).strip_edges().to_lower()})
+	if not reply.ok:return fail(reply.message)
+	status="Si existe una cuenta con ese correo, recibirás un enlace para cambiar tu contraseña.";changed.emit();return true
+
+func save_recovery_password(password):
+	if busy or not password_recovery or not signed_in():return false
+	var validation=validate_credentials(str(user.get("email","")),password)
+	if validation!="":return fail(validation)
+	var reply=await send("/user",{"password":password},access_token,HTTPClient.METHOD_PUT)
+	if not reply.ok:return fail(reply.message)
+	password_recovery=false;status="Contraseña actualizada.";changed.emit();return true
+
+func resume_web_callback():
+	if not OS.has_feature("web"):return
+	# Tokens never leave the Auth service except for this in-memory session.
+	var fragment=str(JavaScriptBridge.eval("window.location.hash.substring(1)",true))
+	if fragment.is_empty():return
+	JavaScriptBridge.eval("window.history.replaceState(null,'',window.location.pathname+window.location.search)",true)
+	var data={}
+	for part in fragment.split("&"):
+		var pair=part.split("=",true,1)
+		if pair.size()==2:data[pair[0]]=pair[1].uri_decode()
+	if data.has("error_description"):fail(str(data.error_description));return
+	if not data.has("access_token") or not data.has("refresh_token"):return
+	var reply=await send("/user",{},str(data.access_token),HTTPClient.METHOD_GET)
+	if not reply.ok:fail(reply.message);return
+	data.user=reply.data;data.expires_in=float(data.get("expires_in",3600))
+	password_recovery=str(data.get("type",""))=="recovery"
+	if accept_session(data):status="Elige una nueva contraseña." if password_recovery else "Correo confirmado.";changed.emit()
 
 func _ready():
 	http = HTTPRequest.new()
@@ -41,11 +105,12 @@ func _ready():
 	status = availability_message()
 	_load_remembered()
 	_restore_remembered.call_deferred()
+	resume_web_callback.call_deferred()
 
 func availability_message():
 	if not configured: return "Las cuentas en línea todavía no están habilitadas. Puedes seguir jugando en Partida individual."
 	if not registration_ready: return "El servicio de cuentas está conectado. Falta completar la configuración de correos para habilitar el registro y el ingreso."
-	return "Crea tu cuenta o ingresa con tu correo y el código que recibirás."
+	return "Crea tu cuenta o ingresa con tu correo y contraseña."
 
 func configure(url, key, allow_loopback_for_tests = false):
 	service_url = str(url).strip_edges().trim_suffix("/")
@@ -156,7 +221,7 @@ func refresh_session():
 		return fail("No pudimos recuperar tu sesión. Reintentaremos cuando haya conexión.")
 	if not reply.ok or not accept_session(reply.data):
 		clear_session(false)
-		return fail("Tu sesión terminó. Vuelve a ingresar con un código para recuperar tu mismo ID.")
+		return fail("Tu sesión terminó. Vuelve a ingresar con tu correo y contraseña.")
 	changed.emit()
 	return true
 
@@ -174,6 +239,7 @@ func sign_out():
 	return revoked
 
 func clear_session(forget = true):
+	password_recovery=false
 	user.clear()
 	access_token = ""
 	refresh_token = ""
@@ -300,14 +366,14 @@ func _restore_remembered():
 	expires_at = 0
 	return await refresh_session()
 
-func send(path, body, bearer = ""):
+func send(path, body, bearer = "", method = HTTPClient.METHOD_POST):
 	if not configured or busy: return {"ok":false, "message":"El servicio de cuentas no está disponible."}
 	busy = true
 	status = "Conectando…"
 	changed.emit()
 	var headers = PackedStringArray(["Content-Type: application/json", "apikey: " + publishable_key])
 	if not bearer.is_empty(): headers.append("Authorization: Bearer " + bearer)
-	var error = http.request(service_url + "/auth/v1" + path, headers, HTTPClient.METHOD_POST, JSON.stringify(body))
+	var error = http.request(service_url + "/auth/v1" + path, headers, method, "" if method==HTTPClient.METHOD_GET else JSON.stringify(body))
 	if error != OK:
 		busy = false
 		return {"ok":false, "retryable":true, "message":"No pudimos conectar. Revisa tu conexión e inténtalo otra vez."}
@@ -316,9 +382,12 @@ func send(path, body, bearer = ""):
 	if completed[0] != HTTPRequest.RESULT_SUCCESS:
 		return {"ok":false, "retryable":true, "message":"No pudimos conectar. Revisa tu conexión e inténtalo otra vez."}
 	var code = int(completed[1])
-	if code == 429: return {"ok":false, "retryable":true, "message":"Se solicitaron demasiados códigos. Espera un momento y vuelve a intentarlo."}
+	if code == 429: return {"ok":false, "retryable":true, "message":"Demasiados intentos. Espera un momento y vuelve a intentarlo."}
 	if code < 200 or code >= 300:
-		var message = "El código no es válido o venció. Solicita uno nuevo." if path == "/verify" else "El servicio no pudo completar la solicitud. Revisa el correo e inténtalo más tarde."
+		var message = "El servicio no pudo completar la solicitud. Inténtalo más tarde."
+		if path.begins_with("/token?grant_type=password"):message="Correo o contraseña incorrectos, o correo pendiente de confirmación."
+		elif path.begins_with("/signup"):message="No pudimos crear la cuenta. Revisa los datos o intenta ingresar si ya tienes cuenta."
+		elif path=="/verify":message="El código no es válido o venció."
 		return {"ok":false, "retryable":code >= 500, "status_code":code, "message":message}
 	if code == 204: return {"ok":true, "data":{}}
 	var json = JSON.new()

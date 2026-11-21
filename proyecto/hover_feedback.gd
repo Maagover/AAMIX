@@ -1,6 +1,7 @@
 extends RefCounted
 ## Visual cue only: never changes a rule, click action, drag payload or hidden information.
 static func attach(node, amount = 1.04, animated = true):
+	if OS.has_feature("web"):return node
 	if node.has_meta("interactive_hover"): return node
 	node.set_meta("interactive_hover", true)
 	node.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND

@@ -32,7 +32,7 @@ func _drop_data(_at_position, data):
 	board.apply_drop(data, board.effective_destination(self))
 
 func _gui_input(event):
-	if OS.has_feature("web") and event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+	if board != null and board.mobile_layout and event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
 			tap_started = Time.get_ticks_msec()
 			long_press_opened = false
@@ -58,7 +58,7 @@ func _gui_input(event):
 
 func _process(_delta):
 	if tap_started < 0 or long_press_opened or Time.get_ticks_msec() - tap_started < 550: return
-	if not OS.has_feature("web") or board == null or board.presenting or board.fx.busy: return
+	if board == null or not board.mobile_layout or board.presenting or board.fx.busy: return
 	var card_uid = display_uid if display_uid != -1 else uid
 	if card_uid != -1:
 		long_press_opened = true

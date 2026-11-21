@@ -157,6 +157,8 @@ var drag_hint
 var account
 var account_email = ""
 var account_nickname = ""
+var account_password = ""
+var account_password_confirm = ""
 var account_code = ""
 var account_register = false
 var guest = false
@@ -214,6 +216,8 @@ const PASSIVE_OVERLAYS = ["inspection","inspection_detail","detail","log","help"
 
 func _ready():
 	mobile = preload("res://mobile_ui.gd").new(self)
+	resized.connect(func():
+		if mobile_layout and screen=="table":mobile.refit_table())
 	DisplayServer.window_set_title("AAMIX Online v1.3.1")
 	tutorial=preload("res://tutorial.gd").new(self)
 	load_game_settings()
@@ -1697,6 +1701,7 @@ func clear_turn_banner():
 	turn_banner = null
 
 func pop_in(node):
+	if mobile_layout:return
 	if is_instance_valid(node): interface_motion.enter(node, animations_enabled)
 
 func capture_layout():
@@ -2074,6 +2079,7 @@ func account_changed():
 	var current = account.player_id()
 	if not current.is_empty():
 		account_code = ""
+		account_password="";account_password_confirm=""
 		account_email = ""
 		account_nickname = ""
 		if current != session_owner:
@@ -2085,7 +2091,7 @@ func account_changed():
 			guest = false
 			reset_match()
 			collection.clear()
-			screen = "home"
+			screen = "account" if account.password_recovery else "home"
 			load_initial_inventory.call_deferred(current)
 	elif not session_owner.is_empty():
 		deck_builder.reset()
@@ -2169,6 +2175,7 @@ func can_enter_play():
 	return true
 
 func account_mode(create):
+	account_password="";account_password_confirm=""
 	if account.busy: return
 	account_register = create
 	account_code = ""
@@ -2183,7 +2190,10 @@ func account_field(parent, caption, value, hint, key, locked = false):
 	input.text = value
 	input.placeholder_text = hint
 	input.custom_minimum_size = Vector2(0, 48) if mobile_layout else Vector2(640, 44)
-	input.max_length = 254 if key == "account_email" else (24 if key == "account_nickname" else (36 if key == "unused_identity" else 10))
+	input.secret = key in ["account_password","account_password_confirm"]
+	input.virtual_keyboard_type = LineEdit.KEYBOARD_TYPE_PASSWORD if input.secret else (LineEdit.KEYBOARD_TYPE_EMAIL_ADDRESS if key=="account_email" else LineEdit.KEYBOARD_TYPE_DEFAULT)
+	input.set_meta("account_field",key)
+	input.max_length = 128 if input.secret else (254 if key == "account_email" else (24 if key == "account_nickname" else (36 if key == "unused_identity" else 10)))
 	input.editable = not locked
 	input.add_theme_color_override("font_color", TEXT)
 	input.add_theme_color_override("font_uneditable_color", MUTED)
@@ -2196,6 +2206,9 @@ func account_field(parent, caption, value, hint, key, locked = false):
 	return input
 
 func render_account():
+	if account.password_recovery:
+		var center=CenterContainer.new();center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);add_child(center)
+		mobile.password_form(box(panel(center),true,12));return
 	if not account.signed_in() and account.remember_me:
 		if account_email.is_empty(): account_email=account.remembered_email
 		if account_nickname.is_empty(): account_nickname=account.remembered_name
@@ -2227,38 +2240,8 @@ func render_account():
 		var tabs = box(outer, false, 10)
 		tabs.add_child(fill(button("Crear cuenta", account_mode.bind(true), account.busy, account_register)))
 		tabs.add_child(fill(button("Ingresar", account_mode.bind(false), account.busy, not account_register)))
-		var intro = label("Usa tu correo y un código de acceso para conservar tu ID en distintos computadores.", 17, MUTED)
-		intro.custom_minimum_size.x = 640
-		intro.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		outer.add_child(intro)
-		if account_register and not account.code_sent:
-			account_field(outer, "Nombre visible", account_nickname, "Cómo te verán tus amigos", "account_nickname", account.busy)
-		account_field(outer, "Correo", account.pending_email if account.code_sent else account_email, "tu@correo.com", "account_email", account.busy or account.code_sent)
-		var remember=CheckBox.new()
-		remember.text="Recuérdame"
-		remember.button_pressed=account.remember_me
-		remember.disabled=account.busy or not account.remember_available()
-		remember.set_meta("remember_me",true)
-		remember.toggled.connect(func(enabled): account.set_remember_me(enabled,account_email,account_nickname))
-		outer.add_child(remember)
-		if account.code_sent:
-			var code = account_field(outer, "Código recibido", account_code, "Código del correo", "account_code", account.busy)
-			code.text_submitted.connect(func(_text): account.verify_code(account_code))
-			outer.add_child(button("Verificar e ingresar", func(): account.verify_code(account_code), account.busy, true))
-			var more = box(outer, false, 10)
-			more.add_child(button("Reenviar código", send_account_code, account.busy))
-			more.add_child(button("Usar otro correo", account_mode.bind(account_register), account.busy))
-		else:
-			outer.add_child(button("Enviar código", send_account_code, not account.configured or not account.registration_ready or account.busy, true))
-		if account.registration_ready and account.restricted_delivery:
-			var delivery = label("Registro en prueba: los códigos sólo se envían a los correos autorizados del proyecto.", 14, GOLD)
-			delivery.custom_minimum_size.x = 640
-			delivery.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-			outer.add_child(delivery)
-		var privacy = label("Recuérdame conserva tu acceso cifrado en este usuario de Windows, también al cambiar de versión. Actívalo sólo en tu equipo.", 14, MUTED)
-		privacy.custom_minimum_size.x = 640
-		privacy.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		outer.add_child(privacy)
+		mobile.password_form(outer)
+
 	var message = label(account.status, 16, MINT)
 	message.custom_minimum_size = Vector2(640, 58)
 	message.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
@@ -2271,6 +2254,18 @@ func render_account():
 func send_account_code():
 	account_code = ""
 	account.request_code(account.pending_email if account.code_sent else account_email, account_nickname, account_register)
+
+func submit_password_account():
+	if account.busy:return
+	if (account_register or account.password_recovery) and account_password!=account_password_confirm:
+		account.fail("Las contraseñas no coinciden.");return
+	var validation=account.validate_credentials(account_email if not account.password_recovery else str(account.user.get("email","")),account_password)
+	if validation!="":account.fail(validation);return
+	var password=account_password
+	account_password="";account_password_confirm=""
+	if account.password_recovery:await account.save_recovery_password(password)
+	elif account_register:await account.register_password(account_email,password,account_nickname)
+	else:await account.sign_in_password(account_email,password)
 
 func copy_player_id():
 	if not account.signed_in(): return
@@ -3100,7 +3095,7 @@ func force_badge_color(uid):
 
 func apply_backdrop_contrast():
 	for node in interface_nodes(self):
-		if not node is Label:continue
+		if not node is Label or node.get_meta("reference_text",false):continue
 		var parent=node.get_parent();var plated=false
 		while parent!=null and parent!=self:
 			if parent is PanelContainer or parent is Panel or parent is Button:plated=true;break
